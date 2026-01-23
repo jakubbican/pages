@@ -600,18 +600,23 @@
         // Force table layout for PDF
         body.classList.add('pdf-export');
 
-        // Check if mobile (use fixed width for consistent rendering)
-        const isMobile = window.innerWidth < 768;
+        // Store original width and set explicit width for rendering
+        const originalMaxWidth = element.style.maxWidth;
+        const originalWidth = element.style.width;
+        element.style.maxWidth = 'none';
+        element.style.width = '1100px';
 
         const opt = {
             margin:       [5, 5],
             filename:     'terminova_listina_2026.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
+            image:        { type: 'jpeg', quality: 0.95 },
             html2canvas:  {
                 scale: 2,
                 useCORS: true,
-                width: 1100,
-                windowWidth: 1100
+                scrollX: 0,
+                scrollY: 0,
+                x: 0,
+                y: 0
             },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' }
         };
@@ -620,10 +625,14 @@
         setTimeout(() => {
             html2pdf().set(opt).from(element).save().then(() => {
                 body.classList.remove('pdf-export');
+                element.style.maxWidth = originalMaxWidth;
+                element.style.width = originalWidth;
             }).catch(() => {
                 body.classList.remove('pdf-export');
+                element.style.maxWidth = originalMaxWidth;
+                element.style.width = originalWidth;
             });
-        }, 150);
+        }, 200);
     };
 
     // Attach listeners
