@@ -36,6 +36,27 @@
         .btn-cal:hover { opacity: 0.8; }
         .btn-cal svg { width: 18px; height: 18px; vertical-align: middle; fill: #333; }
 
+        /* Level filter chips */
+        .filter-group-chips { min-width: 280px; }
+        .chip-hint { font-weight: normal; font-size: 0.75em; color: #888; }
+        .level-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+        .chip {
+            padding: 6px 12px;
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            background: var(--primary);
+            color: white;
+            font-size: 0.85em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .chip:hover { opacity: 0.85; }
+        .chip:not(.active) {
+            background: transparent;
+            color: var(--primary);
+        }
+
         /* Table */
         .table-wrapper { overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; min-width: 800px; }
@@ -139,6 +160,10 @@
             .badge { font-size: 0.7em; padding: 2px 5px; margin-right: 2px; margin-bottom: 0; }
             .btn-cal { padding: 2px; }
             .btn-cal svg { width: 16px; height: 16px; }
+
+            .filter-group-chips { min-width: 100%; }
+            .chip { padding: 5px 10px; font-size: 0.8em; }
+            .chip-hint { display: none; }
 
             .footer img { height: 35px; }
             .footer p { font-size: 0.75em; }
@@ -283,16 +308,15 @@
                 <option value="Kros">Kajak Kros</option>
             </select>
         </div>
-        <div class="filter-group">
-            <label>🏆 Úroveň</label>
-            <select id="levelSelect">
-                <option value="">Všechny</option>
-                <option value="ICF">Mezinárodní (ICF)</option>
-                <option value="MČR">Mistrovství ČR</option>
-                <option value="ČP">Český pohár</option>
-                <option value="ČPŽ">ČP Žáků</option>
-                <option value="VZ">Veřejné závody</option>
-            </select>
+        <div class="filter-group filter-group-chips">
+            <label>🏆 Úroveň <span class="chip-hint">(klikni pro filtr)</span></label>
+            <div class="level-chips" id="levelChips">
+                <button type="button" class="chip active" data-level="ICF">ICF</button>
+                <button type="button" class="chip active" data-level="MČR">MČR</button>
+                <button type="button" class="chip active" data-level="ČP">ČP</button>
+                <button type="button" class="chip active" data-level="ČPŽ">ČPŽ</button>
+                <button type="button" class="chip active" data-level="VZ">VZ</button>
+            </div>
         </div>
         <div class="filter-group btn-group">
             <button onclick="exportPDF()" class="btn btn-pdf">📄 Stáhnout PDF</button>
@@ -413,7 +437,7 @@
     const searchInput = document.getElementById('searchInput');
     const monthSelect = document.getElementById('monthSelect');
     const discSelect = document.getElementById('discSelect');
-    const levelSelect = document.getElementById('levelSelect');
+    const levelChips = document.querySelectorAll('#levelChips .chip');
 
     function renderTable(filteredData) {
         tbody.innerHTML = '';
@@ -474,22 +498,30 @@
         });
     }
 
+    function getActiveLevels() {
+        return Array.from(levelChips)
+            .filter(chip => chip.classList.contains('active'))
+            .map(chip => chip.dataset.level);
+    }
+
     function filterData() {
         const searchTerm = searchInput.value.toLowerCase();
         const selectedMonth = monthSelect.value;
         const selectedDisc = discSelect.value.toLowerCase();
-        const selectedLevel = levelSelect.value;
+        const activeLevels = getActiveLevels();
 
         const filtered = data.filter(item => {
-            const matchesSearch = Object.values(item).some(val => 
+            const matchesSearch = Object.values(item).some(val =>
                 String(val).toLowerCase().includes(searchTerm)
             );
-            
+
             const matchesMonth = selectedMonth === "" || item.datum.includes(selectedMonth);
-            
+
             const matchesDisc = selectedDisc === "" || item.disciplina.toLowerCase().includes(selectedDisc);
-            
-            const matchesLevel = selectedLevel === "" || item.uroven.includes(selectedLevel);
+
+            // Match if any active level is in the item's uroven
+            const matchesLevel = activeLevels.length === 0 ||
+                activeLevels.some(level => item.uroven.includes(level));
 
             return matchesSearch && matchesMonth && matchesDisc && matchesLevel;
         });
@@ -632,7 +664,14 @@
     searchInput.addEventListener('input', filterData);
     monthSelect.addEventListener('change', filterData);
     discSelect.addEventListener('change', filterData);
-    levelSelect.addEventListener('change', filterData);
+
+    // Level chips toggle
+    levelChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            chip.classList.toggle('active');
+            filterData();
+        });
+    });
 
     // Initial render
     renderTable(data);
