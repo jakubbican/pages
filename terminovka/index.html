@@ -316,6 +316,7 @@
                 <button type="button" class="chip active" data-level="ČP">ČP</button>
                 <button type="button" class="chip active" data-level="ČPŽ">ČPŽ</button>
                 <button type="button" class="chip active" data-level="VZ">VZ</button>
+                <button type="button" class="chip active" data-level="OTHER">Ostatní</button>
             </div>
         </div>
         <div class="filter-group btn-group">
@@ -498,10 +499,31 @@
         });
     }
 
+    const mainLevels = ['ICF', 'MČR', 'ČP', 'ČPŽ', 'VZ'];
+
     function getActiveLevels() {
         return Array.from(levelChips)
             .filter(chip => chip.classList.contains('active'))
             .map(chip => chip.dataset.level);
+    }
+
+    function matchesLevelFilter(uroven, activeLevels) {
+        if (activeLevels.length === 0) return true;
+
+        // Check main levels
+        for (const level of activeLevels) {
+            if (level !== 'OTHER' && uroven.includes(level)) {
+                return true;
+            }
+        }
+
+        // Check "OTHER" - matches if none of the main levels are present
+        if (activeLevels.includes('OTHER')) {
+            const hasMainLevel = mainLevels.some(ml => uroven.includes(ml));
+            if (!hasMainLevel) return true;
+        }
+
+        return false;
     }
 
     function filterData() {
@@ -519,9 +541,7 @@
 
             const matchesDisc = selectedDisc === "" || item.disciplina.toLowerCase().includes(selectedDisc);
 
-            // Match if any active level is in the item's uroven
-            const matchesLevel = activeLevels.length === 0 ||
-                activeLevels.some(level => item.uroven.includes(level));
+            const matchesLevel = matchesLevelFilter(item.uroven, activeLevels);
 
             return matchesSearch && matchesMonth && matchesDisc && matchesLevel;
         });
