@@ -311,10 +311,12 @@
         <div class="filter-group filter-group-chips">
             <label>🏆 Úroveň <span class="chip-hint">(klikni pro filtr)</span></label>
             <div class="level-chips" id="levelChips">
-                <button type="button" class="chip active" data-level="ICF">ICF</button>
+                <button type="button" class="chip active" data-level="INT">INT</button>
                 <button type="button" class="chip active" data-level="MČR">MČR</button>
                 <button type="button" class="chip active" data-level="ČP">ČP</button>
                 <button type="button" class="chip active" data-level="ČPŽ">ČPŽ</button>
+                <button type="button" class="chip active" data-level="NKZ">NKZ</button>
+                <button type="button" class="chip active" data-level="ECA">ECA</button>
                 <button type="button" class="chip active" data-level="VZ">VZ</button>
                 <button type="button" class="chip active" data-level="OTHER">Ostatní</button>
             </div>
@@ -499,7 +501,10 @@
         });
     }
 
-    const mainLevels = ['ICF', 'MČR', 'ČP', 'ČPŽ', 'VZ'];
+    // INT covers international events
+    const intLevels = ['ICF', 'SP', 'MS', 'ME', 'WRR'];
+    // All known levels (for OTHER detection)
+    const knownLevels = ['ICF', 'SP', 'MS', 'ME', 'WRR', 'MČR', 'ČP', 'ČPŽ', 'ČPJ', 'ČPV', 'NKZ', 'NOM', 'ECA', 'VZ'];
 
     function getActiveLevels() {
         return Array.from(levelChips)
@@ -510,17 +515,20 @@
     function matchesLevelFilter(uroven, activeLevels) {
         if (activeLevels.length === 0) return true;
 
-        // Check main levels
         for (const level of activeLevels) {
-            if (level !== 'OTHER' && uroven.includes(level)) {
+            // INT matches any international level
+            if (level === 'INT') {
+                if (intLevels.some(il => uroven.includes(il))) return true;
+            }
+            // OTHER matches if no known level is present
+            else if (level === 'OTHER') {
+                const hasKnownLevel = knownLevels.some(kl => uroven.includes(kl));
+                if (!hasKnownLevel) return true;
+            }
+            // Direct match for other chips
+            else if (uroven.includes(level)) {
                 return true;
             }
-        }
-
-        // Check "OTHER" - matches if none of the main levels are present
-        if (activeLevels.includes('OTHER')) {
-            const hasMainLevel = mainLevels.some(ml => uroven.includes(ml));
-            if (!hasMainLevel) return true;
         }
 
         return false;
