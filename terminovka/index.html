@@ -161,10 +161,11 @@
 
         /* PDF Export - force table layout */
         .pdf-export {
-            padding: 0 !important;
+            padding: 10px !important;
         }
         .pdf-export .container {
             max-width: none !important;
+            width: 100% !important;
             padding: 15px !important;
             box-shadow: none !important;
         }
@@ -172,16 +173,20 @@
         .pdf-export .cal-col {
             display: none !important;
         }
+        .pdf-export .table-wrapper {
+            overflow: visible !important;
+        }
         .pdf-export table {
+            display: table !important;
+            width: 100% !important;
             min-width: 0 !important;
-            font-size: 11px !important;
+            table-layout: auto !important;
         }
         .pdf-export thead {
             display: table-header-group !important;
         }
-        .pdf-export table, .pdf-export tbody, .pdf-export tr {
-            display: table !important;
-            width: 100% !important;
+        .pdf-export tbody {
+            display: table-row-group !important;
         }
         .pdf-export tr {
             display: table-row !important;
@@ -191,12 +196,20 @@
             padding: 0 !important;
             box-shadow: none !important;
             background: transparent !important;
+            grid-template-columns: none !important;
+            grid-template-areas: none !important;
+        }
+        .pdf-export th {
+            display: table-cell !important;
+            padding: 8px !important;
+            font-size: 11px !important;
         }
         .pdf-export td {
             display: table-cell !important;
             padding: 6px 8px !important;
             border-bottom: 1px solid #ddd !important;
             font-size: 11px !important;
+            grid-area: unset !important;
         }
         .pdf-export td:nth-child(4) {
             display: table-cell !important;
