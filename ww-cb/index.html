@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areál Lídy Polesné & SK VS České Budějovice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#00264d', // Tmavě modrá SK VS
+                        water: '#00a8e8', // Světlá voda
+                        nature: '#4caf50', // Zelená areál
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 38, 77, 0.7), rgba(0, 38, 77, 0.4)), url('https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .section-title {
+            @apply text-4xl font-display font-bold mb-8 text-navy uppercase tracking-wider;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/95 shadow-md backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <!-- LOGO PLACEHOLDER -->
+                <div class="text-2xl font-display font-black text-navy tracking-tighter">
+                    AREÁL<span class="text-water">LÍDYPOLESNÉ</span>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-widest text-gray-600">
+                <a href="#areal" class="hover:text-water transition">Areál</a>
+                <a href="#sluzby" class="hover:text-water transition">Služby</a>
+                <a href="#klub" class="hover:text-navy text-navy transition">SK VS ČB</a>
+                <a href="#kontakt" class="hover:text-water transition">Kontakt</a>
+            </div>
+            <a href="#nabor" class="bg-navy text-white px-6 py-2 rounded-full font-bold hover:bg-blue-900 transition shadow-lg transform hover:scale-105">
+                PŘIDEJ SE K NÁM
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg h-screen flex items-center justify-center text-white text-center px-4 relative">
+        <div class="absolute bottom-0 w-full h-24 bg-gradient-to-t from-gray-50 to-transparent"></div>
+        <div class="max-w-4xl z-10">
+            <h1 class="text-5xl md:text-7xl font-display font-black mb-6 leading-tight drop-shadow-lg">
+                VODA, KTERÁ SPOJUJE
+            </h1>
+            <p class="text-xl md:text-2xl font-light mb-10 opacity-90 max-w-2xl mx-auto">
+                Divoká voda v srdci Českých Budějovic. Místo, kde se potkává tradice vrcholového sportu s relaxací pro každého.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#sluzby" class="bg-water hover:bg-blue-400 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-xl">
+                    CHCI SI ZAJEZDIT
+                </a>
+                <a href="#klub" class="bg-transparent border-2 border-white hover:bg-white hover:text-navy text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-xl">
+                    O KLUBU SK VS
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- STATUS BAR (Dynamic Info Placeholder) -->
+    <div class="bg-navy text-white py-4 shadow-inner">
+        <div class="container mx-auto px-6 flex flex-wrap justify-center md:justify-between items-center gap-4 text-sm font-bold tracking-wide">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-water text-water text-xl"></i>
+                <span>VODA: <span class="text-green-400">TEČE (14:00 - 18:00)</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-utensils text-yellow-400 text-xl"></i>
+                <span>RESTAURACE: <span class="text-green-400">OTEVŘENO</span></span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i class="fas fa-calendar-alt text-gray-300 text-xl"></i>
+                <span>DALŠÍ AKCE: <a href="#" class="underline hover:text-water">Jarní Slalomy (25.4.)</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- O AREÁLU (Story) -->
+    <section id="areal" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="section-title text-navy">Ostrov pohody a sportu</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Areál se nachází v místě, kde řeka Vltava opouští České Budějovice. Je to unikátní ostrov mezi slalomovou tratí a řekou, který funguje jako oáza klidu i centrum adrenalinu.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Umělá slalomová dráha vznikla v osmdesátých letech, ale v roce 2012 prošla zásadní rekonstrukcí do olympijských parametrů. Dnes nabízí vyžití pro úplné začátečníky na horní pasáži i pro mistry světa na té spodní.
+                    </p>
+                    <div class="flex gap-4 mt-8">
+                        <div class="text-center">
+                            <span class="block text-4xl font-black text-water">50+</span>
+                            <span class="text-sm font-bold text-gray-400 uppercase">Let tradice</span>
+                        </div>
+                        <div class="border-l border-gray-200 mx-4"></div>
+                        <div class="text-center">
+                            <span class="block text-4xl font-black text-water">2012</span>
+                            <span class="text-sm font-bold text-gray-400 uppercase">Nový kanál</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-water/20 rounded-2xl transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Děti na kanále" class="relative rounded-xl shadow-2xl w-full object-cover h-96 transform -rotate-1 transition hover:rotate-0 duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SLUŽBY (Grid) -->
+    <section id="sluzby" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title text-navy">Co u nás zažijete</h2>
+                <p class="text-xl text-gray-500 max-w-2xl mx-auto">Ať už jste profík, turista nebo rodina s dětmi, areál je tu pro vás.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Karta 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300">
+                    <div class="h-48 bg-gray-300 overflow-hidden relative">
+                         <!-- Placeholder image if file not found, trying relative path -->
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <i class="fas fa-beer text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-navy mb-2">Restaurace Na Kanále</h3>
+                        <p class="text-gray-600 mb-4">Skvělé jídlo a pití přímo u vody. Ideální zastávka na cyklostezce.</p>
+                        <a href="#" class="text-water font-bold uppercase text-sm tracking-wide">Otevřít menu →</a>
+                    </div>
+                </div>
+
+                <!-- Karta 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300">
+                    <div class="h-48 bg-gray-300 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1541627916524-7f4c54117b3d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <i class="fas fa-ship text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-navy mb-2">Vodácké Centrum</h3>
+                        <p class="text-gray-600 mb-4">Půjčovna raftů, paddleboardů a vybavení. Kurzy pro školy i firmy.</p>
+                        <a href="#" class="text-water font-bold uppercase text-sm tracking-wide">Rezervovat jízdu →</a>
+                    </div>
+                </div>
+
+                <!-- Karta 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:-translate-y-2 transition duration-300">
+                    <div class="h-48 bg-gray-300 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <i class="fas fa-water text-white text-4xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold text-navy mb-2">Surfing & Adrenalin</h3>
+                        <p class="text-gray-600 mb-4">Jediná surfová vlna v regionu. Vyzkoušejte river surfing nebo dračí lodě.</p>
+                        <a href="#" class="text-water font-bold uppercase text-sm tracking-wide">Více info →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SK VS ČB (Klub) -->
+    <section id="klub" class="py-24 bg-navy text-white relative overflow-hidden">
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-water rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 transform -translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/2">
+                    <span class="text-water font-bold tracking-widest uppercase mb-2 block">SK Vodní Slalom České Budějovice</span>
+                    <h2 class="text-5xl font-display font-black mb-8 leading-tight">Jsme tu doma. <br>Vychováváme šampiony.</h2>
+                    <p class="text-xl text-gray-300 mb-6 font-light">
+                        "Ctíme vztah k přírodě, aktivnímu pohybu a týmovost. Sport nejsou jen výsledky, ale radost na celý život."
+                    </p>
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-water/20 p-2 rounded-lg"><i class="fas fa-medal text-water"></i></div>
+                            <div>
+                                <h4 class="font-bold">Vrcholový sport</h4>
+                                <p class="text-sm text-gray-400">Pořádáme ME, MS a vychováváme reprezentanty (Jakub Krejčí, Daniel Stach).</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-water/20 p-2 rounded-lg"><i class="fas fa-users text-water"></i></div>
+                            <div>
+                                <h4 class="font-bold">Komunita</h4>
+                                <p class="text-sm text-gray-400">Jsme parta fajn lidí, kteří se rádi vrací ke sportu v přírodě.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#nabor" class="inline-block bg-white text-navy px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition">
+                        PŘIJĎ MEZI NÁS (NÁBOR)
+                    </a>
+                </div>
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="rounded-xl shadow-lg transform translate-y-8">
+                    <img src="https://images.unsplash.com/photo-1563299796-b729d0af54a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="rounded-xl shadow-lg">
+                    <div class="bg-gray-800 rounded-xl p-6 flex flex-col justify-center">
+                        <i class="fas fa-quote-left text-4xl text-gray-600 mb-4"></i>
+                        <p class="italic text-gray-400 text-sm">"Ve Vodáckém areálu jsem vyrostl... bez divoké vody bych nedělal to, co dělám dnes."</p>
+                        <p class="mt-4 font-bold text-water">– Daniel Stach</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontakt" class="bg-gray-900 text-white py-16 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-display font-bold mb-6">Areál Lídy Polesné</h3>
+                    <p class="text-gray-400 mb-6 max-w-sm">
+                        Vodácký a sportovní areál v Českém Vrbném. Domov SK Vodní Slalom ČB.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-water transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-water transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 uppercase tracking-wider text-gray-500">Kontakt</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt w-6"></i> České Vrbné 1995</li>
+                        <li><i class="fas fa-phone w-6"></i> +420 123 456 789</li>
+                        <li><i class="fas fa-envelope w-6"></i> info@ww-cb.cz</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 uppercase tracking-wider text-gray-500">Partneři</h4>
+                    <div class="flex flex-wrap gap-4 opacity-50 grayscale hover:grayscale-0 transition duration-500">
+                        <!-- Placeholder loga -->
+                        <div class="bg-white/10 px-4 py-2 rounded">ČEZ</div>
+                        <div class="bg-white/10 px-4 py-2 rounded">Město ČB</div>
+                        <div class="bg-white/10 px-4 py-2 rounded">Kraj</div>
+                        <div class="bg-white/10 px-4 py-2 rounded">Budvar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 SK Vodní Slalom České Budějovice. Vytvořeno s energií divoké vody.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
