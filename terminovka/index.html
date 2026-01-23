@@ -32,9 +32,9 @@
         .btn { padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; color: white; text-decoration: none; display: inline-block; }
         .btn-pdf { background-color: #dc3545; }
         .btn-pdf:hover { background-color: #c82333; }
-        .btn-cal { background-color: #28a745; font-size: 0.8em; padding: 4px 8px; margin-left: 5px; line-height: 1; }
-        .btn-cal:hover { background-color: #218838; }
-        .btn-cal svg { width: 16px; height: 16px; vertical-align: middle; fill: currentColor; }
+        .btn-cal { background: none; border: none; padding: 4px; cursor: pointer; opacity: 0.4; transition: opacity 0.2s; }
+        .btn-cal:hover { opacity: 0.8; }
+        .btn-cal svg { width: 18px; height: 18px; vertical-align: middle; fill: #333; }
 
         /* Table */
         .table-wrapper { overflow-x: auto; }
@@ -137,8 +137,8 @@
             }
 
             .badge { font-size: 0.7em; padding: 2px 5px; margin-right: 2px; margin-bottom: 0; }
-            .btn-cal { padding: 5px; margin: 0; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; }
-            .btn-cal svg { width: 14px; height: 14px; }
+            .btn-cal { padding: 2px; }
+            .btn-cal svg { width: 16px; height: 16px; }
 
             .footer img { height: 35px; }
             .footer p { font-size: 0.75em; }
@@ -156,8 +156,7 @@
             td { font-size: 0.8em; }
             td.date-col { font-size: 0.9em; }
             .badge { font-size: 0.65em; padding: 1px 4px; }
-            .btn-cal { width: 26px; height: 26px; }
-            .btn-cal svg { width: 12px; height: 12px; }
+            .btn-cal svg { width: 14px; height: 14px; }
         }
     </style>
 </head>
@@ -378,7 +377,7 @@
             
             tr.innerHTML = `
                 <td class="cal-col data-html2canvas-ignore">
-                    <button class="btn btn-cal" onclick='downloadICS("${row.datum}", "${safeAkce}", "${safeMisto}")' title="Stáhnout do kalendáře (.ics)"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5v-5z"/></svg></button>
+                    <button class="btn btn-cal" onclick='downloadICS("${row.datum}", "${safeAkce}", "${safeMisto}")' title="Stáhnout do kalendáře (.ics)"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></button>
                 </td>
                 <td class="date-col" data-label="Datum">${row.datum}</td>
                 <td data-label="Místo">${row.misto}</td>
