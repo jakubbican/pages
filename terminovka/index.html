@@ -161,13 +161,26 @@
 
         /* PDF Export - force table layout */
         .pdf-export {
-            padding: 10px !important;
+            padding: 0 !important;
+            margin: 0 !important;
         }
         .pdf-export .container {
             max-width: none !important;
             width: 100% !important;
-            padding: 15px !important;
+            margin: 0 !important;
+            padding: 10px !important;
             box-shadow: none !important;
+            border-radius: 0 !important;
+        }
+        .pdf-export .header-branding {
+            margin-bottom: 5px !important;
+        }
+        .pdf-export .header-branding img {
+            height: 60px !important;
+        }
+        .pdf-export h1 {
+            font-size: 1.1em !important;
+            margin-bottom: 10px !important;
         }
         .pdf-export .filters,
         .pdf-export .cal-col {
@@ -175,6 +188,7 @@
         }
         .pdf-export .table-wrapper {
             overflow: visible !important;
+            margin: 0 !important;
         }
         .pdf-export table {
             display: table !important;
@@ -219,11 +233,11 @@
             padding: 2px 5px !important;
         }
         .pdf-export .footer {
-            margin-top: 15px !important;
-            padding-top: 10px !important;
+            margin-top: 10px !important;
+            padding-top: 5px !important;
         }
-        .pdf-export h1 {
-            font-size: 1.3em !important;
+        .pdf-export .footer img {
+            height: 40px !important;
         }
     </style>
 </head>
