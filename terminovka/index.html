@@ -158,6 +158,60 @@
             .badge { font-size: 0.65em; padding: 1px 4px; }
             .btn-cal svg { width: 14px; height: 14px; }
         }
+
+        /* PDF Export - force table layout */
+        .pdf-export {
+            padding: 0 !important;
+        }
+        .pdf-export .container {
+            max-width: none !important;
+            padding: 15px !important;
+            box-shadow: none !important;
+        }
+        .pdf-export .filters,
+        .pdf-export .cal-col {
+            display: none !important;
+        }
+        .pdf-export table {
+            min-width: 0 !important;
+            font-size: 11px !important;
+        }
+        .pdf-export thead {
+            display: table-header-group !important;
+        }
+        .pdf-export table, .pdf-export tbody, .pdf-export tr {
+            display: table !important;
+            width: 100% !important;
+        }
+        .pdf-export tr {
+            display: table-row !important;
+            border: none !important;
+            border-radius: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            background: transparent !important;
+        }
+        .pdf-export td {
+            display: table-cell !important;
+            padding: 6px 8px !important;
+            border-bottom: 1px solid #ddd !important;
+            font-size: 11px !important;
+        }
+        .pdf-export td:nth-child(4) {
+            display: table-cell !important;
+        }
+        .pdf-export .badge {
+            font-size: 9px !important;
+            padding: 2px 5px !important;
+        }
+        .pdf-export .footer {
+            margin-top: 15px !important;
+            padding-top: 10px !important;
+        }
+        .pdf-export h1 {
+            font-size: 1.3em !important;
+        }
     </style>
 </head>
 <body>
@@ -510,19 +564,25 @@
 
     // --- PDF Export Logic ---
     window.exportPDF = function() {
+        const body = document.body;
         const element = document.getElementById('contentToExport');
+
+        // Force table layout for PDF
+        body.classList.add('pdf-export');
+
         const opt = {
             margin:       [10, 10],
             filename:     'terminova_listina_2026.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2 },
+            html2canvas:  { scale: 2, useCORS: true },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' }
         };
-        
-        // Temporarily hide elements labeled with 'data-html2canvas-ignore' is handled by the lib,
-        // but we double check via CSS classes if needed.
-        
-        html2pdf().set(opt).from(element).save();
+
+        html2pdf().set(opt).from(element).save().then(() => {
+            body.classList.remove('pdf-export');
+        }).catch(() => {
+            body.classList.remove('pdf-export');
+        });
     };
 
     // Attach listeners
