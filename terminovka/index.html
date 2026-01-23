@@ -163,10 +163,11 @@
         .pdf-export {
             padding: 0 !important;
             margin: 0 !important;
+            width: 1100px !important;
         }
         .pdf-export .container {
-            max-width: none !important;
-            width: 100% !important;
+            max-width: 1100px !important;
+            width: 1100px !important;
             margin: 0 !important;
             padding: 10px !important;
             box-shadow: none !important;
@@ -597,11 +598,19 @@
         // Force table layout for PDF
         body.classList.add('pdf-export');
 
+        // Check if mobile (use fixed width for consistent rendering)
+        const isMobile = window.innerWidth < 768;
+
         const opt = {
-            margin:       [10, 10],
+            margin:       [5, 5],
             filename:     'terminova_listina_2026.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, windowWidth: 1200 },
+            html2canvas:  {
+                scale: 2,
+                useCORS: true,
+                width: 1100,
+                windowWidth: 1100
+            },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' }
         };
 
@@ -612,7 +621,7 @@
             }).catch(() => {
                 body.classList.remove('pdf-export');
             });
-        }, 100);
+        }, 150);
     };
 
     // Attach listeners
