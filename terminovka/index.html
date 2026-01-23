@@ -600,11 +600,8 @@
         // Force table layout for PDF
         body.classList.add('pdf-export');
 
-        // Store original width and set explicit width for rendering
-        const originalMaxWidth = element.style.maxWidth;
-        const originalWidth = element.style.width;
-        element.style.maxWidth = 'none';
-        element.style.width = '1100px';
+        // Get actual element width after applying pdf-export styles
+        const elementWidth = element.scrollWidth;
 
         const opt = {
             margin:       [5, 5],
@@ -613,10 +610,10 @@
             html2canvas:  {
                 scale: 2,
                 useCORS: true,
-                scrollX: 0,
-                scrollY: 0,
-                x: 0,
-                y: 0
+                scrollX: -window.scrollX,
+                scrollY: -window.scrollY,
+                windowWidth: Math.max(elementWidth, 1200),
+                windowHeight: element.scrollHeight + 100
             },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' }
         };
@@ -625,12 +622,8 @@
         setTimeout(() => {
             html2pdf().set(opt).from(element).save().then(() => {
                 body.classList.remove('pdf-export');
-                element.style.maxWidth = originalMaxWidth;
-                element.style.width = originalWidth;
             }).catch(() => {
                 body.classList.remove('pdf-export');
-                element.style.maxWidth = originalMaxWidth;
-                element.style.width = originalWidth;
             });
         }, 200);
     };
