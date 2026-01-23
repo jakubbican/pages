@@ -1,0 +1,9 @@
+# Ignore resources folder in ww-cb
+ww-cb/.resources/
+ww-cb/.resources
+.resources
+.resources/
+
+# Ignore symlinks/folders with podklady if they exist
+ww-cb/podklady_*
+podklady_*
