@@ -574,15 +574,18 @@
             margin:       [10, 10],
             filename:     'terminova_listina_2026.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true },
+            html2canvas:  { scale: 2, useCORS: true, windowWidth: 1200 },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' }
         };
 
-        html2pdf().set(opt).from(element).save().then(() => {
-            body.classList.remove('pdf-export');
-        }).catch(() => {
-            body.classList.remove('pdf-export');
-        });
+        // Wait for styles to apply before rendering
+        setTimeout(() => {
+            html2pdf().set(opt).from(element).save().then(() => {
+                body.classList.remove('pdf-export');
+            }).catch(() => {
+                body.classList.remove('pdf-export');
+            });
+        }, 100);
     };
 
     // Attach listeners
