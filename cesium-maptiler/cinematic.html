@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinematic Globe — MapTiler + CesiumJS</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body, #cesiumContainer { width: 100%; height: 100%; overflow: hidden; font-family: 'Inter', system-ui, sans-serif; }
+
+        /* Hide all Cesium UI */
+        .cesium-viewer-bottom,
+        .cesium-viewer .cesium-widget-credits,
+        .cesium-viewer-toolbar { display: none !important; }
+
+        #overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            pointer-events: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 32px;
+        }
+
+        #title-area {
+            text-align: center;
+            pointer-events: auto;
+        }
+        #title-area h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
+        }
+        #title-area p {
+            font-size: 13px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.7);
+            text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+        }
+
+        #bottom-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        #location-info {
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 14px 20px;
+            color: #fff;
+            pointer-events: auto;
+        }
+        #location-info .name {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+        #location-info .coords {
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 2px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        #tour-controls {
+            display: flex;
+            gap: 8px;
+            pointer-events: auto;
+        }
+        #tour-controls button {
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 13px;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        #tour-controls button:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.25);
+        }
+        #tour-controls button.active {
+            background: rgba(59, 130, 246, 0.5);
+            border-color: rgba(59, 130, 246, 0.6);
+        }
+
+        #credits {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10px;
+            color: rgba(255,255,255,0.35);
+            z-index: 11;
+        }
+        #credits a { color: rgba(255,255,255,0.5); text-decoration: none; }
+
+        /* Cinematic bars */
+        .letterbox {
+            position: absolute;
+            left: 0; right: 0;
+            height: 48px;
+            background: #000;
+            z-index: 5;
+            transition: height 0.8s ease;
+        }
+        .letterbox.top { top: 0; }
+        .letterbox.bottom { bottom: 0; }
+        .letterbox.hidden { height: 0; }
+
+        /* Fade transition */
+        #fade {
+            position: absolute;
+            inset: 0;
+            background: #000;
+            z-index: 100;
+            opacity: 1;
+            transition: opacity 2s ease;
+            pointer-events: none;
+        }
+        #fade.out { opacity: 0; }
+    </style>
+</head>
+<body>
+    <div id="fade"></div>
+    <div class="letterbox top" id="lbTop"></div>
+    <div class="letterbox bottom" id="lbBottom"></div>
+
+    <div id="cesiumContainer"></div>
+
+    <div id="overlay">
+        <div id="title-area">
+            <h1>MapTiler Earth</h1>
+            <p>Terrain &bull; Satellite &bull; Atmospheric Rendering</p>
+        </div>
+
+        <div id="bottom-bar">
+            <div id="location-info">
+                <div class="name" id="locName">Loading...</div>
+                <div class="coords" id="locCoords"></div>
+            </div>
+
+            <div id="tour-controls">
+                <button onclick="prevStop()">&#9664; Prev</button>
+                <button onclick="toggleTour()" id="tourBtn">&#9654; Start Tour</button>
+                <button onclick="nextStop()">Next &#9654;</button>
+                <button onclick="toggleLetterbox()" id="lbBtn">Cinematic</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="credits">
+        <a href="https://www.maptiler.com" target="_blank">MapTiler</a> &bull;
+        <a href="https://cesium.com" target="_blank">CesiumJS</a>
+    </div>
+
+    <script type="module">
+        const KEY = 'O7xtY7yIse9ZJeQPtLxe';
+        Cesium.Ion.defaultAccessToken = undefined;
+
+        // ============================================================
+        // Providers
+        // ============================================================
+        const terrainResource = new Cesium.Resource({
+            url: 'https://api.maptiler.com/tiles/terrain-quantized-mesh-v2/',
+            queryParameters: { key: KEY }
+        });
+        const terrain = await Cesium.CesiumTerrainProvider.fromUrl(terrainResource, {
+            requestVertexNormals: true
+        });
+
+        const satellite = new Cesium.UrlTemplateImageryProvider({
+            url: `https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key=${KEY}`,
+            maximumLevel: 20,
+            tileWidth: 512,
+            tileHeight: 512
+        });
+
+        // ============================================================
+        // Viewer
+        // ============================================================
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            baseLayer: new Cesium.ImageryLayer(satellite),
+            terrainProvider: terrain,
+            skyAtmosphere: new Cesium.SkyAtmosphere(),
+            scene3DOnly: true,
+            shadows: false,
+            animation: false,
+            timeline: false,
+            baseLayerPicker: false,
+            geocoder: false,
+            homeButton: false,
+            navigationHelpButton: false,
+            sceneModePicker: false,
+            selectionIndicator: false,
+            infoBox: false,
+            fullscreenButton: false,
+            requestRenderMode: false,
+        });
+
+        const scene = viewer.scene;
+        const globe = scene.globe;
+
+        // Atmosphere
+        globe.enableLighting = true;
+        globe.showGroundAtmosphere = true;
+        globe.atmosphereLightIntensity = 12.0;
+        globe.atmosphereRayleighCoefficient = new Cesium.Cartesian3(5.5e-6, 13.0e-6, 28.4e-6);
+        globe.atmosphereMieCoefficient = new Cesium.Cartesian3(21e-6, 21e-6, 21e-6);
+        globe.atmosphereMieAnisotropy = 0.9;
+
+        // Fog
+        scene.fog.enabled = true;
+        scene.fog.density = 3.0e-4;
+        scene.fog.minimumBrightness = 0.01;
+
+        // HDR
+        scene.highDynamicRange = true;
+
+        // Quality
+        globe.depthTestAgainstTerrain = true;
+        globe.maximumScreenSpaceError = 1.2;
+
+        // ============================================================
+        // Tour Stops
+        // ============================================================
+        const stops = [
+            {
+                name: 'Matterhorn, Switzerland',
+                coords: '45.9763°N, 7.6585°E',
+                destination: Cesium.Cartesian3.fromDegrees(7.6585, 45.9763, 4500),
+                orientation: { heading: Cesium.Math.toRadians(200), pitch: Cesium.Math.toRadians(-15), roll: 0 },
+                time: 12
+            },
+            {
+                name: 'Prague, Czech Republic',
+                coords: '50.0755°N, 14.4378°E',
+                destination: Cesium.Cartesian3.fromDegrees(14.4378, 50.0755, 1500),
+                orientation: { heading: Cesium.Math.toRadians(320), pitch: Cesium.Math.toRadians(-20), roll: 0 },
+                time: 18
+            },
+            {
+                name: 'Grand Canyon, Arizona',
+                coords: '36.1070°N, 112.1129°W',
+                destination: Cesium.Cartesian3.fromDegrees(-112.1129, 36.1070, 2200),
+                orientation: { heading: Cesium.Math.toRadians(270), pitch: Cesium.Math.toRadians(-10), roll: 0 },
+                time: 17
+            },
+            {
+                name: 'Mont Blanc, France/Italy',
+                coords: '45.8326°N, 6.8652°E',
+                destination: Cesium.Cartesian3.fromDegrees(6.8652, 45.8326, 5000),
+                orientation: { heading: Cesium.Math.toRadians(140), pitch: Cesium.Math.toRadians(-12), roll: 0 },
+                time: 7
+            },
+            {
+                name: 'Mount Everest, Nepal',
+                coords: '27.9881°N, 86.9250°E',
+                destination: Cesium.Cartesian3.fromDegrees(86.925, 27.988, 9000),
+                orientation: { heading: Cesium.Math.toRadians(170), pitch: Cesium.Math.toRadians(-14), roll: 0 },
+                time: 6
+            },
+            {
+                name: 'Norwegian Fjords',
+                coords: '61.20°N, 6.85°E',
+                destination: Cesium.Cartesian3.fromDegrees(6.85, 61.20, 3000),
+                orientation: { heading: Cesium.Math.toRadians(45), pitch: Cesium.Math.toRadians(-18), roll: 0 },
+                time: 20
+            },
+            {
+                name: 'Dolomites, Italy',
+                coords: '46.4102°N, 11.8440°E',
+                destination: Cesium.Cartesian3.fromDegrees(11.844, 46.4102, 4000),
+                orientation: { heading: Cesium.Math.toRadians(310), pitch: Cesium.Math.toRadians(-16), roll: 0 },
+                time: 17
+            }
+        ];
+
+        let currentStop = 0;
+        let touring = false;
+        let tourTimeout = null;
+
+        function setTimeOfDay(hour) {
+            const now = new Date();
+            const date = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), hour, 0, 0));
+            viewer.clock.currentTime = Cesium.JulianDate.fromDate(date);
+            viewer.clock.shouldAnimate = false;
+        }
+
+        function goToStop(index, animate) {
+            currentStop = ((index % stops.length) + stops.length) % stops.length;
+            const stop = stops[currentStop];
+
+            document.getElementById('locName').textContent = stop.name;
+            document.getElementById('locCoords').textContent = stop.coords;
+
+            setTimeOfDay(stop.time);
+
+            if (animate) {
+                viewer.camera.flyTo({
+                    destination: stop.destination,
+                    orientation: stop.orientation,
+                    duration: 4.5,
+                    easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT,
+                    complete: () => {
+                        if (touring) {
+                            tourTimeout = setTimeout(() => nextStop(), 6000);
+                        }
+                    }
+                });
+            } else {
+                viewer.camera.setView({
+                    destination: stop.destination,
+                    orientation: stop.orientation
+                });
+            }
+        }
+
+        window.nextStop = function() {
+            clearTimeout(tourTimeout);
+            goToStop(currentStop + 1, true);
+        };
+
+        window.prevStop = function() {
+            clearTimeout(tourTimeout);
+            goToStop(currentStop - 1, true);
+        };
+
+        window.toggleTour = function() {
+            touring = !touring;
+            const btn = document.getElementById('tourBtn');
+            if (touring) {
+                btn.textContent = '⏸ Pause';
+                btn.classList.add('active');
+                nextStop();
+            } else {
+                btn.textContent = '▶ Start Tour';
+                btn.classList.remove('active');
+                clearTimeout(tourTimeout);
+            }
+        };
+
+        let letterboxOn = false;
+        window.toggleLetterbox = function() {
+            letterboxOn = !letterboxOn;
+            const btn = document.getElementById('lbBtn');
+            document.getElementById('lbTop').classList.toggle('hidden', !letterboxOn);
+            document.getElementById('lbBottom').classList.toggle('hidden', !letterboxOn);
+            btn.classList.toggle('active', letterboxOn);
+        };
+
+        // Start with letterbox hidden
+        document.getElementById('lbTop').classList.add('hidden');
+        document.getElementById('lbBottom').classList.add('hidden');
+
+        // ============================================================
+        // Initial State — Matterhorn at golden hour
+        // ============================================================
+        goToStop(0, false);
+
+        // Fade in after load
+        setTimeout(() => {
+            document.getElementById('fade').classList.add('out');
+        }, 500);
+    </script>
+</body>
+</html>

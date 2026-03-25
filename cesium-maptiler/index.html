@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapTiler + CesiumJS — Terrain, Satellite & Atmosphere</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body, #cesiumContainer { width: 100%; height: 100%; overflow: hidden; }
+
+        #controls {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 10;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 14px;
+            padding: 18px;
+            color: #e2e8f0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-size: 13px;
+            min-width: 270px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        #controls h2 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 2px;
+            color: #fff;
+            letter-spacing: -0.3px;
+        }
+        #controls .subtitle {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-bottom: 16px;
+        }
+        #controls label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            cursor: pointer;
+            transition: color 0.15s;
+        }
+        #controls label:hover { color: #fff; }
+        #controls input[type="checkbox"] {
+            accent-color: #3b82f6;
+            width: 15px;
+            height: 15px;
+        }
+        .sep {
+            height: 1px;
+            background: rgba(255,255,255,0.06);
+            margin: 12px 0;
+        }
+        .section-label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+        #controls button {
+            background: rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            color: #93c5fd;
+            padding: 5px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            font-family: inherit;
+            transition: all 0.15s;
+            margin: 2px 3px 2px 0;
+        }
+        #controls button:hover {
+            background: rgba(59, 130, 246, 0.35);
+            color: #fff;
+        }
+        #controls button.active {
+            background: rgba(59, 130, 246, 0.4);
+            border-color: rgba(59, 130, 246, 0.6);
+            color: #fff;
+        }
+        #status {
+            margin-top: 10px;
+            padding: 6px 10px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: 6px;
+            font-size: 11px;
+            color: #86efac;
+        }
+        #status.error {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+        }
+
+        #info-badge {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px;
+            padding: 6px 14px;
+            color: #94a3b8;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 10px;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        #info-badge a { color: #60a5fa; pointer-events: auto; text-decoration: none; }
+
+        .cesium-viewer-bottom { display: none !important; }
+        .cesium-viewer .cesium-widget-credits { display: none !important; }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+
+    <div id="controls">
+        <h2>MapTiler + CesiumJS</h2>
+        <div class="subtitle">Terrain &bull; Satellite &bull; Atmosphere Demo</div>
+
+        <div class="section-label">Data Layers</div>
+        <label><input type="checkbox" id="toggleTerrain" checked> Terrain (Quantized Mesh)</label>
+        <label><input type="checkbox" id="toggleSatellite" checked> Satellite Imagery</label>
+        <label><input type="checkbox" id="toggleLabels"> Map Labels Overlay</label>
+
+        <div class="sep"></div>
+        <div class="section-label">Visual Effects</div>
+        <label><input type="checkbox" id="toggleAtmosphere" checked> Atmosphere &amp; Sky</label>
+        <label><input type="checkbox" id="toggleLighting" checked> Sun Lighting</label>
+        <label><input type="checkbox" id="toggleShadows"> Dynamic Shadows</label>
+        <label><input type="checkbox" id="toggleFog" checked> Fog &amp; Haze</label>
+        <label><input type="checkbox" id="toggleHDR" checked> HDR Rendering</label>
+
+        <div class="sep"></div>
+        <div class="section-label">Fly To</div>
+        <div>
+            <button onclick="flyTo('prague')">Prague</button>
+            <button onclick="flyTo('alps')">Alps</button>
+            <button onclick="flyTo('nyc')">New York</button>
+            <button onclick="flyTo('grandcanyon')">Grand Canyon</button>
+            <button onclick="flyTo('everest')">Everest</button>
+            <button onclick="flyTo('matterhorn')">Matterhorn</button>
+        </div>
+
+        <div class="sep"></div>
+        <div class="section-label">Time of Day</div>
+        <div>
+            <button onclick="setTime('sunrise')">Sunrise</button>
+            <button onclick="setTime('noon')">Noon</button>
+            <button onclick="setTime('golden')">Golden Hour</button>
+            <button onclick="setTime('sunset')">Sunset</button>
+            <button onclick="setTime('night')">Night</button>
+        </div>
+
+        <div id="status">Loading terrain &amp; imagery...</div>
+    </div>
+
+    <div id="info-badge">
+        <a href="https://www.maptiler.com" target="_blank">MapTiler</a> Terrain + Satellite &bull;
+        <a href="https://cesium.com" target="_blank">CesiumJS</a> &bull;
+        Context: <a href="https://cesium.com/blog/2026/03/16/introducing-cesium-for-unity-web/" target="_blank">Cesium Unity Web</a>
+    </div>
+
+    <script type="module">
+        // ============================================================
+        // MapTiler API Key
+        // ============================================================
+        const KEY = 'O7xtY7yIse9ZJeQPtLxe';
+
+        // Disable Cesium Ion — we use MapTiler data exclusively
+        Cesium.Ion.defaultAccessToken = undefined;
+
+        const statusEl = document.getElementById('status');
+        function setStatus(msg, isError) {
+            statusEl.textContent = msg;
+            statusEl.className = isError ? 'error' : '';
+        }
+
+        // ============================================================
+        // Data Providers
+        // ============================================================
+
+        // Terrain — MapTiler Quantized Mesh v2
+        let resolvedTerrain;
+        try {
+            const terrainResource = new Cesium.Resource({
+                url: 'https://api.maptiler.com/tiles/terrain-quantized-mesh-v2/',
+                queryParameters: { key: KEY }
+            });
+            resolvedTerrain = await Cesium.CesiumTerrainProvider.fromUrl(terrainResource, {
+                credit: new Cesium.Credit('<a href="https://www.maptiler.com/">MapTiler</a>', true),
+                requestVertexNormals: true
+            });
+        } catch (e) {
+            console.error('Terrain provider failed:', e);
+            setStatus('Terrain failed to load: ' + e.message, true);
+        }
+
+        // Satellite Imagery — MapTiler Satellite v2
+        const satelliteProvider = new Cesium.UrlTemplateImageryProvider({
+            url: `https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key=${KEY}`,
+            credit: new Cesium.Credit('<a href="https://www.maptiler.com/">MapTiler Satellite</a>', true),
+            maximumLevel: 20,
+            tileWidth: 512,
+            tileHeight: 512
+        });
+
+        // Labels overlay — MapTiler Streets v2 (for labels on top of satellite)
+        const labelsProvider = new Cesium.UrlTemplateImageryProvider({
+            url: `https://api.maptiler.com/maps/hybrid/256/{z}/{x}/{y}@2x.png?key=${KEY}`,
+            credit: new Cesium.Credit('MapTiler', true),
+            maximumLevel: 20,
+            tileWidth: 512,
+            tileHeight: 512
+        });
+
+        // ============================================================
+        // Initialize Viewer
+        // ============================================================
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            baseLayer: new Cesium.ImageryLayer(satelliteProvider),
+            terrainProvider: resolvedTerrain || new Cesium.EllipsoidTerrainProvider(),
+            skyBox: new Cesium.SkyBox({
+                sources: {
+                    positiveX: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_px.jpg'),
+                    negativeX: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_mx.jpg'),
+                    positiveY: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_py.jpg'),
+                    negativeY: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_my.jpg'),
+                    positiveZ: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_pz.jpg'),
+                    negativeZ: Cesium.buildModuleUrl('Assets/Textures/SkyBox/tycho2t3_80_mz.jpg'),
+                }
+            }),
+            skyAtmosphere: new Cesium.SkyAtmosphere(),
+            scene3DOnly: true,
+            shadows: false,
+            animation: false,
+            timeline: false,
+            baseLayerPicker: false,
+            geocoder: false,
+            homeButton: false,
+            navigationHelpButton: false,
+            sceneModePicker: false,
+            selectionIndicator: false,
+            infoBox: false,
+            fullscreenButton: true,
+            requestRenderMode: false,
+        });
+
+        const scene = viewer.scene;
+        const globe = scene.globe;
+
+        // Labels layer (hidden by default)
+        const labelsLayer = viewer.imageryLayers.addImageryProvider(labelsProvider);
+        labelsLayer.show = false;
+
+        // ============================================================
+        // Atmospheric & Visual Effects
+        // ============================================================
+
+        // Lighting
+        globe.enableLighting = true;
+        globe.showGroundAtmosphere = true;
+
+        // Atmosphere tuning — enhanced for dramatic visuals
+        globe.atmosphereLightIntensity = 10.0;
+        globe.atmosphereRayleighCoefficient = new Cesium.Cartesian3(5.5e-6, 13.0e-6, 28.4e-6);
+        globe.atmosphereMieCoefficient = new Cesium.Cartesian3(21e-6, 21e-6, 21e-6);
+        globe.atmosphereRayleighScaleHeight = 10000;
+        globe.atmosphereMieScaleHeight = 3200;
+        globe.atmosphereMieAnisotropy = 0.9;
+
+        // Sky atmosphere
+        scene.skyAtmosphere.hueShift = 0.0;
+        scene.skyAtmosphere.saturationShift = 0.0;
+        scene.skyAtmosphere.brightnessShift = 0.0;
+
+        // Fog — gives depth and atmosphere
+        scene.fog.enabled = true;
+        scene.fog.density = 2.5e-4;
+        scene.fog.minimumBrightness = 0.02;
+
+        // HDR
+        scene.highDynamicRange = true;
+
+        // Globe rendering
+        globe.depthTestAgainstTerrain = true;
+        globe.maximumScreenSpaceError = 1.5; // higher quality terrain
+
+        // ============================================================
+        // Fly-to Locations
+        // ============================================================
+        const locations = {
+            prague: {
+                destination: Cesium.Cartesian3.fromDegrees(14.42, 50.085, 1800),
+                orientation: { heading: Cesium.Math.toRadians(330), pitch: Cesium.Math.toRadians(-22), roll: 0 }
+            },
+            alps: {
+                destination: Cesium.Cartesian3.fromDegrees(10.98, 46.54, 6000),
+                orientation: { heading: Cesium.Math.toRadians(20), pitch: Cesium.Math.toRadians(-18), roll: 0 }
+            },
+            nyc: {
+                destination: Cesium.Cartesian3.fromDegrees(-74.006, 40.7128, 2000),
+                orientation: { heading: Cesium.Math.toRadians(10), pitch: Cesium.Math.toRadians(-25), roll: 0 }
+            },
+            grandcanyon: {
+                destination: Cesium.Cartesian3.fromDegrees(-112.11, 36.10, 2500),
+                orientation: { heading: Cesium.Math.toRadians(270), pitch: Cesium.Math.toRadians(-12), roll: 0 }
+            },
+            everest: {
+                destination: Cesium.Cartesian3.fromDegrees(86.925, 27.988, 10000),
+                orientation: { heading: Cesium.Math.toRadians(170), pitch: Cesium.Math.toRadians(-16), roll: 0 }
+            },
+            matterhorn: {
+                destination: Cesium.Cartesian3.fromDegrees(7.6585, 45.9763, 4500),
+                orientation: { heading: Cesium.Math.toRadians(200), pitch: Cesium.Math.toRadians(-18), roll: 0 }
+            }
+        };
+
+        window.flyTo = function(name) {
+            const loc = locations[name];
+            viewer.camera.flyTo({
+                destination: loc.destination,
+                orientation: loc.orientation,
+                duration: 3.0,
+                easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT
+            });
+        };
+
+        // ============================================================
+        // Time of Day
+        // ============================================================
+        window.setTime = function(timeOfDay) {
+            const now = new Date();
+            const y = now.getFullYear(), m = now.getMonth(), d = now.getDate();
+            const hourMap = { sunrise: 6, noon: 12, golden: 17, sunset: 19, night: 1 };
+            const date = new Date(Date.UTC(y, m, d, hourMap[timeOfDay] || 12, 0, 0));
+            viewer.clock.currentTime = Cesium.JulianDate.fromDate(date);
+            viewer.clock.shouldAnimate = false;
+        };
+
+        // ============================================================
+        // Toggle Controls
+        // ============================================================
+        document.getElementById('toggleTerrain').addEventListener('change', async function () {
+            if (this.checked && resolvedTerrain) {
+                viewer.terrainProvider = resolvedTerrain;
+            } else {
+                viewer.terrainProvider = new Cesium.EllipsoidTerrainProvider();
+            }
+        });
+
+        document.getElementById('toggleSatellite').addEventListener('change', function () {
+            viewer.imageryLayers.get(0).show = this.checked;
+        });
+
+        document.getElementById('toggleLabels').addEventListener('change', function () {
+            labelsLayer.show = this.checked;
+        });
+
+        document.getElementById('toggleAtmosphere').addEventListener('change', function () {
+            scene.skyAtmosphere.show = this.checked;
+            globe.showGroundAtmosphere = this.checked;
+        });
+
+        document.getElementById('toggleLighting').addEventListener('change', function () {
+            globe.enableLighting = this.checked;
+        });
+
+        document.getElementById('toggleShadows').addEventListener('change', function () {
+            viewer.shadows = this.checked;
+        });
+
+        document.getElementById('toggleFog').addEventListener('change', function () {
+            scene.fog.enabled = this.checked;
+        });
+
+        document.getElementById('toggleHDR').addEventListener('change', function () {
+            scene.highDynamicRange = this.checked;
+        });
+
+        // ============================================================
+        // Initial View — Prague at Noon (bright for screenshots)
+        // ============================================================
+        setTime('noon');
+        viewer.camera.setView({
+            destination: Cesium.Cartesian3.fromDegrees(14.42, 50.085, 2500),
+            orientation: {
+                heading: Cesium.Math.toRadians(330),
+                pitch: Cesium.Math.toRadians(-22),
+                roll: 0
+            }
+        });
+
+        setStatus('MapTiler terrain + satellite loaded');
+    </script>
+</body>
+</html>
