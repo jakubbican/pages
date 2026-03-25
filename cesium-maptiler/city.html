@@ -251,15 +251,15 @@
         globe.depthTestAgainstTerrain = true;
 
         // ============================================================
-        // Dynamic Building Loader — Entity API with RELATIVE_TO_GROUND
+        // Dynamic Building Loader — Primitive API + terrain height sampling
         // ============================================================
         const TILE_Z = 15;
         const MAX_TILES = 36;
         const MIN_HEIGHT_CAMERA = 50;
         const MAX_HEIGHT_CAMERA = 15000;
-        const DEBOUNCE_MS = 400;
+        const DEBOUNCE_MS = 500;
 
-        // tileKey -> { features, entities, lastUsed, rendered }
+        // tileKey -> { features, primitive, terrainH, lastUsed }
         const tileCache = new Map();
         let buildingsEnabled = true;
         let currentStyle = 'realistic';
@@ -276,16 +276,16 @@
 
         function getColor(props, style) {
             switch (style) {
-                case 'white': return Cesium.Color.WHITE.withAlpha(0.88);
+                case 'white': return Cesium.Color.WHITE.withAlpha(0.92);
                 case 'height': {
                     const t = Math.min(props.h / 60, 1);
-                    return Cesium.Color.fromHsl(0.6 - t * 0.6, 0.7, 0.45 + t * 0.15, 0.88);
+                    return Cesium.Color.fromHsl(0.6 - t * 0.6, 0.7, 0.45 + t * 0.15, 0.92);
                 }
                 case 'class':
-                    return Cesium.Color.fromCssColorString(classColors[props.c] || classColors['']).withAlpha(0.88);
+                    return Cesium.Color.fromCssColorString(classColors[props.c] || classColors['']).withAlpha(0.92);
                 default: {
-                    if (props.fc) try { return Cesium.Color.fromCssColorString(props.fc).withAlpha(0.9); } catch {}
-                    return Cesium.Color.fromCssColorString(classColors[props.c] || classColors['']).withAlpha(0.85);
+                    if (props.fc) try { return Cesium.Color.fromCssColorString(props.fc).withAlpha(0.92); } catch {}
+                    return Cesium.Color.fromCssColorString(classColors[props.c] || classColors['']).withAlpha(0.9);
                 }
             }
         }
@@ -296,6 +296,21 @@
             return Math.floor((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * (1 << z));
         }
         function tileKey(x, y) { return `${x}_${y}`; }
+        function tileToLon(x, z) { return x / (1 << z) * 360 - 180; }
+        function tileToLat(y, z) { const n = Math.PI - 2 * Math.PI * y / (1 << z); return 180 / Math.PI * Math.atan(0.5 * (Math.exp(n) - Math.exp(-n))); }
+
+        // Sample terrain height at tile center
+        async function getTerrainHeight(tx, ty) {
+            const centerLon = (tileToLon(tx, TILE_Z) + tileToLon(tx + 1, TILE_Z)) / 2;
+            const centerLat = (tileToLat(ty, TILE_Z) + tileToLat(ty + 1, TILE_Z)) / 2;
+            const positions = [Cesium.Cartographic.fromDegrees(centerLon, centerLat)];
+            try {
+                const updated = await Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, positions);
+                return updated[0].height || 0;
+            } catch {
+                return 0;
+            }
+        }
 
         async function fetchAndDecodeTile(tx, ty) {
             const key = tileKey(tx, ty);
@@ -306,11 +321,14 @@
 
             const url = `https://api.maptiler.com/tiles/buildings/${TILE_Z}/${tx}/${ty}.pbf?key=${KEY}`;
             try {
-                const resp = await fetch(url);
+                const [resp, terrainH] = await Promise.all([
+                    fetch(url),
+                    getTerrainHeight(tx, ty)
+                ]);
                 if (!resp.ok) return null;
                 const buffer = await resp.arrayBuffer();
                 const features = MVT.decodeBuildingTile(buffer, tx, ty, TILE_Z);
-                const entry = { features, entities: [], lastUsed: Date.now(), rendered: false };
+                const entry = { features, primitive: null, terrainH, lastUsed: Date.now() };
                 tileCache.set(key, entry);
                 return entry;
             } catch (e) {
@@ -318,37 +336,54 @@
             }
         }
 
-        function renderTileEntities(entry) {
-            if (entry.rendered) return;
-            entry.rendered = true;
+        function buildPrimitive(entry) {
+            if (entry.primitive) return;
+            if (!entry.features.length) return;
+
+            const instances = [];
+            const th = entry.terrainH;
 
             for (const f of entry.features) {
                 const coords = f.coords[0];
                 if (!coords || coords.length < 4) continue;
 
                 const positions = Cesium.Cartesian3.fromDegreesArray(coords.flat());
-                const entity = viewer.entities.add({
-                    show: buildingsEnabled,
-                    polygon: {
-                        hierarchy: new Cesium.PolygonHierarchy(positions),
-                        extrudedHeight: f.h,
-                        extrudedHeightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
-                        height: f.hm || 0,
-                        heightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
-                        material: getColor(f, currentStyle),
-                        outline: false,
-                        closeTop: true,
-                        closeBottom: true
-                    }
-                });
-                entry.entities.push(entity);
+                const color = getColor(f, currentStyle);
+
+                try {
+                    instances.push(new Cesium.GeometryInstance({
+                        geometry: new Cesium.PolygonGeometry({
+                            polygonHierarchy: new Cesium.PolygonHierarchy(positions),
+                            height: th + (f.hm || 0),
+                            extrudedHeight: th + f.h,
+                            vertexFormat: Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
+                        }),
+                        attributes: {
+                            color: Cesium.ColorGeometryInstanceAttribute.fromColor(color)
+                        }
+                    }));
+                } catch {}
             }
+
+            if (!instances.length) return;
+
+            entry.primitive = new Cesium.Primitive({
+                geometryInstances: instances,
+                appearance: new Cesium.PerInstanceColorAppearance({
+                    translucent: true,
+                    flat: false
+                }),
+                asynchronous: true,
+                allowPicking: false
+            });
+            scene.primitives.add(entry.primitive);
         }
 
-        function removeTileEntities(entry) {
-            for (const e of entry.entities) viewer.entities.remove(e);
-            entry.entities = [];
-            entry.rendered = false;
+        function removePrimitive(entry) {
+            if (entry.primitive) {
+                scene.primitives.remove(entry.primitive);
+                entry.primitive = null;
+            }
         }
 
         function getVisibleTiles() {
@@ -360,10 +395,8 @@
 
             const lon = Cesium.Math.toDegrees(carto.longitude);
             const lat = Cesium.Math.toDegrees(carto.latitude);
-
             const radiusDeg = Math.min(Math.max(height / 50000, 0.005), 0.2);
 
-            // Center on where the camera is looking, not where it is
             const lookPoint = viewer.camera.pickEllipsoid(
                 new Cesium.Cartesian2(viewer.canvas.width / 2, viewer.canvas.height / 2)
             );
@@ -399,10 +432,10 @@
                 const visibleTiles = getVisibleTiles();
                 const visibleKeys = new Set(visibleTiles.map(t => tileKey(t.x, t.y)));
 
-                // Remove non-visible tiles
+                // Remove non-visible
                 for (const key of loadedTileKeys) {
                     if (!visibleKeys.has(key) && tileCache.has(key)) {
-                        removeTileEntities(tileCache.get(key));
+                        removePrimitive(tileCache.get(key));
                     }
                 }
 
@@ -416,17 +449,17 @@
                 const newTiles = visibleTiles.filter(t => !tileCache.has(tileKey(t.x, t.y)));
                 if (newTiles.length > 0) setStat(`Loading ${newTiles.length} tiles...`, 'loading');
 
-                // Fetch in batches
+                // Fetch + sample terrain in parallel batches
                 for (let i = 0; i < newTiles.length; i += 6) {
                     await Promise.all(newTiles.slice(i, i + 6).map(t => fetchAndDecodeTile(t.x, t.y)));
                 }
 
-                // Render visible
+                // Build primitives (one per tile — fast!)
                 totalBuildings = 0;
                 for (const t of visibleTiles) {
                     const entry = tileCache.get(tileKey(t.x, t.y));
                     if (entry) {
-                        renderTileEntities(entry);
+                        buildPrimitive(entry);
                         totalBuildings += entry.features.length;
                     }
                 }
@@ -439,7 +472,7 @@
                         .filter(([k]) => !visibleKeys.has(k))
                         .sort((a, b) => a[1].lastUsed - b[1].lastUsed);
                     for (let i = 0; i < old.length - MAX_TILES; i++) {
-                        removeTileEntities(old[i][1]);
+                        removePrimitive(old[i][1]);
                         tileCache.delete(old[i][0]);
                     }
                 }
@@ -510,7 +543,7 @@
         document.getElementById('chkBuildings').addEventListener('change', function () {
             buildingsEnabled = this.checked;
             for (const [, entry] of tileCache) {
-                entry.entities.forEach(e => { e.show = buildingsEnabled; });
+                if (entry.primitive) entry.primitive.show = buildingsEnabled;
             }
             if (buildingsEnabled) updateBuildings();
             else setStat('Buildings disabled', '');
@@ -547,13 +580,10 @@
 
         document.getElementById('buildingStyle').addEventListener('change', function () {
             currentStyle = this.value;
-            setStat('Updating style...', 'loading');
-            for (const [, entry] of tileCache) {
-                for (let i = 0; i < entry.entities.length; i++) {
-                    entry.entities[i].polygon.material = getColor(entry.features[i], currentStyle);
-                }
-            }
-            setStat(`Style: ${currentStyle}`, 'ok');
+            setStat('Rebuilding...', 'loading');
+            // Rebuild all primitives with new colors
+            for (const [, entry] of tileCache) removePrimitive(entry);
+            setTimeout(updateBuildings, 50);
         });
 
         // ============================================================
