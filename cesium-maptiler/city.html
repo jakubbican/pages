@@ -14,7 +14,7 @@
 
         #hud {
             position: absolute;
-            top: 12px;
+            top: 54px;
             left: 12px;
             z-index: 10;
             background: rgba(10, 15, 30, 0.9);
@@ -25,7 +25,7 @@
             color: #cbd5e1;
             font-size: 12px;
             min-width: 260px;
-            max-height: calc(100vh - 24px);
+            max-height: calc(100vh - 66px);
             overflow-y: auto;
             box-shadow: 0 8px 32px rgba(0,0,0,0.5);
             transition: opacity 0.3s ease, transform 0.3s ease;
@@ -82,6 +82,19 @@
         }
         #badge a { color: #60a5fa; pointer-events: auto; text-decoration: none; }
 
+        /* Time slider */
+        .time-slider-wrap { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+        .time-slider-wrap input[type="range"] {
+            flex: 1; height: 4px; accent-color: #3b82f6;
+            background: rgba(255,255,255,0.08); border-radius: 2px;
+            -webkit-appearance: none; appearance: none;
+        }
+        .time-slider-wrap input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; width: 14px; height: 14px;
+            border-radius: 50%; background: #3b82f6; cursor: pointer;
+        }
+        .time-label { font-size: 11px; color: #93c5fd; min-width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
+
         #panel-toggle {
             position: absolute;
             top: 12px;
@@ -89,7 +102,7 @@
             z-index: 20;
             width: 34px;
             height: 34px;
-            border-radius: 50%;
+            border-radius: 8px;
             border: 1px solid rgba(255,255,255,0.1);
             background: rgba(10, 15, 30, 0.8);
             backdrop-filter: blur(12px);
@@ -157,12 +170,10 @@
         </div>
 
         <div class="hr"></div>
-        <div class="s">Time</div>
-        <div>
-            <button onclick="setTime(6)">Sunrise</button>
-            <button onclick="setTime(12)">Noon</button>
-            <button onclick="setTime(17)">Golden</button>
-            <button onclick="setTime(20)">Sunset</button>
+        <div class="s">Time of Day</div>
+        <div class="time-slider-wrap">
+            <input type="range" id="timeSlider" min="0" max="24" step="0.25" value="12">
+            <span class="time-label" id="timeLabel">12:00</span>
         </div>
 
         <div id="stats">Initializing...</div>
@@ -240,15 +251,15 @@
         globe.depthTestAgainstTerrain = true;
 
         // ============================================================
-        // Dynamic Building Loader — using Primitive API for performance
+        // Dynamic Building Loader — Entity API with RELATIVE_TO_GROUND
         // ============================================================
         const TILE_Z = 15;
-        const MAX_TILES = 36;                // more tiles for wider view
+        const MAX_TILES = 36;
         const MIN_HEIGHT_CAMERA = 50;
-        const MAX_HEIGHT_CAMERA = 15000;     // load up to 15km altitude
+        const MAX_HEIGHT_CAMERA = 15000;
         const DEBOUNCE_MS = 400;
 
-        // tileKey -> { features, primitive, lastUsed }
+        // tileKey -> { features, entities, lastUsed, rendered }
         const tileCache = new Map();
         let buildingsEnabled = true;
         let currentStyle = 'realistic';
@@ -257,39 +268,24 @@
         let debounceTimer = null;
         let isUpdating = false;
 
-        // Color helpers
         const classColors = {
-            residential: [0.545, 0.616, 0.765],
-            commercial:  [0.910, 0.659, 0.486],
-            industrial:  [0.584, 0.647, 0.651],
-            civic:       [0.831, 0.647, 0.455],
-            education:   [0.490, 0.808, 0.627],
-            religious:   [0.788, 0.627, 0.863],
-            healthcare:  [0.945, 0.580, 0.541],
-            '':          [0.690, 0.745, 0.773]
+            residential: '#8B9DC3', commercial: '#E8A87C', industrial: '#95A5A6',
+            civic: '#D4A574', education: '#7DCEA0', religious: '#C9A0DC',
+            healthcare: '#F1948A', '': '#B0BEC5'
         };
 
-        function getColorComponents(props, style) {
+        function getColor(props, style) {
             switch (style) {
-                case 'white': return [1, 1, 1, 0.88];
+                case 'white': return Cesium.Color.WHITE.withAlpha(0.88);
                 case 'height': {
                     const t = Math.min(props.h / 60, 1);
-                    const c = Cesium.Color.fromHsl(0.6 - t * 0.6, 0.7, 0.45 + t * 0.15, 0.88);
-                    return [c.red, c.green, c.blue, c.alpha];
+                    return Cesium.Color.fromHsl(0.6 - t * 0.6, 0.7, 0.45 + t * 0.15, 0.88);
                 }
-                case 'class': {
-                    const cc = classColors[props.c] || classColors[''];
-                    return [cc[0], cc[1], cc[2], 0.88];
-                }
-                default: { // realistic
-                    if (props.fc) {
-                        try {
-                            const c = Cesium.Color.fromCssColorString(props.fc);
-                            return [c.red, c.green, c.blue, 0.9];
-                        } catch {}
-                    }
-                    const cc = classColors[props.c] || classColors[''];
-                    return [cc[0], cc[1], cc[2], 0.85];
+                case 'class':
+                    return Cesium.Color.fromCssColorString(classColors[props.c] || classColors['']).withAlpha(0.88);
+                default: {
+                    if (props.fc) try { return Cesium.Color.fromCssColorString(props.fc).withAlpha(0.9); } catch {}
+                    return Cesium.Color.fromCssColorString(classColors[props.c] || classColors['']).withAlpha(0.85);
                 }
             }
         }
@@ -314,68 +310,45 @@
                 if (!resp.ok) return null;
                 const buffer = await resp.arrayBuffer();
                 const features = MVT.decodeBuildingTile(buffer, tx, ty, TILE_Z);
-                const entry = { features, primitive: null, lastUsed: Date.now() };
+                const entry = { features, entities: [], lastUsed: Date.now(), rendered: false };
                 tileCache.set(key, entry);
                 return entry;
             } catch (e) {
-                console.warn('Tile fetch failed:', key, e);
                 return null;
             }
         }
 
-        function buildPrimitive(entry) {
-            if (entry.primitive) return;
-            if (!entry.features.length) return;
+        function renderTileEntities(entry) {
+            if (entry.rendered) return;
+            entry.rendered = true;
 
-            const instances = [];
             for (const f of entry.features) {
                 const coords = f.coords[0];
                 if (!coords || coords.length < 4) continue;
 
                 const positions = Cesium.Cartesian3.fromDegreesArray(coords.flat());
-                const color = getColorComponents(f, currentStyle);
-                const cesiumColor = new Cesium.Color(color[0], color[1], color[2], color[3]);
-
-                try {
-                    const geometry = new Cesium.PolygonGeometry({
-                        polygonHierarchy: new Cesium.PolygonHierarchy(positions),
+                const entity = viewer.entities.add({
+                    show: buildingsEnabled,
+                    polygon: {
+                        hierarchy: new Cesium.PolygonHierarchy(positions),
                         extrudedHeight: f.h,
+                        extrudedHeightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
                         height: f.hm || 0,
-                        vertexFormat: Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
-                    });
-
-                    const instance = new Cesium.GeometryInstance({
-                        geometry,
-                        attributes: {
-                            color: Cesium.ColorGeometryInstanceAttribute.fromColor(cesiumColor)
-                        }
-                    });
-                    instances.push(instance);
-                } catch (e) {
-                    // Skip invalid geometries
-                }
+                        heightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
+                        material: getColor(f, currentStyle),
+                        outline: false,
+                        closeTop: true,
+                        closeBottom: true
+                    }
+                });
+                entry.entities.push(entity);
             }
-
-            if (instances.length === 0) return;
-
-            entry.primitive = new Cesium.Primitive({
-                geometryInstances: instances,
-                appearance: new Cesium.PerInstanceColorAppearance({
-                    translucent: true,
-                    flat: false
-                }),
-                asynchronous: true,
-                allowPicking: false
-            });
-
-            scene.primitives.add(entry.primitive);
         }
 
-        function removePrimitive(entry) {
-            if (entry.primitive) {
-                scene.primitives.remove(entry.primitive);
-                entry.primitive = null;
-            }
+        function removeTileEntities(entry) {
+            for (const e of entry.entities) viewer.entities.remove(e);
+            entry.entities = [];
+            entry.rendered = false;
         }
 
         function getVisibleTiles() {
@@ -388,20 +361,15 @@
             const lon = Cesium.Math.toDegrees(carto.longitude);
             const lat = Cesium.Math.toDegrees(carto.latitude);
 
-            // Wider radius based on camera height
-            // At 500m → ~0.01°, at 2000m → ~0.04°, at 10000m → ~0.15°
             const radiusDeg = Math.min(Math.max(height / 50000, 0.005), 0.2);
 
-            // Also account for camera look direction
-            const dir = viewer.camera.directionWC;
-            const cam3 = viewer.camera.positionWC;
-            const lookCarto = viewer.camera.pickEllipsoid(
+            // Center on where the camera is looking, not where it is
+            const lookPoint = viewer.camera.pickEllipsoid(
                 new Cesium.Cartesian2(viewer.canvas.width / 2, viewer.canvas.height / 2)
             );
-
             let centerLon = lon, centerLat = lat;
-            if (lookCarto) {
-                const lc = Cesium.Cartographic.fromCartesian(lookCarto);
+            if (lookPoint) {
+                const lc = Cesium.Cartographic.fromCartesian(lookPoint);
                 centerLon = Cesium.Math.toDegrees(lc.longitude);
                 centerLat = Cesium.Math.toDegrees(lc.latitude);
             }
@@ -411,14 +379,12 @@
             const yMin = latToTileY(centerLat + radiusDeg, TILE_Z);
             const yMax = latToTileY(centerLat - radiusDeg, TILE_Z);
 
-            // Sort tiles by distance from center (load nearest first)
             const centerTX = (xMin + xMax) / 2;
             const centerTY = (yMin + yMax) / 2;
             const tiles = [];
             for (let x = xMin; x <= xMax; x++) {
                 for (let y = yMin; y <= yMax; y++) {
-                    const dist = Math.hypot(x - centerTX, y - centerTY);
-                    tiles.push({ x, y, dist });
+                    tiles.push({ x, y, dist: Math.hypot(x - centerTX, y - centerTY) });
                 }
             }
             tiles.sort((a, b) => a.dist - b.dist);
@@ -433,58 +399,48 @@
                 const visibleTiles = getVisibleTiles();
                 const visibleKeys = new Set(visibleTiles.map(t => tileKey(t.x, t.y)));
 
-                // Remove tiles no longer visible
+                // Remove non-visible tiles
                 for (const key of loadedTileKeys) {
                     if (!visibleKeys.has(key) && tileCache.has(key)) {
-                        removePrimitive(tileCache.get(key));
+                        removeTileEntities(tileCache.get(key));
                     }
                 }
 
                 if (visibleTiles.length === 0) {
-                    const carto = viewer.camera.positionCartographic;
-                    const h = carto ? Math.round(carto.height) : 0;
-                    setStat(h > MAX_HEIGHT_CAMERA
-                        ? `Zoom in to load buildings (${h}m)`
-                        : h < MIN_HEIGHT_CAMERA
-                        ? `Zoom out slightly (${h}m)`
-                        : 'No tiles in view', '');
+                    const h = viewer.camera.positionCartographic?.height || 0;
+                    setStat(h > MAX_HEIGHT_CAMERA ? `Zoom in (${Math.round(h)}m)` : 'Move to a city', '');
                     loadedTileKeys = visibleKeys;
                     return;
                 }
 
-                // Only fetch tiles we don't have yet
                 const newTiles = visibleTiles.filter(t => !tileCache.has(tileKey(t.x, t.y)));
-                if (newTiles.length > 0) {
-                    setStat(`Loading ${newTiles.length} new tiles...`, 'loading');
+                if (newTiles.length > 0) setStat(`Loading ${newTiles.length} tiles...`, 'loading');
+
+                // Fetch in batches
+                for (let i = 0; i < newTiles.length; i += 6) {
+                    await Promise.all(newTiles.slice(i, i + 6).map(t => fetchAndDecodeTile(t.x, t.y)));
                 }
 
-                // Fetch in parallel (max 6 concurrent)
-                const BATCH = 6;
-                for (let i = 0; i < newTiles.length; i += BATCH) {
-                    const batch = newTiles.slice(i, i + BATCH);
-                    await Promise.all(batch.map(t => fetchAndDecodeTile(t.x, t.y)));
-                }
-
-                // Build primitives for all visible tiles
+                // Render visible
                 totalBuildings = 0;
                 for (const t of visibleTiles) {
                     const entry = tileCache.get(tileKey(t.x, t.y));
                     if (entry) {
-                        buildPrimitive(entry);
+                        renderTileEntities(entry);
                         totalBuildings += entry.features.length;
                     }
                 }
 
                 loadedTileKeys = visibleKeys;
 
-                // Evict old tiles from cache
+                // Evict old
                 if (tileCache.size > MAX_TILES * 3) {
-                    const entries = [...tileCache.entries()]
+                    const old = [...tileCache.entries()]
                         .filter(([k]) => !visibleKeys.has(k))
                         .sort((a, b) => a[1].lastUsed - b[1].lastUsed);
-                    for (let i = 0; i < entries.length - MAX_TILES; i++) {
-                        removePrimitive(entries[i][1]);
-                        tileCache.delete(entries[i][0]);
+                    for (let i = 0; i < old.length - MAX_TILES; i++) {
+                        removeTileEntities(old[i][1]);
+                        tileCache.delete(old[i][0]);
                     }
                 }
 
@@ -530,13 +486,23 @@
             });
         };
 
-        window.setTime = function(hour) {
+        const timeSlider = document.getElementById('timeSlider');
+        const timeLabel = document.getElementById('timeLabel');
+
+        function setTimeHour(hour) {
             const now = new Date();
+            const h = Math.floor(hour);
+            const m = Math.round((hour - h) * 60);
             viewer.clock.currentTime = Cesium.JulianDate.fromDate(
-                new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), hour, 0, 0))
+                new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0))
             );
             viewer.clock.shouldAnimate = false;
-        };
+            timeLabel.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+        }
+
+        timeSlider.addEventListener('input', function () {
+            setTimeHour(parseFloat(this.value));
+        });
 
         // ============================================================
         // Controls
@@ -544,7 +510,7 @@
         document.getElementById('chkBuildings').addEventListener('change', function () {
             buildingsEnabled = this.checked;
             for (const [, entry] of tileCache) {
-                if (entry.primitive) entry.primitive.show = buildingsEnabled;
+                entry.entities.forEach(e => { e.show = buildingsEnabled; });
             }
             if (buildingsEnabled) updateBuildings();
             else setStat('Buildings disabled', '');
@@ -581,13 +547,13 @@
 
         document.getElementById('buildingStyle').addEventListener('change', function () {
             currentStyle = this.value;
-            setStat('Rebuilding with new style...', 'loading');
-            // Need to rebuild primitives for new colors
+            setStat('Updating style...', 'loading');
             for (const [, entry] of tileCache) {
-                removePrimitive(entry);
+                for (let i = 0; i < entry.entities.length; i++) {
+                    entry.entities[i].polygon.material = getColor(entry.features[i], currentStyle);
+                }
             }
-            // Re-render visible tiles with new style
-            setTimeout(updateBuildings, 100);
+            setStat(`Style: ${currentStyle}`, 'ok');
         });
 
         // ============================================================
@@ -627,7 +593,7 @@
         // ============================================================
         // Initial View — Prague at Noon
         // ============================================================
-        setTime(12);
+        setTimeHour(12);
         viewer.camera.setView({
             destination: Cesium.Cartesian3.fromDegrees(14.42, 50.087, 1200),
             orientation: { heading: Cesium.Math.toRadians(330), pitch: Cesium.Math.toRadians(-22), roll: 0 }

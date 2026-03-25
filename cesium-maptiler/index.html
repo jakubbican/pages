@@ -128,14 +128,14 @@
             top: 16px;
             left: 16px;
             z-index: 20;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.12);
-            background: rgba(15, 23, 42, 0.75);
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(12px);
             color: #e2e8f0;
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -148,6 +148,7 @@
         #panel-toggle:hover { background: rgba(15, 23, 42, 0.95); }
 
         #controls {
+            top: 58px !important;
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
         #controls.panel-hidden {
@@ -155,6 +156,19 @@
             transform: translateX(-20px);
             pointer-events: none;
         }
+
+        /* Time slider */
+        .time-slider-wrap { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+        .time-slider-wrap input[type="range"] {
+            flex: 1; height: 4px; accent-color: #3b82f6;
+            background: rgba(255,255,255,0.08); border-radius: 2px;
+            -webkit-appearance: none; appearance: none;
+        }
+        .time-slider-wrap input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; width: 14px; height: 14px;
+            border-radius: 50%; background: #3b82f6; cursor: pointer;
+        }
+        .time-label { font-size: 11px; color: #93c5fd; min-width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
 
         @media (max-width: 767px) {
             #controls { opacity: 0; transform: translateX(-20px); pointer-events: none; }
@@ -197,12 +211,9 @@
 
         <div class="sep"></div>
         <div class="section-label">Time of Day</div>
-        <div>
-            <button onclick="setTime('sunrise')">Sunrise</button>
-            <button onclick="setTime('noon')">Noon</button>
-            <button onclick="setTime('golden')">Golden Hour</button>
-            <button onclick="setTime('sunset')">Sunset</button>
-            <button onclick="setTime('night')">Night</button>
+        <div class="time-slider-wrap">
+            <input type="range" id="timeSlider" min="0" max="24" step="0.25" value="12">
+            <span class="time-label" id="timeLabel">12:00</span>
         </div>
 
         <div id="status">Loading terrain &amp; imagery...</div>
@@ -380,16 +391,24 @@
         };
 
         // ============================================================
-        // Time of Day
+        // Time of Day — Slider
         // ============================================================
-        window.setTime = function(timeOfDay) {
+        const timeSlider = document.getElementById('timeSlider');
+        const timeLabel = document.getElementById('timeLabel');
+
+        function setTimeHour(hour) {
             const now = new Date();
-            const y = now.getFullYear(), m = now.getMonth(), d = now.getDate();
-            const hourMap = { sunrise: 6, noon: 12, golden: 17, sunset: 19, night: 1 };
-            const date = new Date(Date.UTC(y, m, d, hourMap[timeOfDay] || 12, 0, 0));
+            const h = Math.floor(hour);
+            const m = Math.round((hour - h) * 60);
+            const date = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), h, m, 0));
             viewer.clock.currentTime = Cesium.JulianDate.fromDate(date);
             viewer.clock.shouldAnimate = false;
-        };
+            timeLabel.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`;
+        }
+
+        timeSlider.addEventListener('input', function () {
+            setTimeHour(parseFloat(this.value));
+        });
 
         // ============================================================
         // Toggle Controls
@@ -432,9 +451,9 @@
         });
 
         // ============================================================
-        // Initial View — Prague at Noon (bright for screenshots)
+        // Initial View — Prague at Noon
         // ============================================================
-        setTime('noon');
+        setTimeHour(12);
         viewer.camera.setView({
             destination: Cesium.Cartesian3.fromDegrees(14.42, 50.085, 2500),
             orientation: {
