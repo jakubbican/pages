@@ -28,7 +28,9 @@
             max-height: calc(100vh - 24px);
             overflow-y: auto;
             box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            transition: opacity 0.3s ease, transform 0.3s ease;
         }
+        #hud.panel-hidden { opacity: 0; transform: translateX(-20px); pointer-events: none; }
         #hud h2 { font-size: 15px; font-weight: 700; color: #fff; margin-bottom: 1px; }
         #hud .sub { font-size: 10px; color: #475569; margin-bottom: 12px; }
         .s { font-size: 9px; text-transform: uppercase; letter-spacing: 0.8px; color: #475569; margin: 8px 0 5px; }
@@ -79,10 +81,41 @@
             padding: 4px 12px; color: #475569; font-size: 9px; pointer-events: none;
         }
         #badge a { color: #60a5fa; pointer-events: auto; text-decoration: none; }
+
+        #panel-toggle {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 20;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(10, 15, 30, 0.8);
+            backdrop-filter: blur(12px);
+            color: #e2e8f0;
+            font-size: 17px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            font-family: system-ui, sans-serif;
+            line-height: 1;
+            padding: 0;
+        }
+        #panel-toggle:hover { background: rgba(10, 15, 30, 0.95); }
+
+        @media (max-width: 767px) {
+            #hud { opacity: 0; transform: translateX(-20px); pointer-events: none; }
+            #hud.panel-visible { opacity: 1; transform: translateX(0); pointer-events: auto; }
+        }
     </style>
 </head>
 <body>
     <div id="cesiumContainer"></div>
+
+    <button id="panel-toggle" title="Toggle panel (H)">&#9776;</button>
 
     <div id="hud">
         <h2>3D City Explorer</h2>
@@ -207,43 +240,56 @@
         globe.depthTestAgainstTerrain = true;
 
         // ============================================================
-        // Dynamic Building Loader
+        // Dynamic Building Loader — using Primitive API for performance
         // ============================================================
-        const TILE_Z = 15;                   // zoom level for buildings
-        const MAX_TILES = 16;                // max tiles loaded at once
-        const MIN_HEIGHT_CAMERA = 100;       // don't load below 100m
-        const MAX_HEIGHT_CAMERA = 8000;      // don't load above 8km
-        const DEBOUNCE_MS = 600;
+        const TILE_Z = 15;
+        const MAX_TILES = 36;                // more tiles for wider view
+        const MIN_HEIGHT_CAMERA = 50;
+        const MAX_HEIGHT_CAMERA = 15000;     // load up to 15km altitude
+        const DEBOUNCE_MS = 400;
 
-        const tileCache = new Map();         // tileKey -> { entities, features, lastUsed }
+        // tileKey -> { features, primitive, lastUsed }
+        const tileCache = new Map();
         let buildingsEnabled = true;
         let currentStyle = 'realistic';
         let totalBuildings = 0;
         let loadedTileKeys = new Set();
         let debounceTimer = null;
+        let isUpdating = false;
 
         // Color helpers
         const classColors = {
-            residential: '#8B9DC3', commercial: '#E8A87C', industrial: '#95A5A6',
-            civic: '#D4A574', education: '#7DCEA0', religious: '#C9A0DC',
-            healthcare: '#F1948A', '': '#B0BEC5'
+            residential: [0.545, 0.616, 0.765],
+            commercial:  [0.910, 0.659, 0.486],
+            industrial:  [0.584, 0.647, 0.651],
+            civic:       [0.831, 0.647, 0.455],
+            education:   [0.490, 0.808, 0.627],
+            religious:   [0.788, 0.627, 0.863],
+            healthcare:  [0.945, 0.580, 0.541],
+            '':          [0.690, 0.745, 0.773]
         };
 
-        function getColor(props, style) {
+        function getColorComponents(props, style) {
             switch (style) {
-                case 'realistic': {
-                    if (props.fc) try { return Cesium.Color.fromCssColorString(props.fc).withAlpha(0.9); } catch {}
-                    const cc = classColors[props.c] || classColors[''];
-                    return Cesium.Color.fromCssColorString(cc).withAlpha(0.85);
-                }
-                case 'white': return Cesium.Color.WHITE.withAlpha(0.88);
+                case 'white': return [1, 1, 1, 0.88];
                 case 'height': {
                     const t = Math.min(props.h / 60, 1);
-                    return Cesium.Color.fromHsl(0.6 - t * 0.6, 0.7, 0.45 + t * 0.15, 0.88);
+                    const c = Cesium.Color.fromHsl(0.6 - t * 0.6, 0.7, 0.45 + t * 0.15, 0.88);
+                    return [c.red, c.green, c.blue, c.alpha];
                 }
                 case 'class': {
                     const cc = classColors[props.c] || classColors[''];
-                    return Cesium.Color.fromCssColorString(cc).withAlpha(0.88);
+                    return [cc[0], cc[1], cc[2], 0.88];
+                }
+                default: { // realistic
+                    if (props.fc) {
+                        try {
+                            const c = Cesium.Color.fromCssColorString(props.fc);
+                            return [c.red, c.green, c.blue, 0.9];
+                        } catch {}
+                    }
+                    const cc = classColors[props.c] || classColors[''];
+                    return [cc[0], cc[1], cc[2], 0.85];
                 }
             }
         }
@@ -253,7 +299,6 @@
             const r = lat * Math.PI / 180;
             return Math.floor((1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2 * (1 << z));
         }
-
         function tileKey(x, y) { return `${x}_${y}`; }
 
         async function fetchAndDecodeTile(tx, ty) {
@@ -269,7 +314,7 @@
                 if (!resp.ok) return null;
                 const buffer = await resp.arrayBuffer();
                 const features = MVT.decodeBuildingTile(buffer, tx, ty, TILE_Z);
-                const entry = { features, entities: [], lastUsed: Date.now(), rendered: false };
+                const entry = { features, primitive: null, lastUsed: Date.now() };
                 tileCache.set(key, entry);
                 return entry;
             } catch (e) {
@@ -278,47 +323,63 @@
             }
         }
 
-        function renderTileEntities(entry) {
-            if (entry.rendered) return;
-            entry.rendered = true;
+        function buildPrimitive(entry) {
+            if (entry.primitive) return;
+            if (!entry.features.length) return;
 
+            const instances = [];
             for (const f of entry.features) {
-                const coords = f.coords[0]; // outer ring
+                const coords = f.coords[0];
                 if (!coords || coords.length < 4) continue;
 
                 const positions = Cesium.Cartesian3.fromDegreesArray(coords.flat());
-                const color = getColor(f, currentStyle);
+                const color = getColorComponents(f, currentStyle);
+                const cesiumColor = new Cesium.Color(color[0], color[1], color[2], color[3]);
 
-                const entity = viewer.entities.add({
-                    show: buildingsEnabled,
-                    polygon: {
-                        hierarchy: new Cesium.PolygonHierarchy(positions),
+                try {
+                    const geometry = new Cesium.PolygonGeometry({
+                        polygonHierarchy: new Cesium.PolygonHierarchy(positions),
                         extrudedHeight: f.h,
-                        extrudedHeightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
                         height: f.hm || 0,
-                        heightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
-                        material: color,
-                        outline: false,
-                        closeTop: true,
-                        closeBottom: true
-                    }
-                });
-                entry.entities.push(entity);
+                        vertexFormat: Cesium.PerInstanceColorAppearance.VERTEX_FORMAT
+                    });
+
+                    const instance = new Cesium.GeometryInstance({
+                        geometry,
+                        attributes: {
+                            color: Cesium.ColorGeometryInstanceAttribute.fromColor(cesiumColor)
+                        }
+                    });
+                    instances.push(instance);
+                } catch (e) {
+                    // Skip invalid geometries
+                }
             }
+
+            if (instances.length === 0) return;
+
+            entry.primitive = new Cesium.Primitive({
+                geometryInstances: instances,
+                appearance: new Cesium.PerInstanceColorAppearance({
+                    translucent: true,
+                    flat: false
+                }),
+                asynchronous: true,
+                allowPicking: false
+            });
+
+            scene.primitives.add(entry.primitive);
         }
 
-        function removeTileEntities(entry) {
-            for (const e of entry.entities) {
-                viewer.entities.remove(e);
+        function removePrimitive(entry) {
+            if (entry.primitive) {
+                scene.primitives.remove(entry.primitive);
+                entry.primitive = null;
             }
-            entry.entities = [];
-            entry.rendered = false;
         }
 
         function getVisibleTiles() {
-            // Get camera position
-            const cam = viewer.camera;
-            const carto = cam.positionCartographic;
+            const carto = viewer.camera.positionCartographic;
             if (!carto) return [];
 
             const height = carto.height;
@@ -327,77 +388,112 @@
             const lon = Cesium.Math.toDegrees(carto.longitude);
             const lat = Cesium.Math.toDegrees(carto.latitude);
 
-            // Calculate visible radius based on camera height
-            // Approximate: at 1000m, ~0.01° visible; at 5000m, ~0.05°
-            const radiusDeg = Math.min(height / 100000, 0.08);
+            // Wider radius based on camera height
+            // At 500m → ~0.01°, at 2000m → ~0.04°, at 10000m → ~0.15°
+            const radiusDeg = Math.min(Math.max(height / 50000, 0.005), 0.2);
 
-            const xMin = lonToTileX(lon - radiusDeg, TILE_Z);
-            const xMax = lonToTileX(lon + radiusDeg, TILE_Z);
-            const yMin = latToTileY(lat + radiusDeg, TILE_Z);
-            const yMax = latToTileY(lat - radiusDeg, TILE_Z);
+            // Also account for camera look direction
+            const dir = viewer.camera.directionWC;
+            const cam3 = viewer.camera.positionWC;
+            const lookCarto = viewer.camera.pickEllipsoid(
+                new Cesium.Cartesian2(viewer.canvas.width / 2, viewer.canvas.height / 2)
+            );
 
+            let centerLon = lon, centerLat = lat;
+            if (lookCarto) {
+                const lc = Cesium.Cartographic.fromCartesian(lookCarto);
+                centerLon = Cesium.Math.toDegrees(lc.longitude);
+                centerLat = Cesium.Math.toDegrees(lc.latitude);
+            }
+
+            const xMin = lonToTileX(centerLon - radiusDeg * 1.5, TILE_Z);
+            const xMax = lonToTileX(centerLon + radiusDeg * 1.5, TILE_Z);
+            const yMin = latToTileY(centerLat + radiusDeg, TILE_Z);
+            const yMax = latToTileY(centerLat - radiusDeg, TILE_Z);
+
+            // Sort tiles by distance from center (load nearest first)
+            const centerTX = (xMin + xMax) / 2;
+            const centerTY = (yMin + yMax) / 2;
             const tiles = [];
-            for (let x = xMin; x <= xMax && tiles.length < MAX_TILES; x++) {
-                for (let y = yMin; y <= yMax && tiles.length < MAX_TILES; y++) {
-                    tiles.push({ x, y });
+            for (let x = xMin; x <= xMax; x++) {
+                for (let y = yMin; y <= yMax; y++) {
+                    const dist = Math.hypot(x - centerTX, y - centerTY);
+                    tiles.push({ x, y, dist });
                 }
             }
-            return tiles;
+            tiles.sort((a, b) => a.dist - b.dist);
+            return tiles.slice(0, MAX_TILES);
         }
 
         async function updateBuildings() {
-            if (!buildingsEnabled) return;
+            if (!buildingsEnabled || isUpdating) return;
+            isUpdating = true;
 
-            const visibleTiles = getVisibleTiles();
-            const visibleKeys = new Set(visibleTiles.map(t => tileKey(t.x, t.y)));
+            try {
+                const visibleTiles = getVisibleTiles();
+                const visibleKeys = new Set(visibleTiles.map(t => tileKey(t.x, t.y)));
 
-            // Remove tiles no longer visible
-            for (const key of loadedTileKeys) {
-                if (!visibleKeys.has(key) && tileCache.has(key)) {
-                    removeTileEntities(tileCache.get(key));
+                // Remove tiles no longer visible
+                for (const key of loadedTileKeys) {
+                    if (!visibleKeys.has(key) && tileCache.has(key)) {
+                        removePrimitive(tileCache.get(key));
+                    }
                 }
-            }
 
-            if (visibleTiles.length === 0) {
-                const carto = viewer.camera.positionCartographic;
-                const h = carto ? Math.round(carto.height) : 0;
-                setStat(h > MAX_HEIGHT_CAMERA
-                    ? `Zoom in to load buildings (camera: ${h}m)`
-                    : `Camera too low (${h}m)`, '');
+                if (visibleTiles.length === 0) {
+                    const carto = viewer.camera.positionCartographic;
+                    const h = carto ? Math.round(carto.height) : 0;
+                    setStat(h > MAX_HEIGHT_CAMERA
+                        ? `Zoom in to load buildings (${h}m)`
+                        : h < MIN_HEIGHT_CAMERA
+                        ? `Zoom out slightly (${h}m)`
+                        : 'No tiles in view', '');
+                    loadedTileKeys = visibleKeys;
+                    return;
+                }
+
+                // Only fetch tiles we don't have yet
+                const newTiles = visibleTiles.filter(t => !tileCache.has(tileKey(t.x, t.y)));
+                if (newTiles.length > 0) {
+                    setStat(`Loading ${newTiles.length} new tiles...`, 'loading');
+                }
+
+                // Fetch in parallel (max 6 concurrent)
+                const BATCH = 6;
+                for (let i = 0; i < newTiles.length; i += BATCH) {
+                    const batch = newTiles.slice(i, i + BATCH);
+                    await Promise.all(batch.map(t => fetchAndDecodeTile(t.x, t.y)));
+                }
+
+                // Build primitives for all visible tiles
+                totalBuildings = 0;
+                for (const t of visibleTiles) {
+                    const entry = tileCache.get(tileKey(t.x, t.y));
+                    if (entry) {
+                        buildPrimitive(entry);
+                        totalBuildings += entry.features.length;
+                    }
+                }
+
                 loadedTileKeys = visibleKeys;
-                return;
-            }
 
-            setStat(`Loading ${visibleTiles.length} tiles...`, 'loading');
-
-            // Fetch new tiles
-            const fetchPromises = visibleTiles.map(t => fetchAndDecodeTile(t.x, t.y));
-            const results = await Promise.all(fetchPromises);
-
-            // Render
-            totalBuildings = 0;
-            for (const entry of results) {
-                if (entry) {
-                    renderTileEntities(entry);
-                    totalBuildings += entry.features.length;
+                // Evict old tiles from cache
+                if (tileCache.size > MAX_TILES * 3) {
+                    const entries = [...tileCache.entries()]
+                        .filter(([k]) => !visibleKeys.has(k))
+                        .sort((a, b) => a[1].lastUsed - b[1].lastUsed);
+                    for (let i = 0; i < entries.length - MAX_TILES; i++) {
+                        removePrimitive(entries[i][1]);
+                        tileCache.delete(entries[i][0]);
+                    }
                 }
+
+                setStat(`${totalBuildings.toLocaleString()} buildings · ${visibleTiles.length} tiles`, 'ok');
+            } finally {
+                isUpdating = false;
             }
-
-            loadedTileKeys = visibleKeys;
-
-            // Evict old tiles from cache
-            if (tileCache.size > MAX_TILES * 3) {
-                const entries = [...tileCache.entries()].sort((a, b) => a[1].lastUsed - b[1].lastUsed);
-                for (let i = 0; i < entries.length - MAX_TILES * 2; i++) {
-                    removeTileEntities(entries[i][1]);
-                    tileCache.delete(entries[i][0]);
-                }
-            }
-
-            setStat(`${totalBuildings} buildings · ${visibleTiles.length} tiles · z${TILE_Z}`, 'ok');
         }
 
-        // Debounced camera listener
         function onCameraChange() {
             clearTimeout(debounceTimer);
             debounceTimer = setTimeout(updateBuildings, DEBOUNCE_MS);
@@ -447,17 +543,11 @@
         // ============================================================
         document.getElementById('chkBuildings').addEventListener('change', function () {
             buildingsEnabled = this.checked;
-            if (!buildingsEnabled) {
-                for (const [, entry] of tileCache) {
-                    entry.entities.forEach(e => { e.show = false; });
-                }
-                setStat('Buildings disabled', '');
-            } else {
-                for (const [, entry] of tileCache) {
-                    entry.entities.forEach(e => { e.show = true; });
-                }
-                updateBuildings();
+            for (const [, entry] of tileCache) {
+                if (entry.primitive) entry.primitive.show = buildingsEnabled;
             }
+            if (buildingsEnabled) updateBuildings();
+            else setStat('Buildings disabled', '');
         });
 
         document.getElementById('chkTerrain').addEventListener('change', async function () {
@@ -491,13 +581,47 @@
 
         document.getElementById('buildingStyle').addEventListener('change', function () {
             currentStyle = this.value;
-            setStat('Updating style...', 'loading');
+            setStat('Rebuilding with new style...', 'loading');
+            // Need to rebuild primitives for new colors
             for (const [, entry] of tileCache) {
-                for (let i = 0; i < entry.entities.length; i++) {
-                    entry.entities[i].polygon.material = getColor(entry.features[i], currentStyle);
-                }
+                removePrimitive(entry);
             }
-            setStat(`Style: ${currentStyle}`, 'ok');
+            // Re-render visible tiles with new style
+            setTimeout(updateBuildings, 100);
+        });
+
+        // ============================================================
+        // Panel Toggle
+        // ============================================================
+        const panelToggleBtn = document.getElementById('panel-toggle');
+        const hudPanel = document.getElementById('hud');
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
+        let panelVisible = !isMobile;
+
+        function updatePanelState() {
+            if (panelVisible) {
+                hudPanel.classList.remove('panel-hidden');
+                hudPanel.classList.add('panel-visible');
+                panelToggleBtn.innerHTML = '&#10005;';
+            } else {
+                hudPanel.classList.add('panel-hidden');
+                hudPanel.classList.remove('panel-visible');
+                panelToggleBtn.innerHTML = '&#9776;';
+            }
+        }
+        updatePanelState();
+
+        panelToggleBtn.addEventListener('click', () => {
+            panelVisible = !panelVisible;
+            updatePanelState();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'h' || e.key === 'H') {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+                panelVisible = !panelVisible;
+                updatePanelState();
+            }
         });
 
         // ============================================================
@@ -509,7 +633,6 @@
             orientation: { heading: Cesium.Math.toRadians(330), pitch: Cesium.Math.toRadians(-22), roll: 0 }
         });
 
-        // Trigger initial load
         setTimeout(updateBuildings, 2000);
     </script>
 </body>

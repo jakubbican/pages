@@ -121,10 +121,51 @@
 
         .cesium-viewer-bottom { display: none !important; }
         .cesium-viewer .cesium-widget-credits { display: none !important; }
+
+        /* Panel toggle */
+        #panel-toggle {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 20;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            color: #e2e8f0;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            font-family: system-ui, sans-serif;
+            line-height: 1;
+            padding: 0;
+        }
+        #panel-toggle:hover { background: rgba(15, 23, 42, 0.95); }
+
+        #controls {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        #controls.panel-hidden {
+            opacity: 0;
+            transform: translateX(-20px);
+            pointer-events: none;
+        }
+
+        @media (max-width: 767px) {
+            #controls { opacity: 0; transform: translateX(-20px); pointer-events: none; }
+            #controls.panel-visible { opacity: 1; transform: translateX(0); pointer-events: auto; }
+        }
     </style>
 </head>
 <body>
     <div id="cesiumContainer"></div>
+
+    <button id="panel-toggle" title="Toggle panel (H)">&#9776;</button>
 
     <div id="controls">
         <h2>MapTiler + CesiumJS</h2>
@@ -404,6 +445,40 @@
         });
 
         setStatus('MapTiler terrain + satellite loaded');
+
+        // ============================================================
+        // Panel Toggle
+        // ============================================================
+        const panelToggleBtn = document.getElementById('panel-toggle');
+        const controlsPanel = document.getElementById('controls');
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
+        let panelVisible = !isMobile;
+
+        function updatePanelState() {
+            if (panelVisible) {
+                controlsPanel.classList.remove('panel-hidden');
+                controlsPanel.classList.add('panel-visible');
+                panelToggleBtn.innerHTML = '&#10005;';
+            } else {
+                controlsPanel.classList.add('panel-hidden');
+                controlsPanel.classList.remove('panel-visible');
+                panelToggleBtn.innerHTML = '&#9776;';
+            }
+        }
+        updatePanelState();
+
+        panelToggleBtn.addEventListener('click', () => {
+            panelVisible = !panelVisible;
+            updatePanelState();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'h' || e.key === 'H') {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                panelVisible = !panelVisible;
+                updatePanelState();
+            }
+        });
     </script>
 </body>
 </html>

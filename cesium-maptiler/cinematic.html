@@ -135,6 +135,55 @@
             pointer-events: none;
         }
         #fade.out { opacity: 0; }
+
+        /* Panel toggle */
+        #panel-toggle {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 20;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            color: rgba(255,255,255,0.8);
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+            font-family: system-ui, sans-serif;
+            line-height: 1;
+            padding: 0;
+        }
+        #panel-toggle:hover { background: rgba(0, 0, 0, 0.7); }
+
+        #overlay {
+            transition: opacity 0.4s ease;
+        }
+        #overlay.panel-hidden {
+            opacity: 0;
+            pointer-events: none !important;
+        }
+        #credits {
+            transition: opacity 0.4s ease;
+        }
+        #credits.panel-hidden {
+            opacity: 0;
+        }
+
+        @media (max-width: 767px) {
+            #overlay { opacity: 0; pointer-events: none !important; }
+            #overlay.panel-visible { opacity: 1; pointer-events: none; }
+            #overlay.panel-visible #title-area,
+            #overlay.panel-visible #location-info,
+            #overlay.panel-visible #tour-controls { pointer-events: auto; }
+            #credits { opacity: 0; }
+            #credits.panel-visible { opacity: 1; }
+        }
     </style>
 </head>
 <body>
@@ -143,6 +192,8 @@
     <div class="letterbox bottom" id="lbBottom"></div>
 
     <div id="cesiumContainer"></div>
+
+    <button id="panel-toggle" title="Toggle UI (H)">&#9776;</button>
 
     <div id="overlay">
         <div id="title-area">
@@ -378,6 +429,45 @@
         setTimeout(() => {
             document.getElementById('fade').classList.add('out');
         }, 500);
+
+        // ============================================================
+        // Panel Toggle
+        // ============================================================
+        const panelToggleBtn = document.getElementById('panel-toggle');
+        const overlayEl = document.getElementById('overlay');
+        const creditsEl = document.getElementById('credits');
+        const isMobile = window.matchMedia('(max-width: 767px)').matches;
+        let panelVisible = !isMobile;
+
+        function updatePanelState() {
+            if (panelVisible) {
+                overlayEl.classList.remove('panel-hidden');
+                overlayEl.classList.add('panel-visible');
+                creditsEl.classList.remove('panel-hidden');
+                creditsEl.classList.add('panel-visible');
+                panelToggleBtn.innerHTML = '&#10005;';
+            } else {
+                overlayEl.classList.add('panel-hidden');
+                overlayEl.classList.remove('panel-visible');
+                creditsEl.classList.add('panel-hidden');
+                creditsEl.classList.remove('panel-visible');
+                panelToggleBtn.innerHTML = '&#9776;';
+            }
+        }
+        updatePanelState();
+
+        panelToggleBtn.addEventListener('click', () => {
+            panelVisible = !panelVisible;
+            updatePanelState();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'h' || e.key === 'H') {
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+                panelVisible = !panelVisible;
+                updatePanelState();
+            }
+        });
     </script>
 </body>
 </html>
