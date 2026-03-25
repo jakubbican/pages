@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prague City Skyline — MapTiler 3D Buildings + CesiumJS</title>
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.125/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body, #cesiumContainer { width: 100%; height: 100%; overflow: hidden; font-family: 'Inter', system-ui, sans-serif; }
+
+        .cesium-viewer-bottom, .cesium-viewer .cesium-widget-credits { display: none !important; }
+
+        #hud {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 10;
+            background: rgba(10, 15, 30, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 18px;
+            color: #e2e8f0;
+            font-size: 13px;
+            min-width: 280px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        #hud h2 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 2px; letter-spacing: -0.3px; }
+        #hud .sub { font-size: 11px; color: #64748b; margin-bottom: 14px; }
+        .sec { font-size: 10px; text-transform: uppercase; letter-spacing: 0.8px; color: #475569; margin: 10px 0 6px; }
+        #hud label { display: flex; align-items: center; gap: 8px; padding: 4px 0; cursor: pointer; }
+        #hud label:hover { color: #fff; }
+        #hud input[type="checkbox"] { accent-color: #3b82f6; width: 15px; height: 15px; }
+        .sep { height: 1px; background: rgba(255,255,255,0.05); margin: 10px 0; }
+        #hud button {
+            background: rgba(59, 130, 246, 0.12);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            padding: 5px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11px;
+            font-family: inherit;
+            transition: all 0.15s;
+            margin: 2px 3px 2px 0;
+        }
+        #hud button:hover { background: rgba(59, 130, 246, 0.3); color: #fff; }
+        #hud select {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #e2e8f0;
+            padding: 5px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-family: inherit;
+            width: 100%;
+            margin-top: 4px;
+        }
+        #status {
+            margin-top: 10px;
+            padding: 6px 10px;
+            background: rgba(59, 130, 246, 0.08);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 6px;
+            font-size: 11px;
+            color: #93c5fd;
+        }
+        #status.ok { background: rgba(34, 197, 94, 0.08); border-color: rgba(34, 197, 94, 0.15); color: #86efac; }
+        #status.err { background: rgba(239, 68, 68, 0.08); border-color: rgba(239, 68, 68, 0.15); color: #fca5a5; }
+
+        #badge {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            background: rgba(10, 15, 30, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 6px 14px;
+            color: #64748b;
+            font-size: 10px;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+        #badge a { color: #60a5fa; pointer-events: auto; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+
+    <div id="hud">
+        <h2>Prague City Skyline</h2>
+        <div class="sub">MapTiler 3D Buildings + Terrain + Satellite</div>
+
+        <div class="sec">Data Layers</div>
+        <label><input type="checkbox" id="chkBuildings" checked> 3D Buildings (5 067)</label>
+        <label><input type="checkbox" id="chkTerrain" checked> Terrain</label>
+        <label><input type="checkbox" id="chkSatellite" checked> Satellite Imagery</label>
+        <label><input type="checkbox" id="chkStreets"> Streets Map Overlay</label>
+
+        <div class="sep"></div>
+        <div class="sec">Atmosphere</div>
+        <label><input type="checkbox" id="chkAtmo" checked> Atmosphere &amp; Sky</label>
+        <label><input type="checkbox" id="chkLighting" checked> Sun Lighting</label>
+        <label><input type="checkbox" id="chkShadows"> Shadows on Buildings</label>
+        <label><input type="checkbox" id="chkFog" checked> Fog</label>
+
+        <div class="sep"></div>
+        <div class="sec">Building Style</div>
+        <select id="buildingStyle">
+            <option value="realistic">Realistic (facade colors)</option>
+            <option value="white">White Model</option>
+            <option value="height">Height Heatmap</option>
+            <option value="class">By Class (color-coded)</option>
+        </select>
+
+        <div class="sep"></div>
+        <div class="sec">Views</div>
+        <div>
+            <button onclick="flyTo('oldtown')">Old Town</button>
+            <button onclick="flyTo('castle')">Castle</button>
+            <button onclick="flyTo('skyline')">Skyline</button>
+            <button onclick="flyTo('river')">Vltava</button>
+        </div>
+
+        <div class="sep"></div>
+        <div class="sec">Time</div>
+        <div>
+            <button onclick="setTime(6)">Sunrise</button>
+            <button onclick="setTime(12)">Noon</button>
+            <button onclick="setTime(17)">Golden</button>
+            <button onclick="setTime(20)">Sunset</button>
+            <button onclick="setTime(23)">Night</button>
+        </div>
+
+        <div id="status">Loading buildings...</div>
+    </div>
+
+    <div id="badge">
+        Buildings from <a href="https://www.maptiler.com" target="_blank">MapTiler</a> PBF tiles &bull;
+        <a href="https://cesium.com" target="_blank">CesiumJS</a>
+    </div>
+
+    <script type="module">
+        const KEY = 'O7xtY7yIse9ZJeQPtLxe';
+        Cesium.Ion.defaultAccessToken = undefined;
+
+        const statusEl = document.getElementById('status');
+        function setStatus(msg, cls) { statusEl.textContent = msg; statusEl.className = cls || ''; }
+
+        // ============================================================
+        // Terrain
+        // ============================================================
+        const terrainResource = new Cesium.Resource({
+            url: 'https://api.maptiler.com/tiles/terrain-quantized-mesh-v2/',
+            queryParameters: { key: KEY }
+        });
+        const terrain = await Cesium.CesiumTerrainProvider.fromUrl(terrainResource, {
+            requestVertexNormals: true
+        });
+
+        // ============================================================
+        // Imagery
+        // ============================================================
+        const satellite = new Cesium.UrlTemplateImageryProvider({
+            url: `https://api.maptiler.com/tiles/satellite-v2/{z}/{x}/{y}.jpg?key=${KEY}`,
+            maximumLevel: 20, tileWidth: 512, tileHeight: 512
+        });
+
+        const streets = new Cesium.UrlTemplateImageryProvider({
+            url: `https://api.maptiler.com/maps/streets-v2/256/{z}/{x}/{y}@2x.png?key=${KEY}`,
+            maximumLevel: 20, tileWidth: 512, tileHeight: 512
+        });
+
+        // ============================================================
+        // Viewer
+        // ============================================================
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            baseLayer: new Cesium.ImageryLayer(satellite),
+            terrainProvider: terrain,
+            skyAtmosphere: new Cesium.SkyAtmosphere(),
+            scene3DOnly: true,
+            shadows: false,
+            animation: false,
+            timeline: false,
+            baseLayerPicker: false,
+            geocoder: false,
+            homeButton: false,
+            navigationHelpButton: false,
+            sceneModePicker: false,
+            selectionIndicator: false,
+            infoBox: false,
+            fullscreenButton: true,
+            requestRenderMode: false,
+        });
+
+        const scene = viewer.scene;
+        const globe = scene.globe;
+
+        // Streets overlay (hidden by default)
+        const streetsLayer = viewer.imageryLayers.addImageryProvider(streets);
+        streetsLayer.show = false;
+
+        // Atmosphere
+        globe.enableLighting = true;
+        globe.showGroundAtmosphere = true;
+        globe.atmosphereLightIntensity = 10.0;
+        globe.atmosphereRayleighCoefficient = new Cesium.Cartesian3(5.5e-6, 13.0e-6, 28.4e-6);
+        globe.atmosphereMieCoefficient = new Cesium.Cartesian3(21e-6, 21e-6, 21e-6);
+        globe.atmosphereMieAnisotropy = 0.9;
+        scene.fog.enabled = true;
+        scene.fog.density = 2.0e-4;
+        scene.highDynamicRange = true;
+        globe.depthTestAgainstTerrain = true;
+
+        // ============================================================
+        // 3D Buildings from MapTiler PBF data (pre-extracted GeoJSON)
+        // ============================================================
+        setStatus('Loading 5,067 buildings...');
+
+        const buildingData = await fetch('prague-buildings.json').then(r => r.json());
+        setStatus(`Parsing ${buildingData.features.length} buildings...`);
+
+        // Color maps
+        const classColors = {
+            'residential': Cesium.Color.fromCssColorString('#8B9DC3'),
+            'commercial': Cesium.Color.fromCssColorString('#E8A87C'),
+            'industrial': Cesium.Color.fromCssColorString('#95A5A6'),
+            'civic': Cesium.Color.fromCssColorString('#D4A574'),
+            'education': Cesium.Color.fromCssColorString('#7DCEA0'),
+            'religious': Cesium.Color.fromCssColorString('#C9A0DC'),
+            'healthcare': Cesium.Color.fromCssColorString('#F1948A'),
+            '': Cesium.Color.fromCssColorString('#B0BEC5')
+        };
+
+        function heightToColor(h) {
+            const t = Math.min(h / 50, 1);
+            return Cesium.Color.fromHsl(0.6 - t * 0.6, 0.7, 0.45 + t * 0.15);
+        }
+
+        function facadeToColor(fc) {
+            if (!fc) return null;
+            try { return Cesium.Color.fromCssColorString(fc); } catch { return null; }
+        }
+
+        // Build entities
+        const buildingEntities = [];
+        let batch = 0;
+        const BATCH_SIZE = 500;
+
+        function getColor(props, style) {
+            switch (style) {
+                case 'realistic': {
+                    const fc = facadeToColor(props.fc);
+                    if (fc) return fc.withAlpha(0.9);
+                    return classColors[props.c] ? classColors[props.c].withAlpha(0.85) : Cesium.Color.fromCssColorString('#B8C4CE').withAlpha(0.85);
+                }
+                case 'white': return Cesium.Color.WHITE.withAlpha(0.88);
+                case 'height': return heightToColor(props.h).withAlpha(0.88);
+                case 'class': return (classColors[props.c] || classColors['']).withAlpha(0.88);
+                default: return Cesium.Color.fromCssColorString('#B8C4CE').withAlpha(0.85);
+            }
+        }
+
+        let currentStyle = 'realistic';
+
+        async function loadBuildings() {
+            const startTime = performance.now();
+
+            for (let i = 0; i < buildingData.features.length; i++) {
+                const f = buildingData.features[i];
+                const props = f.properties;
+                const coords = f.geometry.coordinates[0]; // outer ring
+
+                if (!coords || coords.length < 4) continue;
+
+                const positions = Cesium.Cartesian3.fromDegreesArray(coords.flat());
+                const color = getColor(props, currentStyle);
+
+                const entity = viewer.entities.add({
+                    polygon: {
+                        hierarchy: new Cesium.PolygonHierarchy(positions),
+                        extrudedHeight: props.h,
+                        extrudedHeightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
+                        height: props.hm || 0,
+                        heightReference: Cesium.HeightReference.RELATIVE_TO_GROUND,
+                        material: color,
+                        outline: false,
+                        closeTop: true,
+                        closeBottom: true
+                    }
+                });
+
+                buildingEntities.push({ entity, props });
+
+                // Yield every batch to keep UI responsive
+                if (i % BATCH_SIZE === 0) {
+                    setStatus(`Loading buildings: ${i}/${buildingData.features.length}`);
+                    await new Promise(r => setTimeout(r, 0));
+                }
+            }
+
+            const elapsed = ((performance.now() - startTime) / 1000).toFixed(1);
+            setStatus(`${buildingEntities.length} buildings loaded (${elapsed}s)`, 'ok');
+        }
+
+        await loadBuildings();
+
+        // ============================================================
+        // Building Style Switcher
+        // ============================================================
+        document.getElementById('buildingStyle').addEventListener('change', function () {
+            currentStyle = this.value;
+            setStatus('Updating building colors...');
+            for (const { entity, props } of buildingEntities) {
+                entity.polygon.material = getColor(props, currentStyle);
+            }
+            setStatus(`Style: ${currentStyle}`, 'ok');
+        });
+
+        // ============================================================
+        // Views
+        // ============================================================
+        const views = {
+            oldtown: {
+                destination: Cesium.Cartesian3.fromDegrees(14.4208, 50.0875, 600),
+                orientation: { heading: Cesium.Math.toRadians(310), pitch: Cesium.Math.toRadians(-25), roll: 0 }
+            },
+            castle: {
+                destination: Cesium.Cartesian3.fromDegrees(14.4015, 50.0905, 500),
+                orientation: { heading: Cesium.Math.toRadians(60), pitch: Cesium.Math.toRadians(-20), roll: 0 }
+            },
+            skyline: {
+                destination: Cesium.Cartesian3.fromDegrees(14.44, 50.075, 1200),
+                orientation: { heading: Cesium.Math.toRadians(320), pitch: Cesium.Math.toRadians(-15), roll: 0 }
+            },
+            river: {
+                destination: Cesium.Cartesian3.fromDegrees(14.413, 50.085, 400),
+                orientation: { heading: Cesium.Math.toRadians(180), pitch: Cesium.Math.toRadians(-18), roll: 0 }
+            }
+        };
+
+        window.flyTo = function(name) {
+            viewer.camera.flyTo({
+                ...views[name],
+                duration: 3.0,
+                easingFunction: Cesium.EasingFunction.CUBIC_IN_OUT
+            });
+        };
+
+        window.setTime = function(hour) {
+            const now = new Date();
+            const date = new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate(), hour, 0, 0));
+            viewer.clock.currentTime = Cesium.JulianDate.fromDate(date);
+            viewer.clock.shouldAnimate = false;
+        };
+
+        // ============================================================
+        // Toggle Controls
+        // ============================================================
+        document.getElementById('chkBuildings').addEventListener('change', function () {
+            buildingEntities.forEach(b => { b.entity.show = this.checked; });
+        });
+
+        document.getElementById('chkTerrain').addEventListener('change', async function () {
+            viewer.terrainProvider = this.checked ? terrain : new Cesium.EllipsoidTerrainProvider();
+        });
+
+        document.getElementById('chkSatellite').addEventListener('change', function () {
+            viewer.imageryLayers.get(0).show = this.checked;
+        });
+
+        document.getElementById('chkStreets').addEventListener('change', function () {
+            streetsLayer.show = this.checked;
+        });
+
+        document.getElementById('chkAtmo').addEventListener('change', function () {
+            scene.skyAtmosphere.show = this.checked;
+            globe.showGroundAtmosphere = this.checked;
+        });
+
+        document.getElementById('chkLighting').addEventListener('change', function () {
+            globe.enableLighting = this.checked;
+        });
+
+        document.getElementById('chkShadows').addEventListener('change', function () {
+            viewer.shadows = this.checked;
+        });
+
+        document.getElementById('chkFog').addEventListener('change', function () {
+            scene.fog.enabled = this.checked;
+        });
+
+        // ============================================================
+        // Initial View — Skyline at Golden Hour
+        // ============================================================
+        setTime(17);
+        viewer.camera.setView(views.skyline);
+    </script>
+</body>
+</html>
