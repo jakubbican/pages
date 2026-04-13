@@ -1,0 +1,655 @@
+/* ==========================================================================
+   3D Airspace Viewer — Dark Theme Stylesheet
+   Professional aviation-grade UI
+   ========================================================================== */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #e2e8f0;
+  background: #0f172a;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- Map Container ---------- */
+#map {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ---------- Shared Panel Glass ---------- */
+.panel {
+  position: absolute;
+  z-index: 2;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #e2e8f0;
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.35),
+    0 1px 2px  rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: box-shadow 0.25s ease;
+}
+
+.panel:hover {
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.45),
+    0 1px 2px  rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- Panel Header (shared) ---------- */
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  user-select: none;
+}
+
+.panel-header h3 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.toggle-icon {
+  font-size: 0.75rem;
+  color: #64748b;
+  transition: transform 0.3s ease;
+}
+
+.collapsed .toggle-icon {
+  transform: rotate(-90deg);
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 2px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #e2e8f0;
+}
+
+/* ====================================================================
+   1. TOP BAR
+   ==================================================================== */
+#top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 56px;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+}
+
+#title {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+#title h1 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f1f5f9;
+  white-space: nowrap;
+}
+
+#title .subtitle {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Style Switcher --- */
+#style-switcher {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.style-btn {
+  background: rgba(30, 41, 59, 0.8);
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.style-btn:hover {
+  background: rgba(30, 41, 59, 1);
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.style-btn.active {
+  color: #06b6d4;
+  border-color: #06b6d4;
+  background: rgba(6, 182, 212, 0.1);
+  box-shadow: 0 0 8px rgba(6, 182, 212, 0.15);
+}
+
+/* ====================================================================
+   2. LEGEND PANEL
+   ==================================================================== */
+#legend-panel {
+  top: 70px;
+  left: 12px;
+  width: 230px;
+  max-height: calc(100vh - 200px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#legend-content {
+  overflow-y: auto;
+  max-height: 420px;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  opacity: 1;
+}
+
+#legend-panel.collapsed #legend-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+/* Custom thin scrollbar for legend */
+#legend-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+#legend-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#legend-content::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 4px;
+}
+
+#legend-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.6);
+}
+
+/* --- Legend Row --- */
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.legend-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.legend-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.15s ease;
+}
+
+.legend-checkbox:checked {
+  background: #06b6d4;
+  border-color: #06b6d4;
+}
+
+.legend-checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 4px;
+  height: 7px;
+  border: solid #0f172a;
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+.legend-checkbox:focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.legend-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.legend-count {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+  padding: 1px 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* ====================================================================
+   3. CONTROLS PANEL
+   ==================================================================== */
+#controls-panel {
+  left: 12px;
+  bottom: 12px;
+  width: 230px;
+}
+
+#controls-panel .panel-content {
+  padding: 10px 14px 14px;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+  max-height: 300px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+#controls-panel.collapsed .panel-content {
+  max-height: 0;
+  opacity: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.control-group {
+  margin-bottom: 12px;
+}
+
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.control-group label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-row span {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #06b6d4;
+  min-width: 36px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Range Input (Dark-Themed) --- */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #06b6d4;
+  border: 2px solid #0f172a;
+  box-shadow: 0 0 6px rgba(6, 182, 212, 0.4);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+  transform: scale(1.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #06b6d4;
+  border: 2px solid #0f172a;
+  box-shadow: 0 0 6px rgba(6, 182, 212, 0.4);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Action Button --- */
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 9px 16px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #0f172a;
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+}
+
+.action-btn:hover {
+  background: linear-gradient(135deg, #22d3ee, #06b6d4);
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.45);
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(6, 182, 212, 0.25);
+}
+
+.action-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ====================================================================
+   4. INFO PANEL (Airspace Detail)
+   ==================================================================== */
+#info-panel {
+  top: 70px;
+  right: 12px;
+  width: 280px;
+  display: none;
+}
+
+#info-panel.visible {
+  display: block;
+  animation: panelSlideIn 0.25s ease-out;
+}
+
+@keyframes panelSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#info-panel .panel-header {
+  cursor: default;
+}
+
+#info-panel .panel-header h3 {
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 600;
+}
+
+.info-content {
+  padding: 4px 0;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.info-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.info-content::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 4px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 14px;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+.info-value {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  text-align: right;
+  word-break: break-word;
+  font-variant-numeric: tabular-nums;
+}
+
+.ref-badge {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: rgba(6, 182, 212, 0.15);
+  color: #06b6d4;
+  vertical-align: middle;
+  margin-left: 4px;
+  letter-spacing: 0.04em;
+}
+
+/* ====================================================================
+   5. LOADING OVERLAY
+   ==================================================================== */
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: opacity 0.4s ease;
+}
+
+#loading.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.08);
+  border-top-color: #06b6d4;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #94a3b8;
+  letter-spacing: 0.02em;
+}
+
+/* ====================================================================
+   6. UTILITIES & RESPONSIVE
+   ==================================================================== */
+
+/* Selection highlight for text */
+::selection {
+  background: rgba(6, 182, 212, 0.3);
+  color: #f1f5f9;
+}
+
+/* Focus-visible ring for keyboard navigation */
+:focus-visible {
+  outline: 2px solid rgba(6, 182, 212, 0.6);
+  outline-offset: 2px;
+}
+
+/* Mapbox attribution / controls: keep them from overlapping panels */
+.mapboxgl-ctrl-bottom-right,
+.maplibregl-ctrl-bottom-right {
+  right: 12px;
+  bottom: 12px;
+}
+
+.mapboxgl-ctrl-bottom-left,
+.maplibregl-ctrl-bottom-left {
+  left: 250px;
+}
+
+/* Small screens: stack panels full-width at bottom */
+@media (max-width: 640px) {
+  #top-bar {
+    padding: 0 12px;
+    height: 48px;
+  }
+
+  #title h1 {
+    font-size: 0.9rem;
+  }
+
+  #title .subtitle {
+    display: none;
+  }
+
+  .style-btn {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+
+  #legend-panel,
+  #controls-panel {
+    width: calc(100vw - 24px);
+    left: 12px;
+  }
+
+  #legend-panel {
+    top: auto;
+    bottom: 62px;
+    max-height: 40vh;
+  }
+
+  #controls-panel {
+    bottom: 12px;
+  }
+
+  #info-panel {
+    top: auto;
+    right: 12px;
+    left: 12px;
+    bottom: 12px;
+    width: auto;
+    max-height: 50vh;
+  }
+}

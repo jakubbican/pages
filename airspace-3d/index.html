@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CZ Airspace 3D - MapTiler</title>
+  <meta name="description" content="3D visualization of Czech Republic airspace using MapTiler SDK">
+  <link href="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.css" rel="stylesheet" />
+  <link href="https://cdn.maptiler.com/maptiler-geocoding-control/latest/style.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Top bar -->
+  <div id="top-bar">
+    <div id="title">
+      <h1>CZ Airspace 3D</h1>
+      <span class="subtitle">Czech Republic Airspace Visualization</span>
+    </div>
+    <div id="style-switcher">
+      <button class="style-btn active" data-style="DATAVIZ.DARK">Dark</button>
+      <button class="style-btn" data-style="STREETS">Streets</button>
+      <button class="style-btn" data-style="SATELLITE">Satellite</button>
+      <button class="style-btn" data-style="OUTDOOR">Outdoor</button>
+      <button class="style-btn" data-style="TOPO">Topo</button>
+    </div>
+  </div>
+
+  <!-- Legend panel -->
+  <div id="legend-panel" class="panel">
+    <div class="panel-header" data-toggle="legend-content">
+      <h3>Airspace Classes</h3>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div id="legend-content" class="panel-content"></div>
+  </div>
+
+  <!-- Controls panel -->
+  <div id="controls-panel" class="panel">
+    <div class="panel-header" data-toggle="controls-content">
+      <h3>Controls</h3>
+      <span class="toggle-icon">&#9660;</span>
+    </div>
+    <div id="controls-content" class="panel-content">
+      <div class="control-group">
+        <label>Opacity</label>
+        <div class="slider-row">
+          <input type="range" id="opacity-slider" min="10" max="90" value="40">
+          <span id="opacity-value">40%</span>
+        </div>
+      </div>
+      <div class="control-group">
+        <label>Max Altitude</label>
+        <div class="slider-row">
+          <input type="range" id="altitude-slider" min="0" max="20000" step="500" value="20000">
+          <span id="altitude-value">&infin;</span>
+        </div>
+      </div>
+      <div class="control-group">
+        <label>Terrain Exaggeration</label>
+        <div class="slider-row">
+          <input type="range" id="terrain-slider" min="0" max="3" step="0.1" value="1">
+          <span id="terrain-value">1.0x</span>
+        </div>
+      </div>
+      <div class="control-group" style="margin-top: 12px;">
+        <label>Flythrough</label>
+        <button id="flythrough-btn" class="action-btn">Prague &rarr; Brno</button>
+        <button id="flythrough-overview-btn" class="action-btn" style="margin-top:6px">CZ Overview</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info panel (airspace details on click) -->
+  <div id="info-panel" class="panel">
+    <div class="panel-header">
+      <h3 id="info-name">&mdash;</h3>
+      <button id="info-close" class="close-btn">&times;</button>
+    </div>
+    <div id="info-content" class="panel-content"></div>
+  </div>
+
+  <!-- Loading overlay -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading airspace data...</p>
+  </div>
+
+  <script src="https://cdn.maptiler.com/maptiler-sdk-js/latest/maptiler-sdk.umd.min.js"></script>
+  <script src="https://cdn.maptiler.com/maptiler-geocoding-control/latest/maptilersdk.umd.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
