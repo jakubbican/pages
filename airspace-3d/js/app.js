@@ -2,7 +2,6 @@
 import { parseOpenAir } from './openair-parser.js';
 import {
   addAirspaceLayers,
-  removeAirspaceLayers,
   updateOpacity,
   updateAltitudeFilter,
   updateExaggeration,
@@ -40,16 +39,21 @@ const map = new maptilersdk.Map({
   hash: true,
 });
 
-// ---- Geocoding control ----
+// ---- Geocoding control — added to centered custom container ----
 try {
   const gc = new maptilersdkMaptilerGeocoder.GeocodingControl({
     country: ['cz'],
     proximity: [15.5, 49.8],
     collapsed: false,
-    placeholder: 'Search places...',
+    placeholder: 'Search places in Czech Republic...',
     flyTo: { duration: 2000, pitch: 55 },
   });
-  map.addControl(gc, 'top-left');
+  const gcContainer = document.getElementById('geocoding-container');
+  if (gcContainer) {
+    // Mount the control into our custom div instead of map controls
+    const ctrl = gc.onAdd(map);
+    gcContainer.appendChild(ctrl);
+  }
 } catch (e) {
   console.warn('Geocoding control not available:', e.message);
 }
@@ -72,7 +76,6 @@ async function loadData() {
   const allData = parseOpenAir(allText);
   const atzData = parseOpenAir(atzText);
 
-  // Merge with unique IDs
   return {
     type: 'FeatureCollection',
     features: [...allData.features, ...atzData.features].map((f, i) => ({
@@ -100,7 +103,6 @@ map.on('load', async () => {
       onOverview: () => flyCzechOverview(map),
     });
 
-    // Hide loading
     document.getElementById('loading').classList.add('hidden');
   } catch (err) {
     console.error('Failed to load airspace data:', err);
@@ -120,10 +122,8 @@ document.querySelectorAll('.style-btn').forEach(btn => {
     currentStyle = styleName;
 
     map.setStyle(STYLES[styleName]);
-    // Re-add layers once new style data arrives (MapTiler recommended pattern)
     map.once('styledata', () => {
       if (geojsonData) {
-        // Small delay to ensure style internals are ready
         setTimeout(() => {
           addAirspaceLayers(map, geojsonData);
         }, 300);
@@ -132,33 +132,23 @@ document.querySelectorAll('.style-btn').forEach(btn => {
   });
 });
 
-// ---- Elevation readout under cursor ----
+// ---- Elevation readout on CLICK (not mousemove — avoids performance issues) ----
 const elevationEl = document.getElementById('elevation-readout');
-let elevationThrottle = 0;
 
-map.on('mousemove', async (e) => {
-  const now = Date.now();
-  if (now - elevationThrottle < 300) return; // throttle to ~3 calls/sec
-  elevationThrottle = now;
-
+map.on('click', async (e) => {
+  if (!elevationEl) return;
   try {
-    const lngLat = e.lngLat;
-    const result = await maptilersdk.elevation.at([lngLat.lng, lngLat.lat]);
+    const { lng, lat } = e.lngLat;
+    elevationEl.textContent = '...';
+    const result = await maptilersdk.elevation.at([lng, lat]);
     if (result && result.length >= 3) {
       const elev = Math.round(result[2]);
       const elevFt = Math.round(elev / 0.3048);
-      if (elevationEl) {
-        elevationEl.textContent = `${elev}m / ${elevFt}ft AMSL`;
-        elevationEl.style.opacity = '1';
-      }
+      elevationEl.textContent = `${elev}m / ${elevFt}ft AMSL`;
     }
   } catch (_) {
-    // silently ignore elevation fetch errors
+    elevationEl.textContent = '—';
   }
-});
-
-map.on('mouseleave', () => {
-  if (elevationEl) elevationEl.style.opacity = '0.5';
 });
 
 // ---- Expose for Playwright testing ----

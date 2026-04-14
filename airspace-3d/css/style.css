@@ -581,28 +581,62 @@ input[type="range"]::-moz-range-track {
 }
 
 /* ====================================================================
-   5b. ELEVATION BAR
+   5b. CENTERED SEARCH BAR + ELEVATION
    ==================================================================== */
-#elevation-bar {
+#search-bar {
   position: fixed;
-  bottom: 6px;
-  right: 12px;
-  z-index: 3;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#geocoding-container {
+  min-width: 320px;
+}
+
+/* Style the geocoding control inside our container */
+#geocoding-container .maplibregl-ctrl-geocoder,
+#geocoding-container .maplibregl-ctrl {
+  background: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+  color: #e2e8f0 !important;
+  font-family: inherit !important;
+}
+
+#geocoding-container input {
+  color: #e2e8f0 !important;
+  font-size: 0.85rem !important;
+}
+
+#geocoding-container input::placeholder {
+  color: #64748b !important;
+}
+
+#elevation-pill {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 12px;
-  background: rgba(15, 23, 42, 0.8);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.72rem;
-  pointer-events: none;
+  padding: 8px 14px;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
 }
 
 #elevation-label {
   color: #64748b;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -610,15 +644,42 @@ input[type="range"]::-moz-range-track {
 
 #elevation-readout {
   color: #06b6d4;
+  font-size: 0.78rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-  transition: opacity 0.3s ease;
 }
 
-/* Geocoding control positioning fix */
+/* ---- Map controls styling (zoom, compass, terrain, geolocate) ---- */
+.maplibregl-ctrl-group,
+.mapboxgl-ctrl-group {
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+}
+
+.maplibregl-ctrl-group button,
+.mapboxgl-ctrl-group button {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.maplibregl-ctrl-group button:hover,
+.mapboxgl-ctrl-group button:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Terrain control icon */
+.maplibregl-ctrl button .maplibregl-ctrl-icon,
+.mapboxgl-ctrl button .mapboxgl-ctrl-icon {
+  filter: invert(0.7);
+}
+
+/* Hide the default top-left map control area (we use custom geocoding) */
 .maplibregl-ctrl-top-left,
 .mapboxgl-ctrl-top-left {
-  top: 62px;
+  display: none;
 }
 
 /* ====================================================================
@@ -662,13 +723,8 @@ input[type="range"]::-moz-range-track {
     min-width: 0;
   }
 
-  #title h1 {
-    font-size: 0.85rem;
-  }
-
-  #title .subtitle {
-    display: none;
-  }
+  #title h1 { font-size: 0.85rem; }
+  #title .subtitle { display: none; }
 
   #style-switcher {
     overflow-x: auto;
@@ -684,27 +740,30 @@ input[type="range"]::-moz-range-track {
     white-space: nowrap;
   }
 
-  #legend-panel,
-  #controls-panel {
-    width: calc(100vw - 24px);
-    left: 12px;
+  #search-bar {
+    top: 50px;
+    left: 8px;
+    right: 8px;
+    transform: none;
+    flex-direction: column;
   }
+
+  #geocoding-container { min-width: 0; width: 100%; }
+  #elevation-pill { align-self: flex-start; }
 
   #legend-panel {
     top: auto;
     bottom: 12px;
+    left: 12px;
+    width: calc(50vw - 18px);
     max-height: 35vh;
   }
 
-  /* Start collapsed on mobile */
-  #legend-panel #legend-content {
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-  }
-
   #controls-panel {
-    display: none;
+    left: auto;
+    right: 12px;
+    bottom: 12px;
+    width: calc(50vw - 18px);
   }
 
   #info-panel {
@@ -714,16 +773,5 @@ input[type="range"]::-moz-range-track {
     bottom: 12px;
     width: auto;
     max-height: 50vh;
-  }
-
-  #elevation-bar {
-    bottom: auto;
-    top: 48px;
-    right: 8px;
-  }
-
-  .maplibregl-ctrl-top-left,
-  .mapboxgl-ctrl-top-left {
-    top: 50px;
   }
 }
