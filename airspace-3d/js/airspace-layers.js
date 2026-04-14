@@ -1,5 +1,6 @@
 // js/airspace-layers.js
-// Manages airspace fill-extrusion layers on the map
+// Manages airspace fill-extrusion + outline layers
+// Performance: NO mouseenter/mouseleave (avoids continuous 3D raycasting)
 
 const CLASS_ORDER = ['P', 'R', 'Q', 'C', 'D', 'CTR', 'E', 'ATZ', 'GS', 'W', 'A', 'B'];
 const SOURCE_ID = 'airspace-source';
@@ -8,6 +9,7 @@ let currentOpacity = 0.4;
 let currentAltMax = 20000;
 let currentExaggeration = 1.0;
 let hiddenClasses = new Set();
+let clickHandlerBound = false;
 
 export function getClassCounts(geojson) {
   const counts = {};
@@ -19,28 +21,22 @@ export function getClassCounts(geojson) {
 }
 
 export function addAirspaceLayers(map, geojson) {
-  // Remove existing first
   removeAirspaceLayers(map);
 
-  // Add source
   map.addSource(SOURCE_ID, {
     type: 'geojson',
     data: geojson,
-    generateId: true,
   });
 
-  // Find label layer to insert before (so labels stay on top)
   const labelLayer = findLabelLayer(map);
-
   const classesInData = [...new Set(geojson.features.map(f => f.properties.class))];
 
   for (const cls of CLASS_ORDER) {
     if (!classesInData.includes(cls)) continue;
 
-    const layerId = `airspace-fill-${cls}`;
-
+    // Fill-extrusion layer
     map.addLayer({
-      id: layerId,
+      id: `airspace-fill-${cls}`,
       type: 'fill-extrusion',
       source: SOURCE_ID,
       filter: [
@@ -59,10 +55,9 @@ export function addAirspaceLayers(map, geojson) {
       },
     }, labelLayer);
 
-    // Outline layer for airspace borders
-    const outlineId = `airspace-outline-${cls}`;
+    // Outline layer
     map.addLayer({
-      id: outlineId,
+      id: `airspace-outline-${cls}`,
       type: 'line',
       source: SOURCE_ID,
       filter: [
@@ -81,8 +76,11 @@ export function addAirspaceLayers(map, geojson) {
     }, labelLayer);
   }
 
-  // Setup click and hover handlers
-  setupClickHandler(map, classesInData);
+  // Bind click handler only once (survives style changes)
+  if (!clickHandlerBound) {
+    setupClickHandler(map);
+    clickHandlerBound = true;
+  }
 }
 
 export function removeAirspaceLayers(map) {
@@ -102,7 +100,6 @@ export function updateOpacity(map, opacity) {
   currentOpacity = opacity;
   const style = map.getStyle();
   if (!style) return;
-
   for (const layer of style.layers) {
     if (layer.id.startsWith('airspace-fill-')) {
       map.setPaintProperty(layer.id, 'fill-extrusion-opacity', opacity);
@@ -118,7 +115,6 @@ export function updateAltitudeFilter(map, maxAlt) {
 function applyFilters(map) {
   const style = map.getStyle();
   if (!style) return;
-
   for (const layer of style.layers) {
     if (layer.id.startsWith('airspace-fill-') || layer.id.startsWith('airspace-outline-')) {
       const cls = layer.id.replace('airspace-fill-', '').replace('airspace-outline-', '');
@@ -135,7 +131,6 @@ export function updateExaggeration(map, exaggeration) {
   currentExaggeration = exaggeration;
   const style = map.getStyle();
   if (!style) return;
-
   for (const layer of style.layers) {
     if (layer.id.startsWith('airspace-fill-')) {
       map.setPaintProperty(layer.id, 'fill-extrusion-height',
@@ -144,7 +139,6 @@ export function updateExaggeration(map, exaggeration) {
         ['*', ['get', 'lowerAlt'], exaggeration]);
     }
   }
-  // Re-apply altitude filter (visual cutoff stays consistent)
   applyFilters(map);
 }
 
@@ -154,13 +148,11 @@ export function toggleClassVisibility(map, cls, visible) {
   } else {
     hiddenClasses.add(cls);
   }
-
   const vis = visible ? 'visible' : 'none';
-  const fillId = `airspace-fill-${cls}`;
-  const outlineId = `airspace-outline-${cls}`;
-
-  if (map.getLayer(fillId)) map.setLayoutProperty(fillId, 'visibility', vis);
-  if (map.getLayer(outlineId)) map.setLayoutProperty(outlineId, 'visibility', vis);
+  if (map.getLayer(`airspace-fill-${cls}`))
+    map.setLayoutProperty(`airspace-fill-${cls}`, 'visibility', vis);
+  if (map.getLayer(`airspace-outline-${cls}`))
+    map.setLayoutProperty(`airspace-outline-${cls}`, 'visibility', vis);
 }
 
 function findLabelLayer(map) {
@@ -173,36 +165,21 @@ function findLabelLayer(map) {
   return undefined;
 }
 
-function setupClickHandler(map, classesInData) {
-  const layerIds = classesInData
-    .filter(cls => CLASS_ORDER.includes(cls))
-    .map(cls => `airspace-fill-${cls}`);
-
-  for (const layerId of layerIds) {
-    if (!map.getLayer(layerId)) continue;
-
-    map.on('click', layerId, (e) => {
-      if (!e.features || !e.features.length) return;
-      e.originalEvent.stopPropagation();
-      const f = e.features[0];
-      showInfoPanel(f.properties);
-    });
-
-    map.on('mouseenter', layerId, () => {
-      map.getCanvas().style.cursor = 'pointer';
-    });
-
-    map.on('mouseleave', layerId, () => {
-      map.getCanvas().style.cursor = '';
-    });
-  }
-
-  // Close info panel when clicking outside airspace
+// Click-only interaction — NO mouseenter/mouseleave (those cause constant GPU raycasting)
+function setupClickHandler(map) {
   map.on('click', (e) => {
-    const features = map.queryRenderedFeatures(e.point, {
-      layers: layerIds.filter(id => map.getLayer(id)),
-    });
-    if (!features.length) {
+    // Query all airspace fill layers at click point
+    const fillLayers = (map.getStyle()?.layers || [])
+      .filter(l => l.id.startsWith('airspace-fill-'))
+      .map(l => l.id);
+
+    if (!fillLayers.length) return;
+
+    const features = map.queryRenderedFeatures(e.point, { layers: fillLayers });
+
+    if (features.length > 0) {
+      showInfoPanel(features[0].properties);
+    } else {
       const panel = document.getElementById('info-panel');
       panel.style.display = 'none';
       panel.classList.remove('visible');
@@ -218,10 +195,6 @@ function showInfoPanel(props) {
   nameEl.textContent = props.name || 'Unknown';
   nameEl.style.color = props.color;
 
-  const upperM = Math.round(props.upperAlt);
-  const lowerM = Math.round(props.lowerAlt);
-  const upperFt = Math.round(props.upperAlt / 0.3048);
-  const lowerFt = Math.round(props.lowerAlt / 0.3048);
   const upperRefBadge = props.upperRef ? ` <small class="ref-badge">${props.upperRef}</small>` : '';
   const lowerRefBadge = props.lowerRef ? ` <small class="ref-badge">${props.lowerRef}</small>` : '';
 
@@ -258,7 +231,6 @@ function showInfoPanel(props) {
   panel.classList.add('visible');
 }
 
-// Close button handler
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('info-close')?.addEventListener('click', () => {
     const panel = document.getElementById('info-panel');
