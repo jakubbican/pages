@@ -5,6 +5,7 @@ import {
   removeAirspaceLayers,
   updateOpacity,
   updateAltitudeFilter,
+  updateExaggeration,
   toggleClassVisibility,
   getClassCounts,
 } from './airspace-layers.js';
@@ -44,6 +45,9 @@ try {
   const gc = new maptilersdkMaptilerGeocoder.GeocodingControl({
     country: ['cz'],
     proximity: [15.5, 49.8],
+    collapsed: false,
+    placeholder: 'Search places...',
+    flyTo: { duration: 2000, pitch: 55 },
   });
   map.addControl(gc, 'top-left');
 } catch (e) {
@@ -90,6 +94,7 @@ map.on('load', async () => {
     setupControls(map, geojsonData, classCounts, {
       onOpacityChange: (val) => updateOpacity(map, val / 100),
       onAltitudeChange: (val) => updateAltitudeFilter(map, val),
+      onExaggerationChange: (val) => updateExaggeration(map, val),
       onClassToggle: (cls, visible) => toggleClassVisibility(map, cls, visible),
       onFlythrough: () => flyPragueToBrno(map),
       onOverview: () => flyCzechOverview(map),
@@ -125,6 +130,35 @@ document.querySelectorAll('.style-btn').forEach(btn => {
       }
     });
   });
+});
+
+// ---- Elevation readout under cursor ----
+const elevationEl = document.getElementById('elevation-readout');
+let elevationThrottle = 0;
+
+map.on('mousemove', async (e) => {
+  const now = Date.now();
+  if (now - elevationThrottle < 300) return; // throttle to ~3 calls/sec
+  elevationThrottle = now;
+
+  try {
+    const lngLat = e.lngLat;
+    const result = await maptilersdk.elevation.at([lngLat.lng, lngLat.lat]);
+    if (result && result.length >= 3) {
+      const elev = Math.round(result[2]);
+      const elevFt = Math.round(elev / 0.3048);
+      if (elevationEl) {
+        elevationEl.textContent = `${elev}m / ${elevFt}ft AMSL`;
+        elevationEl.style.opacity = '1';
+      }
+    }
+  } catch (_) {
+    // silently ignore elevation fetch errors
+  }
+});
+
+map.on('mouseleave', () => {
+  if (elevationEl) elevationEl.style.opacity = '0.5';
 });
 
 // ---- Expose for Playwright testing ----

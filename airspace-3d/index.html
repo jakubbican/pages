@@ -51,9 +51,9 @@
         </div>
       </div>
       <div class="control-group">
-        <label>Max Altitude</label>
+        <label>Max Altitude (ft)</label>
         <div class="slider-row">
-          <input type="range" id="altitude-slider" min="0" max="20000" step="500" value="20000">
+          <input type="range" id="altitude-slider" min="0" max="66000" step="500" value="66000">
           <span id="altitude-value">&infin;</span>
         </div>
       </div>
@@ -79,6 +79,12 @@
       <button id="info-close" class="close-btn">&times;</button>
     </div>
     <div id="info-content" class="panel-content"></div>
+  </div>
+
+  <!-- Elevation readout -->
+  <div id="elevation-bar">
+    <span id="elevation-label">Terrain:</span>
+    <span id="elevation-readout">—</span>
   </div>
 
   <!-- Loading overlay -->

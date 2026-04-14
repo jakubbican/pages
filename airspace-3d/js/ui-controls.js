@@ -75,22 +75,23 @@ function wireSliders(map, callbacks) {
     callbacks.onOpacityChange(val);
   });
 
-  // Altitude
+  // Altitude (slider in feet, convert to meters for filter)
   const altSlider = document.getElementById('altitude-slider');
   const altValue = document.getElementById('altitude-value');
   altSlider.addEventListener('input', () => {
-    const val = parseInt(altSlider.value);
-    if (val >= 20000) {
+    const ft = parseInt(altSlider.value);
+    if (ft >= 66000) {
       altValue.textContent = '\u221E';
-    } else if (val >= 1000) {
-      altValue.textContent = (val / 1000).toFixed(1) + 'km';
+    } else if (ft >= 10000) {
+      altValue.textContent = 'FL ' + Math.round(ft / 100);
     } else {
-      altValue.textContent = val + 'm';
+      altValue.textContent = ft + ' ft';
     }
-    callbacks.onAltitudeChange(val);
+    const meters = ft * 0.3048;
+    callbacks.onAltitudeChange(meters);
   });
 
-  // Terrain exaggeration
+  // Terrain exaggeration — also scales airspace extrusion heights
   const terrainSlider = document.getElementById('terrain-slider');
   const terrainValue = document.getElementById('terrain-value');
   terrainSlider.addEventListener('input', () => {
@@ -101,6 +102,8 @@ function wireSliders(map, callbacks) {
     } else {
       map.disableTerrain();
     }
+    // Keep airspace volume heights in sync with terrain exaggeration
+    callbacks.onExaggerationChange(Math.max(val, 1));
   });
 }
 

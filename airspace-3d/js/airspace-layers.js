@@ -6,6 +6,7 @@ const SOURCE_ID = 'airspace-source';
 
 let currentOpacity = 0.4;
 let currentAltMax = 20000;
+let currentExaggeration = 1.0;
 let hiddenClasses = new Set();
 
 export function getClassCounts(geojson) {
@@ -49,8 +50,8 @@ export function addAirspaceLayers(map, geojson) {
       ],
       paint: {
         'fill-extrusion-color': ['get', 'color'],
-        'fill-extrusion-height': ['get', 'upperAlt'],
-        'fill-extrusion-base': ['get', 'lowerAlt'],
+        'fill-extrusion-height': ['*', ['get', 'upperAlt'], currentExaggeration],
+        'fill-extrusion-base': ['*', ['get', 'lowerAlt'], currentExaggeration],
         'fill-extrusion-opacity': currentOpacity,
       },
       layout: {
@@ -111,6 +112,10 @@ export function updateOpacity(map, opacity) {
 
 export function updateAltitudeFilter(map, maxAlt) {
   currentAltMax = maxAlt;
+  applyFilters(map);
+}
+
+function applyFilters(map) {
   const style = map.getStyle();
   if (!style) return;
 
@@ -120,10 +125,27 @@ export function updateAltitudeFilter(map, maxAlt) {
       map.setFilter(layer.id, [
         'all',
         ['==', ['get', 'class'], cls],
-        ['<=', ['get', 'upperAlt'], maxAlt],
+        ['<=', ['get', 'upperAlt'], currentAltMax],
       ]);
     }
   }
+}
+
+export function updateExaggeration(map, exaggeration) {
+  currentExaggeration = exaggeration;
+  const style = map.getStyle();
+  if (!style) return;
+
+  for (const layer of style.layers) {
+    if (layer.id.startsWith('airspace-fill-')) {
+      map.setPaintProperty(layer.id, 'fill-extrusion-height',
+        ['*', ['get', 'upperAlt'], exaggeration]);
+      map.setPaintProperty(layer.id, 'fill-extrusion-base',
+        ['*', ['get', 'lowerAlt'], exaggeration]);
+    }
+  }
+  // Re-apply altitude filter (visual cutoff stays consistent)
+  applyFilters(map);
 }
 
 export function toggleClassVisibility(map, cls, visible) {

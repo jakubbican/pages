@@ -581,6 +581,47 @@ input[type="range"]::-moz-range-track {
 }
 
 /* ====================================================================
+   5b. ELEVATION BAR
+   ==================================================================== */
+#elevation-bar {
+  position: fixed;
+  bottom: 6px;
+  right: 12px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.72rem;
+  pointer-events: none;
+}
+
+#elevation-label {
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#elevation-readout {
+  color: #06b6d4;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  transition: opacity 0.3s ease;
+}
+
+/* Geocoding control positioning fix */
+.maplibregl-ctrl-top-left,
+.mapboxgl-ctrl-top-left {
+  top: 62px;
+}
+
+/* ====================================================================
    6. UTILITIES & RESPONSIVE
    ==================================================================== */
 
@@ -608,24 +649,39 @@ input[type="range"]::-moz-range-track {
   left: 250px;
 }
 
-/* Small screens: stack panels full-width at bottom */
+/* Small screens */
 @media (max-width: 640px) {
   #top-bar {
-    padding: 0 12px;
-    height: 48px;
+    padding: 0 8px;
+    height: 44px;
+    gap: 8px;
+  }
+
+  #title {
+    flex-shrink: 1;
+    min-width: 0;
   }
 
   #title h1 {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   #title .subtitle {
     display: none;
   }
 
+  #style-switcher {
+    overflow-x: auto;
+    flex-shrink: 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  #style-switcher::-webkit-scrollbar { display: none; }
+
   .style-btn {
-    padding: 5px 10px;
-    font-size: 0.7rem;
+    padding: 4px 8px;
+    font-size: 0.65rem;
+    white-space: nowrap;
   }
 
   #legend-panel,
@@ -636,12 +692,19 @@ input[type="range"]::-moz-range-track {
 
   #legend-panel {
     top: auto;
-    bottom: 62px;
-    max-height: 40vh;
+    bottom: 12px;
+    max-height: 35vh;
+  }
+
+  /* Start collapsed on mobile */
+  #legend-panel #legend-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
   }
 
   #controls-panel {
-    bottom: 12px;
+    display: none;
   }
 
   #info-panel {
@@ -651,5 +714,16 @@ input[type="range"]::-moz-range-track {
     bottom: 12px;
     width: auto;
     max-height: 50vh;
+  }
+
+  #elevation-bar {
+    bottom: auto;
+    top: 48px;
+    right: 8px;
+  }
+
+  .maplibregl-ctrl-top-left,
+  .mapboxgl-ctrl-top-left {
+    top: 50px;
   }
 }
