@@ -620,6 +620,12 @@ input[type="range"]::-moz-range-track {
   color: #64748b !important;
 }
 
+/* Invert dark SVG icons (search, clear) to be visible on dark bg */
+#geocoding-container svg,
+#geocoding-container button svg {
+  filter: invert(0.8);
+}
+
 #elevation-pill {
   display: flex;
   align-items: center;
