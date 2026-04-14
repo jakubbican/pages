@@ -33,7 +33,7 @@ const map = new maptilersdk.Map({
   pitch: 55,
   bearing: 0,
   maxPitch: 85,
-  terrain: true,
+  terrain: false,
   terrainExaggeration: 1.0,
   terrainControl: true,
   navigationControl: 'top-right',
