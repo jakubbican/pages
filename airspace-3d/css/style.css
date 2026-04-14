@@ -698,7 +698,12 @@ input[type="range"]::-moz-range-track {
   outline-offset: 2px;
 }
 
-/* Mapbox attribution / controls: keep them from overlapping panels */
+/* Push map controls below top bar (56px + gap) */
+.maplibregl-ctrl-top-right,
+.mapboxgl-ctrl-top-right {
+  top: 62px;
+}
+
 .mapboxgl-ctrl-bottom-right,
 .maplibregl-ctrl-bottom-right {
   right: 12px;
