@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
             searchQuery: '',
             yearStart: 2012,
             yearEnd: 2026,
-            discipline: 'ALL' // 'ALL', 'SLALOM', 'SJEZD'
+            discipline: 'ALL', // 'ALL', 'SLALOM', 'SJEZD'
+            onlyDomestic: true
         },
         sorting: {
             field: 'races', // 'name', 'races', 'competitors'
@@ -112,6 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        // Domestic Only checkbox listener
+        document.getElementById('onlyDomestic').addEventListener('change', (e) => {
+            state.activeFilters.onlyDomestic = e.target.checked;
+            updateDashboard();
+        });
+
         // Table headers sorting
         const headers = document.querySelectorAll('.th-sort');
         headers.forEach(header => {
@@ -146,12 +153,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function processAndFilterData() {
-        const { searchQuery, yearStart, yearEnd, discipline } = state.activeFilters;
+        const { searchQuery, yearStart, yearEnd, discipline, onlyDomestic } = state.activeFilters;
         
         // Loop through raw clubs and recalculate statistical metrics based on filtered races
         const processed = [];
 
         state.rawData.clubs.forEach(rawClub => {
+            // Exclude unassigned/international "Neznámý oddíl" if "Jen domácí" is checked
+            if (onlyDomestic && rawClub.name === "Neznámý oddíl") {
+                return;
+            }
+
             // Check if club name matches search
             if (searchQuery && !rawClub.name.toLowerCase().includes(searchQuery)) {
                 return;
