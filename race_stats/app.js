@@ -358,14 +358,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         position: 'left',
                         grid: { color: 'rgba(255, 255, 255, 0.05)' },
                         ticks: { color: '#94a3b8' },
-                        title: { display: true, text: 'Účast (celkový průtok lodí)', color: '#94a3b8' }
+                        title: { display: true, text: 'Účast (celkový průtok lodí)', color: '#94a3b8' },
+                        beginAtZero: true
                     },
                     yRaces: {
                         type: 'linear',
                         position: 'right',
                         grid: { drawOnChartArea: false }, // Only draw grid for left axis
                         ticks: { color: '#94a3b8' },
-                        title: { display: true, text: 'Počet akcí', color: '#94a3b8' }
+                        title: { display: true, text: 'Počet akcí', color: '#94a3b8' },
+                        beginAtZero: true
                     }
                 }
             }
