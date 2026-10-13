@@ -26148,19 +26148,14 @@
   {
     "year": 2026,
     "row_idx": 35,
-    "col0": "1. Český pohár seniorů v Kajak krosu 25 kros / počet hodnocených: 74",
+    "col0": "1. Český pohár žáků ve slalomu v Opavě 31 SLALOM / počet hodnocených: 208",
     "date": "25.04.2026",
-    "club": "TJ DUKLA Praha",
-    "location": "Kanoistický areál, umělá slalomová dráha Praha - Troja",
+    "club": "KK Opava",
+    "location": "USD Opava",
     "links": [
-      "https://www.slalom-world.com/index.php?act=01&idz=2511",
-      "https://www.kanoe.cz/cez",
-      "https://dartfi.sh/ySU6QuzlPYc",
-      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381901/",
-      "https://siwidata.com/canoe123/csk_live?SessionKey=CZE1.2026042500",
-      "https://youtube.com/live/4MqBdG8tTHE?feature=share",
-      "https://youtube.com/live/flA8A3J2148?feature=share",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-25-6084f116c819.pdf"
+      "https://www.slalom-world.com/index.php?act=01&idz=2496",
+      "https://live.ww-cb.cz/#/events/2026031",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-31-e63914cbb6bd.pdf"
     ]
   },
   {
@@ -26184,14 +26179,19 @@
   {
     "year": 2026,
     "row_idx": 37,
-    "col0": "1. Český pohár žáků ve slalomu v Opavě 31 SLALOM / počet hodnocených: 208",
+    "col0": "1. Český pohár seniorů v Kajak krosu 25 kros / počet hodnocených: 74",
     "date": "25.04.2026",
-    "club": "KK Opava",
-    "location": "USD Opava",
+    "club": "TJ DUKLA Praha",
+    "location": "Kanoistický areál, umělá slalomová dráha Praha - Troja",
     "links": [
-      "https://www.slalom-world.com/index.php?act=01&idz=2496",
-      "https://live.ww-cb.cz/#/events/2026031",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-31-e63914cbb6bd.pdf"
+      "https://www.slalom-world.com/index.php?act=01&idz=2511",
+      "https://www.kanoe.cz/cez",
+      "https://dartfi.sh/ySU6QuzlPYc",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381901/",
+      "https://siwidata.com/canoe123/csk_live?SessionKey=CZE1.2026042500",
+      "https://youtube.com/live/4MqBdG8tTHE?feature=share",
+      "https://youtube.com/live/flA8A3J2148?feature=share",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-25-6084f116c819.pdf"
     ]
   },
   {
@@ -26213,6 +26213,19 @@
   {
     "year": 2026,
     "row_idx": 39,
+    "col0": "2. Český pohár žáků ve slalomu v Opavě 32 SLALOM / počet hodnocených: 208",
+    "date": "26.04.2026",
+    "club": "KK Opava",
+    "location": "USD Opava",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2497",
+      "https://live.ww-cb.cz/#/events/2026031",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-32-ccf3b12ed214.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 40,
     "col0": "3. Český pohár seniorů v Kajak krosu 29 kros / počet hodnocených: 72",
     "date": "26.04.2026",
     "club": "TJ DUKLA Praha",
@@ -26225,19 +26238,6 @@
       "https://siwidata.com/canoe123/csk_live?SessionKey=CZE1.2026042600",
       "https://youtube.com/live/_9s2XVtsvzA?feature=share",
       "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-29-b53ac035a68a.pdf"
-    ]
-  },
-  {
-    "year": 2026,
-    "row_idx": 40,
-    "col0": "2. Český pohár žáků ve slalomu v Opavě 32 SLALOM / počet hodnocených: 208",
-    "date": "26.04.2026",
-    "club": "KK Opava",
-    "location": "USD Opava",
-    "links": [
-      "https://www.slalom-world.com/index.php?act=01&idz=2497",
-      "https://live.ww-cb.cz/#/events/2026031",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-32-ccf3b12ed214.pdf"
     ]
   },
   {
@@ -26338,7 +26338,8 @@
       "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381902/",
       "https://youtube.com/czechcanoe/live",
       "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226473291381004/",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-41-d42c358fe76f.pdf"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-41-d42c358fe76f.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-41-26214f97c797.pdf"
     ]
   },
   {
@@ -26401,7 +26402,8 @@
       "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381902/",
       "https://youtube.com/czechcanoe/live",
       "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226473291381005/",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-42-af6a34a5b629.pdf"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-42-af6a34a5b629.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-42-2a736e4d1a0d.pdf"
     ]
   },
   {
@@ -26466,7 +26468,8 @@
       "https://youtube.com/live/m2n93PN623I?feature=share",
       "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226473291381006/",
       "https://youtube.com/live/uaG0JnbdDVU?feature=share",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-47-41ddf0ba65b9.pdf"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-47-41ddf0ba65b9.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-47-1dddb6f6d427.pdf"
     ]
   },
   {
@@ -26495,7 +26498,8 @@
       "https://youtube.com/live/DXVBzIrFOww?feature=share",
       "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226473291381007/",
       "https://youtube.com/live/y2vfMtMMpKg?feature=share",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-48-a1fc5dff4dc8.pdf"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-48-a1fc5dff4dc8.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-48-7c07fad20316.pdf"
     ]
   },
   {
@@ -26591,11 +26595,12 @@
   {
     "year": 2026,
     "row_idx": 68,
-    "col0": "World Cup - Tacen 0 SLALOM /  výsledky nejsou k dispozici",
+    "col0": "World Cup - Tacen 0 SLALOM / počet hodnocených: 424",
     "date": "29.05.2026-31.05.2026",
     "club": "",
     "location": "",
     "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2454",
       "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-tacen-2026",
       "https://www.canoeicf.com/canoe-slalom-world-cup/ljubljana-tacen-2026/results",
       "https://youtube.com/planetcanoe",
@@ -26659,7 +26664,10 @@
     "club": "",
     "location": "",
     "links": [
-      "https://www.canoeicf.com/wildwater-canoeing-world-cup/dunaremete-2026"
+      "https://www.canoeicf.com/wildwater-canoeing-world-cup/dunaremete-2026",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-89b85636e4c6.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-58698bafbe10.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-483ce20f4025.pdf"
     ]
   },
   {
@@ -26739,11 +26747,12 @@
   {
     "year": 2026,
     "row_idx": 79,
-    "col0": "World Cup Augsburg 0 SLALOM /  výsledky nejsou k dispozici",
+    "col0": "World Cup Augsburg 0 SLALOM / počet hodnocených: 542",
     "date": "12.06.2026-14.06.2026",
     "club": "",
-    "location": "",
+    "location": "USD Augsburg",
     "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2456",
       "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2026",
       "https://www.canoeicf.com/canoe-slalom-world-cup/augsburg-2026/results",
       "https://youtube.com/planetcanoe",
@@ -26763,7 +26772,10 @@
     "club": "",
     "location": "",
     "links": [
-      "https://www.canoeicf.com/wildwater-canoeing-world-cup/bratislava-2026"
+      "https://www.canoeicf.com/wildwater-canoeing-world-cup/bratislava-2026",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-e56ed4a99dad.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-7ad78c0c932d.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-098177936329.pdf"
     ]
   },
   {
@@ -26891,6 +26903,20 @@
   {
     "year": 2026,
     "row_idx": 91,
+    "col0": "ECA Junior cup Flattach 0 SLALOM / počet hodnocených: 152",
+    "date": "20.06.2026-21.06.2026",
+    "club": "",
+    "location": "AT - Flattach",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2635",
+      "https://ecajuniorslalomcup.eu",
+      "https://siwidata.com/canoe123/live?SessionKey=slocanoe.2026062000",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-e93cf26fbebd.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 92,
     "col0": "4. Národní kvalifikační závod ve slalomu ve Veltrusech + 4. ČPJ 73 SLALOM / počet hodnocených: 258",
     "date": "21.06.2026",
     "club": "TJ KRALUPY, z.s.",
@@ -26903,12 +26929,13 @@
   },
   {
     "year": 2026,
-    "row_idx": 92,
-    "col0": "Olympiáda dětí a mládeže 2026 74 SLALOM /  výsledky nejsou k dispozici",
+    "row_idx": 93,
+    "col0": "Olympiáda dětí a mládeže 2026 74 SLALOM / počet hodnocených: 162",
     "date": "22.06.2026-25.06.2026",
     "club": "Univerzitní sportovní klub Praha",
     "location": "USD Praha Troja",
     "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2538",
       "https://www.olympijskytym.cz/odm",
       "https://siwidata.com/canoe123/csk_live?SessionKey=CZE1.ODM2026",
       "https://www.olympijskytym.cz/tv",
@@ -26922,7 +26949,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 93,
+    "row_idx": 94,
     "col0": "Akademické hry ve slalomu v Brně 75 SLALOM /  zrušeno",
     "date": "23.06.2026",
     "club": "Akademický sportovní spolek Brno, z.s.",
@@ -26931,7 +26958,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 94,
+    "row_idx": 95,
     "col0": "Akademické hry ve sprintu v Brně 76 SPRINT /  zrušeno",
     "date": "23.06.2026",
     "club": "Akademický sportovní spolek Brno, z.s.",
@@ -26940,18 +26967,21 @@
   },
   {
     "year": 2026,
-    "row_idx": 95,
+    "row_idx": 96,
     "col0": "SP ve sjezdu Mezzana (ITA) 0 SJEZD /  výsledky nejsou k dispozici",
     "date": "25.06.2026-28.06.2026",
     "club": "",
     "location": "",
     "links": [
-      "https://www.canoeicf.com/wildwater-canoeing-world-cup/mezzana-2026"
+      "https://www.canoeicf.com/wildwater-canoeing-world-cup/mezzana-2026",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-f82030d0f6ae.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-06ad9c780eda.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-e206426529a9.pdf"
     ]
   },
   {
     "year": 2026,
-    "row_idx": 96,
+    "row_idx": 97,
     "col0": "Slalom v Dolních Kounicích 80 SLALOM / počet hodnocených: 152",
     "date": "27.06.2026",
     "club": "Vodní sporty Dolní Kounice, z.s.",
@@ -26963,7 +26993,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 97,
+    "row_idx": 98,
     "col0": "Slalom ve Strakonicích+3.Český pohár veteránů 78 SLALOM / počet hodnocených: 406",
     "date": "27.06.2026",
     "club": "Otava Strakonice",
@@ -26975,7 +27005,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 98,
+    "row_idx": 99,
     "col0": "Sjezd ve Strakonicích 77 SJEZD / počet hodnocených: 48",
     "date": "27.06.2026",
     "club": "TJ Bohemians Praha",
@@ -26987,7 +27017,19 @@
   },
   {
     "year": 2026,
-    "row_idx": 99,
+    "row_idx": 100,
+    "col0": "ECA Junior cup Solkan I. 0 SLALOM / počet hodnocených: 215",
+    "date": "27.06.2026",
+    "club": "",
+    "location": "",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2632",
+      "https://ecajuniorslalomcup.eu"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 101,
     "col0": "Slalom ve Strakonicích 79 SLALOM / počet hodnocených: 382",
     "date": "28.06.2026",
     "club": "Otava Strakonice",
@@ -26999,7 +27041,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 100,
+    "row_idx": 102,
     "col0": "Slalom v Dolních Kounicích 81 SLALOM / počet hodnocených: 151",
     "date": "28.06.2026",
     "club": "Vodní sporty Dolní Kounice, z.s.",
@@ -27011,7 +27053,19 @@
   },
   {
     "year": 2026,
-    "row_idx": 101,
+    "row_idx": 103,
+    "col0": "ECA Junior cup Solkan II. 0 SLALOM / počet hodnocených: 213",
+    "date": "28.06.2026",
+    "club": "",
+    "location": "",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2633",
+      "https://ecajuniorslalomcup.eu"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 104,
     "col0": "Junior World Championship Krakow 0 SLALOM /  výsledky nejsou k dispozici",
     "date": "30.06.2026-05.07.2026",
     "club": "",
@@ -27025,12 +27079,13 @@
   },
   {
     "year": 2026,
-    "row_idx": 102,
-    "col0": "U23 World Championship Krakow 0 SLALOM /  výsledky nejsou k dispozici",
+    "row_idx": 105,
+    "col0": "U23 World Championship Krakow 0 SLALOM / počet hodnocených: 1357",
     "date": "30.06.2026-05.07.2026",
     "club": "",
     "location": "",
     "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2458",
       "https://www.canoeicf.com/canoe-slalom-world-championships/krakow-2026",
       "https://www.canoeicf.com/canoe-slalom-world-championships/krakow-2026/results",
       "https://youtube.com/planetcanoe",
@@ -27039,7 +27094,21 @@
   },
   {
     "year": 2026,
-    "row_idx": 103,
+    "row_idx": 106,
+    "col0": "ECA Junior cup Augsburg 0 SLALOM / počet hodnocených: 591",
+    "date": "03.07.2026-05.07.2026",
+    "club": "",
+    "location": "",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2634",
+      "https://ecajuniorslalomcup.eu",
+      "https://siwidata.com/canoe123/live?SessionKey=GER.2026070300",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-e47bb58f3e9b.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 107,
     "col0": "5. Český pohár žáků ve slalomu ve Strakonicích 82 SLALOM / počet hodnocených: 281",
     "date": "04.07.2026",
     "club": "Otava Strakonice",
@@ -27052,7 +27121,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 104,
+    "row_idx": 108,
     "col0": "6. Český pohár žáků ve slalomu ve Strakonicích 83 SLALOM / počet hodnocených: 261",
     "date": "05.07.2026",
     "club": "Otava Strakonice",
@@ -27065,7 +27134,20 @@
   },
   {
     "year": 2026,
-    "row_idx": 105,
+    "row_idx": 109,
+    "col0": "ECA Junior cup - Krakow 0 SLALOM / počet hodnocených: 497",
+    "date": "10.07.2026-12.07.2026",
+    "club": "",
+    "location": "",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2636",
+      "https://ecajuniorslalomcup.eu",
+      "https://siwidata.com/canoe123/live?SessionKey=krakow.2026071000"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 110,
     "col0": "Slalom pod Borskou přehradou + 4. ČP veteránů + 5. ČP předžáků 84 SLALOM / počet hodnocených: 164",
     "date": "11.07.2026",
     "club": "TJ Loko Plzeň",
@@ -27077,7 +27159,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 106,
+    "row_idx": 111,
     "col0": "Slalom pod Borskou přehradou + 6. ČP předžáků 85 SLALOM / počet hodnocených: 151",
     "date": "12.07.2026",
     "club": "TJ Loko Plzeň",
@@ -27089,7 +27171,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 107,
+    "row_idx": 112,
     "col0": "Kajak kros v Českém Vrbném 87 kros /  nedostatek vody",
     "date": "18.07.2026",
     "club": "SK Vodní slalom České Budějovice",
@@ -27098,7 +27180,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 108,
+    "row_idx": 113,
     "col0": "Slalom na voleji v Pardubicích 98 SLALOM / počet hodnocených: 78",
     "date": "18.07.2026",
     "club": "TJ Syntesia Pardubice",
@@ -27110,7 +27192,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 109,
+    "row_idx": 114,
     "col0": "Slalom v Českém Vrbném + 5. Český pohár veteránů 86 SLALOM / počet hodnocených: 287",
     "date": "18.07.2026",
     "club": "SK Vodní slalom České Budějovice",
@@ -27123,7 +27205,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 110,
+    "row_idx": 115,
     "col0": "Slalom na voleji v Pardubicích 99 SLALOM / počet hodnocených: 81",
     "date": "19.07.2026",
     "club": "TJ Syntesia Pardubice",
@@ -27135,7 +27217,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 111,
+    "row_idx": 116,
     "col0": "ECA Junior cup v Českém Vrbném - day 1 88 SLALOM / počet hodnocených: 350",
     "date": "19.07.2026",
     "club": "SK Vodní slalom České Budějovice",
@@ -27148,12 +27230,26 @@
   },
   {
     "year": 2026,
-    "row_idx": 112,
-    "col0": "World Championship Oklahoma City 0 SLALOM /  výsledky nejsou k dispozici",
+    "row_idx": 117,
+    "col0": "ECA Junior cup v Českém Vrbném - day 2 89 SLALOM / počet hodnocených: 333",
+    "date": "20.07.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Slalomová dráha České Vrbné - hlavní kanál",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2550",
+      "https://siwidata.com/canoe123/live?SessionKey=CZE2.2026072000",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-89-d9805b92cd56.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 118,
+    "col0": "World Championship Oklahoma City 0 SLALOM / počet hodnocených: 572",
     "date": "20.07.2026-25.07.2026",
     "club": "",
-    "location": "",
+    "location": "USA - Oklahoma City",
     "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2459",
       "https://www.canoeicf.com/canoe-slalom-world-championships/oklahoma-city-2026",
       "https://www.canoeicf.com/canoe-slalom-world-championships/oklahoma-city-2026/results",
       "https://youtube.com/planetcanoe",
@@ -27171,20 +27267,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 113,
-    "col0": "ECA Junior cup v Českém Vrbném - day 2 89 SLALOM / počet hodnocených: 333",
-    "date": "20.07.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Slalomová dráha České Vrbné - hlavní kanál",
-    "links": [
-      "https://www.slalom-world.com/index.php?act=01&idz=2550",
-      "https://siwidata.com/canoe123/live?SessionKey=CZE2.2026072000",
-      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-89-d9805b92cd56.pdf"
-    ]
-  },
-  {
-    "year": 2026,
-    "row_idx": 114,
+    "row_idx": 119,
     "col0": "Sjezd v Třebechovicích 92 SJEZD / počet hodnocených: 23",
     "date": "25.07.2026",
     "club": "SK Třebechovice",
@@ -27196,7 +27279,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 115,
+    "row_idx": 120,
     "col0": "Sprint v Třebechovicích 93 SPRINT / počet hodnocených: 27",
     "date": "25.07.2026",
     "club": "SK Třebechovice",
@@ -27208,7 +27291,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 116,
+    "row_idx": 121,
     "col0": "ECA Cup v Roudnici n.L. - Race 1 90 SLALOM / počet hodnocených: 387",
     "date": "25.07.2026",
     "club": "Klub Kanoistika Roudnice n.L.",
@@ -27221,7 +27304,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 117,
+    "row_idx": 122,
     "col0": "Sjezd v Třebechovicích 94 SJEZD / počet hodnocených: 19",
     "date": "26.07.2026",
     "club": "SK Třebechovice",
@@ -27233,7 +27316,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 118,
+    "row_idx": 123,
     "col0": "Sprint v Třebechovicích 95 SPRINT / počet hodnocených: 28",
     "date": "26.07.2026",
     "club": "SK Třebechovice",
@@ -27245,7 +27328,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 119,
+    "row_idx": 124,
     "col0": "ECA Cup v Roudnici n.L. - Race 2 91 SLALOM / počet hodnocených: 384",
     "date": "26.07.2026",
     "club": "Klub Kanoistika Roudnice n.L.",
@@ -27258,19 +27341,20 @@
   },
   {
     "year": 2026,
-    "row_idx": 120,
-    "col0": "WRR - Bratislava 0 SLALOM /  výsledky nejsou k dispozici",
+    "row_idx": 125,
+    "col0": "WRR - Bratislava 0 SLALOM / počet hodnocených: 128",
     "date": "31.07.2026-01.08.2026",
     "club": "",
     "location": "",
     "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2460",
       "https://siwidata.com/canoe123/live?SessionKey=svkcanoe.2026080100",
       "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-1a9440e7b934.pdf"
     ]
   },
   {
     "year": 2026,
-    "row_idx": 121,
+    "row_idx": 126,
     "col0": "Letní slalom v Opavě 96 SLALOM / počet hodnocených: 64",
     "date": "01.08.2026",
     "club": "KK Opava",
@@ -27282,7 +27366,7 @@
   },
   {
     "year": 2026,
-    "row_idx": 122,
+    "row_idx": 127,
     "col0": "Letní slalom v Opavě 97 SLALOM / počet hodnocených: 61",
     "date": "02.08.2026",
     "club": "KK Opava",
@@ -27294,697 +27378,805 @@
   },
   {
     "year": 2026,
-    "row_idx": 123,
-    "col0": "Junior European Championships 0 SLALOM /  plánovaný závod",
-    "date": "06.08.2026-09.08.2026",
-    "club": "",
-    "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13852",
-      "https://paddle-europe.eu/calendar/2026-eca-junior-and-u23-canoe-slalom-european-championships-588",
-      "https://siwidata.com/CanoeLive/#/splash/PE/2829",
-      "https://www.youtube.com/CanoeEurope"
-    ]
-  },
-  {
-    "year": 2026,
-    "row_idx": 124,
-    "col0": "U23 European Championships 0 SLALOM /  plánovaný závod",
-    "date": "06.08.2026-09.08.2026",
-    "club": "",
-    "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13853",
-      "https://paddle-europe.eu/calendar/2026-eca-junior-and-u23-canoe-slalom-european-championships-588",
-      "https://siwidata.com/CanoeLive/#/splash/PE/2829",
-      "https://www.youtube.com/CanoeEurope"
-    ]
-  },
-  {
-    "year": 2026,
-    "row_idx": 125,
-    "col0": "U23 European Championships 0 SJEZD /  plánovaný závod",
-    "date": "12.08.2026-15.08.2026",
-    "club": "",
-    "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14114",
-      "https://www.canoeicf.com/wildwater-canoeing-continental-championships/grandtully-scotland-2026"
-    ]
-  },
-  {
-    "year": 2026,
-    "row_idx": 126,
-    "col0": "Junior European Championships 0 SJEZD /  plánovaný závod",
-    "date": "12.08.2026-15.08.2026",
-    "club": "",
-    "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14113",
-      "https://www.canoeicf.com/wildwater-canoeing-continental-championships/grandtully-scotland-2026"
-    ]
-  },
-  {
-    "year": 2026,
-    "row_idx": 127,
-    "col0": "WRR Prague 0 SLALOM /  plánovaný závod",
-    "date": "14.08.2026-16.08.2026",
-    "club": "Univerzitní sportovní klub Praha",
-    "location": "USD Praha Troja",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13847",
-      "https://vodackyareal.cz/wrr"
-    ]
-  },
-  {
-    "year": 2026,
     "row_idx": 128,
-    "col0": "Slalom o štít města Benátek + 6. Český pohár veteránů 102 SLALOM /  plánovaný závod",
-    "date": "15.08.2026",
-    "club": "SK VS Benátky nad Jizerou",
-    "location": "Řeka Jizera, jez v Obodři",
+    "col0": "Junior European Championships 0 SLALOM /  výsledky nejsou k dispozici",
+    "date": "06.08.2026-09.08.2026",
+    "club": "",
+    "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13986"
+      "https://paddle-europe.eu/calendar/2026-eca-junior-and-u23-canoe-slalom-european-championships-588",
+      "https://siwidata.com/CanoeLive/#/splash/PE/2829",
+      "https://www.youtube.com/CanoeEurope",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/426232401381202/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-5723024c74e7.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 129,
-    "col0": "4. ČP seniorů v Kajak krosu + MČR dospělých v Kajak krosu individuál 100 kros /  plánovaný závod",
-    "date": "16.08.2026",
-    "club": "Univerzitní sportovní klub Praha",
-    "location": "USD Praha Troja",
+    "col0": "U23 European Championships 0 SLALOM /  výsledky nejsou k dispozici",
+    "date": "06.08.2026-09.08.2026",
+    "club": "",
+    "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13984"
+      "https://paddle-europe.eu/calendar/2026-eca-junior-and-u23-canoe-slalom-european-championships-588",
+      "https://siwidata.com/CanoeLive/#/splash/PE/2829",
+      "https://www.youtube.com/CanoeEurope",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/426232401381202/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-6c0599bffa5a.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 130,
-    "col0": "4. ČP seniorů v Kajak krosu + MČR dospělých v Kajak krosu vyřazovací závod 101 kros /  plánovaný závod",
-    "date": "16.08.2026",
-    "club": "Univerzitní sportovní klub Praha",
-    "location": "USD Praha Troja",
+    "col0": "Next Generation Cup 0 SLALOM /  výsledky nejsou k dispozici",
+    "date": "08.08.2026-09.08.2026",
+    "club": "",
+    "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13985"
+      "https://siwidata.com/canoe123/live?SessionKey=svkcanoe.2026080800",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-105ec377b15f.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-9a36e6139478.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 131,
-    "col0": "Slalom o štít města Benátek 103 SLALOM /  plánovaný závod",
-    "date": "16.08.2026",
-    "club": "SK VS Benátky nad Jizerou",
-    "location": "Řeka Jizera, jez v Obodři",
+    "col0": "U23 European Championships 0 SJEZD /  výsledky nejsou k dispozici",
+    "date": "12.08.2026-15.08.2026",
+    "club": "",
+    "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13987"
+      "https://www.canoeicf.com/wildwater-canoeing-continental-championships/grandtully-scotland-2026",
+      "https://wildwaterresults.paddleuk.org.uk/resultsmanual/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-69b763d1ea5b.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-5d5994119068.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-8e24f385b998.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 132,
-    "col0": "MČR družstev ve slalomu na Lipně 104 SLALOM /  plánovaný závod",
-    "date": "21.08.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Vltava pod VD Lipno I.",
+    "col0": "Junior European Championships 0 SJEZD /  výsledky nejsou k dispozici",
+    "date": "12.08.2026-15.08.2026",
+    "club": "",
+    "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13988"
+      "https://www.canoeicf.com/wildwater-canoeing-continental-championships/grandtully-scotland-2026",
+      "https://wildwaterresults.paddleuk.org.uk/resultsmanual/"
     ]
   },
   {
     "year": 2026,
     "row_idx": 133,
-    "col0": "5. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR dospělých 105 SLALOM /  plánovaný závod",
-    "date": "22.08.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Vltava pod VD Lipno I.",
+    "col0": "WRR Prague 0 SLALOM / počet hodnocených: 765",
+    "date": "14.08.2026-16.08.2026",
+    "club": "Univerzitní sportovní klub Praha",
+    "location": "USD Praha Troja",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13989"
+      "https://www.slalom-world.com/index.php?act=01&idz=2461",
+      "https://vodackyareal.cz/wrr",
+      "https://youtube.com/czechcanoe/live",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471391381501/",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381502/",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381503/",
+      "https://www.dartfish.tv/Videos?CR=p124742c734235&br=1",
+      "https://siwidata.com/canoe123/live?SessionKey=CZE1.2704",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-151-f890eb23ac2a.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 134,
-    "col0": "7. Český pohár ve sjezdu + MČR dospělých na Lipně 107 SJEZD /  plánovaný závod",
-    "date": "22.08.2026",
-    "club": "SK Vltava Č. Krumlov z.s.",
-    "location": "Řeka Vltava pod Lipnem. Start závodu kategorií K1m, K1ž a C1m pod hrází (změna místa  startu vyhraze",
+    "col0": "Slalom o štít města Benátek + 6. Český pohár veteránů 102 SLALOM / počet hodnocených: 356",
+    "date": "15.08.2026",
+    "club": "SK VS Benátky nad Jizerou",
+    "location": "Řeka Jizera, jez v Obodři",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13991"
+      "https://www.slalom-world.com/index.php?act=01&idz=2569",
+      "https://live.ww-cb.cz/#/events/slalom-o-t-t-m-sta-ben-tek-6-esk-poh-r-veter-n",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-102-3a4f66c7c429.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 135,
-    "col0": "5. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR dospělých 105 SLALOM /  plánovaný závod",
-    "date": "22.08.2026",
-    "club": "",
-    "location": "",
+    "col0": "4. ČP seniorů v Kajak krosu + MČR dospělých v Kajak krosu vyřazovací závod 101 kros /  výsledky nejsou k dispozici",
+    "date": "16.08.2026",
+    "club": "Univerzitní sportovní klub Praha",
+    "location": "USD Praha Troja",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14043"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-101-72aea2431def.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 136,
-    "col0": "6. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR U23 106 SLALOM /  plánovaný závod",
-    "date": "23.08.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Vltava pod VD Lipno I.",
+    "col0": "4. ČP seniorů v Kajak krosu + MČR dospělých v Kajak krosu individuál 100 kros / počet hodnocených: 52",
+    "date": "16.08.2026",
+    "club": "Univerzitní sportovní klub Praha",
+    "location": "USD Praha Troja",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13990"
+      "https://www.slalom-world.com/index.php?act=01&idz=2576",
+      "https://siwidata.com/canoe123/live?SessionKey=CZE1.2026081600",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-100-2040b292093b.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 137,
-    "col0": "8. Český pohár ve sprintu + MČR U23 na Lipně 108 SPRINT /  plánovaný závod",
-    "date": "23.08.2026",
-    "club": "SK Vltava Č. Krumlov z.s.",
-    "location": "Řeka Vltava v Loučovicích. Start závodu nad mostem v Loučovicích (před Loučovickou kaskádou). Přesné",
+    "col0": "Slalom o štít města Benátek 103 SLALOM / počet hodnocených: 339",
+    "date": "16.08.2026",
+    "club": "SK VS Benátky nad Jizerou",
+    "location": "Řeka Jizera, jez v Obodři",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13992"
+      "https://www.slalom-world.com/index.php?act=01&idz=2570",
+      "https://siwidata.com/canoe123/csk_live?SessionKey=CZE1.2026081600",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-103-1e2c9d15074b.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 138,
-    "col0": "6. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR U23 106 SLALOM /  plánovaný závod",
-    "date": "23.08.2026",
-    "club": "",
-    "location": "",
+    "col0": "MČR družstev ve slalomu na Lipně 104 SLALOM /  výsledky nejsou k dispozici",
+    "date": "21.08.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Vltava pod VD Lipno I.",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14044"
+      "https://live.results.cz/schedule.php?event=202684CPSlipno",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-104-46109cdafbf6.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-104-6fe53ec7c025.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 139,
-    "col0": "3. ČP žáků ve sprintu v Českém Vrbném 109 SPRINT /  plánovaný závod",
-    "date": "28.08.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Areál Lídy Polesné",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13993"
-    ]
+    "col0": "5. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR dospělých 105 SLALOM /  výsledky nejsou k dispozici",
+    "date": "22.08.2026",
+    "club": "",
+    "location": "",
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 140,
-    "col0": "Memoriál J.Froňka st. ve slalomu ve Veltrusech 114 SLALOM /  plánovaný závod",
-    "date": "29.08.2026",
-    "club": "TJ KRALUPY, z.s.",
-    "location": "USD Veltrusy",
+    "col0": "5. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR dospělých 105 SLALOM / počet hodnocených: 146",
+    "date": "22.08.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Vltava pod VD Lipno I.",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13998"
+      "https://www.slalom-world.com/index.php?act=01&idz=2578",
+      "https://youtube.com/live/Y_iMiGHfAJk?feature=share",
+      "https://youtube.com/live/wTTM_5igon0?feature=share",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381301/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-105-b1cc181f57dd.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-105-6f31fe1e05e8.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 141,
-    "col0": "4. ČP žáků ve sjezdu v Českém Vrbném 110 SJEZD /  plánovaný závod",
-    "date": "29.08.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Areál Lídy Polesné",
+    "col0": "7. Český pohár ve sjezdu + MČR dospělých na Lipně 107 SJEZD / počet hodnocených: 86",
+    "date": "22.08.2026",
+    "club": "SK Vltava Č. Krumlov z.s.",
+    "location": "Řeka Vltava pod Lipnem. Start závodu kategorií K1m, K1ž a C1m pod hrází (změna místa  startu vyhraze",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13994"
+      "https://www.slalom-world.com/index.php?act=01&idz=2588",
+      "https://zive.results.cz/event/2026-107-7cpw/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-107-81511dd75bff.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 142,
-    "col0": "9. Český pohár ve sprintu v Českém Vrbném + PEU CUP + MČR veteránů + 7.ČPJ 111 SPRINT /  plánovaný závod",
-    "date": "29.08.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Areál Lídy Polesné",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13995"
-    ]
+    "col0": "6. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR U23 106 SLALOM /  výsledky nejsou k dispozici",
+    "date": "23.08.2026",
+    "club": "",
+    "location": "",
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 143,
-    "col0": "Memoriál J.Froňka st. ve slalomu ve Veltrusech 115 SLALOM /  plánovaný závod",
-    "date": "30.08.2026",
-    "club": "TJ KRALUPY, z.s.",
-    "location": "USD Veltrusy",
+    "col0": "6. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR U23 106 SLALOM / počet hodnocených: 144",
+    "date": "23.08.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Vltava pod VD Lipno I.",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13999"
+      "https://www.slalom-world.com/index.php?act=01&idz=2579",
+      "https://youtube.com/live/RJjwQ4_F18s?feature=share",
+      "https://youtube.com/live/dUCH_DReKk4?feature=share",
+      "https://www.ceskatelevize.cz/porady/10600129320-kanoistika/226471291381302/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-106-c5c4ed4d1881.pdf",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-106-41101ffb5086.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 144,
-    "col0": "10. Český pohár ve sprintu v Českém Vrbném + PEU CUP + 8.ČPJ 112 SPRINT /  plánovaný závod",
-    "date": "30.08.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Areál Lídy Polesné",
+    "col0": "8. Český pohár ve sprintu + MČR U23 na Lipně 108 SPRINT / počet hodnocených: 106",
+    "date": "23.08.2026",
+    "club": "SK Vltava Č. Krumlov z.s.",
+    "location": "Řeka Vltava v Loučovicích. Start závodu nad mostem v Loučovicích (před Loučovickou kaskádou). Přesné",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13996"
+      "https://www.slalom-world.com/index.php?act=01&idz=2590",
+      "https://zive.results.cz/event/2026-108-8cpw/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-108-b0d70bc8f7ea.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 145,
-    "col0": "MČR družstev dospělých ve sprintu v Českém Vrbném 113 SPRINT /  plánovaný závod",
-    "date": "30.08.2026",
+    "col0": "3. ČP žáků ve sprintu v Českém Vrbném 109 SPRINT / počet hodnocených: 109",
+    "date": "28.08.2026",
     "club": "SK Vodní slalom České Budějovice",
     "location": "Areál Lídy Polesné",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13997"
+      "https://www.slalom-world.com/index.php?act=01&idz=2591",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-109-ab6de06cd81f.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 146,
-    "col0": "WORLD CUP VAIRES-SUR-MARNE 0 SLALOM /  plánovaný závod",
-    "date": "04.09.2026-06.09.2026",
-    "club": "",
-    "location": "",
+    "col0": "9. Český pohár ve sprintu v Českém Vrbném + PEU CUP + MČR veteránů + 7.ČPJ 111 SPRINT / počet hodnocených: 249",
+    "date": "29.08.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Areál Lídy Polesné",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13848",
-      "https://www.canoeicf.com/canoe-slalom-world-cup/vaires-sur-marne-2026",
-      "https://www.canoeicf.com/canoe-slalom-world-cup/vaires-sur-marne-2026/results",
-      "https://youtube.com/planetcanoe"
+      "https://www.slalom-world.com/index.php?act=01&idz=2592",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-111-00414c040fd5.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 147,
-    "col0": "MČR žáků ve slalomu v Brandýse n.L. + 7. ČPž 116 SLALOM /  plánovaný závod",
-    "date": "05.09.2026",
-    "club": "Kajak klub Brandýs nad Labem, z. s.",
-    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
+    "col0": "4. ČP žáků ve sjezdu v Českém Vrbném 110 SJEZD / počet hodnocených: 102",
+    "date": "29.08.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Areál Lídy Polesné",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14000"
+      "https://www.slalom-world.com/index.php?act=01&idz=2589",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-110-d37c3e06765b.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 148,
-    "col0": "MČR družstev žáků ve slalomu v Brandýse n.L. 117 SLALOM /  plánovaný závod",
-    "date": "05.09.2026",
-    "club": "Kajak klub Brandýs nad Labem, z. s.",
-    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
+    "col0": "Memoriál J.Froňka st. ve slalomu ve Veltrusech 114 SLALOM / počet hodnocených: 288",
+    "date": "29.08.2026",
+    "club": "TJ KRALUPY, z.s.",
+    "location": "USD Veltrusy",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14001"
+      "https://www.slalom-world.com/index.php?act=01&idz=2580",
+      "https://siwidata.com/canoe123/csk_live?SessionKey=CZE3.2026082900",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-114-7383652e5880.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 149,
-    "col0": "MČR žáků ve sprintu v Brandýse n.L. + 5. ČPž 118 SPRINT /  plánovaný závod",
-    "date": "06.09.2026",
-    "club": "Kajak klub Brandýs nad Labem, z. s.",
-    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
+    "col0": "MČR družstev dospělých ve sprintu v Českém Vrbném 113 SPRINT /  výsledky nejsou k dispozici",
+    "date": "30.08.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Areál Lídy Polesné",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14002"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-113-82f5479c87a4.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 150,
-    "col0": "MČR družstev žáků ve sprintu v Brandýse n.L. 119 SPRINT /  plánovaný závod",
-    "date": "06.09.2026",
-    "club": "Kajak klub Brandýs nad Labem, z. s.",
-    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
+    "col0": "10. Český pohár ve sprintu v Českém Vrbném + PEU CUP + 8.ČPJ 112 SPRINT / počet hodnocených: 249",
+    "date": "30.08.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Areál Lídy Polesné",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14003"
+      "https://www.slalom-world.com/index.php?act=01&idz=2593",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-112-8710b13f2216.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 151,
-    "col0": "WORLD CUP FINAL LA SEU 0 SLALOM /  plánovaný závod",
-    "date": "11.09.2026-13.09.2026",
-    "club": "",
-    "location": "",
+    "col0": "Memoriál J.Froňka st. ve slalomu ve Veltrusech 115 SLALOM / počet hodnocených: 280",
+    "date": "30.08.2026",
+    "club": "TJ KRALUPY, z.s.",
+    "location": "USD Veltrusy",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13849",
-      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2026",
-      "https://www.canoeicf.com/canoe-slalom-world-cup/la-seu-2026/results",
-      "https://youtube.com/planetcanoe"
+      "https://www.slalom-world.com/index.php?act=01&idz=2581",
+      "https://siwidata.com/canoe123/csk_live?SessionKey=CZE3.2026082900",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-115-d436a2ba5764.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 152,
-    "col0": "MČR dorostu ve slalomu ve Veltrusech + 5.ČPJ 120 SLALOM /  plánovaný závod",
-    "date": "12.09.2026",
-    "club": "TJ KRALUPY, z.s.",
-    "location": "USD Veltrusy",
+    "col0": "WORLD CUP VAIRES-SUR-MARNE 0 SLALOM / počet hodnocených: 457",
+    "date": "04.09.2026-06.09.2026",
+    "club": "",
+    "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14004"
+      "https://www.slalom-world.com/index.php?act=01&idz=2462",
+      "https://paddleworldwide.com/competitions/2026-icf-canoe-slalom-world-cup-vaires-sur-marne-2487",
+      "https://paddleworldwide.com/competitions/2026-icf-canoe-slalom-world-cup-vaires-sur-marne-2487/results",
+      "https://youtube.com/planetcanoe",
+      "https://www.ceskatelevize.cz/porady/15022533437-svetovy-pohar-ve-vodnim-slalomu/226471391381208/",
+      "https://www.ceskatelevize.cz/porady/15022533437-svetovy-pohar-ve-vodnim-slalomu/226471291381209/",
+      "https://www.ceskatelevize.cz/porady/15022533437-svetovy-pohar-ve-vodnim-slalomu/226471291381210/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-1bf58278064f.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 153,
-    "col0": "MČR družstev dorostu ve slalomu ve Veltrusech 121 SLALOM /  plánovaný závod",
-    "date": "12.09.2026",
-    "club": "TJ KRALUPY, z.s.",
-    "location": "USD Veltrusy",
+    "col0": "MČR družstev žáků ve slalomu v Brandýse n.L. 117 SLALOM /  výsledky nejsou k dispozici",
+    "date": "05.09.2026",
+    "club": "Kajak klub Brandýs nad Labem, z. s.",
+    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14005"
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-117-7d228fd60021.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 154,
-    "col0": "MČR dorostu v kajak krosu individuál ve Veltrusech + 4.ČPJ v kajak krosu 122 kros /  plánovaný závod",
-    "date": "13.09.2026",
-    "club": "TJ KRALUPY, z.s.",
-    "location": "USD Veltrusy",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14006"
-    ]
+    "col0": "MČR žáků v kombinaci slalom a sprint 152 SLALOM /  výsledky nejsou k dispozici",
+    "date": "05.09.2026-06.09.2026",
+    "club": "Kajak klub Brandýs nad Labem, z. s.",
+    "location": "",
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 155,
-    "col0": "MČR dorostu v kajak krosu vyřazovací závod ve Veltrusech + 5.ČPJ v kajak krosu 123 kros /  plánovaný závod",
-    "date": "13.09.2026",
-    "club": "TJ KRALUPY, z.s.",
-    "location": "USD Veltrusy",
+    "col0": "MČR žáků ve slalomu v Brandýse n.L. + 7. ČPž 116 SLALOM / počet hodnocených: 208",
+    "date": "05.09.2026",
+    "club": "Kajak klub Brandýs nad Labem, z. s.",
+    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14007"
+      "https://www.slalom-world.com/index.php?act=01&idz=2582",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-116-2a86ee3d093f.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 156,
-    "col0": "56. ročník Slalomu O štít města Tábora + Krajský přebor JČ + ČP předžáků 124 SLALOM /  plánovaný závod",
-    "date": "19.09.2026",
-    "club": "VS Tábor",
-    "location": "Lužnice pod Táborem, u restaurace Harrachovka. Mapa na www.kanoistika-vstabor.cz.",
+    "col0": "MČR družstev žáků ve sprintu v Brandýse n.L. 119 SPRINT /  výsledky nejsou k dispozici",
+    "date": "06.09.2026",
+    "club": "Kajak klub Brandýs nad Labem, z. s.",
+    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14008"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-119-bd5c014f8b83.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 157,
-    "col0": "5. Národní kvalifikační závod v Českém Vrbném + 6. ČPJ 126 SLALOM /  plánovaný závod",
-    "date": "19.09.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Areál Lídy Polesné, střední trať",
+    "col0": "MČR žáků ve sprintu v Brandýse n.L. + 5. ČPž 118 SPRINT / počet hodnocených: 142",
+    "date": "06.09.2026",
+    "club": "Kajak klub Brandýs nad Labem, z. s.",
+    "location": "Umělá slalomová dráha v Brandýse nad Labem.",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14010"
+      "https://www.slalom-world.com/index.php?act=01&idz=2595",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-118-2c8c559869d6.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 158,
-    "col0": "56. ročník Slalomu O štít města Tábora 125 SLALOM /  plánovaný závod",
-    "date": "20.09.2026",
-    "club": "VS Tábor",
-    "location": "Lužnice pod Táborem, u restaurace Harrachovka. Mapa na www.kanoistika-vstabor.cz.",
+    "col0": "WORLD CUP FINAL LA SEU 0 SLALOM / počet hodnocených: 696",
+    "date": "11.09.2026-13.09.2026",
+    "club": "",
+    "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14009"
+      "https://www.slalom-world.com/index.php?act=01&idz=2463",
+      "https://paddleworldwide.com/competitions/2026-icf-canoe-slalom-world-cup-final-la-seu-2489",
+      "https://www.paddleworldwide.com/canoe-slalom-world-cup/la-seu-2026/results",
+      "https://youtube.com/planetcanoe",
+      "https://www.ceskatelevize.cz/porady/15022533437-svetovy-pohar-ve-vodnim-slalomu/226471291381225/",
+      "https://www.ceskatelevize.cz/porady/15022533437-svetovy-pohar-ve-vodnim-slalomu/226471291381226/",
+      "https://www.ceskatelevize.cz/porady/15022533437-svetovy-pohar-ve-vodnim-slalomu/226471291381227/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-c2daee1ceb9b.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 159,
-    "col0": "6. Národní kvalifikační závod v Českém Vrbném + 7. ČPJ 127 SLALOM /  plánovaný závod",
-    "date": "20.09.2026",
-    "club": "SK Vodní slalom České Budějovice",
-    "location": "Areál Lídy Polesné, střední trať",
+    "col0": "MČR družstev dorostu ve slalomu ve Veltrusech 121 SLALOM /  výsledky nejsou k dispozici",
+    "date": "12.09.2026",
+    "club": "TJ KRALUPY, z.s.",
+    "location": "USD Veltrusy",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14011"
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-121-1ee519a8bd8a.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 160,
-    "col0": "European Championships - Ivrea 0 SLALOM /  plánovaný závod",
-    "date": "23.09.2026-27.09.2026",
-    "club": "",
+    "col0": "MČR dorostu v kombinaci slalom + kajak kros 153 SLALOM /  výsledky nejsou k dispozici",
+    "date": "12.09.2026-13.09.2026",
+    "club": "TJ KRALUPY, z.s.",
     "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13854"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-153-1fb3e3948341.xlsx"
     ]
   },
   {
     "year": 2026,
     "row_idx": 161,
-    "col0": "Třebechovický slalom + MČR veteránů 128 SLALOM /  plánovaný závod",
-    "date": "26.09.2026",
-    "club": "SK Třebechovice",
-    "location": "Řeka Orlice v úseku loděnice SK Třebechovice pod Orebem",
+    "col0": "MČR dorostu ve slalomu ve Veltrusech + 5.ČPJ 120 SLALOM / počet hodnocených: 218",
+    "date": "12.09.2026",
+    "club": "TJ KRALUPY, z.s.",
+    "location": "USD Veltrusy",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14012"
+      "https://www.slalom-world.com/index.php?act=01&idz=2584",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-120-98f564765073.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 162,
-    "col0": "Hanácký slalom v Olomouci 130 SLALOM /  plánovaný závod",
-    "date": "26.09.2026",
-    "club": "SKUP Olomouc, z.s. - oddíl kanoistiky",
-    "location": "",
+    "col0": "MČR dorostu v kajak krosu individuál ve Veltrusech + 4.ČPJ v kajak krosu 122 kros /  výsledky nejsou k dispozici",
+    "date": "13.09.2026",
+    "club": "TJ KRALUPY, z.s.",
+    "location": "USD Veltrusy",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14014"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-122-aba0f7b0229e.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 163,
-    "col0": "Třebechovický slalom 129 SLALOM /  plánovaný závod",
-    "date": "27.09.2026",
-    "club": "SK Třebechovice",
-    "location": "Řeka Orlice v úseku loděnice SK Třebechovice pod Orebem",
+    "col0": "MČR dorostu v kajak krosu vyřazovací závod ve Veltrusech + 5.ČPJ v kajak krosu 123 kros /  výsledky nejsou k dispozici",
+    "date": "13.09.2026",
+    "club": "TJ KRALUPY, z.s.",
+    "location": "USD Veltrusy",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14013"
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-123-218d9dde58aa.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 164,
-    "col0": "Hanácký slalom v Olomouci 131 SLALOM /  plánovaný závod",
-    "date": "27.09.2026",
-    "club": "SKUP Olomouc, z.s. - oddíl kanoistiky",
-    "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14015"
-    ]
+    "col0": "56. ročník Slalomu O štít města Tábora + Krajský přebor JČ + ČP předžáků 124 SLALOM /  nedostatek vody",
+    "date": "19.09.2026",
+    "club": "VS Tábor",
+    "location": "Lužnice pod Táborem, u restaurace Harrachovka. Mapa na www.kanoistika-vstabor.cz.",
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 165,
-    "col0": "OH naděje 132 SLALOM /  plánovaný závod",
-    "date": "02.10.2026-04.10.2026",
-    "club": "Klub Kanoistika Roudnice n.L.",
-    "location": "",
+    "col0": "5. Národní kvalifikační závod v Českém Vrbném + 6. ČPJ + Akademické MKČR ve slalomu 126 SLALOM / počet hodnocených: 283",
+    "date": "19.09.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Areál Lídy Polesné, střední trať",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14016"
+      "https://www.slalom-world.com/index.php?act=01&idz=2599",
+      "https://live.ww-cb.cz/#/events/2026126/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-126-0c0a1500ffe2.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 166,
-    "col0": "WRR Race 1 Lee Valley 0 SLALOM /  plánovaný závod",
-    "date": "03.10.2026",
-    "club": "",
-    "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13850"
-    ]
+    "col0": "56. ročník Slalomu O štít města Tábora 125 SLALOM /  nedostatek vody",
+    "date": "20.09.2026",
+    "club": "VS Tábor",
+    "location": "Lužnice pod Táborem, u restaurace Harrachovka. Mapa na www.kanoistika-vstabor.cz.",
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 167,
-    "col0": "Podzimní slalom ve Strakonicích 135 SLALOM /  plánovaný závod",
-    "date": "03.10.2026",
-    "club": "Otava Strakonice",
-    "location": "",
+    "col0": "6. Národní kvalifikační závod v Českém Vrbném + 7. ČPJ 127 SLALOM / počet hodnocených: 283",
+    "date": "20.09.2026",
+    "club": "SK Vodní slalom České Budějovice",
+    "location": "Areál Lídy Polesné, střední trať",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14019"
+      "https://www.slalom-world.com/index.php?act=01&idz=2600",
+      "https://live.ww-cb.cz/#/events/2026126/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-127-6f10063f5b0b.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 168,
-    "col0": "Bobr Cup 133 SJEZD /  plánovaný závod",
-    "date": "03.10.2026",
-    "club": "TJ  Vodní Sporty Litovel",
+    "col0": "European Championships - Ivrea 0 SLALOM /  výsledky nejsou k dispozici",
+    "date": "23.09.2026-27.09.2026",
+    "club": "",
     "location": "",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14017"
+      "https://paddle-europe.eu/calendar/2026-eca-canoe-slalom-european-championships-587",
+      "https://siwidata.com/canoelive/#/splash/pe/2828",
+      "https://www.ceskatelevize.cz/porady/17801450080-me-ve-vodnim-slalomu-2026-italie/226471291381101/",
+      "https://www.ceskatelevize.cz/porady/17801450080-me-ve-vodnim-slalomu-2026-italie/226471291381102/",
+      "https://www.ceskatelevize.cz/porady/17801450080-me-ve-vodnim-slalomu-2026-italie/226471291381103/",
+      "https://eu.zonerama.com/Kanoe/267150",
+      "https://www.youtube.com/@PlanetCanoe",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-283a1fdd29a0.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 169,
-    "col0": "Sjezd ve Strakonicích 134 SJEZD /  plánovaný závod",
-    "date": "03.10.2026",
-    "club": "TJ Bohemians Praha",
-    "location": "",
+    "col0": "Třebechovický slalom + MČR veteránů 128 SLALOM / počet hodnocených: 361",
+    "date": "26.09.2026",
+    "club": "SK Třebechovice",
+    "location": "Řeka Orlice v úseku loděnice SK Třebechovice pod Orebem",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14018"
+      "https://www.slalom-world.com/index.php?act=01&idz=2601",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-128-522bb4bc0d58.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 170,
-    "col0": "WRR Race 2 Lee Valley 0 SLALOM /  plánovaný závod",
-    "date": "04.10.2026",
-    "club": "",
-    "location": "",
+    "col0": "Hanácký slalom v Olomouci 130 SLALOM / počet hodnocených: 324",
+    "date": "26.09.2026",
+    "club": "SKUP Olomouc, z.s. - oddíl kanoistiky",
+    "location": "řeka Morava, loděnice SKUP Olomouc",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=13851"
+      "https://www.slalom-world.com/index.php?act=01&idz=2603",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-130-18838ec28c04.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 171,
-    "col0": "Podzimní slalom ve Strakonicích 136 SLALOM /  plánovaný závod",
-    "date": "04.10.2026",
-    "club": "Otava Strakonice",
-    "location": "",
+    "col0": "Třebechovický slalom 129 SLALOM / počet hodnocených: 334",
+    "date": "27.09.2026",
+    "club": "SK Třebechovice",
+    "location": "Řeka Orlice v úseku loděnice SK Třebechovice pod Orebem",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14020"
+      "https://www.slalom-world.com/index.php?act=01&idz=2602",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-129-b3cc778fd64a.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 172,
-    "col0": "Krumlovský maraton 137 SJEZD /  plánovaný závod",
-    "date": "10.10.2026",
-    "club": "SK Vltava Č. Krumlov z.s.",
-    "location": "",
+    "col0": "Hanácký slalom v Olomouci 131 SLALOM / počet hodnocených: 298",
+    "date": "27.09.2026",
+    "club": "SKUP Olomouc, z.s. - oddíl kanoistiky",
+    "location": "řeka Morava, loděnice SKUP Olomouc",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14021"
+      "https://www.slalom-world.com/index.php?act=01&idz=2604",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-131-a2919aaa2aea.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 173,
-    "col0": "5. ČP seniorů v Kajak krosu individuál v Roudnici + 6.ČPJ 138 kros /  plánovaný závod",
-    "date": "10.10.2026",
+    "col0": "OH naděje 132 SLALOM / počet hodnocených: 226",
+    "date": "02.10.2026-04.10.2026",
     "club": "Klub Kanoistika Roudnice n.L.",
-    "location": "",
+    "location": "USD Roudnice nad Labem",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14022"
+      "https://www.slalom-world.com/index.php?act=01&idz=2605",
+      "https://kkroudnice.cz/",
+      "https://siwidata.com/canoe123/csk_live?SessionKey=CZE1.2026100300",
+      "https://live.ww-cb.cz/#/events/OH-2026",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-132-061a160fe2e6.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 174,
-    "col0": "5. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 6.ČPJ 139 kros /  plánovaný závod",
-    "date": "10.10.2026",
-    "club": "Klub Kanoistika Roudnice n.L.",
+    "col0": "WRR Race 1 Lee Valley 0 SLALOM /  výsledky nejsou k dispozici",
+    "date": "03.10.2026",
+    "club": "",
     "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14023"
-    ]
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 175,
-    "col0": "6. ČP seniorů v Kajak krosu individuál v Roudnici + 7.ČPJ 140 kros /  plánovaný závod",
-    "date": "10.10.2026",
-    "club": "Klub Kanoistika Roudnice n.L.",
+    "col0": "Bobr Cup 133 SJEZD /  výsledky nejsou k dispozici",
+    "date": "03.10.2026",
+    "club": "TJ  Vodní Sporty Litovel",
     "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14024"
-    ]
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 176,
-    "col0": "6. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 7.ČPJ 141 kros /  plánovaný závod",
-    "date": "10.10.2026",
-    "club": "Klub Kanoistika Roudnice n.L.",
-    "location": "",
+    "col0": "Podzimní slalom ve Strakonicích 135 SLALOM / počet hodnocených: 335",
+    "date": "03.10.2026",
+    "club": "Otava Strakonice",
+    "location": "řeka Otava  na Podskalí před loděnicí klubu",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14025"
+      "https://www.slalom-world.com/index.php?act=01&idz=2606",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-135-058a175bdabf.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 177,
-    "col0": "7. ČP seniorů v Kajak krosu individuál v Roudnici + 8.ČPJ + MČR U23 142 kros /  plánovaný závod",
-    "date": "11.10.2026",
-    "club": "Klub Kanoistika Roudnice n.L.",
-    "location": "",
+    "col0": "Sjezd ve Strakonicích 134 SJEZD / počet hodnocených: 21",
+    "date": "03.10.2026",
+    "club": "TJ Bohemians Praha",
+    "location": "řeka Otava na Podskalí před loděnicí klubu; start v místě startu slalomu, pod lávkou pro pěší otočka",
     "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14026"
+      "https://www.slalom-world.com/index.php?act=01&idz=2609",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-134-be7aac4cffbc.pdf"
     ]
   },
   {
     "year": 2026,
     "row_idx": 178,
-    "col0": "7. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 8.ČPJ + MČR U23 143 kros /  plánovaný závod",
-    "date": "11.10.2026",
-    "club": "Klub Kanoistika Roudnice n.L.",
+    "col0": "WRR Race 2 Lee Valley 0 SLALOM /  výsledky nejsou k dispozici",
+    "date": "04.10.2026",
+    "club": "",
     "location": "",
-    "links": [
-      "https://csk.kanoe.cz/extreq/kalendardv.php?z=14027"
-    ]
+    "links": []
   },
   {
     "year": 2026,
     "row_idx": 179,
-    "col0": "Podzimní sjezd na Lužnici v Bechyni 144 SJEZD /  plánovaný závod",
+    "col0": "Podzimní slalom ve Strakonicích 136 SLALOM / počet hodnocených: 298",
+    "date": "04.10.2026",
+    "club": "Otava Strakonice",
+    "location": "řeka Otava  na Podskalí před loděnicí klubu",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2607",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-136-7cdf27b20c62.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 180,
+    "col0": "Krumlovský maraton 137 SJEZD /  výsledky nejsou k dispozici",
+    "date": "10.10.2026",
+    "club": "SK Vltava Č. Krumlov z.s.",
+    "location": "",
+    "links": []
+  },
+  {
+    "year": 2026,
+    "row_idx": 181,
+    "col0": "6. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 7.ČPJ 141 kros / počet hodnocených: 43",
+    "date": "10.10.2026",
+    "club": "Klub Kanoistika Roudnice n.L.",
+    "location": "USD Roudnice nad Labem",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2620",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-141-c165bfca5326.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 182,
+    "col0": "5. ČP seniorů v Kajak krosu individuál v Roudnici + 6.ČPJ 138 kros / počet hodnocených: 43",
+    "date": "10.10.2026",
+    "club": "Klub Kanoistika Roudnice n.L.",
+    "location": "USD Roudnice nad Labem",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2617",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-138-323d865a04e4.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 183,
+    "col0": "5. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 6.ČPJ 139 kros / počet hodnocených: 43",
+    "date": "10.10.2026",
+    "club": "Klub Kanoistika Roudnice n.L.",
+    "location": "USD Roudnice nad Labem",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2618",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-139-09af4118f384.ods"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 184,
+    "col0": "6. ČP seniorů v Kajak krosu individuál v Roudnici + 7.ČPJ 140 kros / počet hodnocených: 43",
+    "date": "10.10.2026",
+    "club": "Klub Kanoistika Roudnice n.L.",
+    "location": "USD Roudnice nad Labem",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2619",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-140-5fee5348e203.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 185,
+    "col0": "7. ČP seniorů v Kajak krosu individuál v Roudnici + 8.ČPJ + MČR U23 142 kros / počet hodnocených: 43",
+    "date": "11.10.2026",
+    "club": "Klub Kanoistika Roudnice n.L.",
+    "location": "USD Roudnice nad Labem",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2621",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-142-410cafac4650.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 186,
+    "col0": "7. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 8.ČPJ + MČR U23 143 kros / počet hodnocených: 43",
+    "date": "11.10.2026",
+    "club": "Klub Kanoistika Roudnice n.L.",
+    "location": "USD Roudnice nad Labem",
+    "links": [
+      "https://www.slalom-world.com/index.php?act=01&idz=2622",
+      "https://zive.results.cz/",
+      "https://csk.kanoe.cz/csk-vysledky/2/2026/res-2026-2-143-7309fe9c234b.pdf"
+    ]
+  },
+  {
+    "year": 2026,
+    "row_idx": 187,
+    "col0": "Podzimní sjezd na Lužnici v Bechyni 144 SJEZD /  nedostatek vody",
     "date": "17.10.2026",
     "club": "TJ Jiskra Bechyně",
-    "location": "",
+    "location": "Řeka Lužnice, Dobronice u Bechyně- Hutě",
     "links": [
       "https://csk.kanoe.cz/extreq/kalendardv.php?z=14028"
     ]
   },
   {
     "year": 2026,
-    "row_idx": 180,
-    "col0": "Podzimní sjezd na Lužnici v Bechyni 145 SJEZD /  plánovaný závod",
+    "row_idx": 188,
+    "col0": "Podzimní sjezd na Lužnici v Bechyni 145 SJEZD /  nedostatek vody",
     "date": "17.10.2026",
     "club": "TJ Jiskra Bechyně",
-    "location": "",
+    "location": "Řeka Lužnice, Dobronice u Bechyně- Hutě",
     "links": [
       "https://csk.kanoe.cz/extreq/kalendardv.php?z=14029"
     ]
   },
   {
     "year": 2026,
-    "row_idx": 181,
-    "col0": "Sjezd na rozloučenou v Brně + Přebor JM kraje 146 SJEZD /  plánovaný závod",
+    "row_idx": 189,
+    "col0": "Sjezd na rozloučenou v Brně 146 SJEZD /  plánovaný závod",
     "date": "24.10.2026",
     "club": "Kanoe Klub Spoj Brno",
-    "location": "",
+    "location": "Řeka Svratka u loděnice KK Brno obtížnost ZWA.  Závod č.146 1300 m  závod 147. 4500 m závod 148. 220",
     "links": [
       "https://csk.kanoe.cz/extreq/kalendardv.php?z=14030"
     ]
   },
   {
     "year": 2026,
-    "row_idx": 182,
+    "row_idx": 190,
     "col0": "Sjezd na rozloučenou v Brně 147 SJEZD /  plánovaný závod",
     "date": "24.10.2026",
     "club": "Kanoe Klub Spoj Brno",
-    "location": "",
+    "location": "viz. závod č. 146",
     "links": [
       "https://csk.kanoe.cz/extreq/kalendardv.php?z=14031"
     ]
   },
   {
     "year": 2026,
-    "row_idx": 183,
+    "row_idx": 191,
     "col0": "Sjezd na rozloučenou v Brně 148 SJEZD /  plánovaný závod",
     "date": "25.10.2026",
     "club": "Kanoe Klub Spoj Brno",
-    "location": "",
+    "location": "viz. závod č. 146",
     "links": [
       "https://csk.kanoe.cz/extreq/kalendardv.php?z=14032"
     ]
   },
   {
     "year": 2026,
-    "row_idx": 184,
+    "row_idx": 192,
     "col0": "Sjezd na rozloučenou v Brně 149 SJEZD /  plánovaný závod",
     "date": "25.10.2026",
     "club": "Kanoe Klub Spoj Brno",
-    "location": "",
+    "location": "viz. závod č. 146",
     "links": [
       "https://csk.kanoe.cz/extreq/kalendardv.php?z=14033"
     ]

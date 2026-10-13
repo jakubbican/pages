@@ -1,4 +1,4 @@
-/* DATA FOR CANOE CLUB STATISTICS DASHBOARD - GENERATED ON 06.08.2026 12:41:11 */
+/* DATA FOR CANOE CLUB STATISTICS DASHBOARD - GENERATED ON 13.10.2026 12:01:31 */
 window.CSK_DATA = {
   "clubs": [
     {
@@ -385,14 +385,14 @@ window.CSK_DATA = {
         {
           "year": 2013,
           "date": "23.03.2013",
-          "name": "Sjezd na Svitavě, závod č.1 SJEZD",
+          "name": "Sjezd na Svitavě, závod č.",
           "discipline": "SJEZD",
           "competitors": 33
         },
         {
           "year": 2013,
           "date": "23.03.2013",
-          "name": "Sjezd na Svitavě, závod č.2 SJEZD",
+          "name": "Sjezd na Svitavě, závod č.",
           "discipline": "SJEZD",
           "competitors": 31
         },
@@ -413,14 +413,14 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "17.03.2012",
-          "name": "Sjezdy na Svitavě, závod č.1 SJEZD",
+          "name": "Sjezdy na Svitavě, závod č.",
           "discipline": "SJEZD",
           "competitors": 36
         },
         {
           "year": 2012,
           "date": "17.03.2012",
-          "name": "Sjezdy na Svitavě, závod č.2 SJEZD",
+          "name": "Sjezdy na Svitavě, závod č.",
           "discipline": "SJEZD",
           "competitors": 35
         },
@@ -722,28 +722,28 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "25.03.2012",
-          "name": "Sjezd v Hanušovicích, neděle, závod č.3 SJEZD",
+          "name": "Sjezd v Hanušovicích, neděle, závod č.",
           "discipline": "SJEZD",
           "competitors": 63
         },
         {
           "year": 2012,
           "date": "25.03.2012",
-          "name": "Sjezd v Hanušovicích, neděle, závod č.4 SJEZD",
+          "name": "Sjezd v Hanušovicích, neděle, závod č.",
           "discipline": "SJEZD",
           "competitors": 64
         },
         {
           "year": 2012,
           "date": "24.03.2012",
-          "name": "Sjezd v Hanušovicích, sobota, závod č.1 SJEZD",
+          "name": "Sjezd v Hanušovicích, sobota, závod č.",
           "discipline": "SJEZD",
           "competitors": 67
         },
         {
           "year": 2012,
           "date": "24.03.2012",
-          "name": "Sjezd v Hanušovicích, sobota, závod č.2 SJEZD",
+          "name": "Sjezd v Hanušovicích, sobota, závod č.",
           "discipline": "SJEZD",
           "competitors": 68
         }
@@ -1120,42 +1120,42 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "31.03.2012",
-          "name": "Jarní sjezdy na Lužnici, sobota, závod č.1 SJEZD",
+          "name": "Jarní sjezdy na Lužnici, sobota, závod č.",
           "discipline": "SJEZD",
           "competitors": 34
         },
         {
           "year": 2012,
           "date": "31.03.2012",
-          "name": "Jarní sjezdy na Lužnici, sobota, závod č.2 SJEZD",
+          "name": "Jarní sjezdy na Lužnici, sobota, závod č.",
           "discipline": "SJEZD",
           "competitors": 34
         },
         {
           "year": 2012,
           "date": "20.10.2012",
-          "name": "VZ ve sjezdu, závod č.1 SJEZD",
+          "name": "VZ ve sjezdu, závod č.",
           "discipline": "SJEZD",
           "competitors": 80
         },
         {
           "year": 2012,
           "date": "20.10.2012",
-          "name": "VZ ve sjezdu, závod č.2 SJEZD",
+          "name": "VZ ve sjezdu, závod č.",
           "discipline": "SJEZD",
           "competitors": 86
         },
         {
           "year": 2012,
           "date": "01.04.2012",
-          "name": "Jarní sjezdy na Lužnici, neděle, závod č.3 SJEZD",
+          "name": "Jarní sjezdy na Lužnici, neděle, závod č.",
           "discipline": "SJEZD",
           "competitors": 22
         },
         {
           "year": 2012,
           "date": "01.04.2012",
-          "name": "Jarní sjezdy na Lužnici, neděle, závod č.4 SJEZD",
+          "name": "Jarní sjezdy na Lužnici, neděle, závod č.",
           "discipline": "SJEZD",
           "competitors": 22
         }
@@ -2205,7 +2205,7 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "26.04.2012",
-          "name": "Sjezd na Chrudimce, závod č.2 SJEZD",
+          "name": "Sjezd na Chrudimce, závod č.",
           "discipline": "SJEZD",
           "competitors": 22
         },
@@ -2226,7 +2226,7 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "05.04.2012",
-          "name": "Sjezd na Chrudimce, závod č.1 SJEZD",
+          "name": "Sjezd na Chrudimce, závod č.",
           "discipline": "SJEZD",
           "competitors": 17
         }
@@ -2445,6 +2445,13 @@ window.CSK_DATA = {
           "name": "3. Český pohár ve sjezdu na Kamenici",
           "discipline": "SJEZD",
           "competitors": 66
+        },
+        {
+          "year": 2026,
+          "date": "03.10.2026",
+          "name": "Sjezd ve Strakonicích",
+          "discipline": "SJEZD",
+          "competitors": 21
         },
         {
           "year": 2025,
@@ -2931,12 +2938,12 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 76,
-        "all_competitors": 6154,
+        "all_races": 77,
+        "all_competitors": 6175,
         "slalom_races": 0,
         "slalom_competitors": 0,
-        "sjezd_races": 76,
-        "sjezd_competitors": 6154,
+        "sjezd_races": 77,
+        "sjezd_competitors": 6175,
         "kros_races": 0,
         "kros_competitors": 0
       },
@@ -3072,12 +3079,12 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 7,
-          "competitors": 393,
+          "races": 8,
+          "competitors": 414,
           "slalom_races": 0,
           "slalom_competitors": 0,
-          "sjezd_races": 7,
-          "sjezd_competitors": 393,
+          "sjezd_races": 8,
+          "sjezd_competitors": 414,
           "kros_races": 0,
           "kros_competitors": 0
         }
@@ -3434,14 +3441,49 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "SK Vodní slalom České Budějovice",
+      "name": "SK VS České Budějovice",
       "races": [
+        {
+          "year": 2026,
+          "date": "30.08.2026",
+          "name": "10. Český pohár ve sprintu v Českém Vrbném + PEU CUP + 8.ČPJ 112 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 249
+        },
+        {
+          "year": 2026,
+          "date": "29.08.2026",
+          "name": "9. Český pohár ve sprintu v Českém Vrbném + PEU CUP + MČR veteránů + 7.ČPJ 111 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 249
+        },
+        {
+          "year": 2026,
+          "date": "29.08.2026",
+          "name": "4. ČP žáků ve sjezdu v Českém Vrbném",
+          "discipline": "SJEZD",
+          "competitors": 102
+        },
+        {
+          "year": 2026,
+          "date": "28.08.2026",
+          "name": "3. ČP žáků ve sprintu v Českém Vrbném 109 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 109
+        },
         {
           "year": 2026,
           "date": "24.05.2026",
           "name": "4. Český pohár žáků ve slalomu v  Českém Vrbném",
           "discipline": "SLALOM",
           "competitors": 221
+        },
+        {
+          "year": 2026,
+          "date": "23.08.2026",
+          "name": "6. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR U23",
+          "discipline": "SLALOM",
+          "competitors": 144
         },
         {
           "year": 2026,
@@ -3452,10 +3494,31 @@ window.CSK_DATA = {
         },
         {
           "year": 2026,
+          "date": "22.08.2026",
+          "name": "5. Český pohár Skupiny ČEZ ve slalomu na Lipně + MČR dospělých",
+          "discipline": "SJEZD",
+          "competitors": 146
+        },
+        {
+          "year": 2026,
+          "date": "20.09.2026",
+          "name": "6. Národní kvalifikační závod v Českém Vrbném + 7. ČPJ",
+          "discipline": "SLALOM",
+          "competitors": 283
+        },
+        {
+          "year": 2026,
           "date": "20.07.2026",
           "name": "ECA Junior cup v Českém Vrbném - day 2",
           "discipline": "SLALOM",
           "competitors": 333
+        },
+        {
+          "year": 2026,
+          "date": "19.09.2026",
+          "name": "5. Národní kvalifikační závod v Českém Vrbném + 6. ČPJ + Akademické MKČR ve slalomu",
+          "discipline": "SLALOM",
+          "competitors": 283
         },
         {
           "year": 2026,
@@ -4404,12 +4467,12 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 138,
-        "all_competitors": 26421,
-        "slalom_races": 130,
-        "slalom_competitors": 25383,
-        "sjezd_races": 8,
-        "sjezd_competitors": 1038,
+        "all_races": 146,
+        "all_competitors": 27986,
+        "slalom_races": 133,
+        "slalom_competitors": 26093,
+        "sjezd_races": 13,
+        "sjezd_competitors": 1893,
         "kros_races": 0,
         "kros_competitors": 0
       },
@@ -4555,12 +4618,12 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 7,
-          "competitors": 1924,
-          "slalom_races": 7,
-          "slalom_competitors": 1924,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
+          "races": 15,
+          "competitors": 3489,
+          "slalom_races": 10,
+          "slalom_competitors": 2634,
+          "sjezd_races": 5,
+          "sjezd_competitors": 855,
           "kros_races": 0,
           "kros_competitors": 0
         }
@@ -5924,14 +5987,14 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "13.05.2012",
-          "name": "VZ ve slalomu v Táboře. neděle, závod č.2 SLALOM",
+          "name": "VZ ve slalomu v Táboře. neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 142
         },
         {
           "year": 2012,
           "date": "12.05.2012",
-          "name": "VZ ve slalomu v Táboře, sobota, závod č.1 SLALOM",
+          "name": "VZ ve slalomu v Táboře, sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 138
         }
@@ -6434,8 +6497,22 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "SKUP Olomouc",
+      "name": "SK UP Olomouc",
       "races": [
+        {
+          "year": 2026,
+          "date": "27.09.2026",
+          "name": "Hanácký slalom v Olomouci",
+          "discipline": "SLALOM",
+          "competitors": 298
+        },
+        {
+          "year": 2026,
+          "date": "26.09.2026",
+          "name": "Hanácký slalom v Olomouci",
+          "discipline": "SLALOM",
+          "competitors": 324
+        },
         {
           "year": 2026,
           "date": "15.04.2026",
@@ -6985,14 +7062,14 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "30.09.2012",
-          "name": "Hanácký slalom - neděle, závod č.2 SLALOM",
+          "name": "Hanácký slalom - neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 158
         },
         {
           "year": 2012,
           "date": "29.09.2012",
-          "name": "Hanácký slalom - sobota, závod č.1 SLALOM",
+          "name": "Hanácký slalom - sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 168
         },
@@ -7012,10 +7089,10 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 82,
-        "all_competitors": 12954,
-        "slalom_races": 53,
-        "slalom_competitors": 10923,
+        "all_races": 84,
+        "all_competitors": 13576,
+        "slalom_races": 55,
+        "slalom_competitors": 11545,
         "sjezd_races": 29,
         "sjezd_competitors": 2031,
         "kros_races": 0,
@@ -7163,10 +7240,10 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 2,
-          "competitors": 212,
-          "slalom_races": 1,
-          "slalom_competitors": 126,
+          "races": 4,
+          "competitors": 834,
+          "slalom_races": 3,
+          "slalom_competitors": 748,
           "sjezd_races": 1,
           "sjezd_competitors": 86,
           "kros_races": 0,
@@ -7175,7 +7252,7 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "SK Kanoistika Česká Lípa",
+      "name": "TJ ŽSK - oddíl kanoistiky Česká Lípa",
       "races": [
         {
           "year": 2026,
@@ -7383,14 +7460,14 @@ window.CSK_DATA = {
         {
           "year": 2013,
           "date": "14.04.2013",
-          "name": "VZ ve slalomu ve Stružnici - neděle, závod č.2 SLALOM",
+          "name": "VZ ve slalomu ve Stružnici - neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 85
         },
         {
           "year": 2013,
           "date": "13.04.2013",
-          "name": "VZ ve slalomu ve Stružnici - sobota, závod č.1 SLALOM",
+          "name": "VZ ve slalomu ve Stružnici - sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 92
         },
@@ -7765,7 +7842,7 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "20.05.2012",
-          "name": "VZ ve slalomu - neděle, závod č.2 SLALOM",
+          "name": "VZ ve slalomu - neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 78
         },
@@ -7779,7 +7856,7 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "19.05.2012",
-          "name": "VZ ve slalomu - sobota, závod č.1 SLALOM",
+          "name": "VZ ve slalomu - sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 87
         },
@@ -7935,7 +8012,7 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "KVS Sušice",
+      "name": "TJ Sokol Sušice",
       "races": [
         {
           "year": 2026,
@@ -8264,8 +8341,22 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "SK Vltava Český Krumlov",
+      "name": "SK Vltava Č. Krumlov z.s.",
       "races": [
+        {
+          "year": 2026,
+          "date": "23.08.2026",
+          "name": "8. Český pohár ve sprintu + MČR U23 na Lipně 108 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 106
+        },
+        {
+          "year": 2026,
+          "date": "22.08.2026",
+          "name": "7. Český pohár ve sjezdu + MČR dospělých na Lipně",
+          "discipline": "SJEZD",
+          "competitors": 86
+        },
         {
           "year": 2026,
           "date": "16.06.2026",
@@ -8779,12 +8870,12 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 73,
-        "all_competitors": 5618,
+        "all_races": 75,
+        "all_competitors": 5810,
         "slalom_races": 15,
         "slalom_competitors": 1428,
-        "sjezd_races": 58,
-        "sjezd_competitors": 4190,
+        "sjezd_races": 60,
+        "sjezd_competitors": 4382,
         "kros_races": 0,
         "kros_competitors": 0
       },
@@ -8930,12 +9021,12 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 5,
-          "competitors": 469,
+          "races": 7,
+          "competitors": 661,
           "slalom_races": 2,
           "slalom_competitors": 276,
-          "sjezd_races": 3,
-          "sjezd_competitors": 193,
+          "sjezd_races": 5,
+          "sjezd_competitors": 385,
           "kros_races": 0,
           "kros_competitors": 0
         }
@@ -8944,6 +9035,20 @@ window.CSK_DATA = {
     {
       "name": "TJ Kralupy, oddíl kanoistiky",
       "races": [
+        {
+          "year": 2026,
+          "date": "30.08.2026",
+          "name": "Memoriál J.Froňka st. ve slalomu ve Veltrusech",
+          "discipline": "SLALOM",
+          "competitors": 280
+        },
+        {
+          "year": 2026,
+          "date": "29.08.2026",
+          "name": "Memoriál J.Froňka st. ve slalomu ve Veltrusech",
+          "discipline": "SLALOM",
+          "competitors": 288
+        },
         {
           "year": 2026,
           "date": "21.06.2026",
@@ -8957,6 +9062,13 @@ window.CSK_DATA = {
           "name": "3. Národní kvalifikační závod ve slalomu ve Veltrusech + 3. ČPJ",
           "discipline": "SLALOM",
           "competitors": 268
+        },
+        {
+          "year": 2026,
+          "date": "12.09.2026",
+          "name": "MČR dorostu ve slalomu ve Veltrusech + 5.ČPJ",
+          "discipline": "SLALOM",
+          "competitors": 218
         },
         {
           "year": 2025,
@@ -9464,10 +9576,10 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 74,
-        "all_competitors": 14160,
-        "slalom_races": 69,
-        "slalom_competitors": 13483,
+        "all_races": 77,
+        "all_competitors": 14946,
+        "slalom_races": 72,
+        "slalom_competitors": 14269,
         "sjezd_races": 5,
         "sjezd_competitors": 677,
         "kros_races": 0,
@@ -9615,10 +9727,10 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 2,
-          "competitors": 526,
-          "slalom_races": 2,
-          "slalom_competitors": 526,
+          "races": 5,
+          "competitors": 1312,
+          "slalom_races": 5,
+          "slalom_competitors": 1312,
           "sjezd_races": 0,
           "sjezd_competitors": 0,
           "kros_races": 0,
@@ -9688,14 +9800,14 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "27.05.2012",
-          "name": "VZ ve slalomu na Paraplíčku, závod č.2 SLALOM",
+          "name": "VZ ve slalomu na Paraplíčku, závod č.",
           "discipline": "SLALOM",
           "competitors": 105
         },
         {
           "year": 2012,
           "date": "26.05.2012",
-          "name": "VZ ve slalomu na Paraplíčku, závod č.1 SLALOM",
+          "name": "VZ ve slalomu na Paraplíčku, závod č.",
           "discipline": "SLALOM",
           "competitors": 102
         }
@@ -9986,7 +10098,7 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "10.06.2012",
-          "name": "VZ ve slalomu - neděle, závod č.2 SLALOM",
+          "name": "VZ ve slalomu - neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 111
         },
@@ -10000,7 +10112,7 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "09.06.2012",
-          "name": "VZ ve slalomu - sobota, závod č.1 SLALOM",
+          "name": "VZ ve slalomu - sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 118
         },
@@ -10643,10 +10755,24 @@ window.CSK_DATA = {
         },
         {
           "year": 2026,
+          "date": "04.10.2026",
+          "name": "Podzimní slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 298
+        },
+        {
+          "year": 2026,
           "date": "04.07.2026",
           "name": "5. Český pohár žáků ve slalomu ve Strakonicích",
           "discipline": "SLALOM",
           "competitors": 281
+        },
+        {
+          "year": 2026,
+          "date": "03.10.2026",
+          "name": "Podzimní slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 335
         },
         {
           "year": 2025,
@@ -10853,10 +10979,10 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 33,
-        "all_competitors": 9892,
-        "slalom_races": 32,
-        "slalom_competitors": 9781,
+        "all_races": 35,
+        "all_competitors": 10525,
+        "slalom_races": 34,
+        "slalom_competitors": 10414,
         "sjezd_races": 1,
         "sjezd_competitors": 111,
         "kros_races": 0,
@@ -11004,10 +11130,10 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 4,
-          "competitors": 1330,
-          "slalom_races": 4,
-          "slalom_competitors": 1330,
+          "races": 6,
+          "competitors": 1963,
+          "slalom_races": 6,
+          "slalom_competitors": 1963,
           "sjezd_races": 0,
           "sjezd_competitors": 0,
           "kros_races": 0,
@@ -11522,76 +11648,6 @@ window.CSK_DATA = {
       "name": "VS Dolní Kounice",
       "races": [
         {
-          "year": 2026,
-          "date": "28.06.2026",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 151
-        },
-        {
-          "year": 2026,
-          "date": "27.06.2026",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 152
-        },
-        {
-          "year": 2025,
-          "date": "29.06.2025",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 102
-        },
-        {
-          "year": 2025,
-          "date": "28.06.2025",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 103
-        },
-        {
-          "year": 2024,
-          "date": "30.06.2024",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 105
-        },
-        {
-          "year": 2024,
-          "date": "29.06.2024",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 105
-        },
-        {
-          "year": 2022,
-          "date": "12.06.2022",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 136
-        },
-        {
-          "year": 2022,
-          "date": "11.06.2022",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 139
-        },
-        {
-          "year": 2019,
-          "date": "30.06.2019",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 134
-        },
-        {
-          "year": 2019,
-          "date": "29.06.2019",
-          "name": "Slalom v Dolních Kounicích",
-          "discipline": "SLALOM",
-          "competitors": 140
-        },
-        {
           "year": 2018,
           "date": "30.06.2018",
           "name": "Slalom v Dolních Kounicích",
@@ -11678,23 +11734,23 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "30.06.2012",
-          "name": "VZ ve slalomu - sobota, závod č.1 SLALOM",
+          "name": "VZ ve slalomu - sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 104
         },
         {
           "year": 2012,
           "date": "01.07.2012",
-          "name": "VZ ve slalomu - neděle, závod č.2 SLALOM",
+          "name": "VZ ve slalomu - neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 99
         }
       ],
       "totals": {
-        "all_races": 24,
-        "all_competitors": 2875,
-        "slalom_races": 24,
-        "slalom_competitors": 2875,
+        "all_races": 14,
+        "all_competitors": 1608,
+        "slalom_races": 14,
+        "slalom_competitors": 1608,
         "sjezd_races": 0,
         "sjezd_competitors": 0,
         "kros_races": 0,
@@ -11766,56 +11822,6 @@ window.CSK_DATA = {
           "competitors": 233,
           "slalom_races": 2,
           "slalom_competitors": 233,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2019": {
-          "races": 2,
-          "competitors": 274,
-          "slalom_races": 2,
-          "slalom_competitors": 274,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2022": {
-          "races": 2,
-          "competitors": 275,
-          "slalom_races": 2,
-          "slalom_competitors": 275,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2024": {
-          "races": 2,
-          "competitors": 210,
-          "slalom_races": 2,
-          "slalom_competitors": 210,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2025": {
-          "races": 2,
-          "competitors": 205,
-          "slalom_races": 2,
-          "slalom_competitors": 205,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2026": {
-          "races": 2,
-          "competitors": 303,
-          "slalom_races": 2,
-          "slalom_competitors": 303,
           "sjezd_races": 0,
           "sjezd_competitors": 0,
           "kros_races": 0,
@@ -11941,14 +11947,14 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "08.07.2012",
-          "name": "VZ ve slalomu v Kadani - neděle, závod č.2 SLALOM",
+          "name": "VZ ve slalomu v Kadani - neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 74
         },
         {
           "year": 2012,
           "date": "07.07.2012",
-          "name": "VZ ve slalomu v Kadani - sobota, závod č.1 SLALOM",
+          "name": "VZ ve slalomu v Kadani - sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 85
         }
@@ -12230,14 +12236,14 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "15.07.2012",
-          "name": "VZ ve sjezdu na Labi - neděle, závod č.3 SJEZD",
+          "name": "VZ ve sjezdu na Labi - neděle, závod č.",
           "discipline": "SJEZD",
           "competitors": 35
         },
         {
           "year": 2012,
           "date": "15.07.2012",
-          "name": "VZ ve sjezdu na Labi - neděle, závod č.4 SJEZD",
+          "name": "VZ ve sjezdu na Labi - neděle, závod č.",
           "discipline": "SJEZD",
           "competitors": 38
         },
@@ -12405,8 +12411,22 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "SKVS Benátky nad Jizerou",
+      "name": "Kanoe klub DELFÍN Benátky n.J.",
       "races": [
+        {
+          "year": 2026,
+          "date": "16.08.2026",
+          "name": "Slalom o štít města Benátek",
+          "discipline": "SLALOM",
+          "competitors": 339
+        },
+        {
+          "year": 2026,
+          "date": "15.08.2026",
+          "name": "Slalom o štít města Benátek + 6. Český pohár veteránů",
+          "discipline": "SLALOM",
+          "competitors": 356
+        },
         {
           "year": 2025,
           "date": "10.08.2025",
@@ -12654,10 +12674,10 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 35,
-        "all_competitors": 9916,
-        "slalom_races": 33,
-        "slalom_competitors": 9766,
+        "all_races": 37,
+        "all_competitors": 10611,
+        "slalom_races": 35,
+        "slalom_competitors": 10461,
         "sjezd_races": 2,
         "sjezd_competitors": 150,
         "kros_races": 0,
@@ -12803,12 +12823,29 @@ window.CSK_DATA = {
           "sjezd_competitors": 0,
           "kros_races": 0,
           "kros_competitors": 0
+        },
+        "2026": {
+          "races": 2,
+          "competitors": 695,
+          "slalom_races": 2,
+          "slalom_competitors": 695,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
         }
       }
     },
     {
       "name": "USK Praha",
       "races": [
+        {
+          "year": 2026,
+          "date": "22.06.2026-25.06.2026",
+          "name": "Olympiáda dětí a mládeže 2026",
+          "discipline": "SLALOM",
+          "competitors": 162
+        },
         {
           "year": 2026,
           "date": "17.05.2026",
@@ -12818,10 +12855,24 @@ window.CSK_DATA = {
         },
         {
           "year": 2026,
+          "date": "16.08.2026",
+          "name": "4. ČP seniorů v Kajak krosu + MČR dospělých v Kajak krosu individuál",
+          "discipline": "KROS",
+          "competitors": 52
+        },
+        {
+          "year": 2026,
           "date": "16.05.2026",
           "name": "3. Český pohár Skupiny ČEZ ve slalomu v Troji + 3. nominační závod RDA + 2. nominační závod RD U23",
           "discipline": "SLALOM",
           "competitors": 153
+        },
+        {
+          "year": 2026,
+          "date": "14.08.2026-16.08.2026",
+          "name": "WRR Prague",
+          "discipline": "SLALOM",
+          "competitors": 765
         },
         {
           "year": 2026,
@@ -12836,6 +12887,13 @@ window.CSK_DATA = {
           "name": "1. Český pohár Skupiny ČEZ ve slalomu v Troji+ 1. nominační závod RDA a RD U23",
           "discipline": "SLALOM",
           "competitors": 153
+        },
+        {
+          "year": 2026,
+          "date": "05.06.2026-07.06.2026",
+          "name": "Světový pohár ve vodním slalomu Praha - Troja",
+          "discipline": "SLALOM",
+          "competitors": 360
         },
         {
           "year": 2025,
@@ -13083,6 +13141,20 @@ window.CSK_DATA = {
           "competitors": 155
         },
         {
+          "year": 2018,
+          "date": "11.08.2018-12.08.2018",
+          "name": "WRR + ECA Open Slalom Cup Troja",
+          "discipline": "SLALOM",
+          "competitors": 412
+        },
+        {
+          "year": 2018,
+          "date": "02.06.2018-03.06.2018",
+          "name": "Mistrovství Evropy ve vodním slalomu Praha - Troja",
+          "discipline": "SLALOM",
+          "competitors": 342
+        },
+        {
           "year": 2017,
           "date": "11.06.2017",
           "name": "6. Český pohár Skupiny ČEZ ve slalomu v Tróji + MČR U23",
@@ -13203,14 +13275,14 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 56,
-        "all_competitors": 11272,
-        "slalom_races": 48,
-        "slalom_competitors": 10493,
+        "all_races": 62,
+        "all_competitors": 13365,
+        "slalom_races": 53,
+        "slalom_competitors": 12534,
         "sjezd_races": 2,
         "sjezd_competitors": 278,
-        "kros_races": 6,
-        "kros_competitors": 501
+        "kros_races": 7,
+        "kros_competitors": 553
       },
       "years": {
         "2012": {
@@ -13274,10 +13346,10 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2018": {
-          "races": 2,
-          "competitors": 310,
-          "slalom_races": 2,
-          "slalom_competitors": 310,
+          "races": 4,
+          "competitors": 1064,
+          "slalom_races": 4,
+          "slalom_competitors": 1064,
           "sjezd_races": 0,
           "sjezd_competitors": 0,
           "kros_races": 0,
@@ -13354,14 +13426,14 @@ window.CSK_DATA = {
           "kros_competitors": 404
         },
         "2026": {
-          "races": 4,
-          "competitors": 608,
-          "slalom_races": 4,
-          "slalom_competitors": 608,
+          "races": 8,
+          "competitors": 1947,
+          "slalom_races": 7,
+          "slalom_competitors": 1895,
           "sjezd_races": 0,
           "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
+          "kros_races": 1,
+          "kros_competitors": 52
         }
       }
     },
@@ -13433,6 +13505,20 @@ window.CSK_DATA = {
     {
       "name": "SK Třebechovice",
       "races": [
+        {
+          "year": 2026,
+          "date": "27.09.2026",
+          "name": "Třebechovický slalom",
+          "discipline": "SLALOM",
+          "competitors": 334
+        },
+        {
+          "year": 2026,
+          "date": "26.09.2026",
+          "name": "Třebechovický slalom + MČR veteránů",
+          "discipline": "SLALOM",
+          "competitors": 361
+        },
         {
           "year": 2026,
           "date": "26.07.2026",
@@ -13968,23 +14054,23 @@ window.CSK_DATA = {
         {
           "year": 2012,
           "date": "30.09.2012",
-          "name": "VZ ve slalomu - neděle, závod č.2 SLALOM",
+          "name": "VZ ve slalomu - neděle, závod č.",
           "discipline": "SLALOM",
           "competitors": 244
         },
         {
           "year": 2012,
           "date": "29.09.2012",
-          "name": "VZ ve slalomu - sobota, závod č.1 SLALOM",
+          "name": "VZ ve slalomu - sobota, závod č.",
           "discipline": "SLALOM",
           "competitors": 266
         }
       ],
       "totals": {
-        "all_races": 78,
-        "all_competitors": 11256,
-        "slalom_races": 28,
-        "slalom_competitors": 9204,
+        "all_races": 80,
+        "all_competitors": 11951,
+        "slalom_races": 30,
+        "slalom_competitors": 9899,
         "sjezd_races": 50,
         "sjezd_competitors": 2052,
         "kros_races": 0,
@@ -14132,10 +14218,10 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 4,
-          "competitors": 97,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
+          "races": 6,
+          "competitors": 792,
+          "slalom_races": 2,
+          "slalom_competitors": 695,
           "sjezd_races": 4,
           "sjezd_competitors": 97,
           "kros_races": 0,
@@ -14144,134 +14230,8 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "Kanoistický klub Klatovy",
+      "name": "Kanoistický klub Klatovy o.s.",
       "races": [
-        {
-          "year": 2025,
-          "date": "05.10.2025",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 218
-        },
-        {
-          "year": 2025,
-          "date": "04.10.2025",
-          "name": "Klatovský slalom ve Strakonicích - memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 235
-        },
-        {
-          "year": 2024,
-          "date": "06.10.2024",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 255
-        },
-        {
-          "year": 2024,
-          "date": "05.10.2024",
-          "name": "Klatovský slalom ve Strakonicích - memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 299
-        },
-        {
-          "year": 2023,
-          "date": "08.10.2023",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 223
-        },
-        {
-          "year": 2023,
-          "date": "07.10.2023",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 249
-        },
-        {
-          "year": 2022,
-          "date": "02.10.2022",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 274
-        },
-        {
-          "year": 2022,
-          "date": "01.10.2022",
-          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 326
-        },
-        {
-          "year": 2021,
-          "date": "03.10.2021",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 276
-        },
-        {
-          "year": 2021,
-          "date": "02.10.2021",
-          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 317
-        },
-        {
-          "year": 2019,
-          "date": "06.10.2019",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 228
-        },
-        {
-          "year": 2019,
-          "date": "05.10.2019",
-          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 283
-        },
-        {
-          "year": 2018,
-          "date": "07.10.2018",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 261
-        },
-        {
-          "year": 2018,
-          "date": "06.10.2018",
-          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 278
-        },
-        {
-          "year": 2017,
-          "date": "08.10.2017",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 206
-        },
-        {
-          "year": 2017,
-          "date": "07.10.2017",
-          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 225
-        },
-        {
-          "year": 2016,
-          "date": "02.10.2016",
-          "name": "Klatovský slalom ve Strakonicích",
-          "discipline": "SLALOM",
-          "competitors": 182
-        },
-        {
-          "year": 2016,
-          "date": "01.10.2016",
-          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
-          "discipline": "SLALOM",
-          "competitors": 208
-        },
         {
           "year": 2015,
           "date": "04.10.2015",
@@ -14330,10 +14290,10 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 26,
-        "all_competitors": 5714,
-        "slalom_races": 26,
-        "slalom_competitors": 5714,
+        "all_races": 8,
+        "all_competitors": 1171,
+        "slalom_races": 8,
+        "slalom_competitors": 1171,
         "sjezd_races": 0,
         "sjezd_competitors": 0,
         "kros_races": 0,
@@ -14375,96 +14335,6 @@ window.CSK_DATA = {
           "competitors": 413,
           "slalom_races": 2,
           "slalom_competitors": 413,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2016": {
-          "races": 2,
-          "competitors": 390,
-          "slalom_races": 2,
-          "slalom_competitors": 390,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2017": {
-          "races": 2,
-          "competitors": 431,
-          "slalom_races": 2,
-          "slalom_competitors": 431,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2018": {
-          "races": 2,
-          "competitors": 539,
-          "slalom_races": 2,
-          "slalom_competitors": 539,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2019": {
-          "races": 2,
-          "competitors": 511,
-          "slalom_races": 2,
-          "slalom_competitors": 511,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2021": {
-          "races": 2,
-          "competitors": 593,
-          "slalom_races": 2,
-          "slalom_competitors": 593,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2022": {
-          "races": 2,
-          "competitors": 600,
-          "slalom_races": 2,
-          "slalom_competitors": 600,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2023": {
-          "races": 2,
-          "competitors": 472,
-          "slalom_races": 2,
-          "slalom_competitors": 472,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2024": {
-          "races": 2,
-          "competitors": 554,
-          "slalom_races": 2,
-          "slalom_competitors": 554,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2025": {
-          "races": 2,
-          "competitors": 453,
-          "slalom_races": 2,
-          "slalom_competitors": 453,
           "sjezd_races": 0,
           "sjezd_competitors": 0,
           "kros_races": 0,
@@ -15085,113 +14955,8 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "TJ VS Litovel",
+      "name": "TJ Vodní Sporty Litovel",
       "races": [
-        {
-          "year": 2026,
-          "date": "28.04.2026",
-          "name": "Krajský přebor ve sprintu v Litovli 33 SPRINT",
-          "discipline": "SJEZD",
-          "competitors": 60
-        },
-        {
-          "year": 2025,
-          "date": "23.04.2025",
-          "name": "Krajský přebor ve sprintu v Litovli 31 SPRINT",
-          "discipline": "SJEZD",
-          "competitors": 59
-        },
-        {
-          "year": 2022,
-          "date": "26.06.2022",
-          "name": "MČR žáků v klasickém sjezdu + 6. ČPJ + 2. ČPž  + veřejný závod na Moravě",
-          "discipline": "SJEZD",
-          "competitors": 222
-        },
-        {
-          "year": 2022,
-          "date": "25.06.2022",
-          "name": "MČR dorostu v klasickém sjezdu + 5. ČPJ + 1. ČPž + veřejný závod na Moravě",
-          "discipline": "SJEZD",
-          "competitors": 229
-        },
-        {
-          "year": 2021,
-          "date": "16.06.2021",
-          "name": "Sjezd v Litovli",
-          "discipline": "SJEZD",
-          "competitors": 52
-        },
-        {
-          "year": 2017,
-          "date": "26.03.2017",
-          "name": "Sjezd v Hanušovicích",
-          "discipline": "SJEZD",
-          "competitors": 80
-        },
-        {
-          "year": 2017,
-          "date": "26.03.2017",
-          "name": "Sjezd v Hanušovicích",
-          "discipline": "SJEZD",
-          "competitors": 71
-        },
-        {
-          "year": 2017,
-          "date": "25.03.2017",
-          "name": "Sjezd v Hanušovicích",
-          "discipline": "SJEZD",
-          "competitors": 79
-        },
-        {
-          "year": 2017,
-          "date": "25.03.2017",
-          "name": "Sjezd v Hanušovicích",
-          "discipline": "SJEZD",
-          "competitors": 81
-        },
-        {
-          "year": 2015,
-          "date": "31.05.2015",
-          "name": "MČR žáků ve sjezdu v Postřelmově + ČPJ + 2.ČPž",
-          "discipline": "SJEZD",
-          "competitors": 127
-        },
-        {
-          "year": 2015,
-          "date": "30.05.2015",
-          "name": "MČR dorostu ve sjezdu v Postřelmově + ČPJ a 1.ČPž",
-          "discipline": "SJEZD",
-          "competitors": 130
-        },
-        {
-          "year": 2014,
-          "date": "31.08.2014",
-          "name": "10. Český pohár ve sjezdu - sprint na Lipně + MČR 125 SPRINT",
-          "discipline": "SJEZD",
-          "competitors": 64
-        },
-        {
-          "year": 2014,
-          "date": "30.08.2014",
-          "name": "9. Český pohár ve sjezdu na Lipně  + MČR",
-          "discipline": "SJEZD",
-          "competitors": 61
-        },
-        {
-          "year": 2014,
-          "date": "04.05.2014",
-          "name": "4. Český pohár ve sjezdu - sprint v Postřelmově 36 SPRINT",
-          "discipline": "SJEZD",
-          "competitors": 142
-        },
-        {
-          "year": 2014,
-          "date": "03.05.2014",
-          "name": "3. Český pohár ve sjezdu - klasik v Postřelmově",
-          "discipline": "SJEZD",
-          "competitors": 123
-        },
         {
           "year": 2013,
           "date": "31.08.2013",
@@ -15229,12 +14994,12 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 20,
-        "all_competitors": 1974,
+        "all_races": 5,
+        "all_competitors": 394,
         "slalom_races": 0,
         "slalom_competitors": 0,
-        "sjezd_races": 20,
-        "sjezd_competitors": 1974,
+        "sjezd_races": 5,
+        "sjezd_competitors": 394,
         "kros_races": 0,
         "kros_competitors": 0
       },
@@ -15246,76 +15011,6 @@ window.CSK_DATA = {
           "slalom_competitors": 0,
           "sjezd_races": 5,
           "sjezd_competitors": 394,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2014": {
-          "races": 4,
-          "competitors": 390,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
-          "sjezd_races": 4,
-          "sjezd_competitors": 390,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2015": {
-          "races": 2,
-          "competitors": 257,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
-          "sjezd_races": 2,
-          "sjezd_competitors": 257,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2017": {
-          "races": 4,
-          "competitors": 311,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
-          "sjezd_races": 4,
-          "sjezd_competitors": 311,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2021": {
-          "races": 1,
-          "competitors": 52,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
-          "sjezd_races": 1,
-          "sjezd_competitors": 52,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2022": {
-          "races": 2,
-          "competitors": 451,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
-          "sjezd_races": 2,
-          "sjezd_competitors": 451,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2025": {
-          "races": 1,
-          "competitors": 59,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
-          "sjezd_races": 1,
-          "sjezd_competitors": 59,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2026": {
-          "races": 1,
-          "competitors": 60,
-          "slalom_races": 0,
-          "slalom_competitors": 0,
-          "sjezd_races": 1,
-          "sjezd_competitors": 60,
           "kros_races": 0,
           "kros_competitors": 0
         }
@@ -15424,7 +15119,7 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "TJ KK Železný Brod",
+      "name": "TJ Jiskra Železný Brod",
       "races": [
         {
           "year": 2025,
@@ -15733,134 +15428,200 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "VK Tzunami Ostrava",
+      "name": "TJ  Vodní Sporty Litovel",
       "races": [
         {
-          "year": 2025,
-          "date": "31.05.2025",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 112
-        },
-        {
-          "year": 2025,
-          "date": "24.06.2025",
-          "name": "AMČR ve slalomu v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 26
-        },
-        {
-          "year": 2025,
-          "date": "24.06.2025",
-          "name": "AMČR ve sprintu v Ostravě",
+          "year": 2026,
+          "date": "28.04.2026",
+          "name": "Krajský přebor ve sprintu v Litovli 33 SPRINT",
           "discipline": "SJEZD",
-          "competitors": 32
+          "competitors": 60
         },
         {
           "year": 2025,
-          "date": "01.06.2025",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 106
+          "date": "23.04.2025",
+          "name": "Krajský přebor ve sprintu v Litovli 31 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 59
         },
         {
-          "year": 2024,
-          "date": "26.05.2024",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 154
+          "year": 2022,
+          "date": "26.06.2022",
+          "name": "MČR žáků v klasickém sjezdu + 6. ČPJ + 2. ČPž  + veřejný závod na Moravě",
+          "discipline": "SJEZD",
+          "competitors": 222
         },
         {
-          "year": 2024,
-          "date": "25.05.2024",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 147
+          "year": 2022,
+          "date": "25.06.2022",
+          "name": "MČR dorostu v klasickém sjezdu + 5. ČPJ + 1. ČPž + veřejný závod na Moravě",
+          "discipline": "SJEZD",
+          "competitors": 229
         },
         {
-          "year": 2023,
-          "date": "14.05.2023",
-          "name": "Ostravské slalomy - slalom u",
-          "discipline": "SLALOM",
+          "year": 2021,
+          "date": "16.06.2021",
+          "name": "Sjezd v Litovli",
+          "discipline": "SJEZD",
+          "competitors": 52
+        },
+        {
+          "year": 2017,
+          "date": "26.03.2017",
+          "name": "Sjezd v Hanušovicích",
+          "discipline": "SJEZD",
+          "competitors": 80
+        },
+        {
+          "year": 2017,
+          "date": "26.03.2017",
+          "name": "Sjezd v Hanušovicích",
+          "discipline": "SJEZD",
+          "competitors": 71
+        },
+        {
+          "year": 2017,
+          "date": "25.03.2017",
+          "name": "Sjezd v Hanušovicích",
+          "discipline": "SJEZD",
+          "competitors": 79
+        },
+        {
+          "year": 2017,
+          "date": "25.03.2017",
+          "name": "Sjezd v Hanušovicích",
+          "discipline": "SJEZD",
+          "competitors": 81
+        },
+        {
+          "year": 2015,
+          "date": "31.05.2015",
+          "name": "MČR žáků ve sjezdu v Postřelmově + ČPJ + 2.ČPž",
+          "discipline": "SJEZD",
+          "competitors": 127
+        },
+        {
+          "year": 2015,
+          "date": "30.05.2015",
+          "name": "MČR dorostu ve sjezdu v Postřelmově + ČPJ a 1.ČPž",
+          "discipline": "SJEZD",
           "competitors": 130
         },
         {
-          "year": 2023,
-          "date": "13.05.2023",
-          "name": "Ostravské slalomy - slalom u",
-          "discipline": "SLALOM",
-          "competitors": 136
+          "year": 2014,
+          "date": "31.08.2014",
+          "name": "10. Český pohár ve sjezdu - sprint na Lipně + MČR 125 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 64
         },
         {
-          "year": 2022,
-          "date": "15.05.2022",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 134
+          "year": 2014,
+          "date": "30.08.2014",
+          "name": "9. Český pohár ve sjezdu na Lipně  + MČR",
+          "discipline": "SJEZD",
+          "competitors": 61
         },
         {
-          "year": 2022,
-          "date": "14.05.2022",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 138
+          "year": 2014,
+          "date": "04.05.2014",
+          "name": "4. Český pohár ve sjezdu - sprint v Postřelmově 36 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 142
         },
         {
-          "year": 2019,
-          "date": "12.05.2019",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 160
+          "year": 2014,
+          "date": "03.05.2014",
+          "name": "3. Český pohár ve sjezdu - klasik v Postřelmově",
+          "discipline": "SJEZD",
+          "competitors": 123
+        }
+      ],
+      "totals": {
+        "all_races": 15,
+        "all_competitors": 1580,
+        "slalom_races": 0,
+        "slalom_competitors": 0,
+        "sjezd_races": 15,
+        "sjezd_competitors": 1580,
+        "kros_races": 0,
+        "kros_competitors": 0
+      },
+      "years": {
+        "2014": {
+          "races": 4,
+          "competitors": 390,
+          "slalom_races": 0,
+          "slalom_competitors": 0,
+          "sjezd_races": 4,
+          "sjezd_competitors": 390,
+          "kros_races": 0,
+          "kros_competitors": 0
         },
-        {
-          "year": 2019,
-          "date": "11.05.2019",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 163
+        "2015": {
+          "races": 2,
+          "competitors": 257,
+          "slalom_races": 0,
+          "slalom_competitors": 0,
+          "sjezd_races": 2,
+          "sjezd_competitors": 257,
+          "kros_races": 0,
+          "kros_competitors": 0
         },
-        {
-          "year": 2018,
-          "date": "13.05.2018",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 153
+        "2017": {
+          "races": 4,
+          "competitors": 311,
+          "slalom_races": 0,
+          "slalom_competitors": 0,
+          "sjezd_races": 4,
+          "sjezd_competitors": 311,
+          "kros_races": 0,
+          "kros_competitors": 0
         },
-        {
-          "year": 2018,
-          "date": "12.05.2018",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 152
+        "2021": {
+          "races": 1,
+          "competitors": 52,
+          "slalom_races": 0,
+          "slalom_competitors": 0,
+          "sjezd_races": 1,
+          "sjezd_competitors": 52,
+          "kros_races": 0,
+          "kros_competitors": 0
         },
-        {
-          "year": 2017,
-          "date": "14.05.2017",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 124
+        "2022": {
+          "races": 2,
+          "competitors": 451,
+          "slalom_races": 0,
+          "slalom_competitors": 0,
+          "sjezd_races": 2,
+          "sjezd_competitors": 451,
+          "kros_races": 0,
+          "kros_competitors": 0
         },
-        {
-          "year": 2017,
-          "date": "13.05.2017",
-          "name": "Slalom v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 133
+        "2025": {
+          "races": 1,
+          "competitors": 59,
+          "slalom_races": 0,
+          "slalom_competitors": 0,
+          "sjezd_races": 1,
+          "sjezd_competitors": 59,
+          "kros_races": 0,
+          "kros_competitors": 0
         },
-        {
-          "year": 2016,
-          "date": "29.05.2016",
-          "name": "2. Český pohár žáků ve slalomu v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 173
-        },
-        {
-          "year": 2016,
-          "date": "28.05.2016",
-          "name": "1. Český pohár žáků ve slalomu v Ostravě",
-          "discipline": "SLALOM",
-          "competitors": 174
-        },
+        "2026": {
+          "races": 1,
+          "competitors": 60,
+          "slalom_races": 0,
+          "slalom_competitors": 0,
+          "sjezd_races": 1,
+          "sjezd_competitors": 60,
+          "kros_races": 0,
+          "kros_competitors": 0
+        }
+      }
+    },
+    {
+      "name": "Tzunami Ostrava",
+      "races": [
         {
           "year": 2015,
           "date": "10.05.2015",
@@ -15891,12 +15652,12 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 22,
-        "all_competitors": 2559,
-        "slalom_races": 21,
-        "slalom_competitors": 2527,
-        "sjezd_races": 1,
-        "sjezd_competitors": 32,
+        "all_races": 4,
+        "all_competitors": 212,
+        "slalom_races": 4,
+        "slalom_competitors": 212,
+        "sjezd_races": 0,
+        "sjezd_competitors": 0,
         "kros_races": 0,
         "kros_competitors": 0
       },
@@ -15920,148 +15681,12 @@ window.CSK_DATA = {
           "sjezd_competitors": 0,
           "kros_races": 0,
           "kros_competitors": 0
-        },
-        "2016": {
-          "races": 2,
-          "competitors": 347,
-          "slalom_races": 2,
-          "slalom_competitors": 347,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2017": {
-          "races": 2,
-          "competitors": 257,
-          "slalom_races": 2,
-          "slalom_competitors": 257,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2018": {
-          "races": 2,
-          "competitors": 305,
-          "slalom_races": 2,
-          "slalom_competitors": 305,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2019": {
-          "races": 2,
-          "competitors": 323,
-          "slalom_races": 2,
-          "slalom_competitors": 323,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2022": {
-          "races": 2,
-          "competitors": 272,
-          "slalom_races": 2,
-          "slalom_competitors": 272,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2023": {
-          "races": 2,
-          "competitors": 266,
-          "slalom_races": 2,
-          "slalom_competitors": 266,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2024": {
-          "races": 2,
-          "competitors": 301,
-          "slalom_races": 2,
-          "slalom_competitors": 301,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2025": {
-          "races": 4,
-          "competitors": 276,
-          "slalom_races": 3,
-          "slalom_competitors": 244,
-          "sjezd_races": 1,
-          "sjezd_competitors": 32,
-          "kros_races": 0,
-          "kros_competitors": 0
         }
       }
     },
     {
       "name": "KK Brandýs nad Labem",
       "races": [
-        {
-          "year": 2025,
-          "date": "22.06.2025",
-          "name": "6. Český pohár žáků ve slalomu v Brandýse n.L.",
-          "discipline": "SLALOM",
-          "competitors": 225
-        },
-        {
-          "year": 2025,
-          "date": "21.06.2025",
-          "name": "5. Český pohár žáků ve slalomu v Brandýse n.L.",
-          "discipline": "SLALOM",
-          "competitors": 231
-        },
-        {
-          "year": 2024,
-          "date": "08.09.2024",
-          "name": "MČR žáků ve sprintu v Brandýse n.L. + 5. Český pohár žáků ve sjezdu 131 SPRINT",
-          "discipline": "SJEZD",
-          "competitors": 195
-        },
-        {
-          "year": 2024,
-          "date": "07.09.2024",
-          "name": "MČR žáků ve slalomu v Brandýse n.L. + 7. Český pohár žáků ve slalomu",
-          "discipline": "SLALOM",
-          "competitors": 230
-        },
-        {
-          "year": 2023,
-          "date": "13.08.2023",
-          "name": "6. Český pohár žáků ve slalomu v Brandýse nad Labem",
-          "discipline": "SLALOM",
-          "competitors": 212
-        },
-        {
-          "year": 2023,
-          "date": "12.08.2023",
-          "name": "5. Český pohár žáků ve slalomu v Brandýse nad Labem",
-          "discipline": "SLALOM",
-          "competitors": 214
-        },
-        {
-          "year": 2022,
-          "date": "28.08.2022",
-          "name": "MČR žáků ve sprintu v Brandýse n.L. 113 SPRINT",
-          "discipline": "SJEZD",
-          "competitors": 158
-        },
-        {
-          "year": 2022,
-          "date": "27.08.2022",
-          "name": "MČR žáků ve slalomu v Brandýse n.L.",
-          "discipline": "SLALOM",
-          "competitors": 199
-        },
         {
           "year": 2021,
           "date": "22.08.2021",
@@ -16120,12 +15745,12 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 16,
-        "all_competitors": 3117,
-        "slalom_races": 11,
-        "slalom_competitors": 2386,
-        "sjezd_races": 5,
-        "sjezd_competitors": 731,
+        "all_races": 8,
+        "all_competitors": 1453,
+        "slalom_races": 5,
+        "slalom_competitors": 1075,
+        "sjezd_races": 3,
+        "sjezd_competitors": 378,
         "kros_races": 0,
         "kros_competitors": 0
       },
@@ -16159,51 +15784,11 @@ window.CSK_DATA = {
           "sjezd_competitors": 138,
           "kros_races": 0,
           "kros_competitors": 0
-        },
-        "2022": {
-          "races": 2,
-          "competitors": 357,
-          "slalom_races": 1,
-          "slalom_competitors": 199,
-          "sjezd_races": 1,
-          "sjezd_competitors": 158,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2023": {
-          "races": 2,
-          "competitors": 426,
-          "slalom_races": 2,
-          "slalom_competitors": 426,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2024": {
-          "races": 2,
-          "competitors": 425,
-          "slalom_races": 1,
-          "slalom_competitors": 230,
-          "sjezd_races": 1,
-          "sjezd_competitors": 195,
-          "kros_races": 0,
-          "kros_competitors": 0
-        },
-        "2025": {
-          "races": 2,
-          "competitors": 456,
-          "slalom_races": 2,
-          "slalom_competitors": 456,
-          "sjezd_races": 0,
-          "sjezd_competitors": 0,
-          "kros_races": 0,
-          "kros_competitors": 0
         }
       }
     },
     {
-      "name": "Dukla Brandýs",
+      "name": "DUKLA Brandýs",
       "races": [
         {
           "year": 2018,
@@ -16355,10 +15940,59 @@ window.CSK_DATA = {
         },
         {
           "year": 2026,
+          "date": "11.10.2026",
+          "name": "7. ČP seniorů v Kajak krosu individuál v Roudnici + 8.ČPJ + MČR U23",
+          "discipline": "KROS",
+          "competitors": 43
+        },
+        {
+          "year": 2026,
+          "date": "11.10.2026",
+          "name": "7. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 8.ČPJ + MČR U23",
+          "discipline": "KROS",
+          "competitors": 43
+        },
+        {
+          "year": 2026,
+          "date": "10.10.2026",
+          "name": "6. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 7.ČPJ",
+          "discipline": "KROS",
+          "competitors": 43
+        },
+        {
+          "year": 2026,
+          "date": "10.10.2026",
+          "name": "5. ČP seniorů v Kajak krosu individuál v Roudnici + 6.ČPJ",
+          "discipline": "KROS",
+          "competitors": 43
+        },
+        {
+          "year": 2026,
+          "date": "10.10.2026",
+          "name": "5. ČP seniorů v Kajak krosu vyřazovací závod v Roudnici + 6.ČPJ",
+          "discipline": "KROS",
+          "competitors": 43
+        },
+        {
+          "year": 2026,
+          "date": "10.10.2026",
+          "name": "6. ČP seniorů v Kajak krosu individuál v Roudnici + 7.ČPJ",
+          "discipline": "KROS",
+          "competitors": 43
+        },
+        {
+          "year": 2026,
           "date": "03.05.2026",
           "name": "6. Český pohár ve sprintu + MČR dospělých + 4.ČPJ v Roudnici n.L. 36 SPRINT",
           "discipline": "SJEZD",
           "competitors": 236
+        },
+        {
+          "year": 2026,
+          "date": "02.10.2026-04.10.2026",
+          "name": "OH naděje",
+          "discipline": "SLALOM",
+          "competitors": 226
         },
         {
           "year": 2026,
@@ -16719,14 +16353,14 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 58,
-        "all_competitors": 12978,
-        "slalom_races": 41,
-        "slalom_competitors": 9879,
+        "all_races": 65,
+        "all_competitors": 13462,
+        "slalom_races": 42,
+        "slalom_competitors": 10105,
         "sjezd_races": 17,
         "sjezd_competitors": 3099,
-        "kros_races": 0,
-        "kros_competitors": 0
+        "kros_races": 6,
+        "kros_competitors": 258
       },
       "years": {
         "2015": {
@@ -16840,14 +16474,14 @@ window.CSK_DATA = {
           "kros_competitors": 0
         },
         "2026": {
-          "races": 8,
-          "competitors": 2220,
-          "slalom_races": 6,
-          "slalom_competitors": 1748,
+          "races": 15,
+          "competitors": 2704,
+          "slalom_races": 7,
+          "slalom_competitors": 1974,
           "sjezd_races": 2,
           "sjezd_competitors": 472,
-          "kros_races": 0,
-          "kros_competitors": 0
+          "kros_races": 6,
+          "kros_competitors": 258
         }
       }
     },
@@ -16894,6 +16528,462 @@ window.CSK_DATA = {
           "slalom_competitors": 0,
           "sjezd_races": 3,
           "sjezd_competitors": 78,
+          "kros_races": 0,
+          "kros_competitors": 0
+        }
+      }
+    },
+    {
+      "name": "VK Tzunami Ostrava",
+      "races": [
+        {
+          "year": 2025,
+          "date": "31.05.2025",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 112
+        },
+        {
+          "year": 2025,
+          "date": "24.06.2025",
+          "name": "AMČR ve slalomu v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 26
+        },
+        {
+          "year": 2025,
+          "date": "24.06.2025",
+          "name": "AMČR ve sprintu v Ostravě",
+          "discipline": "SJEZD",
+          "competitors": 32
+        },
+        {
+          "year": 2025,
+          "date": "01.06.2025",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 106
+        },
+        {
+          "year": 2024,
+          "date": "26.05.2024",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 154
+        },
+        {
+          "year": 2024,
+          "date": "25.05.2024",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 147
+        },
+        {
+          "year": 2023,
+          "date": "14.05.2023",
+          "name": "Ostravské slalomy - slalom u",
+          "discipline": "SLALOM",
+          "competitors": 130
+        },
+        {
+          "year": 2023,
+          "date": "13.05.2023",
+          "name": "Ostravské slalomy - slalom u",
+          "discipline": "SLALOM",
+          "competitors": 136
+        },
+        {
+          "year": 2022,
+          "date": "15.05.2022",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 134
+        },
+        {
+          "year": 2022,
+          "date": "14.05.2022",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 138
+        },
+        {
+          "year": 2019,
+          "date": "12.05.2019",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 160
+        },
+        {
+          "year": 2019,
+          "date": "11.05.2019",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 163
+        },
+        {
+          "year": 2018,
+          "date": "13.05.2018",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 153
+        },
+        {
+          "year": 2018,
+          "date": "12.05.2018",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 152
+        },
+        {
+          "year": 2017,
+          "date": "14.05.2017",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 124
+        },
+        {
+          "year": 2017,
+          "date": "13.05.2017",
+          "name": "Slalom v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 133
+        },
+        {
+          "year": 2016,
+          "date": "29.05.2016",
+          "name": "2. Český pohár žáků ve slalomu v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 173
+        },
+        {
+          "year": 2016,
+          "date": "28.05.2016",
+          "name": "1. Český pohár žáků ve slalomu v Ostravě",
+          "discipline": "SLALOM",
+          "competitors": 174
+        }
+      ],
+      "totals": {
+        "all_races": 18,
+        "all_competitors": 2347,
+        "slalom_races": 17,
+        "slalom_competitors": 2315,
+        "sjezd_races": 1,
+        "sjezd_competitors": 32,
+        "kros_races": 0,
+        "kros_competitors": 0
+      },
+      "years": {
+        "2016": {
+          "races": 2,
+          "competitors": 347,
+          "slalom_races": 2,
+          "slalom_competitors": 347,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2017": {
+          "races": 2,
+          "competitors": 257,
+          "slalom_races": 2,
+          "slalom_competitors": 257,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2018": {
+          "races": 2,
+          "competitors": 305,
+          "slalom_races": 2,
+          "slalom_competitors": 305,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2019": {
+          "races": 2,
+          "competitors": 323,
+          "slalom_races": 2,
+          "slalom_competitors": 323,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2022": {
+          "races": 2,
+          "competitors": 272,
+          "slalom_races": 2,
+          "slalom_competitors": 272,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2023": {
+          "races": 2,
+          "competitors": 266,
+          "slalom_races": 2,
+          "slalom_competitors": 266,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2024": {
+          "races": 2,
+          "competitors": 301,
+          "slalom_races": 2,
+          "slalom_competitors": 301,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2025": {
+          "races": 4,
+          "competitors": 276,
+          "slalom_races": 3,
+          "slalom_competitors": 244,
+          "sjezd_races": 1,
+          "sjezd_competitors": 32,
+          "kros_races": 0,
+          "kros_competitors": 0
+        }
+      }
+    },
+    {
+      "name": "Kanoistický klub Klatovy z.s.",
+      "races": [
+        {
+          "year": 2025,
+          "date": "05.10.2025",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 218
+        },
+        {
+          "year": 2025,
+          "date": "04.10.2025",
+          "name": "Klatovský slalom ve Strakonicích - memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 235
+        },
+        {
+          "year": 2024,
+          "date": "06.10.2024",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 255
+        },
+        {
+          "year": 2024,
+          "date": "05.10.2024",
+          "name": "Klatovský slalom ve Strakonicích - memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 299
+        },
+        {
+          "year": 2023,
+          "date": "08.10.2023",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 223
+        },
+        {
+          "year": 2023,
+          "date": "07.10.2023",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 249
+        },
+        {
+          "year": 2022,
+          "date": "02.10.2022",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 274
+        },
+        {
+          "year": 2022,
+          "date": "01.10.2022",
+          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 326
+        },
+        {
+          "year": 2021,
+          "date": "03.10.2021",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 276
+        },
+        {
+          "year": 2021,
+          "date": "02.10.2021",
+          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 317
+        },
+        {
+          "year": 2019,
+          "date": "06.10.2019",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 228
+        },
+        {
+          "year": 2019,
+          "date": "05.10.2019",
+          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 283
+        },
+        {
+          "year": 2018,
+          "date": "07.10.2018",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 261
+        },
+        {
+          "year": 2018,
+          "date": "06.10.2018",
+          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 278
+        },
+        {
+          "year": 2017,
+          "date": "08.10.2017",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 206
+        },
+        {
+          "year": 2017,
+          "date": "07.10.2017",
+          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 225
+        },
+        {
+          "year": 2016,
+          "date": "02.10.2016",
+          "name": "Klatovský slalom ve Strakonicích",
+          "discipline": "SLALOM",
+          "competitors": 182
+        },
+        {
+          "year": 2016,
+          "date": "01.10.2016",
+          "name": "Klatovský slalom ve Strakonicích - Memoriál Karla Vanči",
+          "discipline": "SLALOM",
+          "competitors": 208
+        }
+      ],
+      "totals": {
+        "all_races": 18,
+        "all_competitors": 4543,
+        "slalom_races": 18,
+        "slalom_competitors": 4543,
+        "sjezd_races": 0,
+        "sjezd_competitors": 0,
+        "kros_races": 0,
+        "kros_competitors": 0
+      },
+      "years": {
+        "2016": {
+          "races": 2,
+          "competitors": 390,
+          "slalom_races": 2,
+          "slalom_competitors": 390,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2017": {
+          "races": 2,
+          "competitors": 431,
+          "slalom_races": 2,
+          "slalom_competitors": 431,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2018": {
+          "races": 2,
+          "competitors": 539,
+          "slalom_races": 2,
+          "slalom_competitors": 539,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2019": {
+          "races": 2,
+          "competitors": 511,
+          "slalom_races": 2,
+          "slalom_competitors": 511,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2021": {
+          "races": 2,
+          "competitors": 593,
+          "slalom_races": 2,
+          "slalom_competitors": 593,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2022": {
+          "races": 2,
+          "competitors": 600,
+          "slalom_races": 2,
+          "slalom_competitors": 600,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2023": {
+          "races": 2,
+          "competitors": 472,
+          "slalom_races": 2,
+          "slalom_competitors": 472,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2024": {
+          "races": 2,
+          "competitors": 554,
+          "slalom_races": 2,
+          "slalom_competitors": 554,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2025": {
+          "races": 2,
+          "competitors": 453,
+          "slalom_races": 2,
+          "slalom_competitors": 453,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
           "kros_races": 0,
           "kros_competitors": 0
         }
@@ -17044,8 +17134,342 @@ window.CSK_DATA = {
       }
     },
     {
+      "name": "TJ Vodní sporty Dolní Kounice, z.s.",
+      "races": [
+        {
+          "year": 2025,
+          "date": "29.06.2025",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 102
+        },
+        {
+          "year": 2025,
+          "date": "28.06.2025",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 103
+        },
+        {
+          "year": 2024,
+          "date": "30.06.2024",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 105
+        },
+        {
+          "year": 2024,
+          "date": "29.06.2024",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 105
+        },
+        {
+          "year": 2022,
+          "date": "12.06.2022",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 136
+        },
+        {
+          "year": 2022,
+          "date": "11.06.2022",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 139
+        },
+        {
+          "year": 2019,
+          "date": "30.06.2019",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 134
+        },
+        {
+          "year": 2019,
+          "date": "29.06.2019",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 140
+        }
+      ],
+      "totals": {
+        "all_races": 8,
+        "all_competitors": 964,
+        "slalom_races": 8,
+        "slalom_competitors": 964,
+        "sjezd_races": 0,
+        "sjezd_competitors": 0,
+        "kros_races": 0,
+        "kros_competitors": 0
+      },
+      "years": {
+        "2019": {
+          "races": 2,
+          "competitors": 274,
+          "slalom_races": 2,
+          "slalom_competitors": 274,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2022": {
+          "races": 2,
+          "competitors": 275,
+          "slalom_races": 2,
+          "slalom_competitors": 275,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2024": {
+          "races": 2,
+          "competitors": 210,
+          "slalom_races": 2,
+          "slalom_competitors": 210,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2025": {
+          "races": 2,
+          "competitors": 205,
+          "slalom_races": 2,
+          "slalom_competitors": 205,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        }
+      }
+    },
+    {
+      "name": "Kajak klub Brandýs nad Labem, z. s.",
+      "races": [
+        {
+          "year": 2026,
+          "date": "06.09.2026",
+          "name": "MČR žáků ve sprintu v Brandýse n.L. + 5. ČPž 118 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 142
+        },
+        {
+          "year": 2026,
+          "date": "05.09.2026",
+          "name": "MČR žáků ve slalomu v Brandýse n.L. + 7. ČPž",
+          "discipline": "SLALOM",
+          "competitors": 208
+        },
+        {
+          "year": 2025,
+          "date": "22.06.2025",
+          "name": "6. Český pohár žáků ve slalomu v Brandýse n.L.",
+          "discipline": "SLALOM",
+          "competitors": 225
+        },
+        {
+          "year": 2025,
+          "date": "21.06.2025",
+          "name": "5. Český pohár žáků ve slalomu v Brandýse n.L.",
+          "discipline": "SLALOM",
+          "competitors": 231
+        },
+        {
+          "year": 2024,
+          "date": "08.09.2024",
+          "name": "MČR žáků ve sprintu v Brandýse n.L. + 5. Český pohár žáků ve sjezdu 131 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 195
+        },
+        {
+          "year": 2024,
+          "date": "07.09.2024",
+          "name": "MČR žáků ve slalomu v Brandýse n.L. + 7. Český pohár žáků ve slalomu",
+          "discipline": "SLALOM",
+          "competitors": 230
+        },
+        {
+          "year": 2023,
+          "date": "13.08.2023",
+          "name": "6. Český pohár žáků ve slalomu v Brandýse nad Labem",
+          "discipline": "SLALOM",
+          "competitors": 212
+        },
+        {
+          "year": 2023,
+          "date": "12.08.2023",
+          "name": "5. Český pohár žáků ve slalomu v Brandýse nad Labem",
+          "discipline": "SLALOM",
+          "competitors": 214
+        },
+        {
+          "year": 2022,
+          "date": "28.08.2022",
+          "name": "MČR žáků ve sprintu v Brandýse n.L. 113 SPRINT",
+          "discipline": "SJEZD",
+          "competitors": 158
+        },
+        {
+          "year": 2022,
+          "date": "27.08.2022",
+          "name": "MČR žáků ve slalomu v Brandýse n.L.",
+          "discipline": "SLALOM",
+          "competitors": 199
+        }
+      ],
+      "totals": {
+        "all_races": 10,
+        "all_competitors": 2014,
+        "slalom_races": 7,
+        "slalom_competitors": 1519,
+        "sjezd_races": 3,
+        "sjezd_competitors": 495,
+        "kros_races": 0,
+        "kros_competitors": 0
+      },
+      "years": {
+        "2022": {
+          "races": 2,
+          "competitors": 357,
+          "slalom_races": 1,
+          "slalom_competitors": 199,
+          "sjezd_races": 1,
+          "sjezd_competitors": 158,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2023": {
+          "races": 2,
+          "competitors": 426,
+          "slalom_races": 2,
+          "slalom_competitors": 426,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2024": {
+          "races": 2,
+          "competitors": 425,
+          "slalom_races": 1,
+          "slalom_competitors": 230,
+          "sjezd_races": 1,
+          "sjezd_competitors": 195,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2025": {
+          "races": 2,
+          "competitors": 456,
+          "slalom_races": 2,
+          "slalom_competitors": 456,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        },
+        "2026": {
+          "races": 2,
+          "competitors": 350,
+          "slalom_races": 1,
+          "slalom_competitors": 208,
+          "sjezd_races": 1,
+          "sjezd_competitors": 142,
+          "kros_races": 0,
+          "kros_competitors": 0
+        }
+      }
+    },
+    {
       "name": "Neznámý oddíl",
       "races": [
+        {
+          "year": 2026,
+          "date": "31.07.2026-01.08.2026",
+          "name": "WRR - Bratislava",
+          "discipline": "SLALOM",
+          "competitors": 128
+        },
+        {
+          "year": 2026,
+          "date": "30.06.2026-05.07.2026",
+          "name": "U23 World Championship Krakow",
+          "discipline": "SLALOM",
+          "competitors": 1357
+        },
+        {
+          "year": 2026,
+          "date": "29.05.2026-31.05.2026",
+          "name": "World Cup - Tacen",
+          "discipline": "SLALOM",
+          "competitors": 424
+        },
+        {
+          "year": 2026,
+          "date": "28.06.2026",
+          "name": "ECA Junior cup Solkan II.",
+          "discipline": "SLALOM",
+          "competitors": 213
+        },
+        {
+          "year": 2026,
+          "date": "27.06.2026",
+          "name": "ECA Junior cup Solkan I.",
+          "discipline": "SLALOM",
+          "competitors": 215
+        },
+        {
+          "year": 2026,
+          "date": "20.07.2026-25.07.2026",
+          "name": "World Championship Oklahoma City",
+          "discipline": "SLALOM",
+          "competitors": 572
+        },
+        {
+          "year": 2026,
+          "date": "20.06.2026-21.06.2026",
+          "name": "ECA Junior cup Flattach",
+          "discipline": "SLALOM",
+          "competitors": 152
+        },
+        {
+          "year": 2026,
+          "date": "12.06.2026-14.06.2026",
+          "name": "World Cup Augsburg",
+          "discipline": "SLALOM",
+          "competitors": 542
+        },
+        {
+          "year": 2026,
+          "date": "11.09.2026-13.09.2026",
+          "name": "WORLD CUP FINAL LA SEU",
+          "discipline": "SLALOM",
+          "competitors": 696
+        },
+        {
+          "year": 2026,
+          "date": "10.07.2026-12.07.2026",
+          "name": "ECA Junior cup - Krakow",
+          "discipline": "SLALOM",
+          "competitors": 497
+        },
+        {
+          "year": 2026,
+          "date": "04.09.2026-06.09.2026",
+          "name": "WORLD CUP VAIRES-SUR-MARNE",
+          "discipline": "SLALOM",
+          "competitors": 457
+        },
+        {
+          "year": 2026,
+          "date": "03.07.2026-05.07.2026",
+          "name": "ECA Junior cup Augsburg",
+          "discipline": "SLALOM",
+          "competitors": 591
+        },
         {
           "year": 2025,
           "date": "30.07.2025-03.08.2025",
@@ -17167,10 +17591,10 @@ window.CSK_DATA = {
         }
       ],
       "totals": {
-        "all_races": 17,
-        "all_competitors": 8996,
-        "slalom_races": 16,
-        "slalom_competitors": 8614,
+        "all_races": 29,
+        "all_competitors": 14840,
+        "slalom_races": 28,
+        "slalom_competitors": 14458,
         "sjezd_races": 1,
         "sjezd_competitors": 382,
         "kros_races": 0,
@@ -17206,11 +17630,21 @@ window.CSK_DATA = {
           "sjezd_competitors": 0,
           "kros_races": 0,
           "kros_competitors": 0
+        },
+        "2026": {
+          "races": 12,
+          "competitors": 5844,
+          "slalom_races": 12,
+          "slalom_competitors": 5844,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
         }
       }
     },
     {
-      "name": "Sk VS Slávia Hradec Králové",
+      "name": "TJ Slávia Hradec Králové",
       "races": [
         {
           "year": 2024,
@@ -17244,7 +17678,7 @@ window.CSK_DATA = {
       }
     },
     {
-      "name": "Slovak Canoeing whitewater section",
+      "name": "Slovak Canoeing  whitewater section",
       "races": [
         {
           "year": 2024,
@@ -17379,16 +17813,16 @@ window.CSK_DATA = {
         {
           "year": 2026,
           "date": "25.04.2026",
-          "name": "1. Český pohár seniorů v Kajak krosu",
+          "name": "2. Český pohár seniorů v Kajak krosu",
           "discipline": "KROS",
-          "competitors": 74
+          "competitors": 72
         },
         {
           "year": 2026,
           "date": "25.04.2026",
-          "name": "2. Český pohár seniorů v Kajak krosu",
+          "name": "1. Český pohár seniorů v Kajak krosu",
           "discipline": "KROS",
-          "competitors": 72
+          "competitors": 74
         }
       ],
       "totals": {
@@ -17413,11 +17847,52 @@ window.CSK_DATA = {
           "kros_competitors": 351
         }
       }
+    },
+    {
+      "name": "Vodní sporty Dolní Kounice, z.s.",
+      "races": [
+        {
+          "year": 2026,
+          "date": "28.06.2026",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 151
+        },
+        {
+          "year": 2026,
+          "date": "27.06.2026",
+          "name": "Slalom v Dolních Kounicích",
+          "discipline": "SLALOM",
+          "competitors": 152
+        }
+      ],
+      "totals": {
+        "all_races": 2,
+        "all_competitors": 303,
+        "slalom_races": 2,
+        "slalom_competitors": 303,
+        "sjezd_races": 0,
+        "sjezd_competitors": 0,
+        "kros_races": 0,
+        "kros_competitors": 0
+      },
+      "years": {
+        "2026": {
+          "races": 2,
+          "competitors": 303,
+          "slalom_races": 2,
+          "slalom_competitors": 303,
+          "sjezd_races": 0,
+          "sjezd_competitors": 0,
+          "kros_races": 0,
+          "kros_competitors": 0
+        }
+      }
     }
   ],
   "global_totals": {
-    "races": 1699,
-    "competitors": 255744,
+    "races": 1748,
+    "competitors": 269724,
     "by_year": {
       "2012": {
         "races": 114,
@@ -17480,10 +17955,10 @@ window.CSK_DATA = {
         "kros_competitors": 0
       },
       "2018": {
-        "races": 118,
-        "competitors": 17800,
-        "slalom_races": 71,
-        "slalom_competitors": 13568,
+        "races": 120,
+        "competitors": 18554,
+        "slalom_races": 73,
+        "slalom_competitors": 14322,
         "sjezd_races": 47,
         "sjezd_competitors": 4232,
         "kros_races": 0,
@@ -17560,28 +18035,28 @@ window.CSK_DATA = {
         "kros_competitors": 404
       },
       "2026": {
-        "races": 84,
-        "competitors": 13636,
-        "slalom_races": 49,
-        "slalom_competitors": 10619,
-        "sjezd_races": 29,
-        "sjezd_competitors": 2666,
-        "kros_races": 6,
-        "kros_competitors": 351
+        "races": 131,
+        "competitors": 26862,
+        "slalom_races": 80,
+        "slalom_competitors": 22325,
+        "sjezd_races": 38,
+        "sjezd_competitors": 3876,
+        "kros_races": 13,
+        "kros_competitors": 661
       }
     },
     "by_discipline": {
       "SLALOM": {
-        "races": 979,
-        "competitors": 197500
+        "races": 1012,
+        "competitors": 209960
       },
       "SJEZD": {
-        "races": 708,
-        "competitors": 57392
+        "races": 717,
+        "competitors": 58602
       },
       "KROS": {
-        "races": 12,
-        "competitors": 852
+        "races": 19,
+        "competitors": 1162
       }
     }
   }

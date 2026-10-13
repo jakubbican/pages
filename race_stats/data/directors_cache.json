@@ -1,0 +1,8497 @@
+{
+  "215": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "208": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "209": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "219": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "214": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "216": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "218": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "212": {
+    "director": "Hugo Knotek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "211": {
+    "director": "Hugo Knotek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "213": {
+    "director": "Hugo Knotek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "217": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "220": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "221": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "232": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "226": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "229": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "227": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "228": {
+    "director": "Martin Kašpar",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "236": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "235": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "230": {
+    "director": "Jakub Bican",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "233": {
+    "director": "Petr Weissar",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "234": {
+    "director": "Petr Weissar",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "231": {
+    "director": "Jakub Bican",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "210": {
+    "director": "Hugo Knotek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "238": {
+    "director": "Martin Rousek",
+    "referee": "Petr Aleš",
+    "error": null
+  },
+  "237": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "242": {
+    "director": "Jan Šťastný",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "239": {
+    "director": "Martin Rousek",
+    "referee": "Petr Aleš",
+    "error": null
+  },
+  "244": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "248": {
+    "director": "Ladislav Jílek",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "243": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "249": {
+    "director": "Ladislav Jílek",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "250": {
+    "director": "Ladislav Jílek",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "246": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "251": {
+    "director": "Ladislav Jílek",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "254": {
+    "director": "Václav Kabrhel",
+    "referee": "",
+    "error": null
+  },
+  "245": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "253": {
+    "director": "Václav Kabrhel",
+    "referee": "",
+    "error": null
+  },
+  "247": {
+    "director": "Hugo Knotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "258": {
+    "director": "Vladimír Jordán",
+    "referee": "",
+    "error": null
+  },
+  "255": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "256": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "257": {
+    "director": "Vladimír Jordán",
+    "referee": "",
+    "error": null
+  },
+  "259": {
+    "director": "Vladimír Jordán",
+    "referee": "",
+    "error": null
+  },
+  "260": {
+    "director": "Vladimír Jordán",
+    "referee": "",
+    "error": null
+  },
+  "264": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "263": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "261": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "262": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "265": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "270": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "269": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "266": {
+    "director": "Jaroslav Froněk",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "267": {
+    "director": "Jaroslav Froněk",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "274": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "271": {
+    "director": "vrchní",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "276": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "273": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "279": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "275": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "282": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "272": {
+    "director": "vrchní",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "281": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "285": {
+    "director": "Václav Vondra",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "283": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "287": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "296": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "288": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "289": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "297": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "291": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "284": {
+    "director": "Václav Vondra",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "300": {
+    "director": "Martin Záruba",
+    "referee": "",
+    "error": null
+  },
+  "298": {
+    "director": "Martin Záruba",
+    "referee": "",
+    "error": null
+  },
+  "294": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "295": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "299": {
+    "director": "Martin Záruba",
+    "referee": "",
+    "error": null
+  },
+  "301": {
+    "director": "Martin Záruba",
+    "referee": "",
+    "error": null
+  },
+  "286": {
+    "director": "Václav Vondra",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "338": {
+    "director": "Zdeněk Boček",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "339": {
+    "director": "Zdeněk Boček",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "305": {
+    "director": "Ondřej Pokorný",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "306": {
+    "director": "Ondřej Pokorný",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "308": {
+    "director": "Zdeněk Boček",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "314": {
+    "director": "Petr Weissar",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "309": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "310": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "307": {
+    "director": "Zdeněk Boček",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "313": {
+    "director": "Petr Weissar",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "312": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "315": {
+    "director": "Petr Weissar",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "316": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "317": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "311": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "320": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "319": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "321": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "322": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "325": {
+    "director": "Jiří Holý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "324": {
+    "director": "Jiří Holý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "327": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "326": {
+    "director": "Jakub Bican",
+    "referee": "",
+    "error": null
+  },
+  "328": {
+    "director": "Jaroslav Froněk",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "330": {
+    "director": "David Lisický",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "318": {
+    "director": "Jiří Rohan",
+    "referee": "",
+    "error": null
+  },
+  "329": {
+    "director": "Jaroslav Froněk",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "335": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "331": {
+    "director": "David Lisický",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "340": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "341": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "342": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "332": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "343": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "336": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "334": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "352": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "348": {
+    "director": "Jiří Vyhnánek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "349": {
+    "director": "Jiří Vyhnánek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "351": {
+    "director": "Jiří Vyhnánek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "353": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "344": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "345": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "354": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "346": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "362": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "359": {
+    "director": "vrchní",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "363": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "361": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "357": {
+    "director": "Iva Šedivá",
+    "referee": "Jaroslava Roučková",
+    "error": null
+  },
+  "360": {
+    "director": "vrchní",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "358": {
+    "director": "Iva Šedivá",
+    "referee": "Jaroslava Roučková",
+    "error": null
+  },
+  "364": {
+    "director": "Rudolf Rozsypal",
+    "referee": "",
+    "error": null
+  },
+  "366": {
+    "director": "Robert Knebel",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "368": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "367": {
+    "director": "Robert Knebel",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "365": {
+    "director": "Rudolf Rozsypal",
+    "referee": "",
+    "error": null
+  },
+  "370": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "372": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "373": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "369": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "371": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "374": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "376": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "350": {
+    "director": "Jiří Vyhnánek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "375": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "377": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "379": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "381": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "382": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "386": {
+    "director": "Heda Kratochvílová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "385": {
+    "director": "Heda Kratochvílová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "383": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "378": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "389": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "380": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "384": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "388": {
+    "director": "Martin Smolka",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "387": {
+    "director": "Martin Smolka",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "391": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "392": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "390": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "393": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "400": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "394": {
+    "director": "Zdeněk Boček",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "401": {
+    "director": "Tomáš Kutý",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "395": {
+    "director": "Zdeněk Boček",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "403": {
+    "director": "Tomáš Kutý",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "402": {
+    "director": "Tomáš Kutý",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "409": {
+    "director": "Vladimír Jordán",
+    "referee": "Jana Zůrková",
+    "error": null
+  },
+  "412": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "413": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "408": {
+    "director": "Vladimír Jordán",
+    "referee": "Jana Zůrková",
+    "error": null
+  },
+  "415": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "407": {
+    "director": "vrchní",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "410": {
+    "director": "Vladimír Jordán",
+    "referee": "Jana Zůrková",
+    "error": null
+  },
+  "411": {
+    "director": "Vladimír Jordán",
+    "referee": "Jana Zůrková",
+    "error": null
+  },
+  "416": {
+    "director": "Václav Vondra",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "414": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "432": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "420": {
+    "director": "vrchní",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "419": {
+    "director": "vrchní",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "430": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "418": {
+    "director": "Václav Vondra",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "441": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "434": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "440": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "431": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "438": {
+    "director": "Ondřej Pokorný",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "436": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "442": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "406": {
+    "director": "Jiří Kratochvíl",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "444": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "443": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "437": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "446": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "439": {
+    "director": "Ondřej Pokorný",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "447": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "445": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "448": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "458": {
+    "director": "Michael Veřtát",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "459": {
+    "director": "Michael Veřtát",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "449": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "452": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "461": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "453": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "455": {
+    "director": "Zdeněk Boček",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "456": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "460": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "454": {
+    "director": "Zdeněk Boček",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "457": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "463": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "464": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "465": {
+    "director": "vrchní",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "466": {
+    "director": "vrchní",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "422": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "421": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "426": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "427": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "424": {
+    "director": "Jiří Prskavec",
+    "referee": "",
+    "error": null
+  },
+  "429": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "425": {
+    "director": "Jiří Prskavec",
+    "referee": "",
+    "error": null
+  },
+  "428": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "470": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "472": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "468": {
+    "director": "Jiří Rohan",
+    "referee": "",
+    "error": null
+  },
+  "474": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "471": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "475": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "473": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "478": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "476": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "479": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "480": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "469": {
+    "director": "vrchní",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "487": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "485": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "491": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "488": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "489": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "486": {
+    "director": "Iva",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "490": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "493": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "494": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "500": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "499": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "503": {
+    "director": "Martin Smolka",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "501": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "502": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "504": {
+    "director": "Martin Smolka",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "492": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "505": {
+    "director": "Pavel Musil",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "624": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "510": {
+    "director": "Jakub Bican",
+    "referee": "Eva Zýková",
+    "error": null
+  },
+  "626": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "506": {
+    "director": "Pavel Musil",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "517": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "512": {
+    "director": "Jakub Bican",
+    "referee": "Eva Zýková",
+    "error": null
+  },
+  "511": {
+    "director": "Jakub Bican",
+    "referee": "Eva Zýková",
+    "error": null
+  },
+  "516": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "513": {
+    "director": "Jakub Bican",
+    "referee": "Eva Zýková",
+    "error": null
+  },
+  "519": {
+    "director": "Bohumil Hrabec",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "524": {
+    "director": "Miloslav Říha",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "514": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "520": {
+    "director": "Heda Kratochvílová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "518": {
+    "director": "Bohumil Hrabec",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "521": {
+    "director": "Heda Kratochvílová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "515": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "525": {
+    "director": "Miloslav Říha",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "532": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "526": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "523": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "522": {
+    "director": "Martin Kašpar",
+    "referee": "Han Kneblová",
+    "error": null
+  },
+  "534": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "527": {
+    "director": "Martin Smolka",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "529": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "533": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "528": {
+    "director": "Martin Smolka",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "530": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "538": {
+    "director": "Lenka Lagnerová",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "539": {
+    "director": "Lenka Lagnerová",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "535": {
+    "director": "Zdeněk Boček",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "542": {
+    "director": "Dušan Vavrla",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "531": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "536": {
+    "director": "Zdeněk Boček",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "555": {
+    "director": "Radka Bačáková",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "554": {
+    "director": "Radka Bačáková",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "543": {
+    "director": "Dušan Vavrla",
+    "referee": "heda Kratochvílová",
+    "error": null
+  },
+  "544": {
+    "director": "Jan",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "548": {
+    "director": "Ivo Košík",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "540": {
+    "director": "Milan Johanides",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "545": {
+    "director": "Jiří Rohan",
+    "referee": "Colin Woodgate",
+    "error": null
+  },
+  "541": {
+    "director": "Milan Johanides",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "552": {
+    "director": "Jana LAGNEROVÁ",
+    "referee": "Jiří ČIHÁČEK",
+    "error": null
+  },
+  "549": {
+    "director": "Ivo Košík",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "560": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "546": {
+    "director": "Ivo Košík",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "547": {
+    "director": "Ivo Košík",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "551": {
+    "director": "Václav Vondra",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "550": {
+    "director": "Václav Vondra",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "562": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav",
+    "error": null
+  },
+  "563": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "561": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "568": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "556": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "558": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "567": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "570": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "565": {
+    "director": "Jakub Bican",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "571": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "569": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "573": {
+    "director": "Michael Veřtát",
+    "referee": "Jaroslava Roučková",
+    "error": null
+  },
+  "574": {
+    "director": "Michael Veřtát",
+    "referee": "Jaroslava Roučková",
+    "error": null
+  },
+  "578": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "577": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "580": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "564": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "575": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "576": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "579": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "582": {
+    "director": "Petr Weissar",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "627": {
+    "director": "Jindřich Beneš",
+    "referee": "",
+    "error": null
+  },
+  "630": {
+    "director": "Jindřich Beneš",
+    "referee": "",
+    "error": null
+  },
+  "572": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "581": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "589": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "628": {
+    "director": "Jaroslav Volf",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "566": {
+    "director": "Jakub Bican",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "590": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "591": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "584": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "583": {
+    "director": "Petr Weissar",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "585": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "592": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "594": {
+    "director": "Jan",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "601": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "597": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "595": {
+    "director": "Jan Šťastny",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "596": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "599": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "600": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "606": {
+    "director": "Michal Veřtát",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "617": {
+    "director": "Jiří Holý",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "604": {
+    "director": "Muchal Veřtát",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "608": {
+    "director": "Jiří Holý",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "609": {
+    "director": "Martin Kašpar",
+    "referee": "Petr Aleš",
+    "error": null
+  },
+  "610": {
+    "director": "Martin Kašpar",
+    "referee": "Petr Aleš",
+    "error": null
+  },
+  "612": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "614": {
+    "director": "David Lisický",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "620": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "619": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "622": {
+    "director": "Josef Macášek",
+    "referee": "Jana",
+    "error": null
+  },
+  "632": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "623": {
+    "director": "Josef Macášek",
+    "referee": "Jana",
+    "error": null
+  },
+  "613": {
+    "director": "David Lisický",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "669": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "670": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "676": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "679": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "675": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "633": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "680": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "634": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "678": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "682": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "635": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "796": {
+    "director": "Jan Kulhánek",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "636": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "797": {
+    "director": "Jan Kulhánek",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "683": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "637": {
+    "director": "Robert Knebel",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "602": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "639": {
+    "director": "Jakub Bican",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "640": {
+    "director": "Jakub Bican",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "638": {
+    "director": "Robert Knebel",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "677": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "642": {
+    "director": "Jakub Bican",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "644": {
+    "director": "Petr Weissar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "646": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "641": {
+    "director": "Jakub Bican",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "611": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "681": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "647": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "650": {
+    "director": "Dušan Vavrla",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "648": {
+    "director": "Milan Johanides",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "684": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "652": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "655": {
+    "director": "Heda Kratochvílová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "651": {
+    "director": "Dušan Vavrla",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "653": {
+    "director": "Miloš",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "656": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "688": {
+    "director": "Heda Kratochvílová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "689": {
+    "director": "Jiří Pek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "658": {
+    "director": "Iva Šedivá",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "645": {
+    "director": "Petr Weissar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "649": {
+    "director": "Milan Johanides",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "660": {
+    "director": "Jiří Pek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "659": {
+    "director": "Iva Šedivá",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "690": {
+    "director": "Jiří Pek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "657": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "691": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "662": {
+    "director": "Milan Johanides",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "693": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "663": {
+    "director": "Milan Johanides",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "665": {
+    "director": "Tomáš Kutý",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "666": {
+    "director": "Tomáš Kutý",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "725": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "692": {
+    "director": "Lenka Lagnerová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "668": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "661": {
+    "director": "Jiří Pek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "701": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "726": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "699": {
+    "director": "Zdeněk Boček",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "667": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "697": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "727": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "698": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "700": {
+    "director": "Zdeněk Boček",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "702": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "728": {
+    "director": "Michael Veřtát",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "705": {
+    "director": "Michael Veřtát",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "729": {
+    "director": "Michael Veřtát",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "704": {
+    "director": "Michael Veřtát",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "718": {
+    "director": "Jiří Holý",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "706": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "732": {
+    "director": "Jana LAGNEROVÁ",
+    "referee": "Jiří ČIHÁČEK",
+    "error": null
+  },
+  "719": {
+    "director": "Jiří Holý",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "709": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "714": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "707": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "710": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "733": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "734": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "711": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "735": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "720": {
+    "director": "Zdeněk Boček",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "738": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "737": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "739": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "723": {
+    "director": "Miloslav Říha",
+    "referee": "Le Kutá",
+    "error": null
+  },
+  "721": {
+    "director": "Zdeněk Boček",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "744": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "736": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "741": {
+    "director": "Zdeněk Boček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "747": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "804": {
+    "director": "SK VS Č. Budějovice",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "745": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "765": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "708": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "740": {
+    "director": "Jakub Bican",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "746": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "724": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "750": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "749": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "754": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "766": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "752": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "751": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "748": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "753": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "755": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "761": {
+    "director": "Ivo Košík",
+    "referee": "Jana Žůrková",
+    "error": null
+  },
+  "759": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "760": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "758": {
+    "director": "Jan Šťastný",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "762": {
+    "director": "Ivo Košík",
+    "referee": "Jana Žůrková",
+    "error": null
+  },
+  "787": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "771": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "788": {
+    "director": "Rudolf Rozsypal",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "772": {
+    "director": "Rudolf Rozsypal",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "790": {
+    "director": "Radka Bačáková",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "774": {
+    "director": "Radka Bačáková",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "776": {
+    "director": "Ivan Pisvejc",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "775": {
+    "director": "Ivan Pisvejc",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "757": {
+    "director": "Jan Šťastný",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "794": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "777": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "778": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "780": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "784": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "812": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "813": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "795": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "785": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "814": {
+    "director": "Michal Cuc",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "817": {
+    "director": "Michal Cuc",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "806": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "816": {
+    "director": "Michal Cuc",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "779": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "818": {
+    "director": "Jan Štastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "807": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "824": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "808": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "823": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "819": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "820": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "811": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "809": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "825": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "821": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "810": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "826": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "822": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "827": {
+    "director": "Jiří Pek",
+    "referee": "Čestmir Bednárek",
+    "error": null
+  },
+  "828": {
+    "director": "Jiří Pek",
+    "referee": "Čestmir Bednárek",
+    "error": null
+  },
+  "829": {
+    "director": "Jan Štastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "830": {
+    "director": "Milan Johanides",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "834": {
+    "director": "Jan Kulhánek",
+    "referee": "Zdena",
+    "error": null
+  },
+  "871": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "835": {
+    "director": "Jan Kulhánek",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "832": {
+    "director": "Pavel Přindiš",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "833": {
+    "director": "Pavel Přindiš",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "831": {
+    "director": "Milan Johanides",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "872": {
+    "director": "Martin Smolka",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "867": {
+    "director": "Jan Štastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "840": {
+    "director": "Petr Weissar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "841": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "836": {
+    "director": "Petr Weissar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "845": {
+    "director": "Martin Rousek",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "874": {
+    "director": "Věra Jarolímková",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "873": {
+    "director": "Věra Jarolímková",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "842": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "846": {
+    "director": "Martin Rousek",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "875": {
+    "director": "Věra Jarolímková",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "868": {
+    "director": "Pavla Kneblová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "843": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "844": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "847": {
+    "director": "Pavla Kneblová",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "848": {
+    "director": "Michal Veřtát",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "870": {
+    "director": "Iva Šedivá",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "878": {
+    "director": "Lenka Vandasová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "879": {
+    "director": "Lenka Vandasová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "849": {
+    "director": "Michal Veřtát",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "850": {
+    "director": "Lukáš Kubričan",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "860": {
+    "director": "Dušan Vavrla",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "851": {
+    "director": "Lukáš Kubričan",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "854": {
+    "director": "Jan Štastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "859": {
+    "director": "Dušan Vavrla",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "880": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "857": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "852": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "877": {
+    "director": "Lenka Vandasová",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "853": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "881": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "858": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "883": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "856": {
+    "director": "Ivan Pišvejc",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "954": {
+    "director": "Radka Bačáková",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "855": {
+    "director": "Ivan Pišvejc",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "886": {
+    "director": "Radka Bačáková",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "887": {
+    "director": "Ivo Košík",
+    "referee": "Jana Žůrková",
+    "error": null
+  },
+  "885": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "889": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "862": {
+    "director": "Radka Bačáková",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "863": {
+    "director": "Ivo Košík",
+    "referee": "Jana Žůrková",
+    "error": null
+  },
+  "865": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "864": {
+    "director": "Ivo Košík",
+    "referee": "Jana Žůrková",
+    "error": null
+  },
+  "861": {
+    "director": "Radka Bačáková",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "888": {
+    "director": "Ivo Košík",
+    "referee": "Jana Žůrková",
+    "error": null
+  },
+  "893": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "866": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "892": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "903": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "901": {
+    "director": "Jana LAGNEROVÁ",
+    "referee": "Alois KUNA",
+    "error": null
+  },
+  "912": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "911": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "896": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "904": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "902": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "895": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "897": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "905": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "907": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "908": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "899": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "906": {
+    "director": "Tomáš Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "900": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "898": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "894": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "926": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "918": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "916": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "910": {
+    "director": "Jiří Abraham",
+    "referee": "Zdeňka Rychterová",
+    "error": null
+  },
+  "931": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "957": {
+    "director": "Jan Štastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "919": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "920": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "909": {
+    "director": "Jiří Abraham",
+    "referee": "Zdeňka Rychterová",
+    "error": null
+  },
+  "928": {
+    "director": "Jan Štastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "930": {
+    "director": "vrchní",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "958": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "929": {
+    "director": "Jan Štastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "935": {
+    "director": "Zdeněk Boček",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "924": {
+    "director": "Zdeněk Boček",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "936": {
+    "director": "Martin Kašpar",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "950": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "937": {
+    "director": "Martin Kašpar",
+    "referee": "Lenka Demjanová",
+    "error": null
+  },
+  "944": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "945": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "949": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "938": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "941": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "998": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "940": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "999": {
+    "director": "viz. závod č. 1",
+    "referee": "viz. závod č. 1",
+    "error": null
+  },
+  "939": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "966": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "921": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "967": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "968": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "969": {
+    "director": "Tomáš Kutý",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "959": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "960": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "970": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "961": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "972": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "973": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "974": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "975": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "979": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "978": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "971": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "976": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "982": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "977": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "983": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1000": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "985": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "981": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "980": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "987": {
+    "director": "Jan Kulhánek",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "986": {
+    "director": "Jan Kulhánek",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1001": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "988": {
+    "director": "Robert Knebel",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "984": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "989": {
+    "director": "Robert Knebel",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "992": {
+    "director": "Jiří Pek",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1002": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1004": {
+    "director": "Petr Weissar",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "993": {
+    "director": "Jiří Pek",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1005": {
+    "director": "Petr Weissar",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1006": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1029": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "1028": {
+    "director": "Petr Troch",
+    "referee": "Jindřich",
+    "error": null
+  },
+  "991": {
+    "director": "Pavel Míl",
+    "referee": "Zdeňka Rychterová",
+    "error": null
+  },
+  "990": {
+    "director": "Pavel Míl",
+    "referee": "Zdeňka Rychterová",
+    "error": null
+  },
+  "994": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1030": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "1031": {
+    "director": "Petr Troch",
+    "referee": "Jindřich Outrata",
+    "error": null
+  },
+  "995": {
+    "director": "Martin Kašpar",
+    "referee": "",
+    "error": null
+  },
+  "996": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1007": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "997": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1011": {
+    "director": "Dušan Vavrla",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1012": {
+    "director": "Dušan Vavrla",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1009": {
+    "director": "Michael Veřtát",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1010": {
+    "director": "Michael Veřtát",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1008": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1033": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1034": {
+    "director": "Michal Šrámek",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1013": {
+    "director": "Pavla Kneblová",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1032": {
+    "director": "Pavla Kneblová",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1035": {
+    "director": "Michal Šrámek",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1018": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1016": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1037": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1038": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1020": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1036": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1021": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1019": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1017": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1077": {
+    "director": "Roman Pláchý",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "1078": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1042": {
+    "director": "Roman Pláchý",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "1074": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1026": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1043": {
+    "director": "Roman Pláchý",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "1044": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1076": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1079": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1027": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1045": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1080": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1040": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1041": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1050": {
+    "director": "Jana LAGNEROVÁ",
+    "referee": "Alois KUNA",
+    "error": null
+  },
+  "1046": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1047": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1048": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "1054": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1053": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1049": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "1051": {
+    "director": "Vaclav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1058": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1057": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1082": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1081": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1059": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1052": {
+    "director": "Vaclav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1060": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1061": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1062": {
+    "director": "Jan Hek",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1083": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1063": {
+    "director": "Jan Hek",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1065": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1066": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1070": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1069": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1107": {
+    "director": "Jan Šťastný",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1067": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1108": {
+    "director": "Jan Šťastný",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1092": {
+    "director": "Jan Šťastný",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1109": {
+    "director": "Jan Šťastný",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1088": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1112": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1087": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1068": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1113": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1094": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1089": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1090": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1116": {
+    "director": "Radka Bačáková",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1096": {
+    "director": "Radka Bačáková",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1098": {
+    "director": "Michal Šrámek",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1099": {
+    "director": "Michal Šrámek",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1100": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1101": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1120": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1121": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1153": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "1102": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1154": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Vladimír Jordán",
+    "error": null
+  },
+  "1156": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1104": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1105": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1103": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1155": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1157": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1159": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1160": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1163": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1158": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1162": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1161": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1168": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1129": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1128": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1165": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "1164": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "1130": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1126": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1169": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1171": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1167": {
+    "director": "Josef Macášek",
+    "referee": "Eva",
+    "error": null
+  },
+  "1166": {
+    "director": "Josef Macášek",
+    "referee": "Eva",
+    "error": null
+  },
+  "1170": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1131": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1173": {
+    "director": "Martin Smolka",
+    "referee": "",
+    "error": null
+  },
+  "1172": {
+    "director": "Martin Smolka",
+    "referee": "",
+    "error": null
+  },
+  "1174": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1127": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1135": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1137": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1180": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1178": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1176": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1134": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1138": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1234": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1144": {
+    "director": "Jiří Pek",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1235": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1181": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1146": {
+    "director": "Petr Kratochvíl",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1145": {
+    "director": "Jiří Pek",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1147": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1141": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1142": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1151": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1148": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1149": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1152": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1183": {
+    "director": "Michael Veřtát",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1220": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1150": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1217": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1184": {
+    "director": "Michael Veřtát",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1219": {
+    "director": "Ondřej Zajíc",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1185": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1186": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1224": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1187": {
+    "director": "Milan Johanides",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1192": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1190": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1193": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1191": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1188": {
+    "director": "Milan Johanides",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1194": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1226": {
+    "director": "Luděk Roleček",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1197": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1196": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1229": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1195": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1198": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1228": {
+    "director": "Luděk Roleček",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1202": {
+    "director": "Petr Veselý",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1199": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1200": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1201": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1208": {
+    "director": "Bohuslav Šamánek",
+    "referee": "",
+    "error": null
+  },
+  "1209": {
+    "director": "Bohuslav Šamánek",
+    "referee": "",
+    "error": null
+  },
+  "1210": {
+    "director": "Jindřich Outrata",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1203": {
+    "director": "Petr Veselý",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1205": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "1204": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "1211": {
+    "director": "Jindřich Outrata",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1231": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1232": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1230": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1206": {
+    "director": "Zdeněk Boček",
+    "referee": "",
+    "error": null
+  },
+  "1233": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1207": {
+    "director": "Zdeněk Boček",
+    "referee": "",
+    "error": null
+  },
+  "1213": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1214": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1237": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1236": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1238": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1248": {
+    "director": "Jan Šťastný",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1254": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1239": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1240": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1253": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1251": {
+    "director": "Jan Šťastný",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1241": {
+    "director": "Milan Johanides",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1268": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1270": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1244": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1257": {
+    "director": "Oldřích Weber",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1274": {
+    "director": "Milan Johanides",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1273": {
+    "director": "Oldřích Weber",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1260": {
+    "director": "Zdeněk Boček",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1246": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1264": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1261": {
+    "director": "Zdeněk Boček",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1258": {
+    "director": "Milan Johanides",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1279": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1262": {
+    "director": "David Lisický",
+    "referee": "Hanka Kneblová",
+    "error": null
+  },
+  "1266": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1278": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1365": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1263": {
+    "director": "David Lisický",
+    "referee": "Hanka Kneblová",
+    "error": null
+  },
+  "1265": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1369": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1366": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1368": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1373": {
+    "director": "Martin Smolka",
+    "referee": "Kateřina Šedivá",
+    "error": null
+  },
+  "1367": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1371": {
+    "director": "Martin Smolka",
+    "referee": "Kateřina Šedivá",
+    "error": null
+  },
+  "1370": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1267": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1374": {
+    "director": "Martin Smolka",
+    "referee": "Kateřina Šedivá",
+    "error": null
+  },
+  "1376": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1280": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1377": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1375": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1380": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1281": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1381": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1378": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1379": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1382": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1372": {
+    "director": "Martin Smolka",
+    "referee": "Kateřina Šedivá",
+    "error": null
+  },
+  "1283": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1282": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1383": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1385": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1384": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1284": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1386": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1387": {
+    "director": "Jan Polesný",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1285": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1288": {
+    "director": "Jiří Pek",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1289": {
+    "director": "Jiří Pek",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1292": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1390": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1389": {
+    "director": "Jan Polesný",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1391": {
+    "director": "Petr Troch",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "1392": {
+    "director": "Petr Troch",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "1293": {
+    "director": "Pavel Míl",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1296": {
+    "director": "Milan Johanides",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1294": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1393": {
+    "director": "Petr Troch",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "1395": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1394": {
+    "director": "Petr Troch",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "1297": {
+    "director": "Milan Johanides",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1295": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1300": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1298": {
+    "director": "Miloslav Říha",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1302": {
+    "director": "Michal Veřtát",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1301": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1304": {
+    "director": "Dušan Vavrla",
+    "referee": "Jindra Černohouzová",
+    "error": null
+  },
+  "1303": {
+    "director": "Michal",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1306": {
+    "director": "Pavla Kneblová",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1305": {
+    "director": "Dušan Vavrla",
+    "referee": "Jindra Černohouzová",
+    "error": null
+  },
+  "1307": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1299": {
+    "director": "Miloslav Říha",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1308": {
+    "director": "Ondřej Zajíc",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1309": {
+    "director": "Ondřej Zajíc",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1397": {
+    "director": "Milan Johanides",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1396": {
+    "director": "Petr Kratochvíl",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1399": {
+    "director": "Milan Johanides",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1310": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1400": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1313": {
+    "director": "Roman Plachý",
+    "referee": "Ladislav Jordán",
+    "error": null
+  },
+  "2063": {
+    "director": "Pau FRA",
+    "referee": "",
+    "error": null
+  },
+  "1312": {
+    "director": "Roman Plachý",
+    "referee": "Ladislav Jordán",
+    "error": null
+  },
+  "1311": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1401": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1314": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1316": {
+    "director": "Jiří Kratochvíl",
+    "referee": "Ján Piaček",
+    "error": null
+  },
+  "1315": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1317": {
+    "director": "Jiří Kratochvíl",
+    "referee": "Ján Piaček",
+    "error": null
+  },
+  "2058": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1318": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1319": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1320": {
+    "director": "Martin Smolka",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1405": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1404": {
+    "director": "Martin Smolka",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1321": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2059": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1325": {
+    "director": "Petr Veselý",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1322": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav",
+    "error": null
+  },
+  "2060": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1326": {
+    "director": "Petr Veselý",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1331": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1324": {
+    "director": "Vaclav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1406": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1323": {
+    "director": "Vaclav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1332": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1329": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1335": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1407": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "2064": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1333": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1334": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1339": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1408": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1330": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1338": {
+    "director": "Petr Weissar",
+    "referee": "Tomáš Habich",
+    "error": null
+  },
+  "1340": {
+    "director": "Michal Košík",
+    "referee": "Jana Žurková",
+    "error": null
+  },
+  "1337": {
+    "director": "Petr Weissar",
+    "referee": "Tomáš Habich",
+    "error": null
+  },
+  "1409": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1341": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1343": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslava Roučková",
+    "error": null
+  },
+  "1336": {
+    "director": "Lukáš Přinda",
+    "referee": "Ján Piaček",
+    "error": null
+  },
+  "1342": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1412": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1410": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1414": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1344": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslava Roučková",
+    "error": null
+  },
+  "1413": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1346": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1417": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1415": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1347": {
+    "director": "Jakub Bican",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1349": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2061": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1353": {
+    "director": "Oldřich Weber",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1350": {
+    "director": "Jiří Rohan",
+    "referee": "Jean Michael",
+    "error": null
+  },
+  "1351": {
+    "director": "Oldřich Weber",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1355": {
+    "director": "Stanislav Ježek",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1354": {
+    "director": "Stanislav Ježek",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2062": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1422": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "1357": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1363": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1421": {
+    "director": "Josef Macášek",
+    "referee": "Eva Přechová",
+    "error": null
+  },
+  "1356": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1358": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1494": {
+    "director": "Lukáš Novosad",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "1362": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1455": {
+    "director": "Robert Knebel",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1480": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1481": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1496": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1359": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1517": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1499": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1519": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1500": {
+    "director": "Jiří Abraham",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1503": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1505": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1493": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1506": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1504": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1492": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1509": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "1510": {
+    "director": "Lucie Černá",
+    "referee": "Günter Totzauer",
+    "error": null
+  },
+  "1424": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1488": {
+    "director": "Oldřich Weber",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1513": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1425": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1514": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1540": {
+    "director": "Ondřej Zajíc",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1520": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1541": {
+    "director": "Ondřej Zajíc",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1516": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1523": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1522": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1515": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1443": {
+    "director": "Patrik Šeba",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1526": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1449": {
+    "director": "Lukáš Přinda",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1444": {
+    "director": "Patrik Šeba",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1525": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1521": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1489": {
+    "director": "Oldřich Weber",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1450": {
+    "director": "Lukáš Přinda",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1551": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1554": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1552": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1527": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1528": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1555": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1532": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1529": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1558": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1559": {
+    "director": "vrchní",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1557": {
+    "director": "Radka Bačáková",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1530": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1533": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1535": {
+    "director": "Radka Bačáková",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1537": {
+    "director": "Jakub Bican",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1572": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1538": {
+    "director": "Jakub Bican",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1561": {
+    "director": "Patrik Šeba",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2067": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1575": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1543": {
+    "director": "Patrik Šeba",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1511": {
+    "director": "Petr Tomeček",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1571": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1456": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1512": {
+    "director": "Petr Tomeček",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1570": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2065": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1545": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1457": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1547": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1546": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1655": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2066": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1548": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1635": {
+    "director": "Miloslav Říha",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1630": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1629": {
+    "director": "Martin Kašpar",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1646": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1636": {
+    "director": "Miloslav Říha",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1658": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1648": {
+    "director": "Zbyněk Schreiber",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1643": {
+    "director": "Robert Knebel",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1677": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1675": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1676": {
+    "director": "Lukáš Novosad",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "1674": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1614": {
+    "director": "Michaela Kratochvílová",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1660": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1659": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1661": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "1679": {
+    "director": "Martin Smolka",
+    "referee": "",
+    "error": null
+  },
+  "1687": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1667": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1682": {
+    "director": "Martin Smolka",
+    "referee": "",
+    "error": null
+  },
+  "1688": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1664": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1662": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "1668": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1663": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1737": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1689": {
+    "director": "Petr Weissar",
+    "referee": "Tomáš Habich",
+    "error": null
+  },
+  "1738": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1693": {
+    "director": "Patrik Šeba",
+    "referee": "Iva šedivá",
+    "error": null
+  },
+  "1690": {
+    "director": "Petr Weissar",
+    "referee": "Tomáš Habich",
+    "error": null
+  },
+  "1694": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1739": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1706": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1708": {
+    "director": "Martin Novák",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1707": {
+    "director": "vrchní",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1695": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1711": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1714": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1701": {
+    "director": "Jakub Bican",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1698": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1702": {
+    "director": "Jakub Bican",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1696": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1715": {
+    "director": "Oldřich Weber",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1710": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1713": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1740": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1704": {
+    "director": "Oldřich Weber",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1719": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1720": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1718": {
+    "director": "Martin Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1721": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1722": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1741": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1728": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1727": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1742": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1725": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1726": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1640": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "1823": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1732": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1731": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1639": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "1822": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1824": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1717": {
+    "director": "Martin Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1825": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1828": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "1829": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "1826": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1827": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1830": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "1832": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1831": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "1747": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1748": {
+    "director": "Iva Šedivá",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1750": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1837": {
+    "director": "Jan Polesný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1839": {
+    "director": "Jan Polesný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1749": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1751": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1840": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1752": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1868": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1755": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1891": {
+    "director": "Pavel Míl",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1756": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1753": {
+    "director": "Pavel Míl",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1841": {
+    "director": "Martin Smolka",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1843": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1757": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "1842": {
+    "director": "Martin Smolka",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1869": {
+    "director": "Knebel Robert",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "1754": {
+    "director": "Pavel Míl",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1844": {
+    "director": "Knebel Robert",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "1758": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "1759": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "1870": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1845": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1763": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1761": {
+    "director": "Martin Kašpar",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1892": {
+    "director": "Petr Kratochvíl",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1765": {
+    "director": "Petr Kratochvíl",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1764": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1760": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "1762": {
+    "director": "Martin Kašpar",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1768": {
+    "director": "Dušan Vavrla",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "1769": {
+    "director": "Dušan Vavrla",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "1846": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1770": {
+    "director": "Veřtát Michael",
+    "referee": "Šedivá Iva",
+    "error": null
+  },
+  "1771": {
+    "director": "Veřtát Michael",
+    "referee": "Šedivá Iva",
+    "error": null
+  },
+  "1766": {
+    "director": "Miloslav Říha",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1767": {
+    "director": "Miloslav Říha",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1847": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1871": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1873": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1775": {
+    "director": "Jakub Bican",
+    "referee": "Bednář Jaroslav",
+    "error": null
+  },
+  "1774": {
+    "director": "Jakub Bican",
+    "referee": "Bednář Jaroslav",
+    "error": null
+  },
+  "1781": {
+    "director": "Tomáš Palouda",
+    "referee": "jana Lagnerová",
+    "error": null
+  },
+  "1773": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1780": {
+    "director": "Petr Veselý",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1779": {
+    "director": "Petr Veselý",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1772": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1776": {
+    "director": "Patrik Šeba",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1848": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1784": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "1777": {
+    "director": "Patrik Šeba",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1887": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1785": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "1782": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1888": {
+    "director": "Radka Bačáková",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1850": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1849": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1851": {
+    "director": "Tomáš Kutý",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1783": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1786": {
+    "director": "Robert Knebel",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1853": {
+    "director": "Tomáš Kutý",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1789": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1874": {
+    "director": "Robert Knebel",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1790": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1855": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1787": {
+    "director": "Petr Tomeček",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1793": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1792": {
+    "director": "Lucie Černá",
+    "referee": "G?nter Totzauer",
+    "error": null
+  },
+  "1875": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1788": {
+    "director": "Petr Tomeček",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "1856": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1876": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1794": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "1857": {
+    "director": "Lukáš Novosad",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1791": {
+    "director": "Lucie Černá",
+    "referee": "Gunter Totzauer",
+    "error": null
+  },
+  "1877": {
+    "director": "vrchní",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1801": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1878": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1800": {
+    "director": "Jiří Abraham",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1804": {
+    "director": "Rudolf Rozsypal",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "1805": {
+    "director": "Rudolf Rozsypal",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "1858": {
+    "director": "vrchní",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1806": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1882": {
+    "director": "vrchní",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1880": {
+    "director": "vrchní",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1883": {
+    "director": "vrchní",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1808": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1812": {
+    "director": "Ondřej Zajíc",
+    "referee": "Kratochvílová Michaela",
+    "error": null
+  },
+  "1809": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1810": {
+    "director": "Patrik Šeba",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "1814": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1859": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1813": {
+    "director": "Ondřej Zajíc",
+    "referee": "Kratochvílová Michaela",
+    "error": null
+  },
+  "1815": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1818": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1862": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1864": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1819": {
+    "director": "Jiří Měchura",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "1863": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1820": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1865": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1867": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1816": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1817": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "1866": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1977": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1978": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "1980": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1979": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1821": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1981": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1984": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Kutý Tomáš",
+    "error": null
+  },
+  "1985": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Kutý Tomáš",
+    "error": null
+  },
+  "1982": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1987": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Kutý Tomáš",
+    "error": null
+  },
+  "1983": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "1986": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Kutý Tomáš",
+    "error": null
+  },
+  "1988": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1993": {
+    "director": "Jan Polesný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1896": {
+    "director": "Iva Šedivá",
+    "referee": "Roučková Jaroslava",
+    "error": null
+  },
+  "1897": {
+    "director": "Iva Šedivá",
+    "referee": "Roučková Jaroslava",
+    "error": null
+  },
+  "1995": {
+    "director": "Jan Polesný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1902": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "1900": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1899": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1898": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1901": {
+    "director": "Jakub Bican",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1996": {
+    "director": "Martin Smolka",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1997": {
+    "director": "Martin Smolka",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2028": {
+    "director": "Petr Kratochvíl",
+    "referee": "Tomáš Kutý",
+    "error": null
+  },
+  "1998": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1904": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "1999": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1908": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "1906": {
+    "director": "Pavel Míl",
+    "referee": "Bednář Jaroslav",
+    "error": null
+  },
+  "2030": {
+    "director": "Ondřej Zajíc",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1909": {
+    "director": "Jiří Pek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "2001": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "1907": {
+    "director": "Pavel Míl",
+    "referee": "Bednář Jaroslav",
+    "error": null
+  },
+  "2000": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1911": {
+    "director": "Martin Kašpar",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2032": {
+    "director": "vrchní",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2034": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "1910": {
+    "director": "Martin Kašpar",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "1905": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "1916": {
+    "director": "Dušan Vavrla",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1914": {
+    "director": "Miloslav Říha",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "1913": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "1918": {
+    "director": "Veřtát Michael",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1917": {
+    "director": "Dušan Vavrla",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "1920": {
+    "director": "Jiří Kratochvíl",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1915": {
+    "director": "Miloslav Říha",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "1912": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "1919": {
+    "director": "Veřtát Michael",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1921": {
+    "director": "Iva Šedivá",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1924": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "1923": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2002": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1922": {
+    "director": "Iva Šedivá",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1925": {
+    "director": "Oldřich Weber",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1926": {
+    "director": "Oldřich Weber",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1927": {
+    "director": "Ondřej Zajíc",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "2045": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1930": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "1928": {
+    "director": "Ondřej Zajíc",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "2007": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1929": {
+    "director": "Jiří Rohan",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2005": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1932": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2003": {
+    "director": "Martin Smolka",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "1931": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "2008": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1934": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "1935": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2046": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2010": {
+    "director": "Robert Knebel",
+    "referee": "Peter Schofield",
+    "error": null
+  },
+  "2036": {
+    "director": "Robert Knebel",
+    "referee": "Peter Schofield",
+    "error": null
+  },
+  "1939": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1943": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1933": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1938": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "1942": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1946": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2037": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "2011": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "2012": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "2068": {
+    "director": "Ondřej Zajíc",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "1947": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2038": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "2069": {
+    "director": "Ondřej Zajíc",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "1950": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "2050": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1957": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "1956": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2013": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1954": {
+    "director": "Jiří Abraham",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "1955": {
+    "director": "Jiří Abraham",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "1959": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1958": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "1961": {
+    "director": "Jakub Bican",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "1962": {
+    "director": "Jakub Bican",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2040": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2014": {
+    "director": "Lukáš Novosad",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "1951": {
+    "director": "Jindra Outrata",
+    "referee": "Zdenka Rychterová",
+    "error": null
+  },
+  "2039": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2015": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2052": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1949": {
+    "director": "Jan Busta",
+    "referee": "Ján Piaček",
+    "error": null
+  },
+  "2042": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2016": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2018": {
+    "director": "Viktor Vácha",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "2047": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1963": {
+    "director": "Viktor Vácha",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1967": {
+    "director": "Martin Říha",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2041": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "1970": {
+    "director": "Patrik Šeba",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1969": {
+    "director": "Patrik Šeba",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "1966": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2051": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1973": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1965": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2074": {
+    "director": "Petr Tomeček",
+    "referee": "Bohumil Šamánek",
+    "error": null
+  },
+  "1974": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "1975": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "1971": {
+    "director": "Jiří Měchura",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2021": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2023": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2020": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "1976": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2025": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "2026": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2022": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2048": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "1972": {
+    "director": "Jiří Měchura",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2201": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2231": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2188": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2189": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2183": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2185": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2114": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2184": {
+    "director": "Martin Smolka",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "2202": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2113": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2186": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2117": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2220": {
+    "director": "Pavel Míl",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2111": {
+    "director": "Pavel Míl",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2118": {
+    "director": "viz závod 18",
+    "referee": "viz závod 18",
+    "error": null
+  },
+  "2112": {
+    "director": "Pavel Míl",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2116": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2115": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2171": {
+    "director": "Martin Hanzel",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2172": {
+    "director": "Martin Hanzel",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2168": {
+    "director": "Bednářová Anna",
+    "referee": "Roučková Jaroslava",
+    "error": null
+  },
+  "2119": {
+    "director": "viz závod 18",
+    "referee": "viz závod 18",
+    "error": null
+  },
+  "2203": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2120": {
+    "director": "viz závod 18",
+    "referee": "viz závod 18",
+    "error": null
+  },
+  "2173": {
+    "director": "Martin Smolka",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2174": {
+    "director": "Martin Smolka",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2123": {
+    "director": "Jan Bednárek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "2124": {
+    "director": "Jan Bednárek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "2169": {
+    "director": "Bednářová Anna",
+    "referee": "Roučková Jaroslava",
+    "error": null
+  },
+  "2225": {
+    "director": "Miloslav Říha",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2204": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2083": {
+    "director": "Patrik Šeba",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2084": {
+    "director": "Patrik Šeba",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2208": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2085": {
+    "director": "Miloslav Říha",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2224": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2088": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "2087": {
+    "director": "Martin Rousek",
+    "referee": "Heda Kratochvílová",
+    "error": null
+  },
+  "2086": {
+    "director": "Miloslav Říha",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2165": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2205": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2164": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2221": {
+    "director": "Petr Kratochvíl",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2089": {
+    "director": "Martin Kašpar",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "2125": {
+    "director": "Knebel David",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2211": {
+    "director": "Martin Smolka",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2127": {
+    "director": "Veřtát Michael",
+    "referee": "Šedivá Iva",
+    "error": null
+  },
+  "2233": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2213": {
+    "director": "Martin Smolka",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2126": {
+    "director": "Veřtát Michael",
+    "referee": "Šedivá Iva",
+    "error": null
+  },
+  "2090": {
+    "director": "Martin Kašpar",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "2206": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2209": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2091": {
+    "director": "Robert Knebel",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2130": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2131": {
+    "director": "Vladislav Galuška",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2207": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2190": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2128": {
+    "director": "Dušan Vavrla",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2176": {
+    "director": "Aleš Marek",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2180": {
+    "director": "Aleš Marek",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2134": {
+    "director": "Petr Tomeček",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2129": {
+    "director": "Dušan Vavrla",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2136": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2092": {
+    "director": "Knebel Robert",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2137": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2135": {
+    "director": "Petr Tomeček",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2138": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2139": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2093": {
+    "director": "Jakub Prűher",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2140": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2232": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2094": {
+    "director": "Jakub Prűher",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2122": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2142": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2144": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2145": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2143": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2095": {
+    "director": "Jakub Prűher",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2162": {
+    "director": "Jindra Outrata",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2121": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2163": {
+    "director": "Jindra Outrata",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2191": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "2160": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2161": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2222": {
+    "director": "Miroslav Dvořák",
+    "referee": "Zdena Rychterová",
+    "error": null
+  },
+  "2227": {
+    "director": "Jan Busta",
+    "referee": "Piaček Ján",
+    "error": null
+  },
+  "2166": {
+    "director": "Ondřej Zajíc",
+    "referee": "Pavlína Frohlichová",
+    "error": null
+  },
+  "2141": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2098": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2167": {
+    "director": "Ondřej Zajíc",
+    "referee": "Pavlína Frohlichová",
+    "error": null
+  },
+  "2097": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2181": {
+    "director": "Lukáš Novosad",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2236": {
+    "director": "Jakub Stanovský",
+    "referee": "Renáta Daníková",
+    "error": null
+  },
+  "2102": {
+    "director": "Lukáš Novosad",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2148": {
+    "director": "Jiří Abraham",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2096": {
+    "director": "Jan Busta",
+    "referee": "Piaček Ján",
+    "error": null
+  },
+  "2216": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2101": {
+    "director": "Jakub Bican",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2100": {
+    "director": "Jakub Bican",
+    "referee": "Kutá Lenka",
+    "error": null
+  },
+  "2149": {
+    "director": "Jiří Abraham",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2182": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2214": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2150": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "2217": {
+    "director": "Jan Šťastný",
+    "referee": "Luděk Roleček",
+    "error": null
+  },
+  "2151": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "2218": {
+    "director": "Jaroslav Volf",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "2105": {
+    "director": "Jaroslav Volf",
+    "referee": "Martin Václav",
+    "error": null
+  },
+  "2159": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2157": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2156": {
+    "director": "David Lisický",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2198": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2237": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2197": {
+    "director": "viz závod č. 154",
+    "referee": "viz závod č. 154",
+    "error": null
+  },
+  "2158": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2196": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "2195": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "2155": {
+    "director": "Jiří Měchura",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2154": {
+    "director": "Jiří Měchura",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2199": {
+    "director": "viz závod č. 154",
+    "referee": "viz závod č. 154",
+    "error": null
+  },
+  "2200": {
+    "director": "viz závod č. 154",
+    "referee": "viz závod č. 154",
+    "error": null
+  },
+  "2252": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2251": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2253": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2256": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2255": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2254": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2258": {
+    "director": "Martin Smolka",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2259": {
+    "director": "Martin Smolka",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2260": {
+    "director": "Martin Smolka",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2261": {
+    "director": "Martin Smolka",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2263": {
+    "director": "Jiří Vašina",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2262": {
+    "director": "Jiří Vašina",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2266": {
+    "director": "Pavel Míl",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2264": {
+    "director": "Jiří Vašina",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2265": {
+    "director": "Pavel Míl",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2270": {
+    "director": "Tomáš Stanovský",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2269": {
+    "director": "viz závod 20",
+    "referee": "viz závod 20",
+    "error": null
+  },
+  "2280": {
+    "director": "Martin Hanzel",
+    "referee": "Roleček Luděk",
+    "error": null
+  },
+  "2278": {
+    "director": "Martin Hanzel",
+    "referee": "Roleček Luděk",
+    "error": null
+  },
+  "2267": {
+    "director": "Jan Merenus",
+    "referee": "Pavlína Fröhlichová",
+    "error": null
+  },
+  "2272": {
+    "director": "viz závod 20",
+    "referee": "viz závod 20",
+    "error": null
+  },
+  "2271": {
+    "director": "viz závod 20",
+    "referee": "viz závod 20",
+    "error": null
+  },
+  "2281": {
+    "director": "Knebel Robert",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2283": {
+    "director": "Knebel Robert",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2268": {
+    "director": "Jan Merenus",
+    "referee": "Pavlína Fröhlichová",
+    "error": null
+  },
+  "2298": {
+    "director": "Martin Smolka",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2284": {
+    "director": "Tomáš Kutý",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "2299": {
+    "director": "Martin Smolka",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2274": {
+    "director": "Jan Merenus",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2273": {
+    "director": "Jan Merenus",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2300": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2285": {
+    "director": "Veřtát Michael",
+    "referee": "Bednář Jaroslav",
+    "error": null
+  },
+  "2276": {
+    "director": "Martin Kašpar",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2289": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2286": {
+    "director": "Veřtát Michael",
+    "referee": "Bednář Jaroslav",
+    "error": null
+  },
+  "2287": {
+    "director": "Jan Bednárek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "2290": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2351": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2288": {
+    "director": "Jan Bednárek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "2306": {
+    "director": "Jan Šťastný",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2275": {
+    "director": "Martin Kašpar",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2308": {
+    "director": "Jan",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2291": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2293": {
+    "director": "Kneblová Pavla",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2292": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2309": {
+    "director": "Petr Kratochvíl",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2294": {
+    "director": "Patrik Šeba",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2304": {
+    "director": "Martin Novák",
+    "referee": "ROLEČKOVÁ Libuše",
+    "error": null
+  },
+  "2302": {
+    "director": "Martin Novák",
+    "referee": "ROLEČKOVÁ Libuše",
+    "error": null
+  },
+  "2295": {
+    "director": "Patrik Šeba",
+    "referee": "Václav Martiin",
+    "error": null
+  },
+  "2296": {
+    "director": "Ladislav Hojda",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2248": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2311": {
+    "director": "Dušan Vavrla",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2310": {
+    "director": "Dušan Vavrla",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2312": {
+    "director": "Ondřej Zajíc",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2313": {
+    "director": "Ondřej Zajíc",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2297": {
+    "director": "Ladislav Hojda",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2314": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "2315": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "2322": {
+    "director": "Petr Tomeček",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2241": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2317": {
+    "director": "Jakub Prűher zást. Hana Tesař",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2336": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2323": {
+    "director": "Petr Tomeček",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2320": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2242": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2321": {
+    "director": "Luděk Roleček",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2329": {
+    "director": "Adam Vavrla",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2337": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2316": {
+    "director": "Jakub Prűher zást. Hana Tesař",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2324": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2328": {
+    "director": "Adam Vavrla",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2326": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2327": {
+    "director": "Jaroslav Volf",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2325": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2330": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2243": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2341": {
+    "director": "Jindra Outrata",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2331": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2334": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2349": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2342": {
+    "director": "Jindra Outrata",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2335": {
+    "director": "Petr Weissar",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2352": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2333": {
+    "director": "Vondra Václav",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2332": {
+    "director": "Vondra Václav",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2343": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2350": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2353": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2439": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2344": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2345": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2385": {
+    "director": "Jan Busta",
+    "referee": "Piaček Ján",
+    "error": null
+  },
+  "2442": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2246": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2373": {
+    "director": "Lukáš Novosad",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2355": {
+    "director": "Jakub Bican",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2356": {
+    "director": "Jakub Bican",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2346": {
+    "director": "Jiří Abraham",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2374": {
+    "director": "Lukáš Novosad",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2376": {
+    "director": "Jan Šťastný",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2378": {
+    "director": "Jan Šťastný",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2377": {
+    "director": "Jan Šťastný",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2347": {
+    "director": "Jiří Abraham",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2244": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2379": {
+    "director": "Jan Šťastný",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2247": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2357": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "2381": {
+    "director": "Jan Šťastný",
+    "referee": "Rolečková Libuše",
+    "error": null
+  },
+  "2383": {
+    "director": "Viktor Vácha",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2359": {
+    "director": "Viktor Vácha",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2249": {
+    "director": "vrchní",
+    "referee": "Piaček Ján",
+    "error": null
+  },
+  "2358": {
+    "director": "Patrik Šeba",
+    "referee": "Iva Šedivá",
+    "error": null
+  },
+  "2361": {
+    "director": "Patrik Šeba",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2365": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2240": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2363": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2364": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2366": {
+    "director": "Miloš Kotek",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2444": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "2369": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2367": {
+    "director": "Jiří Měchura",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2392": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2391": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2370": {
+    "director": "David Lisický",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2390": {
+    "director": "Josef Macášek",
+    "referee": "Jana Kudějová",
+    "error": null
+  },
+  "2368": {
+    "director": "Jiří Měchura",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2372": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2393": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2394": {
+    "director": "Bohuslav Šamánek",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2245": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2478": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "2479": {
+    "director": "Šamánek Bohuslav",
+    "referee": "Macíková Jana",
+    "error": null
+  },
+  "2371": {
+    "director": "Josef Veselý",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2482": {
+    "director": "Michal Šťastný",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2483": {
+    "director": "Michal Šťastný",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2480": {
+    "director": "Michal Šťastný",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2481": {
+    "director": "Michal Šťastný",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2473": {
+    "director": "Barbora Merenusová",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2484": {
+    "director": "Martin Hanzel",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2503": {
+    "director": "Martin Hanzel",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2474": {
+    "director": "Barbora Merenusová",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2487": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2488": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2486": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2491": {
+    "director": "Váckav Martin",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2490": {
+    "director": "Váckav Martin",
+    "referee": "Jana Macíková",
+    "error": null
+  },
+  "2489": {
+    "director": "p.Schreiber Zbyněk",
+    "referee": "p.Jílek Ladislav",
+    "error": null
+  },
+  "2452": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2477": {
+    "director": "Knebel Robert",
+    "referee": "Kneblová Hana",
+    "error": null
+  },
+  "2513": {
+    "director": "Pavel Foukal",
+    "referee": "Tomáš Mráka",
+    "error": null
+  },
+  "2510": {
+    "director": "Pavel Foukal",
+    "referee": "Tomáš Mráka",
+    "error": null
+  },
+  "2511": {
+    "director": "Pavel Foukal",
+    "referee": "Tomáš Mráka",
+    "error": null
+  },
+  "2492": {
+    "director": "Tomáš Stanovský",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2515": {
+    "director": "Pavel Foukal",
+    "referee": "Tomáš Mráka",
+    "error": null
+  },
+  "2512": {
+    "director": "Pavel Foukal",
+    "referee": "Tomáš Mráka",
+    "error": null
+  },
+  "2494": {
+    "director": "viz závod 21",
+    "referee": "viz závod 21",
+    "error": null
+  },
+  "2496": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "2514": {
+    "director": "Pavel Foukal",
+    "referee": "Tomáš Mráka",
+    "error": null
+  },
+  "2504": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2505": {
+    "director": "Tomáš Kutý",
+    "referee": "Michaela Kratochvílová",
+    "error": null
+  },
+  "2506": {
+    "director": "Ondřej Zajíc",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "2497": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "2509": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2508": {
+    "director": "Ondřej Zajíc",
+    "referee": "Libuše Rolečková",
+    "error": null
+  },
+  "2558": {
+    "director": "Petr Kratochvíl",
+    "referee": "Hana Kneblová",
+    "error": null
+  },
+  "2498": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2499": {
+    "director": "Tomáš Palouda",
+    "referee": "Lenka Vandasová",
+    "error": null
+  },
+  "2501": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2518": {
+    "director": "Jan Bednárek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "2625": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2500": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2516": {
+    "director": "Jan Bednárek",
+    "referee": "Čestmír Bednárek",
+    "error": null
+  },
+  "2626": {
+    "director": "Miloslav Říha",
+    "referee": "Lenka Kutá",
+    "error": null
+  },
+  "2521": {
+    "director": "Hana Tesařová",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2522": {
+    "director": "viz závod 49",
+    "referee": "viz závod 49",
+    "error": null
+  },
+  "2551": {
+    "director": "Aleš Marek",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2553": {
+    "director": "Aleš Marek",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2523": {
+    "director": "Hojdová Eliška",
+    "referee": "Čiháček Jiří",
+    "error": null
+  },
+  "2525": {
+    "director": "Ondřej Zajíc",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2555": {
+    "director": "Filip Krejza",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2527": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2532": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2524": {
+    "director": "Hojdová Eliška",
+    "referee": "Čiháček Jiří",
+    "error": null
+  },
+  "2534": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "2526": {
+    "director": "Ondřej Zajíc",
+    "referee": "Václav Martin",
+    "error": null
+  },
+  "2528": {
+    "director": "Viktor Vácha",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2530": {
+    "director": "Filip Krejza",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2556": {
+    "director": "Tomáš Palouda",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2533": {
+    "director": "Ondřej Zajíc",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2535": {
+    "director": "Roman Plachý",
+    "referee": "Jan Břečka",
+    "error": null
+  },
+  "2531": {
+    "director": "Filip Krejza",
+    "referee": "Ladislav Jílek",
+    "error": null
+  },
+  "2542": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2557": {
+    "director": "Václav Martin",
+    "referee": "Jana Lagnerová",
+    "error": null
+  },
+  "2536": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2537": {
+    "director": "Patrik Šeba",
+    "referee": "Jaroslav Bednář",
+    "error": null
+  },
+  "2546": {
+    "director": "Petr Weissar",
+    "referee": "Marcela Nováková",
+    "error": null
+  },
+  "2543": {
+    "director": "Martin Střecha",
+    "referee": "Bohuslav Šamánek",
+    "error": null
+  },
+  "2540": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2545": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2544": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2568": {
+    "director": "Jindra Outrata",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2541": {
+    "director": "Václav Vondra",
+    "referee": "Alois Kuna",
+    "error": null
+  },
+  "2567": {
+    "director": "Jindra Outrata",
+    "referee": "Karel Bohatý",
+    "error": null
+  },
+  "2547": {
+    "director": "Petr Weissar",
+    "referee": "Marcela Nováková",
+    "error": null
+  },
+  "2574": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2572": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2549": {
+    "director": "Martin Toncar",
+    "referee": "Pavlína Fröhlichová",
+    "error": null
+  },
+  "2548": {
+    "director": "Zdeněk Boček",
+    "referee": "Jiří Čiháček",
+    "error": null
+  },
+  "2550": {
+    "director": "Martin Toncar",
+    "referee": "Pavlína Fröhlichová",
+    "error": null
+  },
+  "2573": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2575": {
+    "director": "Miroslav Dvořák",
+    "referee": "Petra Pokorná",
+    "error": null
+  },
+  "2563": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  },
+  "2566": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "2565": {
+    "director": "Martin Rousek",
+    "referee": "Mgr. Heda Kratochvílová",
+    "error": null
+  },
+  "2564": {
+    "director": "vrchní",
+    "referee": "",
+    "error": null
+  }
+}

@@ -1,0 +1,2329 @@
+[
+  {
+    "name": "Jan Šťastný",
+    "races": 105,
+    "competitors": 9992,
+    "avg_competitors": 95.2,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 105,
+    "sjezd_competitors": 9992,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "TJ Syntesia Pardubice": 105
+    }
+  },
+  {
+    "name": "Zbyněk Schreiber",
+    "races": 69,
+    "competitors": 6935,
+    "avg_competitors": 100.5,
+    "slalom_races": 2,
+    "slalom_competitors": 105,
+    "sjezd_races": 67,
+    "sjezd_competitors": 6830,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "TJ Šumperk": 4,
+      "Vodní sporty Desná": 65
+    }
+  },
+  {
+    "name": "Martin Smolka",
+    "races": 65,
+    "competitors": 5511,
+    "avg_competitors": 84.8,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 65,
+    "sjezd_competitors": 5511,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "Bohemians Praha": 30,
+      "TJ Bohemians Praha": 35
+    }
+  },
+  {
+    "name": "Jakub Bican",
+    "races": 58,
+    "competitors": 7824,
+    "avg_competitors": 134.9,
+    "slalom_races": 55,
+    "slalom_competitors": 7415,
+    "sjezd_races": 3,
+    "sjezd_competitors": 409,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SK VS České Budějovice": 2,
+      "SK VS Č. Budějovice": 40,
+      "SK Vodní slalom České Budějovice": 16
+    }
+  },
+  {
+    "name": "Bohuslav Šamánek",
+    "races": 56,
+    "competitors": 3823,
+    "avg_competitors": 68.3,
+    "slalom_races": 15,
+    "slalom_competitors": 1657,
+    "sjezd_races": 41,
+    "sjezd_competitors": 2166,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "Kanoe Klub Spoj Brno": 56
+    }
+  },
+  {
+    "name": "Josef Macášek",
+    "races": 54,
+    "competitors": 2927,
+    "avg_competitors": 54.2,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 54,
+    "sjezd_competitors": 2927,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "TJ Jiskra Bechyně": 54
+    }
+  },
+  {
+    "name": "Zdeněk Boček",
+    "races": 43,
+    "competitors": 9696,
+    "avg_competitors": 225.5,
+    "slalom_races": 42,
+    "slalom_competitors": 9585,
+    "sjezd_races": 1,
+    "sjezd_competitors": 111,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "SK VS České Budějovice": 4,
+      "SK vodní slalom České Budějovice": 2,
+      "SK VS Č. Budějovice": 29,
+      "SK Vodní slalom České Budějovice": 8
+    }
+  },
+  {
+    "name": "Ondřej Zajíc",
+    "races": 42,
+    "competitors": 9340,
+    "avg_competitors": 222.4,
+    "slalom_races": 29,
+    "slalom_competitors": 6889,
+    "sjezd_races": 13,
+    "sjezd_competitors": 2451,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "Klub Kanoistika Roudnice n.L.": 42
+    }
+  },
+  {
+    "name": "Luděk Roleček",
+    "races": 39,
+    "competitors": 4642,
+    "avg_competitors": 119.0,
+    "slalom_races": 24,
+    "slalom_competitors": 3668,
+    "sjezd_races": 15,
+    "sjezd_competitors": 974,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SKK Vysoké Mýto": 39
+    }
+  },
+  {
+    "name": "Miroslav Dvořák",
+    "races": 38,
+    "competitors": 1661,
+    "avg_competitors": 43.7,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 38,
+    "sjezd_competitors": 1661,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2017,
+      2018,
+      2019,
+      2020,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "SK Třebechovice": 38
+    }
+  },
+  {
+    "name": "Petr Weissar",
+    "races": 36,
+    "competitors": 5185,
+    "avg_competitors": 144.0,
+    "slalom_races": 27,
+    "slalom_competitors": 4133,
+    "sjezd_races": 9,
+    "sjezd_competitors": 1052,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "TJ Loko Plzeň": 36
+    }
+  },
+  {
+    "name": "Patrik Šeba",
+    "races": 36,
+    "competitors": 8045,
+    "avg_competitors": 223.5,
+    "slalom_races": 35,
+    "slalom_competitors": 7904,
+    "sjezd_races": 1,
+    "sjezd_competitors": 141,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "TJ Kralupy, oddíl kanoistiky": 27,
+      "TJ KRALUPY, z.s.": 9
+    }
+  },
+  {
+    "name": "Václav Vondra",
+    "races": 33,
+    "competitors": 9892,
+    "avg_competitors": 299.8,
+    "slalom_races": 32,
+    "slalom_competitors": 9781,
+    "sjezd_races": 1,
+    "sjezd_competitors": 111,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "Otava Strakonice": 33
+    }
+  },
+  {
+    "name": "Jiří Abraham",
+    "races": 33,
+    "competitors": 9504,
+    "avg_competitors": 288.0,
+    "slalom_races": 31,
+    "slalom_competitors": 9354,
+    "sjezd_races": 2,
+    "sjezd_competitors": 150,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SK VS Karbo Benátky": 18,
+      "SK VS Benátky nad Jizerou z.s.": 7,
+      "SK VS Benátky nad Jizerou": 8
+    }
+  },
+  {
+    "name": "Milan Johanides",
+    "races": 30,
+    "competitors": 4989,
+    "avg_competitors": 166.3,
+    "slalom_races": 27,
+    "slalom_competitors": 4532,
+    "sjezd_races": 3,
+    "sjezd_competitors": 457,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "clubs": {
+      "TJ Kralupy, oddíl kanoistiky": 30
+    }
+  },
+  {
+    "name": "Tomáš Palouda",
+    "races": 30,
+    "competitors": 2111,
+    "avg_competitors": 70.4,
+    "slalom_races": 13,
+    "slalom_competitors": 1220,
+    "sjezd_races": 17,
+    "sjezd_competitors": 891,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2017,
+      2019,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "SK Vltava Č. Krumlov z.s.": 30
+    }
+  },
+  {
+    "name": "Martin Kašpar",
+    "races": 27,
+    "competitors": 4181,
+    "avg_competitors": 154.9,
+    "slalom_races": 27,
+    "slalom_competitors": 4181,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SK Žižkov": 19,
+      "Sportovní klub Žižkov Praha z.s.": 8
+    }
+  },
+  {
+    "name": "Pavel Míl",
+    "races": 27,
+    "competitors": 3394,
+    "avg_competitors": 125.7,
+    "slalom_races": 23,
+    "slalom_competitors": 3284,
+    "sjezd_races": 4,
+    "sjezd_competitors": 110,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2019,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "Loko Trutnov": 27
+    }
+  },
+  {
+    "name": "David Lisický",
+    "races": 26,
+    "competitors": 6678,
+    "avg_competitors": 256.8,
+    "slalom_races": 26,
+    "slalom_competitors": 6678,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "UP Olomouc": 16,
+      "SKUP Olomouc, z.s. - oddíl kanoistiky": 10
+    }
+  },
+  {
+    "name": "Jiří Měchura",
+    "races": 26,
+    "competitors": 8708,
+    "avg_competitors": 334.9,
+    "slalom_races": 26,
+    "slalom_competitors": 8708,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SK Třebechovice": 26
+    }
+  },
+  {
+    "name": "Michael Veřtát",
+    "races": 26,
+    "competitors": 4886,
+    "avg_competitors": 187.9,
+    "slalom_races": 23,
+    "slalom_competitors": 4636,
+    "sjezd_races": 3,
+    "sjezd_competitors": 250,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "TJ Klub kanoistiky Železný Brod": 18,
+      "Klub kanoistiky Železný Brod z.s.": 8
+    }
+  },
+  {
+    "name": "Radka Bačáková",
+    "races": 26,
+    "competitors": 5081,
+    "avg_competitors": 195.4,
+    "slalom_races": 22,
+    "slalom_competitors": 4631,
+    "sjezd_races": 4,
+    "sjezd_competitors": 450,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022
+    ],
+    "clubs": {
+      "KK Rakovník": 26
+    }
+  },
+  {
+    "name": "Miloš Kotek",
+    "races": 25,
+    "competitors": 6244,
+    "avg_competitors": 249.8,
+    "slalom_races": 25,
+    "slalom_competitors": 6244,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "clubs": {
+      "VS Tábor": 25
+    }
+  },
+  {
+    "name": "Iva Šedivá",
+    "races": 25,
+    "competitors": 3344,
+    "avg_competitors": 133.8,
+    "slalom_races": 22,
+    "slalom_competitors": 3010,
+    "sjezd_races": 3,
+    "sjezd_competitors": 334,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2022,
+      2023
+    ],
+    "clubs": {
+      "TJ Česká Lípa": 4,
+      "Sportovní Klub Kanoistika Česká Lípa": 11,
+      "SK Kanoistika Česká Lípa, z.s.": 10
+    }
+  },
+  {
+    "name": "Miloslav Říha",
+    "races": 25,
+    "competitors": 3481,
+    "avg_competitors": 139.2,
+    "slalom_races": 22,
+    "slalom_competitors": 3147,
+    "sjezd_races": 2,
+    "sjezd_competitors": 278,
+    "kros_races": 1,
+    "kros_competitors": 56,
+    "years": [
+      2013,
+      2014,
+      2015,
+      2017,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "USK Praha": 7,
+      "Univerzitní sportovní klub Praha": 17
+    }
+  },
+  {
+    "name": "Josef Veselý",
+    "races": 24,
+    "competitors": 5457,
+    "avg_competitors": 227.4,
+    "slalom_races": 24,
+    "slalom_competitors": 5457,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "Kanoistický klub Klatovy o.s.": 6,
+      "Kanoistický klub Klatovy z.s.": 18
+    }
+  },
+  {
+    "name": "Martin Rousek",
+    "races": 22,
+    "competitors": 3295,
+    "avg_competitors": 149.8,
+    "slalom_races": 20,
+    "slalom_competitors": 3226,
+    "sjezd_races": 2,
+    "sjezd_competitors": 69,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2016,
+      2018,
+      2019,
+      2022,
+      2023,
+      2024,
+      2026
+    ],
+    "clubs": {
+      "KK Opava": 22
+    }
+  },
+  {
+    "name": "Jiří Pek",
+    "races": 21,
+    "competitors": 2209,
+    "avg_competitors": 105.2,
+    "slalom_races": 16,
+    "slalom_competitors": 2004,
+    "sjezd_races": 5,
+    "sjezd_competitors": 205,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023
+    ],
+    "clubs": {
+      "Vodní sporty Zábřeh": 21
+    }
+  },
+  {
+    "name": "Jaroslav Volf",
+    "races": 21,
+    "competitors": 4036,
+    "avg_competitors": 192.2,
+    "slalom_races": 15,
+    "slalom_competitors": 3204,
+    "sjezd_races": 6,
+    "sjezd_competitors": 832,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2015,
+      2017,
+      2018,
+      2019,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "KK Brandýs nad Labem": 8,
+      "DUKLA Brandýs": 5,
+      "Kajak klub Brandýs nad Labem, z. s.": 8
+    }
+  },
+  {
+    "name": "Vladislav Galuška",
+    "races": 20,
+    "competitors": 6746,
+    "avg_competitors": 337.3,
+    "slalom_races": 20,
+    "slalom_competitors": 6746,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2022,
+      2023,
+      2024
+    ],
+    "clubs": {
+      "TJ KVS Sušice": 8,
+      "Klub vodních sportů Sušice z.s.": 12
+    }
+  },
+  {
+    "name": "Petr Troch",
+    "races": 20,
+    "competitors": 599,
+    "avg_competitors": 29.9,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 20,
+    "sjezd_competitors": 599,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2019
+    ],
+    "clubs": {
+      "TJ Dvůr Králové": 20
+    }
+  },
+  {
+    "name": "Jindra Outrata",
+    "races": 20,
+    "competitors": 2022,
+    "avg_competitors": 101.1,
+    "slalom_races": 20,
+    "slalom_competitors": 2022,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "TJ Syntesia Pardubice": 20
+    }
+  },
+  {
+    "name": "Robert Knebel",
+    "races": 19,
+    "competitors": 2092,
+    "avg_competitors": 110.1,
+    "slalom_races": 6,
+    "slalom_competitors": 1113,
+    "sjezd_races": 13,
+    "sjezd_competitors": 979,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2015,
+      2017,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "UP Olomouc": 7,
+      "SKUP Olomouc, z.s. - oddíl kanoistiky": 12
+    }
+  },
+  {
+    "name": "Dušan Vavrla",
+    "races": 18,
+    "competitors": 2196,
+    "avg_competitors": 122.0,
+    "slalom_races": 18,
+    "slalom_competitors": 2196,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2019,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "Tzunami Ostrava": 4,
+      "VK Tzunami Ostrava": 14
+    }
+  },
+  {
+    "name": "Tomáš Kutý",
+    "races": 17,
+    "competitors": 1806,
+    "avg_competitors": 106.2,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 17,
+    "sjezd_competitors": 1806,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2014,
+      2015,
+      2017,
+      2022,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "TJ Vodní Sporty Litovel": 3,
+      "TJ  Vodní Sporty Litovel": 14
+    }
+  },
+  {
+    "name": "Lucie Černá",
+    "races": 16,
+    "competitors": 2702,
+    "avg_competitors": 168.9,
+    "slalom_races": 16,
+    "slalom_competitors": 2702,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2020,
+      2022
+    ],
+    "clubs": {
+      "TJ DNT VS Kadaň": 16
+    }
+  },
+  {
+    "name": "Martin Střecha",
+    "races": 16,
+    "competitors": 1890,
+    "avg_competitors": 118.1,
+    "slalom_races": 16,
+    "slalom_competitors": 1890,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "VS Dolní Kounice": 10,
+      "TJ Vodní sporty Dolní Kounice, z.s.": 4,
+      "Vodní sporty Dolní Kounice, z.s.": 2
+    }
+  },
+  {
+    "name": "Lukáš Novosad",
+    "races": 16,
+    "competitors": 1441,
+    "avg_competitors": 90.1,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 16,
+    "sjezd_competitors": 1441,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2015,
+      2016,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SK Vltava Č. Krumlov": 1,
+      "SK Vltava Č. Krumlov z.s.": 15
+    }
+  },
+  {
+    "name": "Roman Plachý",
+    "races": 13,
+    "competitors": 1982,
+    "avg_competitors": 152.5,
+    "slalom_races": 12,
+    "slalom_competitors": 1845,
+    "sjezd_races": 1,
+    "sjezd_competitors": 137,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2017,
+      2019,
+      2022,
+      2023,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "VK Kroměříž": 13
+    }
+  },
+  {
+    "name": "Viktor Vácha",
+    "races": 12,
+    "competitors": 2557,
+    "avg_competitors": 213.1,
+    "slalom_races": 10,
+    "slalom_competitors": 2278,
+    "sjezd_races": 2,
+    "sjezd_competitors": 279,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "KK Rakovník": 12
+    }
+  },
+  {
+    "name": "Lenka Lagnerová",
+    "races": 11,
+    "competitors": 570,
+    "avg_competitors": 51.8,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 11,
+    "sjezd_competitors": 570,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "clubs": {
+      "SK Vltava Č. Krumlov": 11
+    }
+  },
+  {
+    "name": "Ivo Košík",
+    "races": 10,
+    "competitors": 1188,
+    "avg_competitors": 118.8,
+    "slalom_races": 6,
+    "slalom_competitors": 883,
+    "sjezd_races": 4,
+    "sjezd_competitors": 305,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2015,
+      2016
+    ],
+    "clubs": {
+      "SK Veselí nad Moravou": 10
+    }
+  },
+  {
+    "name": "Oldřich Weber",
+    "races": 10,
+    "competitors": 2133,
+    "avg_competitors": 213.3,
+    "slalom_races": 7,
+    "slalom_competitors": 1693,
+    "sjezd_races": 3,
+    "sjezd_competitors": 440,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2018,
+      2019,
+      2020,
+      2021,
+      2023
+    ],
+    "clubs": {
+      "SK VS České Budějovice": 2,
+      "SK VS Č. Budějovice": 6,
+      "SK Vodní slalom České Budějovice": 2
+    }
+  },
+  {
+    "name": "Petr Tomeček",
+    "races": 9,
+    "competitors": 1241,
+    "avg_competitors": 137.9,
+    "slalom_races": 8,
+    "slalom_competitors": 1205,
+    "sjezd_races": 1,
+    "sjezd_competitors": 36,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2020,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SK Veselí nad Moravou": 9
+    }
+  },
+  {
+    "name": "Vladimír Jordán",
+    "races": 8,
+    "competitors": 595,
+    "avg_competitors": 74.4,
+    "slalom_races": 4,
+    "slalom_competitors": 380,
+    "sjezd_races": 4,
+    "sjezd_competitors": 215,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013
+    ],
+    "clubs": {
+      "SK Veselí nad Moravou": 8
+    }
+  },
+  {
+    "name": "Tomáš Dvořák",
+    "races": 8,
+    "competitors": 267,
+    "avg_competitors": 33.4,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 8,
+    "sjezd_competitors": 267,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2015,
+      2016
+    ],
+    "clubs": {
+      "SK Třebechovice": 8
+    }
+  },
+  {
+    "name": "Michal Košík",
+    "races": 8,
+    "competitors": 808,
+    "avg_competitors": 101.0,
+    "slalom_races": 6,
+    "slalom_competitors": 712,
+    "sjezd_races": 2,
+    "sjezd_competitors": 96,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2017,
+      2018,
+      2019
+    ],
+    "clubs": {
+      "SK Veselí nad Moravou": 8
+    }
+  },
+  {
+    "name": "Petr Kratochvíl",
+    "races": 8,
+    "competitors": 755,
+    "avg_competitors": 94.4,
+    "slalom_races": 2,
+    "slalom_competitors": 325,
+    "sjezd_races": 6,
+    "sjezd_competitors": 430,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2018,
+      2019,
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "UP Olomouc": 2,
+      "SKUP Olomouc, z.s. - oddíl kanoistiky": 6
+    }
+  },
+  {
+    "name": "Jiří Holý",
+    "races": 6,
+    "competitors": 702,
+    "avg_competitors": 117.0,
+    "slalom_races": 4,
+    "slalom_competitors": 512,
+    "sjezd_races": 2,
+    "sjezd_competitors": 190,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2014,
+      2015
+    ],
+    "clubs": {
+      "KK Rakovník": 6
+    }
+  },
+  {
+    "name": "Rudolf Rozsypal",
+    "races": 6,
+    "competitors": 556,
+    "avg_competitors": 92.7,
+    "slalom_races": 4,
+    "slalom_competitors": 404,
+    "sjezd_races": 2,
+    "sjezd_competitors": 152,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2015,
+      2022
+    ],
+    "clubs": {
+      "UP Olomouc": 4,
+      "SKUP Olomouc, z.s. - oddíl kanoistiky": 2
+    }
+  },
+  {
+    "name": "Heda Kratochvílová",
+    "races": 6,
+    "competitors": 331,
+    "avg_competitors": 55.2,
+    "slalom_races": 3,
+    "slalom_competitors": 213,
+    "sjezd_races": 3,
+    "sjezd_competitors": 118,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2014,
+      2015
+    ],
+    "clubs": {
+      "UP Olomouc": 6
+    }
+  },
+  {
+    "name": "Jan Kulhánek",
+    "races": 6,
+    "competitors": 466,
+    "avg_competitors": 77.7,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 6,
+    "sjezd_competitors": 466,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2015,
+      2016,
+      2017
+    ],
+    "clubs": {
+      "Delfín Jablonec": 6
+    }
+  },
+  {
+    "name": "Pavla Kneblová",
+    "races": 6,
+    "competitors": 628,
+    "avg_competitors": 104.7,
+    "slalom_races": 4,
+    "slalom_competitors": 499,
+    "sjezd_races": 2,
+    "sjezd_competitors": 129,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2016,
+      2017,
+      2019,
+      2025
+    ],
+    "clubs": {
+      "UP Olomouc": 5,
+      "SKUP Olomouc, z.s. - oddíl kanoistiky": 1
+    }
+  },
+  {
+    "name": "Petr Veselý",
+    "races": 6,
+    "competitors": 782,
+    "avg_competitors": 130.3,
+    "slalom_races": 6,
+    "slalom_competitors": 782,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2018,
+      2019,
+      2022
+    ],
+    "clubs": {
+      "VS Dolní Kounice": 2,
+      "TJ Vodní sporty Dolní Kounice, z.s.": 4
+    }
+  },
+  {
+    "name": "Jan Polesný",
+    "races": 6,
+    "competitors": 916,
+    "avg_competitors": 152.7,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 6,
+    "sjezd_competitors": 916,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2019,
+      2022,
+      2023
+    ],
+    "clubs": {
+      "TJ Loko Plzeň": 6
+    }
+  },
+  {
+    "name": "Martin Hanzel",
+    "races": 6,
+    "competitors": 1123,
+    "avg_competitors": 187.2,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 6,
+    "sjezd_competitors": 1123,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "TJ Loko Plzeň": 6
+    }
+  },
+  {
+    "name": "Jan Bednárek",
+    "races": 6,
+    "competitors": 970,
+    "avg_competitors": 161.7,
+    "slalom_races": 6,
+    "slalom_competitors": 970,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2024,
+      2025,
+      2026
+    ],
+    "clubs": {
+      "Vodní sporty Zábřeh": 6
+    }
+  },
+  {
+    "name": "Pavel Foukal",
+    "races": 6,
+    "competitors": 351,
+    "avg_competitors": 58.5,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 6,
+    "kros_competitors": 351,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "TJ DUKLA Praha": 6
+    }
+  },
+  {
+    "name": "Hugo Knotek",
+    "races": 5,
+    "competitors": 415,
+    "avg_competitors": 83.0,
+    "slalom_races": 1,
+    "slalom_competitors": 142,
+    "sjezd_races": 4,
+    "sjezd_competitors": 273,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012
+    ],
+    "clubs": {
+      "Technika Praha": 4,
+      "VS Tábor": 1
+    }
+  },
+  {
+    "name": "Jiří Rohan",
+    "races": 5,
+    "competitors": 1617,
+    "avg_competitors": 323.4,
+    "slalom_races": 5,
+    "slalom_competitors": 1617,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013,
+      2014,
+      2019,
+      2023
+    ],
+    "clubs": {
+      "USK Praha": 3,
+      "Univerzitní sportovní klub Praha": 2
+    }
+  },
+  {
+    "name": "Jakub Prüher",
+    "races": 5,
+    "competitors": 1554,
+    "avg_competitors": 310.8,
+    "slalom_races": 5,
+    "slalom_competitors": 1554,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2024,
+      2025
+    ],
+    "clubs": {
+      "SK Vodní slalom České Budějovice": 5
+    }
+  },
+  {
+    "name": "Ladislav Jílek",
+    "races": 4,
+    "competitors": 276,
+    "avg_competitors": 69.0,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 4,
+    "sjezd_competitors": 276,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012
+    ],
+    "clubs": {
+      "Vodní sporty Zábřeh": 4
+    }
+  },
+  {
+    "name": "Jaroslav Froněk",
+    "races": 4,
+    "competitors": 716,
+    "avg_competitors": 179.0,
+    "slalom_races": 4,
+    "slalom_competitors": 716,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012
+    ],
+    "clubs": {
+      "TJ Kralupy, oddíl kanoistiky": 4
+    }
+  },
+  {
+    "name": "Martin Záruba",
+    "races": 4,
+    "competitors": 207,
+    "avg_competitors": 51.8,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 4,
+    "sjezd_competitors": 207,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012
+    ],
+    "clubs": {
+      "TJ Dvůr Králové": 4
+    }
+  },
+  {
+    "name": "Ondřej Pokorný",
+    "races": 4,
+    "competitors": 768,
+    "avg_competitors": 192.0,
+    "slalom_races": 4,
+    "slalom_competitors": 768,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012,
+      2013
+    ],
+    "clubs": {
+      "KVS Písek": 4
+    }
+  },
+  {
+    "name": "Jiří Vyhnánek",
+    "races": 4,
+    "competitors": 181,
+    "avg_competitors": 45.2,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 4,
+    "sjezd_competitors": 181,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013
+    ],
+    "clubs": {
+      "Technika Praha": 4
+    }
+  },
+  {
+    "name": "Jiří Kratochvíl",
+    "races": 4,
+    "competitors": 894,
+    "avg_competitors": 223.5,
+    "slalom_races": 4,
+    "slalom_competitors": 894,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013,
+      2019,
+      2023
+    ],
+    "clubs": {
+      "UP Olomouc": 3,
+      "SKUP Olomouc, z.s. - oddíl kanoistiky": 1
+    }
+  },
+  {
+    "name": "Jana Lagnerová",
+    "races": 4,
+    "competitors": 214,
+    "avg_competitors": 53.5,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 4,
+    "sjezd_competitors": 214,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014,
+      2015,
+      2016,
+      2017
+    ],
+    "clubs": {
+      "SK Domeček Soběslav": 4
+    }
+  },
+  {
+    "name": "Ivan Pišvejc",
+    "races": 4,
+    "competitors": 941,
+    "avg_competitors": 235.2,
+    "slalom_races": 4,
+    "slalom_competitors": 941,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2015,
+      2016
+    ],
+    "clubs": {
+      "Klub Kanoistika Roudnice n.L.": 4
+    }
+  },
+  {
+    "name": "Michal Šrámek",
+    "races": 4,
+    "competitors": 750,
+    "avg_competitors": 187.5,
+    "slalom_races": 2,
+    "slalom_competitors": 493,
+    "sjezd_races": 2,
+    "sjezd_competitors": 257,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2017
+    ],
+    "clubs": {
+      "Klub Kanoistika Roudnice n.L.": 4
+    }
+  },
+  {
+    "name": "Jan Busta",
+    "races": 4,
+    "competitors": 1245,
+    "avg_competitors": 311.2,
+    "slalom_races": 2,
+    "slalom_competitors": 1161,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 2,
+    "kros_competitors": 84,
+    "years": [
+      2023,
+      2024,
+      2025
+    ],
+    "clubs": {
+      "Univerzitní sportovní klub Praha": 4
+    }
+  },
+  {
+    "name": "Aleš Marek",
+    "races": 4,
+    "competitors": 867,
+    "avg_competitors": 216.8,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 4,
+    "sjezd_competitors": 867,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2024,
+      2026
+    ],
+    "clubs": {
+      "Loko Trutnov": 4
+    }
+  },
+  {
+    "name": "Jan Merenus",
+    "races": 4,
+    "competitors": 966,
+    "avg_competitors": 241.5,
+    "slalom_races": 4,
+    "slalom_competitors": 966,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2025
+    ],
+    "clubs": {
+      "SK Kanoistika Česká Lípa, z.s.": 4
+    }
+  },
+  {
+    "name": "Michal Šťastný",
+    "races": 4,
+    "competitors": 222,
+    "avg_competitors": 55.5,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 4,
+    "sjezd_competitors": 222,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "TJ Bohemians Praha": 4
+    }
+  },
+  {
+    "name": "Michal Cuc",
+    "races": 3,
+    "competitors": 162,
+    "avg_competitors": 54.0,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 3,
+    "sjezd_competitors": 162,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2016
+    ],
+    "clubs": {
+      "Technika Praha": 3
+    }
+  },
+  {
+    "name": "Věra Jarolímková",
+    "races": 3,
+    "competitors": 78,
+    "avg_competitors": 26.0,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 3,
+    "sjezd_competitors": 78,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2016
+    ],
+    "clubs": {
+      "TJ Turnov": 3
+    }
+  },
+  {
+    "name": "Lenka Vandasová",
+    "races": 3,
+    "competitors": 138,
+    "avg_competitors": 46.0,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 3,
+    "sjezd_competitors": 138,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2016
+    ],
+    "clubs": {
+      "SK Vltava Č. Krumlov z.s.": 3
+    }
+  },
+  {
+    "name": "Lukáš Přinda",
+    "races": 3,
+    "competitors": 611,
+    "avg_competitors": 203.7,
+    "slalom_races": 3,
+    "slalom_competitors": 611,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2019,
+      2020
+    ],
+    "clubs": {
+      "Univerzitní sportovní klub Praha": 3
+    }
+  },
+  {
+    "name": "Martin Novák",
+    "races": 3,
+    "competitors": 456,
+    "avg_competitors": 152.0,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 3,
+    "sjezd_competitors": 456,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2021,
+      2025
+    ],
+    "clubs": {
+      "SK Vltava Č. Krumlov z.s.": 3
+    }
+  },
+  {
+    "name": "Martin Říha",
+    "races": 3,
+    "competitors": 648,
+    "avg_competitors": 216.0,
+    "slalom_races": 3,
+    "slalom_competitors": 648,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2021,
+      2023
+    ],
+    "clubs": {
+      "Univerzitní sportovní klub Praha": 3
+    }
+  },
+  {
+    "name": "Jiří Vašina",
+    "races": 3,
+    "competitors": 361,
+    "avg_competitors": 120.3,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 3,
+    "kros_competitors": 361,
+    "years": [
+      2025
+    ],
+    "clubs": {
+      "Univerzitní sportovní klub Praha": 3
+    }
+  },
+  {
+    "name": "Václav Martin",
+    "races": 3,
+    "competitors": 171,
+    "avg_competitors": 57.0,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 3,
+    "sjezd_competitors": 171,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "TJ Bohemians Praha": 3
+    }
+  },
+  {
+    "name": "Filip Krejza",
+    "races": 3,
+    "competitors": 389,
+    "avg_competitors": 129.7,
+    "slalom_races": 2,
+    "slalom_competitors": 354,
+    "sjezd_races": 1,
+    "sjezd_competitors": 35,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "Sportovní klub kanoistiky Vysoké Mýto": 3
+    }
+  },
+  {
+    "name": "Václav Kabrhel",
+    "races": 2,
+    "competitors": 122,
+    "avg_competitors": 61.0,
+    "slalom_races": 1,
+    "slalom_competitors": 75,
+    "sjezd_races": 1,
+    "sjezd_competitors": 47,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2012
+    ],
+    "clubs": {
+      "UP Olomouc": 2
+    }
+  },
+  {
+    "name": "Jiří Prskavec",
+    "races": 2,
+    "competitors": 272,
+    "avg_competitors": 136.0,
+    "slalom_races": 2,
+    "slalom_competitors": 272,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2013
+    ],
+    "clubs": {
+      "USK Praha": 2
+    }
+  },
+  {
+    "name": "Pavel Musil",
+    "races": 2,
+    "competitors": 429,
+    "avg_competitors": 214.5,
+    "slalom_races": 2,
+    "slalom_competitors": 429,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014
+    ],
+    "clubs": {
+      "Delfín Jablonec": 2
+    }
+  },
+  {
+    "name": "Bohumil Hrabec",
+    "races": 2,
+    "competitors": 160,
+    "avg_competitors": 80.0,
+    "slalom_races": 1,
+    "slalom_competitors": 104,
+    "sjezd_races": 1,
+    "sjezd_competitors": 56,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014
+    ],
+    "clubs": {
+      "VK Kroměříž": 2
+    }
+  },
+  {
+    "name": "Jindřich Beneš",
+    "races": 2,
+    "competitors": 778,
+    "avg_competitors": 389.0,
+    "slalom_races": 2,
+    "slalom_competitors": 778,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2014
+    ],
+    "clubs": {
+      "SK vodní slalom České Budějovice": 2
+    }
+  },
+  {
+    "name": "Pavel Přindiš",
+    "races": 2,
+    "competitors": 286,
+    "avg_competitors": 143.0,
+    "slalom_races": 2,
+    "slalom_competitors": 286,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2016
+    ],
+    "clubs": {
+      "Univerzitní sportovní klub Praha": 2
+    }
+  },
+  {
+    "name": "Lukáš Kubričan",
+    "races": 2,
+    "competitors": 546,
+    "avg_competitors": 273.0,
+    "slalom_races": 2,
+    "slalom_competitors": 546,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2016
+    ],
+    "clubs": {
+      "DUKLA Brandýs": 2
+    }
+  },
+  {
+    "name": "Jan Hek",
+    "races": 2,
+    "competitors": 196,
+    "avg_competitors": 98.0,
+    "slalom_races": 2,
+    "slalom_competitors": 196,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2017
+    ],
+    "clubs": {
+      "Klub Kanoistika Roudnice n.L.": 2
+    }
+  },
+  {
+    "name": "Stanislav Ježek",
+    "races": 2,
+    "competitors": 535,
+    "avg_competitors": 267.5,
+    "slalom_races": 2,
+    "slalom_competitors": 535,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2019
+    ],
+    "clubs": {
+      "Univerzitní sportovní klub Praha": 2
+    }
+  },
+  {
+    "name": "Anna Bednářová",
+    "races": 2,
+    "competitors": 341,
+    "avg_competitors": 170.5,
+    "slalom_races": 2,
+    "slalom_competitors": 341,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2024
+    ],
+    "clubs": {
+      "SK Kanoistika Česká Lípa, z.s.": 2
+    }
+  },
+  {
+    "name": "Tomáš Stanovský",
+    "races": 2,
+    "competitors": 387,
+    "avg_competitors": 193.5,
+    "slalom_races": 2,
+    "slalom_competitors": 387,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2025,
+      2026
+    ],
+    "clubs": {
+      "SK Vodní slalom České Budějovice": 2
+    }
+  },
+  {
+    "name": "Ladislav Hojda",
+    "races": 2,
+    "competitors": 717,
+    "avg_competitors": 358.5,
+    "slalom_races": 2,
+    "slalom_competitors": 717,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2025
+    ],
+    "clubs": {
+      "Klub vodních sportů Sušice z.s.": 2
+    }
+  },
+  {
+    "name": "Adam Vavrla",
+    "races": 2,
+    "competitors": 58,
+    "avg_competitors": 29.0,
+    "slalom_races": 1,
+    "slalom_competitors": 26,
+    "sjezd_races": 1,
+    "sjezd_competitors": 32,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2025
+    ],
+    "clubs": {
+      "VK Tzunami Ostrava": 2
+    }
+  },
+  {
+    "name": "Barbora Merenusová",
+    "races": 2,
+    "competitors": 406,
+    "avg_competitors": 203.0,
+    "slalom_races": 2,
+    "slalom_competitors": 406,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "SK Kanoistika Česká Lípa, z.s.": 2
+    }
+  },
+  {
+    "name": "Eliška Hojdová",
+    "races": 2,
+    "competitors": 649,
+    "avg_competitors": 324.5,
+    "slalom_races": 2,
+    "slalom_competitors": 649,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "Klub vodních sportů Sušice z.s.": 2
+    }
+  },
+  {
+    "name": "Martin Toncar",
+    "races": 2,
+    "competitors": 683,
+    "avg_competitors": 341.5,
+    "slalom_races": 2,
+    "slalom_competitors": 683,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "SK Vodní slalom České Budějovice": 2
+    }
+  },
+  {
+    "name": "Michaela Kratochvílová",
+    "races": 1,
+    "competitors": 76,
+    "avg_competitors": 76.0,
+    "slalom_races": 0,
+    "slalom_competitors": 0,
+    "sjezd_races": 1,
+    "sjezd_competitors": 76,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2021
+    ],
+    "clubs": {
+      "SKUP Olomouc, z.s. - oddíl kanoistiky": 1
+    }
+  },
+  {
+    "name": "David Knebel",
+    "races": 1,
+    "competitors": 130,
+    "avg_competitors": 130.0,
+    "slalom_races": 1,
+    "slalom_competitors": 130,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2024
+    ],
+    "clubs": {
+      "Sk VS Slávia Hradec Králové": 1
+    }
+  },
+  {
+    "name": "Jakub Stanovský",
+    "races": 1,
+    "competitors": 393,
+    "avg_competitors": 393.0,
+    "slalom_races": 1,
+    "slalom_competitors": 393,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2024
+    ],
+    "clubs": {
+      "Slovak Canoeing  whitewater section": 1
+    }
+  },
+  {
+    "name": "Hana Tesařová",
+    "races": 1,
+    "competitors": 234,
+    "avg_competitors": 234.0,
+    "slalom_races": 1,
+    "slalom_competitors": 234,
+    "sjezd_races": 0,
+    "sjezd_competitors": 0,
+    "kros_races": 0,
+    "kros_competitors": 0,
+    "years": [
+      2026
+    ],
+    "clubs": {
+      "SK Vodní slalom České Budějovice": 1
+    }
+  }
+]
