@@ -3,45 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#004899">
     <title>Statistika vodáckých oddílů ČR (slalom a sjezd)</title>
     <meta name="description" content="Statistika počtu pořádaných akcí a celkového průtoku závodníků u vodáckých oddílů divoké vody v České republice od roku 2012 po současnost.">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/barlow-semi-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="icon" href="assets/csk-logo.svg" type="image/svg+xml">
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="glow-bg"></div>
-    
-    <div class="dashboard-container">
-        <!-- HEADER -->
-        <header class="dashboard-header">
-            <div class="header-logo">
-                <svg viewBox="0 0 100 100" class="logo-svg" aria-hidden="true">
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoGrad)" stroke-width="4"/>
-                    <path d="M25 65 Q40 30, 50 35 T75 65" fill="none" stroke="var(--accent-teal)" stroke-width="5" stroke-linecap="round"/>
-                    <path d="M20 55 Q35 70, 50 50 T80 55" fill="none" stroke="var(--accent-blue)" stroke-width="3" stroke-linecap="round"/>
-                    <polygon points="50,20 45,35 55,35" fill="var(--accent-orange)"/>
-                    <defs>
-                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="var(--accent-blue)"/>
-                            <stop offset="100%" stop-color="var(--accent-teal)"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <div class="header-title-wrapper">
-                    <h1 class="header-title">Vodácké oddíly ČR</h1>
-                    <p class="header-subtitle">Statistika pořádaných akcí a průtoku závodníků (slalom, sjezd) 2012–2026</p>
-                </div>
+<body data-theme="light">
+    <div class="site-band" aria-hidden="true"></div>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__brand" href="https://www.kanoe.cz/" aria-label="Český svaz kanoistů – kanoe.cz">
+                <img src="assets/csk-logo.svg" alt="ČSK – Český svaz kanoistů" width="45" height="36">
+                <span class="site-header__app">Statistiky oddílů</span>
+            </a>
+            <a class="site-header__home" href="https://www.kanoe.cz/">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                kanoe.cz
+            </a>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- TITULEK -->
+        <section class="dashboard-header">
+            <div class="header-title-wrapper">
+                <p class="header-eyebrow">Divoká voda · slalom a sjezd</p>
+                <h1 class="header-title">Vodácké oddíly ČR</h1>
+                <p class="header-subtitle">Statistika pořádaných akcí a průtoku závodníků 2012–2026</p>
             </div>
             <div class="data-source-badge">
-                <span class="pulse-dot"></span>
-                <span>Data ČSK DV & Slalom World</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span>Data ČSK DV &amp; Slalom World</span>
             </div>
-        </header>
+        </section>
 
         <!-- FILTERS PANEL -->
         <section class="filters-panel" aria-label="Filtry a ovládání">
@@ -76,9 +75,9 @@
             <div class="filter-group discipline-group">
                 <label class="filter-label">Disciplína</label>
                 <div class="btn-toggle-group">
-                    <button class="btn-toggle active" data-discipline="ALL" id="btnDisciplineAll">Všechny</button>
-                    <button class="btn-toggle" data-discipline="SLALOM" id="btnDisciplineSlalom">Slalom</button>
-                    <button class="btn-toggle" data-discipline="SJEZD" id="btnDisciplineSjezd">Sjezd</button>
+                    <button class="btn-toggle active" aria-pressed="true" data-discipline="ALL" id="btnDisciplineAll">Všechny</button>
+                    <button class="btn-toggle" aria-pressed="false" data-discipline="SLALOM" id="btnDisciplineSlalom">Slalom</button>
+                    <button class="btn-toggle" aria-pressed="false" data-discipline="SJEZD" id="btnDisciplineSjezd">Sjezd</button>
                 </div>
             </div>
 
@@ -104,7 +103,7 @@
                 </div>
                 <div class="kpi-content">
                     <p class="kpi-title">Uspořádané akce</p>
-                    <h3 class="kpi-value" id="kpiRacesCount">-</h3>
+                    <p class="kpi-value" id="kpiRacesCount">-</p>
                     <p class="kpi-desc">celkový počet odjetých závodů</p>
                 </div>
             </div>
@@ -120,7 +119,7 @@
                 </div>
                 <div class="kpi-content">
                     <p class="kpi-title">Celkový průtok</p>
-                    <h3 class="kpi-value" id="kpiCompetitorsCount">-</h3>
+                    <p class="kpi-value" id="kpiCompetitorsCount">-</p>
                     <p class="kpi-desc">celkový počet startů v cíli</p>
                 </div>
             </div>
@@ -133,7 +132,7 @@
                 </div>
                 <div class="kpi-content">
                     <p class="kpi-title">Nejaktivnější oddíl</p>
-                    <h3 class="kpi-value kpi-text-sm" id="kpiTopClubName">-</h3>
+                    <p class="kpi-value kpi-text-sm" id="kpiTopClubName">-</p>
                     <p class="kpi-desc" id="kpiTopClubDesc">pořádal nejvíce akcí</p>
                 </div>
             </div>
@@ -148,7 +147,7 @@
                 </div>
                 <div class="kpi-content">
                     <p class="kpi-title">Průměrná účast</p>
-                    <h3 class="kpi-value" id="kpiAvgParticipation">-</h3>
+                    <p class="kpi-value" id="kpiAvgParticipation">-</p>
                     <p class="kpi-desc">závodníků na jeden závod</p>
                 </div>
             </div>
@@ -220,7 +219,11 @@
                 </table>
             </div>
         </section>
-    </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">Zdroj dat: registrační a výsledkový systém ČSK DV a Slalom World. Vzhled podle design systému <a href="https://github.com/CzechCanoe/rvp-design-system">ČSK RVP</a>.</div>
+    </footer>
 
     <!-- SCRIPTS -->
     <script src="data.js"></script>
