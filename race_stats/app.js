@@ -1,3 +1,44 @@
+// Barvy a písma z CSK RVP Design System (čtené z CSS tokenů, aby graf a stránka nesly stejné hodnoty)
+const cssVar = (name, fallback) => {
+    const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    return v || fallback;
+};
+const CSK = {
+    navy: cssVar('--csk-navy', '#004899'),
+    blue: cssVar('--csk-blue', '#2a66b4'),
+    blueDark: cssVar('--csk-blue-dark', '#1d4f8f'),
+    vt: cssVar('--csk-vt', '#b0471a'),
+    text: cssVar('--csk-ink', '#1b1f26'),
+    text2: cssVar('--csk-ink-2', '#444b55'),
+    text3: cssVar('--csk-ink-3', '#626a75'),
+    line: cssVar('--csk-line', '#d9dee5'),
+    line2: cssVar('--csk-line-2', '#eceff3'),
+    surface: cssVar('--csk-white', '#ffffff'),
+    fontSans: "'IBM Plex Sans', system-ui, sans-serif",
+    fontDisplay: "'Barlow Semi Condensed', 'IBM Plex Sans', sans-serif"
+};
+function withAlpha(hex, a) {
+    const h = hex.replace('#', '');
+    const n = parseInt(h.length === 3 ? h.split('').map(c => c + c).join('') : h, 16);
+    return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
+}
+const TOOLTIP = {
+    backgroundColor: CSK.text,
+    titleColor: '#ffffff',
+    bodyColor: '#ffffff',
+    titleFont: { family: CSK.fontDisplay, size: 14, weight: '600' },
+    bodyFont: { family: CSK.fontSans, size: 13 },
+    padding: 10,
+    cornerRadius: 6,
+    displayColors: true,
+    boxPadding: 4
+};
+if (window.Chart) {
+    Chart.defaults.font.family = CSK.fontSans;
+    Chart.defaults.color = CSK.text2;
+    Chart.defaults.locale = 'cs-CZ';
+}
+
 /* WATER SPORTS CANOE CLUB STATISTICS - FRONTEND LOGIC */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -28,6 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
     initDropdowns();
     setupEventListeners();
     updateDashboard();
+    // Grafy na canvasu znovu vykreslit, až se načtou self-hosted fonty
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => renderCharts());
+    }
 
     // --- INITIALIZATION ---
     function initDropdowns() {
@@ -105,8 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const disciplineButtons = document.querySelectorAll('.btn-toggle');
         disciplineButtons.forEach(btn => {
             btn.addEventListener('click', (e) => {
-                disciplineButtons.forEach(b => b.classList.remove('active'));
+                disciplineButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
                 btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
                 
                 state.activeFilters.discipline = btn.getAttribute('data-discipline');
                 updateDashboard();
@@ -298,10 +344,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const ctx = document.getElementById('trendChart').getContext('2d');
         
-        // Define beautiful gradients
-        const gradientComps = ctx.createLinearGradient(0, 0, 0, 300);
-        gradientComps.addColorStop(0, 'rgba(0, 210, 255, 0.4)');
-        gradientComps.addColorStop(1, 'rgba(0, 210, 255, 0.02)');
+        // Plná plocha bez gradientu (DS v2: žádné gradienty)
+        const fillComps = withAlpha(CSK.navy, 0.08);
 
         state.charts.trend = new Chart(ctx, {
             type: 'line',
@@ -311,11 +355,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Počet startů (průtok)',
                         data: competitorsTrend,
-                        borderColor: '#00d2ff',
-                        borderWidth: 3,
-                        pointBackgroundColor: '#00d2ff',
-                        pointHoverRadius: 7,
-                        backgroundColor: gradientComps,
+                        borderColor: CSK.navy,
+                        borderWidth: 2.5,
+                        pointBackgroundColor: CSK.navy,
+                        pointBorderColor: CSK.surface,
+                        pointBorderWidth: 1.5,
+                        pointRadius: 3.5,
+                        pointHoverRadius: 6,
+                        backgroundColor: fillComps,
                         fill: true,
                         yAxisID: 'yCompetitors',
                         tension: 0.3
@@ -323,10 +370,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Počet závodů',
                         data: racesTrend,
-                        borderColor: '#00f2fe',
+                        borderColor: CSK.vt,
                         borderWidth: 2,
-                        borderDash: [5, 5],
-                        pointBackgroundColor: '#00f2fe',
+                        borderDash: [5, 4],
+                        pointBackgroundColor: CSK.vt,
+                        pointBorderColor: CSK.surface,
+                        pointBorderWidth: 1.5,
+                        pointRadius: 3,
+                        pointStyle: 'rectRot',
                         yAxisID: 'yRaces',
                         tension: 0.2,
                         fill: false
@@ -338,35 +389,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
+                        align: 'start',
                         labels: {
-                            color: '#e2e8f0',
-                            font: { family: 'Inter', size: 12 }
+                            color: CSK.text2,
+                            font: { family: CSK.fontSans, size: 13 },
+                            usePointStyle: true,
+                            boxWidth: 8,
+                            boxHeight: 8
                         }
                     },
                     tooltip: {
+                        ...TOOLTIP,
                         mode: 'index',
                         intersect: false
                     }
                 },
                 scales: {
                     x: {
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                        ticks: { color: '#94a3b8' }
+                        grid: { color: CSK.line2 }, border: { color: CSK.line },
+                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } }
                     },
                     yCompetitors: {
                         type: 'linear',
                         position: 'left',
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                        ticks: { color: '#94a3b8' },
-                        title: { display: true, text: 'Účast (celkový průtok lodí)', color: '#94a3b8' },
+                        grid: { color: CSK.line2 }, border: { color: CSK.line },
+                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
+                        title: { display: true, text: 'Účast (celkový průtok lodí)', color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
                         beginAtZero: true
                     },
                     yRaces: {
                         type: 'linear',
                         position: 'right',
                         grid: { drawOnChartArea: false }, // Only draw grid for left axis
-                        ticks: { color: '#94a3b8' },
-                        title: { display: true, text: 'Počet akcí', color: '#94a3b8' },
+                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
+                        title: { display: true, text: 'Počet akcí', color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
                         beginAtZero: true
                     }
                 }
@@ -396,9 +452,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     label: 'Počet akcí',
                     data: data,
-                    backgroundColor: 'rgba(0, 242, 254, 0.85)',
-                    hoverBackgroundColor: '#00f2fe',
-                    borderRadius: 6,
+                    backgroundColor: CSK.navy,
+                    hoverBackgroundColor: CSK.blueDark,
+                    borderRadius: 3,
+                    maxBarThickness: 22,
                     borderWidth: 0
                 }]
             },
@@ -407,16 +464,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false }
+                    legend: { display: false },
+                    tooltip: TOOLTIP
                 },
                 scales: {
                     x: {
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                        ticks: { color: '#94a3b8' }
+                        grid: { color: CSK.line2 }, border: { color: CSK.line },
+                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } }
                     },
                     y: {
                         grid: { display: false },
-                        ticks: { color: '#e2e8f0', font: { family: 'Inter', size: 11 } }
+                        ticks: { color: CSK.text, font: { family: CSK.fontSans, size: 12 } }
                     }
                 }
             }
@@ -445,9 +503,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     label: 'Průtok (startů)',
                     data: data,
-                    backgroundColor: 'rgba(255, 83, 118, 0.85)',
-                    hoverBackgroundColor: '#ff5376',
-                    borderRadius: 6,
+                    backgroundColor: CSK.blue,
+                    hoverBackgroundColor: CSK.blueDark,
+                    borderRadius: 3,
+                    maxBarThickness: 22,
                     borderWidth: 0
                 }]
             },
@@ -456,16 +515,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false }
+                    legend: { display: false },
+                    tooltip: TOOLTIP
                 },
                 scales: {
                     x: {
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                        ticks: { color: '#94a3b8' }
+                        grid: { color: CSK.line2 }, border: { color: CSK.line },
+                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } }
                     },
                     y: {
                         grid: { display: false },
-                        ticks: { color: '#e2e8f0', font: { family: 'Inter', size: 11 } }
+                        ticks: { color: CSK.text, font: { family: CSK.fontSans, size: 12 } }
                     }
                 }
             }
@@ -502,7 +562,7 @@ document.addEventListener('DOMContentLoaded', () => {
         recordsCount.textContent = `Zobrazeno ${sortedClubs.length} oddílů`;
 
         if (sortedClubs.length === 0) {
-            body.innerHTML = `<tr><td colspan="7" class="text-center" style="padding: 40px; color: var(--text-muted);">Žádné oddíly neodpovídají nastaveným filtrům.</td></tr>`;
+            body.innerHTML = `<tr><td colspan="7" class="empty-row">Žádné oddíly neodpovídají nastaveným filtrům.</td></tr>`;
             return;
         }
 
@@ -530,21 +590,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span>${club.name}</span>
                     </div>
                 </td>
-                <td class="text-center font-heading" style="font-weight:700; font-size:15px;">${club.totals.all_races}</td>
+                <td class="text-center cell-strong">${club.totals.all_races}</td>
                 <td class="text-center">
                     <span class="badge-sub badge-slalom">${club.totals.slalom_races} sl</span>
-                    <span class="badge-sub" style="color:var(--text-muted); padding: 0 4px;">/</span>
+                    <span class="badge-sep" aria-hidden="true">/</span>
                     <span class="badge-sub badge-sjezd">${club.totals.sjezd_races} sj</span>
-                    ${club.totals.kros_races > 0 ? `<span class="badge-sub" style="color:var(--text-muted); padding: 0 4px;">/</span><span class="badge-sub badge-kros">${club.totals.kros_races} kr</span>` : ''}
+                    ${club.totals.kros_races > 0 ? `<span class="badge-sep" aria-hidden="true">/</span><span class="badge-sub badge-kros">${club.totals.kros_races} kr</span>` : ''}
                 </td>
-                <td class="text-center font-heading" style="font-weight:700; font-size:15px; color:var(--accent-blue);">${formatNumber(club.totals.all_competitors)}</td>
+                <td class="text-center cell-strong cell-brand">${formatNumber(club.totals.all_competitors)}</td>
                 <td class="text-center">
                     <span class="badge-sub badge-slalom">${formatNumber(club.totals.slalom_competitors)} sl</span>
-                    <span class="badge-sub" style="color:var(--text-muted); padding: 0 4px;">/</span>
+                    <span class="badge-sep" aria-hidden="true">/</span>
                     <span class="badge-sub badge-sjezd">${formatNumber(club.totals.sjezd_competitors)} sj</span>
-                    ${club.totals.kros_competitors > 0 ? `<span class="badge-sub" style="color:var(--text-muted); padding: 0 4px;">/</span><span class="badge-sub badge-kros">${formatNumber(club.totals.kros_competitors)} kr</span>` : ''}
+                    ${club.totals.kros_competitors > 0 ? `<span class="badge-sep" aria-hidden="true">/</span><span class="badge-sub badge-kros">${formatNumber(club.totals.kros_competitors)} kr</span>` : ''}
                 </td>
-                <td class="text-center font-heading" style="color:var(--accent-purple); font-weight:600;">${avgParticipation}</td>
+                <td class="text-center cell-muted">${avgParticipation}</td>
                 <td class="text-center">
                     <button class="detail-btn" aria-label="Zobrazit detaily závodů" aria-expanded="${isExpanded}">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -678,13 +738,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const rTr = document.createElement('tr');
             rTr.innerHTML = `
-                <td style="color:var(--text-secondary); font-weight: 500;">
-                    <div style="font-size: 11px; color:var(--text-muted);">${r.year}</div>
-                    <div>${r.date}</div>
+                <td>
+                    <div class="race-year">${r.year}</div>
+                    <div class="race-date">${r.date}</div>
                 </td>
-                <td style="font-weight:600; color:#fff;">${r.name}</td>
+                <td class="race-name">${r.name}</td>
                 <td><span class="badge-pill ${discClass}">${discLabel}</span></td>
-                <td style="text-align: center; font-weight: 700; font-size: 13px; color:var(--accent-teal);">${formatNumber(r.competitors)}</td>
+                <td class="race-count">${formatNumber(r.competitors)}</td>
             `;
             tbody.appendChild(rTr);
         });
