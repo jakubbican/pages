@@ -712,6 +712,50 @@ body {
   text-align: center !important;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.table-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--ui-space-3);
+}
+
+.mobile-sort {
+  display: none;
+  align-items: center;
+  gap: var(--ui-space-2);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-text-2);
+}
+
+.mobile-sort .form-select {
+  min-width: 0;
+  min-height: 40px;
+  font-size: var(--ui-text-sm);
+}
+
+/* Rozpad po disciplínách pod hlavním číslem – zobrazí se jen na užších obrazovkách */
+.cell-split {
+  display: none;
+  margin-top: 2px;
+  line-height: var(--ui-line-height-snug);
+}
+
+.cell-split .badge-sub {
+  font-size: var(--ui-text-xs);
+}
+
 .cell-strong {
   font-family: var(--ui-font-display);
   font-size: 20px;
@@ -1040,6 +1084,153 @@ body {
   .data-table > thead > tr > th:first-child,
   .data-table > tbody > tr > td:first-child {
     padding-left: var(--ui-space-4);
+  }
+}
+
+/* Tabulka oddílů: tablet – rozpad pod hlavním číslem místo samostatných sloupců */
+@media (max-width: 1100px) {
+  .data-table .col-split {
+    display: none;
+  }
+
+  .cell-split {
+    display: block;
+  }
+}
+
+/* Tabulka oddílů: mobil – řádek jako karta */
+@media (max-width: 760px) {
+  .table-card-header {
+    align-items: flex-start;
+  }
+
+  .table-actions {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .mobile-sort {
+    display: inline-flex;
+  }
+
+  .data-table,
+  .data-table > tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .data-table > thead {
+    display: none;
+  }
+
+  .data-table > tbody > tr.club-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr) auto;
+    grid-template-areas:
+      "name name name btn"
+      "races comps avg avg";
+    align-items: start;
+    gap: var(--ui-space-2) var(--ui-space-3);
+    padding: var(--ui-space-3) var(--ui-space-4);
+  }
+
+  .data-table > tbody > tr.club-row > td {
+    display: block;
+    padding: 0 !important;
+    text-align: left !important;
+  }
+
+  .data-table > tbody > tr.club-row > td.col-split { display: none !important; }
+  .data-table .cell-split .badge-sep { display: none; }
+  .data-table .cell-split .badge-sub { display: block; }
+  .data-table > tbody > tr.club-row > td.col-name { grid-area: name; align-self: center; }
+  .data-table > tbody > tr.club-row > td.col-btn { grid-area: btn; align-self: center; }
+  .data-table > tbody > tr.club-row > td.col-races { grid-area: races; }
+  .data-table > tbody > tr.club-row > td.col-comps { grid-area: comps; }
+  .data-table > tbody > tr.club-row > td.col-avg { grid-area: avg; }
+
+  .data-table > tbody > tr.club-row > td[data-label]::before {
+    content: attr(data-label);
+    display: block;
+    margin-bottom: 2px;
+    font-size: var(--ui-text-xs);
+    font-weight: var(--ui-font-weight-bold);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ui-color-text-3);
+  }
+
+  .club-name-cell {
+    min-width: 0;
+  }
+
+  .club-name-cell span {
+    font-weight: var(--ui-font-weight-semibold);
+  }
+
+  .detail-btn {
+    width: var(--ui-tap);
+    height: var(--ui-tap);
+  }
+
+  .data-table > tbody > tr.detail-row {
+    display: block !important;
+  }
+
+  .data-table > tbody > tr.detail-row[style*="none"] {
+    display: none !important;
+  }
+
+  .data-table > tbody > tr.detail-row > td {
+    display: block;
+  }
+
+  .data-table > tbody > tr.empty-row,
+  .data-table > tbody > tr > td.empty-row {
+    display: block;
+  }
+
+  .detail-search {
+    width: 100%;
+  }
+
+  /* Seznam závodů oddílu */
+  .races-grid-table thead {
+    display: none;
+  }
+
+  .races-grid-table,
+  .races-grid-table tbody {
+    display: block;
+  }
+
+  .races-grid-table tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "when count"
+      "name name"
+      "disc disc";
+    gap: 2px var(--ui-space-3);
+    padding: var(--ui-space-2) var(--ui-space-3);
+  }
+
+  .races-grid-table td {
+    padding: 0 !important;
+  }
+
+  .races-grid-table .race-when { grid-area: when; display: flex; gap: var(--ui-space-2); align-items: baseline; }
+  .races-grid-table .race-when .race-year { display: none; }
+  .races-grid-table .race-name { grid-area: name; }
+  .races-grid-table .race-disc { grid-area: disc; }
+  .races-grid-table .race-count { grid-area: count; text-align: right !important; }
+  .races-grid-table .race-count::after {
+    content: ' ' attr(data-label);
+    font-family: var(--ui-font-sans);
+    font-weight: var(--ui-font-weight-regular);
+    font-size: var(--ui-text-xs);
+    color: var(--ui-color-text-3);
   }
 }
 

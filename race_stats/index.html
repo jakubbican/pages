@@ -199,6 +199,16 @@
                     <p class="table-card-subtitle">Kliknutím na řádek oddílu zobrazíte seznam všech konkrétních pořádaných závodů</p>
                 </div>
                 <div class="table-actions">
+                    <label class="mobile-sort">
+                        <span>Řadit</span>
+                        <span class="select-wrapper">
+                            <select id="mobileSort" class="form-select">
+                                <option value="name">podle názvu</option>
+                                <option value="races" selected>podle počtu akcí</option>
+                                <option value="competitors">podle průtoku</option>
+                            </select>
+                        </span>
+                    </label>
                     <span class="table-records-count" id="tableRecordsCount">Zobrazeno 0 oddílů</span>
                 </div>
             </div>
@@ -207,13 +217,13 @@
                 <table class="data-table" id="clubsTable">
                     <thead>
                         <tr>
-                            <th class="th-sort sort-asc" data-sort="name">Oddíl <span class="sort-arrow"></span></th>
-                            <th class="th-sort text-center" data-sort="races">Uspořádané akce <span class="sort-arrow"></span></th>
-                            <th class="text-center">Slalom / Sjezd / Kros</th>
+                            <th class="th-sort" data-sort="name">Oddíl <span class="sort-arrow"></span></th>
+                            <th class="th-sort sort-desc text-center" data-sort="races">Uspořádané akce <span class="sort-arrow"></span></th>
+                            <th class="text-center col-split">Slalom / Sjezd / Kros</th>
                             <th class="th-sort text-center" data-sort="competitors">Průtok závodníků <span class="sort-arrow"></span></th>
-                            <th class="text-center">Slalom / Sjezd / Kros</th>
+                            <th class="text-center col-split">Slalom / Sjezd / Kros</th>
                             <th class="text-center">Průměr na závod</th>
-                            <th style="width: 60px;"></th>
+                            <th style="width: 60px;"><span class="sr-only">Detail</span></th>
                         </tr>
                     </thead>
                     <tbody id="clubsTableBody">

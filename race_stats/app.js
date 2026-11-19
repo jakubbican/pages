@@ -186,8 +186,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.add(state.sorting.order === 'asc' ? 'sort-asc' : 'sort-desc');
 
                 renderTable();
+                const ms = document.getElementById('mobileSort');
+                if (ms) ms.value = field;
             });
         });
+
+        // Řazení na mobilu (záhlaví tabulky je skryté)
+        const mobileSort = document.getElementById('mobileSort');
+        if (mobileSort) {
+            mobileSort.addEventListener('change', () => {
+                const th = document.querySelector(`.th-sort[data-sort="${mobileSort.value}"]`);
+                if (th && state.sorting.field !== mobileSort.value) th.click();
+            });
+        }
     }
 
     // --- DATA PROCESSING CORE ---
@@ -583,31 +594,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const tr = document.createElement('tr');
             tr.id = clubRowId;
             tr.className = `club-row ${isExpanded ? 'active' : ''}`;
+            const racesSplit = `
+                    <span class="badge-sub badge-slalom">${club.totals.slalom_races} sl</span>
+                    <span class="badge-sep" aria-hidden="true">/</span>
+                    <span class="badge-sub badge-sjezd">${club.totals.sjezd_races} sj</span>
+                    ${club.totals.kros_races > 0 ? `<span class="badge-sep" aria-hidden="true">/</span><span class="badge-sub badge-kros">${club.totals.kros_races} kr</span>` : ''}`;
+            const compsSplit = `
+                    <span class="badge-sub badge-slalom">${formatNumber(club.totals.slalom_competitors)} sl</span>
+                    <span class="badge-sep" aria-hidden="true">/</span>
+                    <span class="badge-sub badge-sjezd">${formatNumber(club.totals.sjezd_competitors)} sj</span>
+                    ${club.totals.kros_competitors > 0 ? `<span class="badge-sep" aria-hidden="true">/</span><span class="badge-sub badge-kros">${formatNumber(club.totals.kros_competitors)} kr</span>` : ''}`;
             tr.innerHTML = `
-                <td>
+                <td class="col-name">
                     <div class="club-name-cell">
                         <div class="club-avatar">${initials}</div>
                         <span>${club.name}</span>
                     </div>
                 </td>
-                <td class="text-center cell-strong">${club.totals.all_races}</td>
-                <td class="text-center">
-                    <span class="badge-sub badge-slalom">${club.totals.slalom_races} sl</span>
-                    <span class="badge-sep" aria-hidden="true">/</span>
-                    <span class="badge-sub badge-sjezd">${club.totals.sjezd_races} sj</span>
-                    ${club.totals.kros_races > 0 ? `<span class="badge-sep" aria-hidden="true">/</span><span class="badge-sub badge-kros">${club.totals.kros_races} kr</span>` : ''}
+                <td class="text-center col-races" data-label="Akce">
+                    <span class="cell-strong">${club.totals.all_races}</span>
+                    <div class="cell-split">${racesSplit}</div>
                 </td>
-                <td class="text-center cell-strong cell-brand">${formatNumber(club.totals.all_competitors)}</td>
-                <td class="text-center">
-                    <span class="badge-sub badge-slalom">${formatNumber(club.totals.slalom_competitors)} sl</span>
-                    <span class="badge-sep" aria-hidden="true">/</span>
-                    <span class="badge-sub badge-sjezd">${formatNumber(club.totals.sjezd_competitors)} sj</span>
-                    ${club.totals.kros_competitors > 0 ? `<span class="badge-sep" aria-hidden="true">/</span><span class="badge-sub badge-kros">${formatNumber(club.totals.kros_competitors)} kr</span>` : ''}
+                <td class="text-center col-split">${racesSplit}</td>
+                <td class="text-center col-comps" data-label="Průtok">
+                    <span class="cell-strong cell-brand">${formatNumber(club.totals.all_competitors)}</span>
+                    <div class="cell-split">${compsSplit}</div>
                 </td>
-                <td class="text-center cell-muted">${avgParticipation}</td>
-                <td class="text-center">
-                    <button class="detail-btn" aria-label="Zobrazit detaily závodů" aria-expanded="${isExpanded}">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <td class="text-center col-split">${compsSplit}</td>
+                <td class="text-center col-avg" data-label="Ø na závod"><span class="cell-muted">${avgParticipation}</span></td>
+                <td class="text-center col-btn">
+                    <button class="detail-btn" aria-label="Zobrazit závody oddílu ${club.name}" aria-expanded="${isExpanded}">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <polyline points="9 18 15 12 9 6"></polyline>
                         </svg>
                     </button>
@@ -738,13 +755,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const rTr = document.createElement('tr');
             rTr.innerHTML = `
-                <td>
+                <td class="race-when">
                     <div class="race-year">${r.year}</div>
                     <div class="race-date">${r.date}</div>
                 </td>
                 <td class="race-name">${r.name}</td>
-                <td><span class="badge-pill ${discClass}">${discLabel}</span></td>
-                <td class="race-count">${formatNumber(r.competitors)}</td>
+                <td class="race-disc"><span class="badge-pill ${discClass}">${discLabel}</span></td>
+                <td class="race-count" data-label="v cíli">${formatNumber(r.competitors)}</td>
             `;
             tbody.appendChild(rTr);
         });
