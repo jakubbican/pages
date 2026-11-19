@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#002E5D">
+    <title>Termínová listina 2026</title>
+    <link rel="icon" href="assets/logo-navy.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/skvscb-theme.css">
+    <!-- HTML2PDF Library for PDF Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        /* Termínová listina – vzhled SK Vodní slalom České Budějovice (assets/skvscb-theme.css: tokeny z jakubbican/skvscb-design + vrstva --ui-*) */
+
+        :root {
+            /* Disciplíny divoké vody – jen pro štítky, vždy s textem */
+            --app-slalom-bg: var(--water);
+            --app-slalom-text: var(--navy);
+            --app-sjezd-bg: #FBEBCB;
+            --app-sjezd-text: var(--accent-text);
+            --app-sprint-bg: #FBEBCB;
+            --app-sprint-text: var(--accent-text);
+            --app-sprint-border: var(--accent-strong);
+            --app-kros-bg: var(--line-soft);
+            --app-kros-text: var(--muted);
+        }
+
+        * { box-sizing: border-box; }
+
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+        body {
+            margin: 0;
+            background: var(--ui-color-page);
+            color: var(--ui-color-text);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-base);
+            line-height: var(--ui-line-height-normal);
+            -webkit-text-size-adjust: 100%;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--ui-color-focus);
+            outline-offset: 2px;
+        }
+
+        a { color: var(--ui-color-action); }
+        a:hover { color: var(--ui-color-action-hover); }
+
+        /* ---------- Hlavička: satelitní lišta ---------- */
+
+        .site-header {
+            background: var(--ui-color-surface-2);
+            border-bottom: 1px solid var(--ui-color-border);
+        }
+
+        .site-header__inner {
+            display: flex;
+            align-items: center;
+            gap: var(--ui-space-3);
+            max-width: var(--ui-layout-max-width);
+            min-height: 76px;
+            margin: 0 auto;
+            padding: var(--ui-space-2) var(--ui-layout-gutter);
+        }
+
+        .site-header__brand {
+            display: flex;
+            align-items: center;
+            gap: var(--ui-space-3);
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .site-header__brand img { display: block; width: 36px; height: 48px; }
+
+        .site-header__name {
+            font-family: var(--ui-font-display);
+            font-size: 20px;
+            font-weight: var(--ui-font-weight-black);
+            line-height: .95;
+            text-transform: uppercase;
+            color: var(--ui-color-brand);
+        }
+
+        .site-header__name span { font-weight: var(--ui-font-weight-semibold); color: var(--ui-color-text-2); }
+
+        .site-header__sep { align-self: stretch; width: 1px; margin: var(--ui-space-2) var(--ui-space-1); background: var(--ui-color-border); }
+
+        .site-header__app {
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-lg);
+            font-weight: var(--ui-font-weight-bold);
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: var(--ui-color-text-2);
+        }
+
+        .site-header__home {
+            margin-left: auto;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--ui-space-1);
+            min-height: 32px;
+            padding: var(--ui-space-1) var(--ui-space-2);
+            border-radius: var(--ui-radius-sm);
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-medium);
+            text-decoration: none;
+        }
+
+        .site-header__home:hover { color: var(--ui-color-action-hover); }
+
+        /* ---------- Obsah ---------- */
+        .container {
+            max-width: var(--ui-layout-max-width);
+            margin: 0 auto;
+            padding: var(--ui-space-8) var(--ui-layout-gutter) var(--ui-space-10);
+            background: var(--ui-color-page);
+        }
+
+        .page-title {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: var(--ui-space-4);
+            margin-bottom: var(--ui-space-6);
+        }
+
+        .page-title__main { display: flex; flex-direction: column; gap: var(--ui-space-2); min-width: 0; }
+
+        .pdf-logo { display: none; }
+
+        .page-eyebrow {
+            margin: 0;
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-bold);
+            text-transform: uppercase;
+            letter-spacing: var(--ui-letter-spacing-eyebrow);
+            color: var(--ui-color-eyebrow);
+        }
+
+        h1 {
+            margin: 0;
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-3xl);
+            font-weight: var(--ui-font-weight-black);
+            line-height: var(--ui-line-height-tight);
+            letter-spacing: var(--ui-letter-spacing-tight);
+            text-transform: uppercase;
+            color: var(--ui-color-brand);
+        }
+
+        .page-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: var(--ui-space-2);
+            margin: 0;
+            font-size: var(--ui-text-sm);
+            color: var(--ui-color-text-3);
+        }
+
+        .meta-badge {
+            display: inline-flex;
+            align-items: center;
+            height: 22px;
+            padding: 0 var(--ui-space-2);
+            border-radius: var(--ui-radius-sm);
+            background: var(--ui-color-surface-3);
+            color: var(--ui-color-text-2);
+            font-size: 12px;
+            font-weight: var(--ui-font-weight-semibold);
+        }
+
+        .count { font-variant-numeric: tabular-nums; }
+
+        .archive-link { margin-left: var(--ui-space-2); font-weight: var(--ui-font-weight-semibold); }
+        .pdf-export .archive-link { display: none !important; }
+
+        /* ---------- Filtry ---------- */
+        .filters {
+            display: grid;
+            grid-template-columns: minmax(220px, 2fr) minmax(160px, 1fr) minmax(160px, 1fr);
+            gap: var(--ui-space-4) var(--ui-space-5);
+            margin-bottom: var(--ui-space-6);
+            padding: var(--ui-space-4) var(--ui-space-5);
+            background: var(--ui-color-surface);
+            border-radius: var(--ui-radius-lg);
+            box-shadow: var(--ui-shadow-card);
+        }
+
+        .filter-group { display: flex; flex-direction: column; gap: var(--ui-space-1); min-width: 0; }
+        .filter-group-chips { grid-column: 1 / 3; }
+        .btn-group { grid-column: 3; justify-content: flex-end; align-items: flex-end; }
+
+        label, .filter-label {
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-medium);
+            color: var(--ui-color-text-2);
+        }
+
+        .chip-hint { font-weight: var(--ui-font-weight-regular); color: var(--ui-color-text-3); }
+
+        .input-wrapper { position: relative; display: flex; align-items: center; }
+
+        .input-icon {
+            position: absolute;
+            left: var(--ui-space-3);
+            width: 18px;
+            height: 18px;
+            color: var(--ui-color-text-3);
+            pointer-events: none;
+        }
+
+        .select-wrapper { position: relative; }
+
+        .select-wrapper::after {
+            content: '';
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            width: 7px;
+            height: 7px;
+            border-right: 2px solid var(--ui-color-text-2);
+            border-bottom: 2px solid var(--ui-color-text-2);
+            transform: translateY(-70%) rotate(45deg);
+            pointer-events: none;
+        }
+
+        input, select {
+            width: 100%;
+            min-height: var(--ui-tap);
+            padding: 0 var(--ui-space-3);
+            background: var(--ui-color-surface);
+            border: 2px solid var(--ui-color-border);
+            border-radius: var(--ui-radius-md);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-base);
+            color: var(--ui-color-text);
+            transition: border-color var(--ui-transition-fast);
+        }
+
+        input { padding-left: 40px; }
+        input::placeholder { color: var(--ui-color-text-3); }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        input:hover, select:hover { border-color: var(--ui-color-text-3); }
+
+        input:focus, select:focus {
+            outline: 2px solid var(--ui-color-focus);
+            outline-offset: 1px;
+            border-color: var(--ui-color-brand);
+        }
+
+        /* Úroveň – FilterPills */
+        .level-chips { display: flex; flex-wrap: wrap; gap: var(--ui-space-2); }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            height: 34px;
+            padding: 0 var(--ui-space-3);
+            background: var(--ui-color-surface);
+            border: 2px solid var(--ui-color-border);
+            border-radius: var(--ui-radius-md);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-semibold);
+            color: var(--ui-color-text-2);
+            white-space: nowrap;
+            cursor: pointer;
+            transition: background-color var(--ui-transition-fast), border-color var(--ui-transition-fast), color var(--ui-transition-fast);
+        }
+
+        .chip:hover { background: var(--ui-color-surface-2); color: var(--ui-color-text); }
+
+        .chip.active {
+            background: var(--ui-color-brand);
+            border-color: var(--ui-color-brand);
+            color: var(--ui-color-text-on-fill);
+        }
+
+        .chip.active:hover { background: var(--navy-deep); border-color: var(--navy-deep); }
+
+        .chip:focus-visible { outline-offset: 2px; }
+
+        /* Tlačítka – Button */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--ui-space-2);
+            min-height: 40px;
+            min-width: var(--ui-tap);
+            padding: 0 var(--ui-space-4);
+            border: 1px solid transparent;
+            border-radius: var(--ui-radius-md);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-base);
+            font-weight: var(--ui-font-weight-semibold);
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color var(--ui-transition-fast), border-color var(--ui-transition-fast), color var(--ui-transition-fast);
+        }
+
+        .btn svg { width: 18px; height: 18px; }
+
+        /* Jediná akcentní akce na obrazovce: šafrán, text navy */
+        .btn-pdf {
+            background: var(--ui-color-accent);
+            color: var(--ui-color-on-accent);
+            font-weight: var(--ui-font-weight-bold);
+            border-radius: var(--ui-radius-sm);
+            min-height: 44px;
+        }
+
+        .btn-pdf:hover { background: var(--accent-on-navy); }
+
+        .btn-cal {
+            min-height: 36px;
+            min-width: 36px;
+            padding: 0;
+            background: transparent;
+            border: 2px solid var(--ui-color-border);
+            color: var(--ui-color-brand);
+        }
+
+        .btn-cal:hover {
+            border-color: var(--ui-color-action);
+            color: var(--ui-color-action);
+            background: var(--ui-color-highlight-bg);
+        }
+
+        .btn-cal svg { width: 18px; height: 18px; fill: currentColor; }
+
+        /* ---------- Tabulka ---------- */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: var(--ui-radius-lg);
+            background: var(--ui-color-surface);
+            box-shadow: var(--ui-shadow-card);
+        }
+
+        table {
+            width: 100%;
+            min-width: 880px;
+            border-collapse: collapse;
+            font-size: var(--ui-text-md);
+        }
+
+        th, td {
+            padding: var(--ui-space-3);
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--ui-color-border-2);
+        }
+
+        th {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            padding-top: var(--ui-space-2);
+            padding-bottom: var(--ui-space-2);
+            background: var(--ui-color-surface);
+            border-bottom: 1px solid var(--ui-color-border);
+            font-size: var(--ui-text-xs);
+            font-weight: var(--ui-font-weight-bold);
+            text-transform: uppercase;
+            letter-spacing: var(--ui-letter-spacing-caps);
+            color: var(--ui-color-text-3);
+            white-space: nowrap;
+        }
+
+        tbody tr:last-child td { border-bottom: 0; }
+        tbody tr { transition: background-color var(--ui-transition-fast); }
+        tbody tr:hover { background: var(--ui-color-surface-2); }
+
+        td { line-height: var(--ui-line-height-snug); }
+
+        .date-col {
+            white-space: nowrap;
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-lg);
+            font-weight: var(--ui-font-weight-bold);
+            font-variant-numeric: tabular-nums;
+            color: var(--ui-color-brand);
+        }
+
+        .place-col { font-weight: var(--ui-font-weight-semibold); }
+        .org-col { color: var(--ui-color-text-2); }
+        .action-col { color: var(--ui-color-text-2); }
+        .cal-col { width: 56px; text-align: center; vertical-align: middle; }
+        .badges-col { white-space: nowrap; }
+
+        .empty-row td {
+            padding: var(--ui-space-8);
+            text-align: center;
+            color: var(--ui-color-text-3);
+        }
+
+        /* Štítky – Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            height: 22px;
+            margin: 0 4px 4px 0;
+            padding: 0 var(--ui-space-2);
+            border: 1px solid transparent;
+            border-radius: var(--ui-radius-sm);
+            font-size: 12px;
+            font-weight: var(--ui-font-weight-semibold);
+            line-height: 1;
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+
+        .disc-slalom { background: var(--app-slalom-bg); color: var(--app-slalom-text); }
+        .disc-sjezd { background: var(--app-sjezd-bg); color: var(--app-sjezd-text); }
+        .disc-sprint { background: transparent; border-color: var(--app-sprint-border); color: var(--app-sprint-text); }
+        .disc-kros { background: var(--app-kros-bg); color: var(--app-kros-text); }
+        .disc-other { background: transparent; border-color: var(--ui-color-border); color: var(--ui-color-text-2); }
+
+        /* Úroveň: MČR = navy, ČP = voda, mezinárodní = navy obrys, ostatní = neutrální */
+        .level-mcr { background: var(--ui-color-brand); color: var(--ui-color-text-on-fill); }
+        .level-cp { background: var(--ui-color-highlight-bg); color: var(--ui-color-highlight-text); }
+        .level-icf { background: transparent; border-color: var(--ui-color-brand); color: var(--ui-color-brand); }
+        .level-other { background: var(--ui-color-surface-3); color: var(--ui-color-text-2); }
+
+        /* ---------- Patička ---------- */
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--ui-space-4);
+            margin-top: var(--ui-space-8);
+            padding-top: var(--ui-space-5);
+            border-top: 1px solid var(--ui-color-border);
+        }
+
+        .footer p { margin: 0; font-size: var(--ui-text-sm); color: var(--ui-color-text-3); }
+        .footer img { height: 48px; width: auto; flex: none; }
+
+        /* ---------- Tablet ---------- */
+        @media (max-width: 960px) {
+            .filters { grid-template-columns: 1fr 1fr; }
+            .filter-group:first-child { grid-column: 1 / -1; }
+            .filter-group-chips { grid-column: 1 / -1; }
+            .btn-group { grid-column: 1 / -1; justify-content: flex-start; }
+        }
+
+        /* ---------- Mobil: karty ---------- */
+        @media (max-width: 768px) {
+            .container { padding-top: var(--ui-space-5); }
+            h1 { font-size: var(--ui-text-2xl); }
+            .page-title { margin-bottom: var(--ui-space-4); }
+
+            .site-header__app, .site-header__sep { display: none; }
+
+            .filters { grid-template-columns: 1fr 1fr; gap: var(--ui-space-3); padding: var(--ui-space-4); margin-bottom: var(--ui-space-4); }
+            .btn-group .btn { width: 100%; }
+            .chip-hint { display: none; }
+
+            .table-wrapper { overflow: visible; border: 0; border-radius: 0; background: transparent; }
+            table { min-width: 0; }
+            thead { display: none; }
+            table, tbody { display: block; width: 100%; }
+
+            tbody tr {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                grid-template-areas:
+                    "date cal"
+                    "place cal"
+                    "badges badges"
+                    "akce akce";
+                gap: 2px var(--ui-space-3);
+                margin-bottom: var(--ui-space-2);
+                padding: var(--ui-space-3) var(--ui-space-4);
+                background: var(--ui-color-surface);
+                border: 1px solid var(--ui-color-border);
+                border-radius: var(--ui-radius-lg);
+            }
+
+            tbody tr:hover { background: var(--ui-color-surface); }
+            tbody tr.empty-row { display: block; }
+
+            td { padding: 0; border: 0; }
+
+            td.cal-col { grid-area: cal; width: auto; align-self: center; }
+            td.date-col { grid-area: date; }
+            td.place-col { grid-area: place; }
+            td.org-col { display: none; }
+            td.disc-col { grid-area: badges; padding-top: var(--ui-space-2); white-space: normal; }
+            td.level-col { grid-area: badges; padding-top: var(--ui-space-2); white-space: normal; justify-self: end; text-align: right; }
+            td.action-col {
+                grid-area: akce;
+                margin-top: var(--ui-space-1);
+                padding-top: var(--ui-space-2);
+                border-top: 1px solid var(--ui-color-border-2);
+                font-size: var(--ui-text-sm);
+            }
+
+            .btn-cal { min-height: var(--ui-tap); min-width: var(--ui-tap); }
+
+            .footer { flex-direction: column-reverse; align-items: flex-start; }
+            .footer img { height: 36px; }
+        }
+
+        @media (pointer: coarse) {
+            input, select { font-size: 16px; }
+        }
+
+        /* ---------- Export do PDF: tabulka ---------- */
+        .pdf-export .site-header,
+        .pdf-export .filters,
+        .pdf-export .cal-col,
+        .pdf-export .page-eyebrow { display: none !important; }
+
+        .pdf-export, .pdf-export .container { background: var(--white) !important; }
+
+        .pdf-export .container {
+            max-width: none !important;
+            width: auto !important;
+            margin: 0 !important;
+            padding: 5px !important;
+        }
+
+        .pdf-export .page-title { margin-bottom: 8px !important; align-items: center !important; justify-content: flex-start !important; }
+        .pdf-export .pdf-logo { display: block !important; height: 48px; width: auto; }
+        .pdf-export h1 { font-size: 20px !important; }
+        .pdf-export .table-wrapper { overflow: visible !important; border-radius: 0 !important; box-shadow: none !important; }
+        .pdf-export .date-col { font-size: 12px !important; }
+
+        .pdf-export table {
+            display: table !important;
+            width: 100% !important;
+            min-width: 0 !important;
+            table-layout: fixed !important;
+        }
+
+        .pdf-export thead { display: table-header-group !important; }
+        .pdf-export tbody { display: table-row-group !important; }
+
+        .pdf-export tbody tr {
+            display: table-row !important;
+            border: none !important;
+            border-radius: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+            grid-template-columns: none !important;
+            grid-template-areas: none !important;
+        }
+
+        .pdf-export th {
+            display: table-cell !important;
+            position: static !important;
+            padding: 6px 8px !important;
+            font-size: 9px !important;
+        }
+
+        .pdf-export td {
+            display: table-cell !important;
+            padding: 5px 8px !important;
+            border-bottom: 1px solid var(--ui-color-border-2) !important;
+            border-top: 0 !important;
+            margin: 0 !important;
+            font-size: 10px !important;
+            grid-area: unset !important;
+            text-align: left !important;
+            color: var(--ui-color-text) !important;
+        }
+
+        .pdf-export td.org-col { display: table-cell !important; }
+        .pdf-export .badge { height: 16px !important; font-size: 9px !important; padding: 0 5px !important; margin: 0 3px 2px 0 !important; }
+        .pdf-export .footer { margin-top: 10px !important; padding-top: 5px !important; flex-direction: row !important; }
+        .pdf-export .footer img { height: 32px !important; }
+    </style>
+</head>
+<body>
+
+<header class="site-header data-html2canvas-ignore">
+    <div class="site-header__inner">
+        <a class="site-header__brand" href="https://www.ww-cb.cz/">
+            <img src="assets/logo-navy.svg" alt="" width="36" height="48">
+            <span class="site-header__name">SK Vodní slalom<br><span>České Budějovice</span></span>
+        </a>
+        <span class="site-header__sep" aria-hidden="true"></span>
+        <span class="site-header__app">Termínová listina</span>
+        <a class="site-header__home" href="https://www.ww-cb.cz/">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            ww-cb.cz
+        </a>
+    </div>
+</header>
+
+<main class="container" id="contentToExport">
+    <div class="page-title">
+        <img class="pdf-logo" src="assets/logo-navy.png" alt="">
+        <div class="page-title__main">
+            <p class="page-eyebrow">Divoká voda · slalom, sjezd, sprint, kajak kros</p>
+            <h1>Termínová listina vodáckých závodů 2026</h1>
+            <p class="page-meta"><span class="meta-badge">Archiv · v1 · 23. 1. 2026</span> <span class="count" id="resultCount" aria-live="polite"></span> <a class="archive-link data-html2canvas-ignore" href="./">Aktuální listina 2027</a></p>
+        </div>
+    </div>
+
+    <div class="filters" data-html2canvas-ignore>
+        <div class="filter-group">
+            <label for="searchInput">Hledat (lokalita, akce…)</label>
+            <div class="input-wrapper">
+                <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="searchInput" placeholder="Např. Troja, MČR…">
+            </div>
+        </div>
+        <div class="filter-group">
+            <label for="monthSelect">Měsíc</label>
+            <div class="select-wrapper">
+                <select id="monthSelect">
+                    <option value="">Všechny měsíce</option>
+                    <option value=".03.">Březen</option>
+                    <option value=".04.">Duben</option>
+                    <option value=".05.">Květen</option>
+                    <option value=".06.">Červen</option>
+                    <option value=".07.">Červenec</option>
+                    <option value=".08.">Srpen</option>
+                    <option value=".09.">Září</option>
+                    <option value=".10.">Říjen</option>
+                    <option value=".11.">Listopad</option>
+                </select>
+            </div>
+        </div>
+        <div class="filter-group">
+            <label for="discSelect">Disciplína</label>
+            <div class="select-wrapper">
+                <select id="discSelect">
+                    <option value="">Všechny</option>
+                    <option value="Slalom">Slalom</option>
+                    <option value="Sjezd">Sjezd</option>
+                    <option value="Sprint">Sprint</option>
+                    <option value="Kros">Kajak Kros</option>
+                </select>
+            </div>
+        </div>
+        <div class="filter-group filter-group-chips">
+            <span class="filter-label" id="levelLabel">Úroveň <span class="chip-hint">(klikni pro zúžení)</span></span>
+            <div class="level-chips" id="levelChips" role="group" aria-labelledby="levelLabel">
+                <button type="button" class="chip" aria-pressed="false" data-level="INT">INT</button>
+                <button type="button" class="chip" aria-pressed="false" data-level="MČR">MČR</button>
+                <button type="button" class="chip" aria-pressed="false" data-level="ČP">ČP</button>
+                <button type="button" class="chip" aria-pressed="false" data-level="ČPŽ">ČPŽ</button>
+                <button type="button" class="chip" aria-pressed="false" data-level="NKZ">NKZ</button>
+                <button type="button" class="chip" aria-pressed="false" data-level="ECA">ECA</button>
+                <button type="button" class="chip" aria-pressed="false" data-level="VZ">VZ</button>
+                <button type="button" class="chip" aria-pressed="false" data-level="OTHER">Ostatní</button>
+            </div>
+        </div>
+        <div class="filter-group btn-group">
+            <button type="button" onclick="exportPDF()" class="btn btn-pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Stáhnout PDF
+            </button>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <table id="scheduleTable">
+            <thead>
+                <tr>
+                    <th class="cal-col data-html2canvas-ignore"><span class="sr-only">Kalendář</span></th>
+                    <th style="width: 110px;">Datum</th>
+                    <th style="width: 15%;">Místo</th>
+                    <th style="width: 11%;">Pořadatel</th>
+                    <th style="width: 12%;">Disciplína</th>
+                    <th style="width: 13%;">Úroveň</th>
+                    <th>Akce / poznámka</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>Z podkladů ZK ČSK vytvořil Jakub Bican / SK VS ČB <a href="http://www.ww-cb.cz" target="_blank" rel="noopener">www.ww-cb.cz</a></p>
+        <img src="assets/logo-navy.png" alt="Logo SK VS ČB">
+    </div>
+</main>
+
+<script>
+    // DATA JSON
+    const data = [
+    {"datum": "21.03.", "misto": "Brno (Svratka)", "poradatel": "KK Brno", "disciplina": "Sjezd", "uroven": "VZ", "akce": "2 veřejné sjezdy + přebor Brna"},
+    {"datum": "27.-29.03.", "misto": "Oklahoma (USA)", "poradatel": "ICF", "disciplina": "Slalom / Kros", "uroven": "ICF", "akce": "WRR - Světový ranking"},
+    {"datum": "28.-29.03.", "misto": "Sázava", "poradatel": "Bohemians", "disciplina": "Sjezd", "uroven": "VZ", "akce": "4 sjezdy na Sázavě"},
+    {"datum": "04.-05.04.", "misto": "Vyšší Brod", "poradatel": "Loko Plzeň", "disciplina": "Sjezd (Klasik)", "uroven": "ČP, ČPJ, MČR", "akce": "1. a 2. ČP SJ, 1. a 2. ČPJ, MČR dospělí družstva, MČR veteráni"},
+    {"datum": "04.-05.04.", "misto": "Stružnická peřej", "poradatel": "Č. Lípa", "disciplina": "Slalom", "uroven": "VZ", "akce": "Veřejné závody"},
+    {"datum": "11.-12.04.", "misto": "Postřelmov", "poradatel": "VS Desná", "disciplina": "Sjezd", "uroven": "VZ", "akce": "4 sjezdy v Postřelmově"},
+    {"datum": "11.-12.04.", "misto": "Trutnov", "poradatel": "Trutnov", "disciplina": "Slalom", "uroven": "ČPV, VZ", "akce": "2. ČPV, Trutnovské slalomy + MČR veteránů"},
+    {"datum": "15.04.", "misto": "Olomouc", "poradatel": "Olomouc", "disciplina": "Slalom", "uroven": "VZ", "akce": "Krajský přebor ve slalomu"},
+    {"datum": "18.-19.04.", "misto": "Kamenice", "poradatel": "Bohemians", "disciplina": "Sjezd (Klasik)", "uroven": "ČP, MČR", "akce": "3. a 4. ČP SJ, MČR U23, Nominační závod C2ž"},
+    {"datum": "18.-19.04.", "misto": "České Vrbné", "poradatel": "SKVS ČB", "disciplina": "Slalom", "uroven": "VZ", "akce": "4 jarní slalomy"},
+    {"datum": "25.-26.04.", "misto": "Praha - Troja", "poradatel": "Dukla Praha", "disciplina": "Kajak Kros", "uroven": "ČP, ČPJ", "akce": "1., 2. a 3. ČP sen. Kajak kros, 1., 2. a 3. ČPJ"},
+    {"datum": "25.-26.04.", "misto": "Opava", "poradatel": "Opava", "disciplina": "Slalom", "uroven": "ČPŽ", "akce": "1. a 2. ČP žáků ve slalomu"},
+    {"datum": "28.04.", "misto": "Litovel", "poradatel": "Litovel", "disciplina": "Sprint", "uroven": "VZ", "akce": "Krajský přebor ve sprintu"},
+    {"datum": "02.-03.05.", "misto": "Roudnice n. L.", "poradatel": "Roudnice", "disciplina": "Sjezd (Sprint)", "uroven": "ČP, ČPJ, MČR", "akce": "5. a 6. ČP SJ (sprint), 3. a 4. ČPJ, MČR dorost (+družstva), MČR dospělí"},
+    {"datum": "08.05.", "misto": "Český Krumlov", "poradatel": "Č. Krumlov", "disciplina": "Sjezd", "uroven": "VZ, MČR", "akce": "Krumlovský sjezd + MČR C2mix + KP JČ"},
+    {"datum": "09.05.", "misto": "Český Krumlov", "poradatel": "Č. Krumlov", "disciplina": "Sprint", "uroven": "VZ", "akce": "Krumlovský sprint"},
+    {"datum": "09.-10.05.", "misto": "Trnávka", "poradatel": "Sokol Žižkov", "disciplina": "Slalom", "uroven": "ČP, NOM", "akce": "1. a 2. ČP SL, 1. a 2. nominace RDA, 1. nom. RD U23, 1. nom. RDJ"},
+    {"datum": "09.-10.05.", "misto": "Český Krumlov", "poradatel": "Č. Krumlov", "disciplina": "Slalom", "uroven": "VZ", "akce": "Krumlovský slalom"},
+    {"datum": "09.-10.05.", "misto": "Zábřeh", "poradatel": "Zábřeh", "disciplina": "Slalom", "uroven": "VZ", "akce": "Slalomy v Zábřehu + hlídky"},
+    {"datum": "13.05.", "misto": "Olomouc", "poradatel": "Olomouc", "disciplina": "Sprint", "uroven": "VZ", "akce": "Sprint v Olomouci"},
+    {"datum": "16.-17.05.", "misto": "Praha - Troja", "poradatel": "USK Praha", "disciplina": "Slalom", "uroven": "ČP, NOM", "akce": "3. a 4. ČP SL, 3. a 4. nominace RDA, 1. a 2. nom. RD U23, 2. a 3. nom. RDJ"},
+    {"datum": "21.-24.05.", "misto": "Banja Luka (BIH)", "poradatel": "ICF", "disciplina": "Sjezd / Sprint", "uroven": "MS", "akce": "MS senioři"},
+    {"datum": "23.-24.05.", "misto": "České Vrbné", "poradatel": "SKVS ČB", "disciplina": "Slalom / Kros", "uroven": "ČPŽ, MČR", "akce": "3. a 4. ČP žáků SL, MČRž Kajak kros (i packraft)"},
+    {"datum": "23.-24.05.", "misto": "Sušice", "poradatel": "Sušice", "disciplina": "Slalom", "uroven": "VZ", "akce": "Slalomy v Sušici"},
+    {"datum": "29.-31.05.", "misto": "Tacen (SLO)", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "SP", "akce": "Světový pohár"},
+    {"datum": "30.-31.05.", "misto": "Roudnice n. L.", "poradatel": "Roudnice", "disciplina": "Slalom", "uroven": "NKZ, ČPJ", "akce": "1. a 2. NKZ, 4. a 5. nominace RDJ, 1. a 2. ČPJ ve slalomu"},
+    {"datum": "05.-07.06.", "misto": "Praha - Troja", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "SP", "akce": "Světový pohár"},
+    {"datum": "05.-07.06.", "misto": "Dunarenete (HUN)", "poradatel": "", "disciplina": "Sjezd", "uroven": "ICF", "akce": "Young Danubia Cup (SPW)"},
+    {"datum": "06.-07.06.", "misto": "Rakovník", "poradatel": "Rakovník", "disciplina": "Slalom", "uroven": "VZ", "akce": "Křivoklátské slalomy"},
+    {"datum": "06.-07.06.", "misto": "Dvůr Králové n. L.", "poradatel": "Trutnov", "disciplina": "Sjezd (Klasik)", "uroven": "ČPJ, ČPŽ, MČR", "akce": "5. a 6. ČPJ, 1. a 2. ČP žáků sjezd, MČR dorostu a žáků (klasik + hlídky)"},
+    {"datum": "12.-14.06.", "misto": "Augsburg (GER)", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "SP", "akce": "Světový pohár"},
+    {"datum": "12.-14.06.", "misto": "Bratislava (SVK)", "poradatel": "", "disciplina": "Sjezd", "uroven": "ICF", "akce": "SPW Bratislava + ECA Cup"},
+    {"datum": "13.06.", "misto": "Vysoké Mýto", "poradatel": "Vys. Mýto", "disciplina": "Sjezd", "uroven": "VZ", "akce": "Vysokomýtský sjezd"},
+    {"datum": "13.06.", "misto": "Vysoké Mýto", "poradatel": "Vys. Mýto", "disciplina": "Slalom", "uroven": "VZ", "akce": "Vysokomýtské hlídky slalom"},
+    {"datum": "13.-14.06.", "misto": "Vysoké Mýto", "poradatel": "Vys. Mýto", "disciplina": "Slalom", "uroven": "VZ", "akce": "Vysokomýtské slalomy"},
+    {"datum": "13.-14.06.", "misto": "Roudnice n. L.", "poradatel": "Roudnice", "disciplina": "Slalom", "uroven": "VZ", "akce": "Podřipské slalomy"},
+    {"datum": "13.-14.06.", "misto": "Ostrava", "poradatel": "Ostrava", "disciplina": "Slalom", "uroven": "VZ", "akce": "Ostravské slalomy"},
+    {"datum": "16.06.", "misto": "Český Krumlov", "poradatel": "Č. Krumlov", "disciplina": "Sjezd", "uroven": "VZ", "akce": "Egonův krumlovský sjezd"},
+    {"datum": "20.-21.06.", "misto": "Veltrusy", "poradatel": "Kralupy", "disciplina": "Slalom", "uroven": "NKZ, ČPJ", "akce": "3. a 4. NKZ, 3. a 4. ČPJ ve slalomu"},
+    {"datum": "22.-25.06.", "misto": "Praha - Troja", "poradatel": "", "disciplina": "Slalom / Kros", "uroven": "ODM", "akce": "Olympiáda mládeže"},
+    {"datum": "23.06.", "misto": "Brno", "poradatel": "", "disciplina": "Slalom / Sprint", "uroven": "AM", "akce": "Akademické hry"},
+    {"datum": "27.06.", "misto": "Strakonice", "poradatel": "Bohemians", "disciplina": "Sjezd", "uroven": "VZ", "akce": "Sjezd ve Strakonicích"},
+    {"datum": "27.-28.06.", "misto": "Strakonice", "poradatel": "Strakonice", "disciplina": "Slalom", "uroven": "VZ", "akce": "Slalomy ve Strakonicích"},
+    {"datum": "27.-28.06.", "misto": "Dolní Kounice", "poradatel": "Dolní Kounice", "disciplina": "Slalom", "uroven": "VZ", "akce": "Dolnokounické slalomy"},
+    {"datum": "27.-29.06.", "misto": "Mezzana (ITA)", "poradatel": "", "disciplina": "Sjezd", "uroven": "ICF", "akce": "SPW Mezzana"},
+    {"datum": "29.06.-05.07.", "misto": "Krakow (POL)", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "MS", "akce": "MS U23 + MS Juniorů"},
+    {"datum": "04.-05.07.", "misto": "Strakonice", "poradatel": "Strakonice", "disciplina": "Slalom", "uroven": "ČPŽ", "akce": "5. a 6. ČP žáků ve slalomu"},
+    {"datum": "11.-12.07.", "misto": "Plzeň", "poradatel": "Loko Plzeň", "disciplina": "Slalom", "uroven": "VZ", "akce": "Slalomy pod Borskou přehradou"},
+    {"datum": "18.07.", "misto": "České Vrbné", "poradatel": "SKVS ČB", "disciplina": "Slalom / Kros", "uroven": "ČPV, VZ", "akce": "ČPV, Slalom + kajak kros"},
+    {"datum": "19.-20.07.", "misto": "České Vrbné", "poradatel": "", "disciplina": "Slalom", "uroven": "ECA", "akce": "ECA Junior cup"},
+    {"datum": "21.-26.07.", "misto": "Oklahoma (USA)", "poradatel": "ICF", "disciplina": "Slalom / Kros", "uroven": "MS", "akce": "Mistrovství světa"},
+    {"datum": "25.-26.07.", "misto": "Roudnice n. L.", "poradatel": "", "disciplina": "Slalom", "uroven": "ECA", "akce": "ECA Cup"},
+    {"datum": "25.-26.07.", "misto": "Třebechovice", "poradatel": "Třebechovice", "disciplina": "Sjezd / Sprint", "uroven": "VZ", "akce": "Sjezdy a sprinty v Třebechovicích"},
+    {"datum": "01.-02.08.", "misto": "Opava", "poradatel": "Opava", "disciplina": "Slalom", "uroven": "VZ", "akce": "Letní slalomy"},
+    {"datum": "01.-02.08.", "misto": "Pardubice", "poradatel": "Synthesia Pardubice", "disciplina": "Slalom", "uroven": "VZ", "akce": "Slalomy na voleji"},
+    {"datum": "06.-09.08.", "misto": "Epinal (FRA)", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "ME", "akce": "ME U23 + ME Juniorů"},
+    {"datum": "12.-15.08.", "misto": "Skotsko", "poradatel": "ICF", "disciplina": "Sjezd", "uroven": "ME", "akce": "ME Junioři + U23"},
+    {"datum": "14.-16.08.", "misto": "Praha - Troja", "poradatel": "", "disciplina": "Slalom", "uroven": "WRR", "akce": "WRR Troja"},
+    {"datum": "15.-16.08.", "misto": "Benátky n. J.", "poradatel": "Benátky", "disciplina": "Slalom", "uroven": "VZ", "akce": "O štít města Benátek, Cena Tyrolitu"},
+    {"datum": "15.-16.08.", "misto": "Neznámé", "poradatel": "", "disciplina": "Kajak Kros", "uroven": "ČP, MČR", "akce": "4. ČP sen Kajak kros, MČR dospělých"},
+    {"datum": "21.-23.08.", "misto": "Lipno", "poradatel": "SKVS ČB / SK Vltava", "disciplina": "Slalom / Sjezd (Klasik) / Sprint", "uroven": "ČP, MČR", "akce": "5. a 6. ČP slalom, 7. a 8. ČP SJ (klasik), MČR družstev SL, MČR dospělých SL, MČR U23 SL, MČR SJ klasik, MČR U23 SJ sprint"},
+    {"datum": "28.-30.08.", "misto": "České Vrbné", "poradatel": "SKVS ČB", "disciplina": "Sjezd (Sprint)", "uroven": "ČP, ČPJ, ČPŽ, MČR", "akce": "9. a 10. ČP SJ (sprint), 7. a 8. ČPJ (sjezd), 3. a 4. ČP žáků sjezd, MČR veteránů (sjezd), MČR družstva (sjezd)"},
+    {"datum": "29.-30.08.", "misto": "Kralupy", "poradatel": "Kralupy", "disciplina": "Slalom", "uroven": "VZ", "akce": "Memoriál J. Froňka st."},
+    {"datum": "04.-06.09.", "misto": "Paříž (FRA)", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "SP", "akce": "Světový pohár"},
+    {"datum": "05.-06.09.", "misto": "Brandýs n. L.", "poradatel": "KK Brandýs", "disciplina": "Slalom / Sprint", "uroven": "ČPŽ, MČR", "akce": "7. ČPŽ slalom, 5. ČPŽ sjezd, MČR žáků + družstva (slalom i sprint)"},
+    {"datum": "11.-13.09.", "misto": "Seo (ESP)", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "SP", "akce": "Světový pohár"},
+    {"datum": "12.-13.09.", "misto": "Veltrusy", "poradatel": "Veltrusy", "disciplina": "Slalom / Kros", "uroven": "ČPJ, MČR", "akce": "4. a 5. ČPJ Kajak kros, 5. ČPJ slalom, MČR dorost + hlídky SL, MČR dorost Kros"},
+    {"datum": "19.-20.09.", "misto": "Tábor", "poradatel": "VS Tábor", "disciplina": "Slalom", "uroven": "VZ", "akce": "Slalomy v Táboře"},
+    {"datum": "19.-20.09.", "misto": "České Vrbné", "poradatel": "SKVS ČB", "disciplina": "Slalom", "uroven": "NKZ, ČPJ", "akce": "2. a 3. nom. RDJ MSJ 2027, 5. a 6. NKZ, 6. a 7. ČPJ slalom"},
+    {"datum": "24.-27.09.", "misto": "Ivrea (ITA)", "poradatel": "ICF", "disciplina": "Slalom", "uroven": "ME", "akce": "Mistrovství Evropy"},
+    {"datum": "26.-27.09.", "misto": "Třebechovice", "poradatel": "Třebechovice", "disciplina": "Slalom", "uroven": "VZ", "akce": "Třebechovické slalomy"},
+    {"datum": "Říjen", "misto": "Olomouc", "poradatel": "Olomouc", "disciplina": "Slalom", "uroven": "VZ", "akce": "Hanácké slalomy"},
+    {"datum": "02.-04.10.", "misto": "Roudnice n. L.", "poradatel": "Roudnice", "disciplina": "Slalom", "uroven": "Ostatní", "akce": "OH naděje"},
+    {"datum": "03.10.", "misto": "Litovel", "poradatel": "Litovel", "disciplina": "Jiné", "uroven": "VZ", "akce": "Bobr Cup"},
+    {"datum": "03.10.", "misto": "Strakonice", "poradatel": "Bohemians", "disciplina": "Sjezd", "uroven": "VZ", "akce": "Sjezd ve Strakonicích"},
+    {"datum": "03.-04.10.", "misto": "Strakonice", "poradatel": "Klatovy", "disciplina": "Slalom", "uroven": "VZ", "akce": "Slalomy ve Strakonicích"},
+    {"datum": "10.10.", "misto": "Český Krumlov", "poradatel": "Č. Krumlov", "disciplina": "Jiné", "uroven": "VZ", "akce": "Krumlovský maraton"},
+    {"datum": "10.-11.10.", "misto": "Roudnice n. L.", "poradatel": "Roudnice", "disciplina": "Kajak Kros", "uroven": "ČP, ČPJ, MČR", "akce": "5.-7. ČP sen. (nom. MSJ 2027), 6.-8. ČPJ Kajak kros, MČR U23 Kajak Kros"},
+    {"datum": "17.10.", "misto": "Bechyně", "poradatel": "Bechyně", "disciplina": "Sjezd", "uroven": "VZ", "akce": "2 Podzimní sjezdy na Lužnici"},
+    {"datum": "24.-25.10.", "misto": "Brno", "poradatel": "KK Brno", "disciplina": "Sjezd", "uroven": "VZ", "akce": "4 sjezdy na rozloučenou + přebor JM kraje"},
+    {"datum": "21.11.", "misto": "Olomouc", "poradatel": "Olomouc", "disciplina": "", "uroven": "", "akce": "Král divoké vody (společenská akce)"}
+];
+
+    const tbody = document.getElementById('tableBody');
+    const searchInput = document.getElementById('searchInput');
+    const monthSelect = document.getElementById('monthSelect');
+    const discSelect = document.getElementById('discSelect');
+    const levelChips = document.querySelectorAll('#levelChips .chip');
+
+    function renderTable(filteredData) {
+        tbody.innerHTML = '';
+        if(filteredData.length === 0) {
+            tbody.innerHTML = '<tr class="empty-row"><td colspan="7">Žádné závody neodpovídají filtrům.</td></tr>';
+            updateCount(0);
+            return;
+        }
+
+        filteredData.forEach(row => {
+            const tr = document.createElement('tr');
+            
+            // Format Disciplina badges
+            let discHtml = '';
+            if (row.disciplina) {
+                const parts = row.disciplina.split('/');
+                parts.forEach(p => {
+                    let cleanP = p.trim();
+                    let cls = 'disc-other';
+                    if(cleanP.toLowerCase().includes('sjezd')) cls = 'disc-sjezd';
+                    if(cleanP.toLowerCase().includes('slalom')) cls = 'disc-slalom';
+                    if(cleanP.toLowerCase().includes('sprint')) cls = 'disc-sprint';
+                    if(cleanP.toLowerCase().includes('kros')) cls = 'disc-kros';
+                    discHtml += `<span class="badge ${cls}">${cleanP}</span>`;
+                });
+            }
+
+            // Format Level badges
+            let levelHtml = '';
+            if (row.uroven) {
+                const parts = row.uroven.split(',');
+                parts.forEach(p => {
+                    let cleanP = p.trim();
+                    let cls = 'badge';
+                    if(cleanP.includes('ICF')) { cls += ' level-icf'; }
+                    else if(cleanP.includes('MČR')) { cls += ' level-mcr'; }
+                    else if(cleanP.includes('ČP')) { cls += ' level-cp'; }
+                    else if(intLevels.some(il => cleanP.includes(il))) { cls += ' level-icf'; }
+                    else { cls += ' level-other'; }
+                    levelHtml += `<span class="${cls}">${cleanP}</span>`;
+                });
+            }
+            
+            // ICS Button logic - pass the row index
+            const safeAkce = row.akce.replace(/'/g, "\'");
+            const safeMisto = row.misto.replace(/'/g, "\'");
+            
+            tr.innerHTML = `
+                <td class="cal-col data-html2canvas-ignore">
+                    <button type="button" class="btn btn-cal" onclick='downloadICS("${row.datum}", "${safeAkce}", "${safeMisto}")' title="Stáhnout do kalendáře (.ics)" aria-label="Přidat do kalendáře: ${safeMisto} ${row.datum}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-8 4h2v3h3v2h-3v3h-2v-3H8v-2h3z"/></svg></button>
+                </td>
+                <td class="date-col" data-label="Datum">${row.datum}</td>
+                <td class="place-col" data-label="Místo">${row.misto}</td>
+                <td class="org-col" data-label="Pořadatel">${row.poradatel}</td>
+                <td class="badges-col disc-col" data-label="Disciplína">${discHtml}</td>
+                <td class="badges-col level-col" data-label="Úroveň">${levelHtml}</td>
+                <td class="action-col" data-label="Akce">${row.akce}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+        updateCount(filteredData.length);
+    }
+
+    function updateCount(n) {
+        const el = document.getElementById('resultCount');
+        if (!el) return;
+        const word = n === 1 ? 'závod' : (n >= 2 && n <= 4 ? 'závody' : 'závodů');
+        el.textContent = n === data.length ? `${n} ${word}` : `${n} ${word} z ${data.length}`;
+    }
+
+    // INT covers international events
+    const intLevels = ['ICF', 'SP', 'MS', 'ME', 'WRR'];
+    // All known levels (for OTHER detection)
+    const knownLevels = ['ICF', 'SP', 'MS', 'ME', 'WRR', 'MČR', 'ČP', 'ČPŽ', 'ČPJ', 'ČPV', 'NKZ', 'NOM', 'ECA', 'VZ'];
+
+    function getActiveLevels() {
+        return Array.from(levelChips)
+            .filter(chip => chip.classList.contains('active'))
+            .map(chip => chip.dataset.level);
+    }
+
+    function matchesLevelFilter(uroven, activeLevels) {
+        if (activeLevels.length === 0) return true;
+
+        for (const level of activeLevels) {
+            // INT matches any international level
+            if (level === 'INT') {
+                if (intLevels.some(il => uroven.includes(il))) return true;
+            }
+            // OTHER matches if no known level is present
+            else if (level === 'OTHER') {
+                const hasKnownLevel = knownLevels.some(kl => uroven.includes(kl));
+                if (!hasKnownLevel) return true;
+            }
+            // Direct match for other chips
+            else if (uroven.includes(level)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    function filterData() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedMonth = monthSelect.value;
+        const selectedDisc = discSelect.value.toLowerCase();
+        const activeLevels = getActiveLevels();
+
+        const filtered = data.filter(item => {
+            const matchesSearch = Object.values(item).some(val =>
+                String(val).toLowerCase().includes(searchTerm)
+            );
+
+            const matchesMonth = selectedMonth === "" || item.datum.includes(selectedMonth);
+
+            const matchesDisc = selectedDisc === "" || item.disciplina.toLowerCase().includes(selectedDisc);
+
+            const matchesLevel = matchesLevelFilter(item.uroven, activeLevels);
+
+            return matchesSearch && matchesMonth && matchesDisc && matchesLevel;
+        });
+
+        renderTable(filtered);
+    }
+
+    // --- ICS Export Logic ---
+    function parseDateString(dateStr) {
+        const year = 2026;
+        let startMonth, startDay, endMonth, endDay;
+
+        // Clean string
+        dateStr = dateStr.trim();
+        
+        // Handle full text months like "Říjen" - defaults to 1st of month
+        const monthNames = {
+            "Březen": 3, "Duben": 4, "Květen": 5, "Červen": 6, 
+            "Červenec": 7, "Srpen": 8, "Září": 9, "Říjen": 10, "Listopad": 11
+        };
+        if(monthNames[dateStr]) {
+            return {
+                start: new Date(year, monthNames[dateStr] - 1, 1),
+                end: new Date(year, monthNames[dateStr] - 1, 2),
+                isAllDay: true
+            };
+        }
+
+        // Regex for DD.MM.
+        const singleDate = /^(\d{1,2})\.(\d{1,2})\.$/; // Corrected regex for DD.MM.
+        // Regex for DD.-DD.MM.
+        const rangeSameMonth = /^(\d{1,2})\.-(\d{1,2})\.(\d{1,2})\.$/; // Corrected regex for DD.-DD.MM.
+        // Regex for DD.MM.-DD.MM.
+        const rangeDiffMonth = /^(\d{1,2})\.(\d{1,2})\.-(\d{1,2})\.(\d{1,2})\.$/; // Corrected regex for DD.MM.-DD.MM.
+
+        if (dateStr.match(rangeDiffMonth)) {
+            const m = dateStr.match(rangeDiffMonth);
+            startDay = parseInt(m[1]); startMonth = parseInt(m[2]);
+            endDay = parseInt(m[3]); endMonth = parseInt(m[4]);
+        } else if (dateStr.match(rangeSameMonth)) {
+            const m = dateStr.match(rangeSameMonth);
+            startDay = parseInt(m[1]);
+            endDay = parseInt(m[2]);
+            startMonth = parseInt(m[3]);
+            endMonth = startMonth;
+        } else if (dateStr.match(singleDate)) {
+            const m = dateStr.match(singleDate);
+            startDay = parseInt(m[1]); startMonth = parseInt(m[2]);
+            endDay = startDay; endMonth = startMonth;
+        } else {
+            // Unknown format, return null
+            return null;
+        }
+
+        const startDate = new Date(year, startMonth - 1, startDay);
+        // End date in ICS for all day events is exclusive, so add 1 day to the parsed end date
+        const endDate = new Date(year, endMonth - 1, endDay);
+        endDate.setDate(endDate.getDate() + 1);
+
+        return { start: startDate, end: endDate, isAllDay: true };
+    }
+
+    function formatDateICS(date) {
+        const y = date.getFullYear();
+        const m = String(date.getMonth() + 1).padStart(2, '0');
+        const d = String(date.getDate()).padStart(2, '0');
+        return `${y}${m}${d}`;
+    }
+
+    window.downloadICS = function(dateStr, title, location) {
+        const dates = parseDateString(dateStr);
+        if (!dates) {
+            alert("Omlouváme se, formát data '" + dateStr + "' nelze automaticky převést.");
+            return;
+        }
+
+        const startStr = formatDateICS(dates.start);
+        const endStr = formatDateICS(dates.end);
+        
+        const icsContent = [
+            'BEGIN:VCALENDAR',
+            'VERSION:2.0',
+            'PRODID:-//SKVS CB//Terminovka//CZ',
+            'BEGIN:VEVENT',
+            `SUMMARY:${title}`,
+            `DTSTART;VALUE=DATE:${startStr}`,
+            `DTEND;VALUE=DATE:${endStr}`,
+            `LOCATION:${location}`,
+            'DESCRIPTION:Importováno z Termínové listiny SKVS ČB',
+            'END:VEVENT',
+            'END:VCALENDAR'
+        ].join('\r\n');
+
+        const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.setAttribute('download', 'zavod.ics');
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
+    // --- PDF Export Logic ---
+    window.exportPDF = function() {
+        const body = document.body;
+        const element = document.getElementById('contentToExport');
+
+        // Force table layout for PDF
+        body.classList.add('pdf-export');
+
+        // Get actual element width after applying pdf-export styles
+        const elementWidth = element.scrollWidth;
+
+        const opt = {
+            margin:       [5, 5],
+            filename:     'terminova_listina_2026.pdf',
+            image:        { type: 'jpeg', quality: 0.95 },
+            html2canvas:  {
+                scale: 2,
+                useCORS: true,
+                scrollX: -window.scrollX,
+                scrollY: -window.scrollY,
+                windowWidth: Math.max(elementWidth, 1200),
+                windowHeight: element.scrollHeight + 100
+            },
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'landscape' }
+        };
+
+        // Wait for styles to apply before rendering
+        setTimeout(() => {
+            html2pdf().set(opt).from(element).save().then(() => {
+                body.classList.remove('pdf-export');
+            }).catch(() => {
+                body.classList.remove('pdf-export');
+            });
+        }, 200);
+    };
+
+    // Attach listeners
+    searchInput.addEventListener('input', filterData);
+    monthSelect.addEventListener('change', filterData);
+    discSelect.addEventListener('change', filterData);
+
+    // Level chips toggle
+    levelChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            chip.classList.toggle('active');
+            chip.setAttribute('aria-pressed', chip.classList.contains('active') ? 'true' : 'false');
+            filterData();
+        });
+    });
+
+    // Initial render
+    renderTable(data);
+</script>
+
+</body>
+</html>
