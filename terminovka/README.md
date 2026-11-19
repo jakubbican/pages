@@ -3,6 +3,7 @@
 Statická stránka s termínovou listinou závodů divoké vody (slalom, sjezd, sprint, kajak kros) ve vzhledu SK VS ČB.
 
 - `index.html` – aktuální listina (teď **2027, předběžná – příprava 1, stav 7. 11. 2026**)
+  + vlastní záměry SKVS ČB v Českém Vrbném, které v listině komise nejsou (v textu akce „záměr SKVS ČB“)
 - `2026.html` – archiv listiny 2026 (v1, 23. 1. 2026)
 - `assets/` – tokeny klubu (`skvscb-theme.css`) a logo
 - `tools/xls_extract.py` – vytěžení XLS od závodní komise do JSON / přehledové tabulky
