@@ -1,21 +1,21 @@
-// Barvy a písma z CSK RVP Design System (čtené z CSS tokenů, aby graf a stránka nesly stejné hodnoty)
+// Barvy a písma z design systému SK VS ČB (čtené z CSS tokenů, aby graf a stránka nesly stejné hodnoty)
 const cssVar = (name, fallback) => {
     const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
     return v || fallback;
 };
-const CSK = {
-    navy: cssVar('--csk-navy', '#004899'),
-    blue: cssVar('--csk-blue', '#2a66b4'),
-    blueDark: cssVar('--csk-blue-dark', '#1d4f8f'),
-    vt: cssVar('--csk-vt', '#b0471a'),
-    text: cssVar('--csk-ink', '#1b1f26'),
-    text2: cssVar('--csk-ink-2', '#444b55'),
-    text3: cssVar('--csk-ink-3', '#626a75'),
-    line: cssVar('--csk-line', '#d9dee5'),
-    line2: cssVar('--csk-line-2', '#eceff3'),
-    surface: cssVar('--csk-white', '#ffffff'),
-    fontSans: "'IBM Plex Sans', system-ui, sans-serif",
-    fontDisplay: "'Barlow Semi Condensed', 'IBM Plex Sans', sans-serif"
+const THEME = {
+    navy: cssVar('--navy', '#002E5D'),
+    accent: cssVar('--accent-strong', '#A86A00'),
+    navyDeep: cssVar('--navy-deep', '#0B1F3A'),
+    water: cssVar('--water', '#CFE0EE'),
+    text: cssVar('--ink', '#0B1F3A'),
+    text2: cssVar('--muted', '#4A5668'),
+    text3: cssVar('--muted', '#4A5668'),
+    line: cssVar('--line', '#D9D4C8'),
+    line2: cssVar('--line-soft', '#ECE8DF'),
+    surface: cssVar('--white', '#ffffff'),
+    fontSans: "'Barlow', system-ui, sans-serif",
+    fontDisplay: "'Barlow Condensed', 'Barlow', sans-serif"
 };
 function withAlpha(hex, a) {
     const h = hex.replace('#', '');
@@ -23,19 +23,19 @@ function withAlpha(hex, a) {
     return `rgba(${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
 }
 const TOOLTIP = {
-    backgroundColor: CSK.text,
+    backgroundColor: THEME.text,
     titleColor: '#ffffff',
     bodyColor: '#ffffff',
-    titleFont: { family: CSK.fontDisplay, size: 14, weight: '600' },
-    bodyFont: { family: CSK.fontSans, size: 13 },
+    titleFont: { family: THEME.fontDisplay, size: 15, weight: '700' },
+    bodyFont: { family: THEME.fontSans, size: 13 },
     padding: 10,
     cornerRadius: 6,
     displayColors: true,
     boxPadding: 4
 };
 if (window.Chart) {
-    Chart.defaults.font.family = CSK.fontSans;
-    Chart.defaults.color = CSK.text2;
+    Chart.defaults.font.family = THEME.fontSans;
+    Chart.defaults.color = THEME.text2;
     Chart.defaults.locale = 'cs-CZ';
 }
 
@@ -345,7 +345,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ctx = document.getElementById('trendChart').getContext('2d');
         
         // Plná plocha bez gradientu (DS v2: žádné gradienty)
-        const fillComps = withAlpha(CSK.navy, 0.08);
+        const fillComps = withAlpha(THEME.water, 0.55);
 
         state.charts.trend = new Chart(ctx, {
             type: 'line',
@@ -355,10 +355,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Počet startů (průtok)',
                         data: competitorsTrend,
-                        borderColor: CSK.navy,
+                        borderColor: THEME.navy,
                         borderWidth: 2.5,
-                        pointBackgroundColor: CSK.navy,
-                        pointBorderColor: CSK.surface,
+                        pointBackgroundColor: THEME.navy,
+                        pointBorderColor: THEME.surface,
                         pointBorderWidth: 1.5,
                         pointRadius: 3.5,
                         pointHoverRadius: 6,
@@ -370,11 +370,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         label: 'Počet závodů',
                         data: racesTrend,
-                        borderColor: CSK.vt,
+                        borderColor: THEME.accent,
                         borderWidth: 2,
                         borderDash: [5, 4],
-                        pointBackgroundColor: CSK.vt,
-                        pointBorderColor: CSK.surface,
+                        pointBackgroundColor: THEME.accent,
+                        pointBorderColor: THEME.surface,
                         pointBorderWidth: 1.5,
                         pointRadius: 3,
                         pointStyle: 'rectRot',
@@ -391,8 +391,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         align: 'start',
                         labels: {
-                            color: CSK.text2,
-                            font: { family: CSK.fontSans, size: 13 },
+                            color: THEME.text2,
+                            font: { family: THEME.fontSans, size: 13 },
                             usePointStyle: true,
                             boxWidth: 8,
                             boxHeight: 8
@@ -406,23 +406,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 scales: {
                     x: {
-                        grid: { color: CSK.line2 }, border: { color: CSK.line },
-                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } }
+                        grid: { color: THEME.line2 }, border: { color: THEME.line },
+                        ticks: { color: THEME.text3, font: { family: THEME.fontSans, size: 12 } }
                     },
                     yCompetitors: {
                         type: 'linear',
                         position: 'left',
-                        grid: { color: CSK.line2 }, border: { color: CSK.line },
-                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
-                        title: { display: true, text: 'Účast (celkový průtok lodí)', color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
+                        grid: { color: THEME.line2 }, border: { color: THEME.line },
+                        ticks: { color: THEME.text3, font: { family: THEME.fontSans, size: 12 } },
+                        title: { display: true, text: 'Účast (celkový průtok lodí)', color: THEME.text3, font: { family: THEME.fontSans, size: 12 } },
                         beginAtZero: true
                     },
                     yRaces: {
                         type: 'linear',
                         position: 'right',
                         grid: { drawOnChartArea: false }, // Only draw grid for left axis
-                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
-                        title: { display: true, text: 'Počet akcí', color: CSK.text3, font: { family: CSK.fontSans, size: 12 } },
+                        ticks: { color: THEME.text3, font: { family: THEME.fontSans, size: 12 } },
+                        title: { display: true, text: 'Počet akcí', color: THEME.text3, font: { family: THEME.fontSans, size: 12 } },
                         beginAtZero: true
                     }
                 }
@@ -452,9 +452,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     label: 'Počet akcí',
                     data: data,
-                    backgroundColor: CSK.navy,
-                    hoverBackgroundColor: CSK.blueDark,
-                    borderRadius: 3,
+                    backgroundColor: THEME.navy,
+                    hoverBackgroundColor: THEME.navyDeep,
+                    borderRadius: 4,
                     maxBarThickness: 22,
                     borderWidth: 0
                 }]
@@ -469,12 +469,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 scales: {
                     x: {
-                        grid: { color: CSK.line2 }, border: { color: CSK.line },
-                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } }
+                        grid: { color: THEME.line2 }, border: { color: THEME.line },
+                        ticks: { color: THEME.text3, font: { family: THEME.fontSans, size: 12 } }
                     },
                     y: {
                         grid: { display: false },
-                        ticks: { color: CSK.text, font: { family: CSK.fontSans, size: 12 } }
+                        ticks: { color: THEME.text, font: { family: THEME.fontSans, size: 12 } }
                     }
                 }
             }
@@ -503,9 +503,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     label: 'Průtok (startů)',
                     data: data,
-                    backgroundColor: CSK.blue,
-                    hoverBackgroundColor: CSK.blueDark,
-                    borderRadius: 3,
+                    backgroundColor: THEME.accent,
+                    hoverBackgroundColor: THEME.navyDeep,
+                    borderRadius: 4,
                     maxBarThickness: 22,
                     borderWidth: 0
                 }]
@@ -520,12 +520,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 scales: {
                     x: {
-                        grid: { color: CSK.line2 }, border: { color: CSK.line },
-                        ticks: { color: CSK.text3, font: { family: CSK.fontSans, size: 12 } }
+                        grid: { color: THEME.line2 }, border: { color: THEME.line },
+                        ticks: { color: THEME.text3, font: { family: THEME.fontSans, size: 12 } }
                     },
                     y: {
                         grid: { display: false },
-                        ticks: { color: CSK.text, font: { family: CSK.fontSans, size: 12 } }
+                        ticks: { color: THEME.text, font: { family: THEME.fontSans, size: 12 } }
                     }
                 }
             }

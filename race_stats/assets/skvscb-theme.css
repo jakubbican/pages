@@ -1,0 +1,103 @@
+/* SK Vodní slalom České Budějovice — design tokens v2.2.2
+   Zdroj pravdy: https://github.com/jakubbican/skvscb-design/tokens/tokens.json
+   Písma: Google Fonts – Barlow (400–800) a Barlow Condensed (600–800).
+   Akcent = šafrán. Text na --accent je VŽDY navy (--navy), nikdy bílý.
+   --accent nikdy jako text ani tenká linka na světlém pozadí – tam --accent-text / --accent-strong.
+   --orange je zastaralý alias --accent (odstraní se ve 3.0.0). */
+:root{
+  --navy:#002E5D; --navy-deep:#0B1F3A; --sand:#F4F1EA; --water:#CFE0EE;
+  --accent:#E8940A;          /* plochy: tlačítka, lem, štítky; text na něm navy */
+  --accent-strong:#A86A00;   /* obrysy, ikony, tečky na bílé/písku; text jen ≥18px tučný */
+  --accent-text:#8F5C00;     /* malý text na bílé/písku: štítky, data, odkazy */
+  --accent-on-navy:#F2A20C;  /* akcent na navy: eyebrow, tečky, odkaz v patičce */
+  --orange:var(--accent);    /* DEPRECATED alias */
+  --ink:#0B1F3A; --muted:#4A5668; --line:#D9D4C8; --line-soft:#ECE8DF; --white:#fff;
+  --display:'Barlow Condensed',system-ui,sans-serif; --body:'Barlow',system-ui,sans-serif;
+  --radius-sm:4px; --radius-md:6px; --radius-lg:8px;
+  --radius-control:10px;     /* tlačítka, pole, segmenty, výběrové chipy (aplikace) */
+  --radius-card:12px;        /* karty a seznamy (aplikace) */
+  --radius-sheet:24px;       /* horní rohy spodního panelu (aplikace) */
+  --max:1180px;
+}
+
+/* =============================================================================
+   Aplikační vrstva --ui-* nad tokeny SK VS ČB (výše, beze změny z tokens/tokens.css).
+   Stránky používají jen --ui-*; barvy a písma berou výhradně z klubových tokenů.
+   ============================================================================= */
+:root {
+  /* Plochy a text */
+  --ui-color-page: var(--sand);
+  --ui-color-surface: var(--white);
+  --ui-color-surface-2: var(--sand);
+  --ui-color-surface-3: var(--line-soft);
+  --ui-color-border: var(--line);
+  --ui-color-border-2: var(--line-soft);
+  --ui-color-text: var(--ink);
+  --ui-color-text-2: var(--muted);
+  --ui-color-text-3: var(--muted);
+  --ui-color-text-on-fill: var(--white);
+
+  /* Značka a akce: navy; šafrán jen jako akcent (text na něm navy) */
+  --ui-color-brand: var(--navy);
+  --ui-color-action: var(--navy);
+  --ui-color-action-hover: var(--accent-text);
+  --ui-color-focus: var(--accent-strong);
+  --ui-color-highlight-bg: var(--water);
+  --ui-color-highlight-text: var(--navy);
+  --ui-color-eyebrow: var(--accent-text);
+  --ui-color-accent: var(--accent);
+  --ui-color-on-accent: var(--navy);
+
+  /* Písmo */
+  --ui-font-display: var(--display);
+  --ui-font-sans: var(--body);
+  --ui-font-mono: var(--body);
+  --ui-font-weight-regular: 400;
+  --ui-font-weight-medium: 500;
+  --ui-font-weight-semibold: 600;
+  --ui-font-weight-bold: 700;
+  --ui-font-weight-black: 800;
+
+  --ui-text-xs: 12px;
+  --ui-text-sm: 14px;
+  --ui-text-md: 15px;
+  --ui-text-base: 16px;
+  --ui-text-lg: 18px;
+  --ui-text-xl: 22px;
+  --ui-text-2xl: 28px;
+  --ui-text-3xl: 44px;
+
+  --ui-line-height-tight: 1;
+  --ui-line-height-snug: 1.3;
+  --ui-line-height-normal: 1.5;
+  --ui-letter-spacing-caps: .12em;
+  --ui-letter-spacing-eyebrow: .18em;
+  --ui-letter-spacing-tight: .01em;
+
+  /* Rozměry (krok 4 px) */
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-5: 20px;
+  --ui-space-6: 24px;
+  --ui-space-8: 32px;
+  --ui-space-10: 40px;
+  --ui-space-12: 48px;
+  --ui-layout-max-width: var(--max);
+  --ui-layout-gutter: 24px;
+  --ui-tap: 44px;
+
+  --ui-radius-sm: var(--radius-sm);
+  --ui-radius-md: var(--radius-control);
+  --ui-radius-lg: var(--radius-card);
+  --ui-radius-pill: 999px;
+  --ui-shadow-card: 0 1px 0 rgba(11, 31, 58, .08);
+
+  --ui-transition-fast: 120ms ease;
+  --ui-transition-slow: 300ms ease;
+}
+
+@media (max-width: 600px) {
+  :root { --ui-layout-gutter: 16px; --ui-text-3xl: 34px; }
+}

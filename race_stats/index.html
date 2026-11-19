@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#004899">
+    <meta name="theme-color" content="#002E5D">
     <title>Statistika vodáckých oddílů ČR (slalom a sjezd)</title>
     <meta name="description" content="Statistika počtu pořádaných akcí a celkového průtoku závodníků u vodáckých oddílů divoké vody v České republice od roku 2012 po současnost.">
-    <link rel="preload" href="assets/fonts/barlow-semi-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="icon" href="assets/csk-logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo-navy.svg" type="image/svg+xml">
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="assets/skvscb-theme.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body data-theme="light">
-    <div class="site-band" aria-hidden="true"></div>
     <header class="site-header">
         <div class="site-header__inner">
-            <a class="site-header__brand" href="https://www.kanoe.cz/" aria-label="Český svaz kanoistů – kanoe.cz">
-                <img src="assets/csk-logo.svg" alt="ČSK – Český svaz kanoistů" width="45" height="36">
-                <span class="site-header__app">Statistiky oddílů</span>
+            <a class="site-header__brand" href="https://www.ww-cb.cz/">
+                <img src="assets/logo-navy.svg" alt="" width="36" height="48">
+                <span class="site-header__name">SK Vodní slalom<br><span>České Budějovice</span></span>
             </a>
-            <a class="site-header__home" href="https://www.kanoe.cz/">
+            <span class="site-header__sep" aria-hidden="true"></span>
+            <span class="site-header__app">Statistiky oddílů</span>
+            <a class="site-header__home" href="https://www.ww-cb.cz/">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                kanoe.cz
+                ww-cb.cz
             </a>
         </div>
     </header>
@@ -222,7 +225,7 @@
     </main>
 
     <footer class="site-footer">
-        <div class="site-footer__inner">Zdroj dat: registrační a výsledkový systém ČSK DV a Slalom World. Vzhled podle design systému <a href="https://github.com/CzechCanoe/rvp-design-system">ČSK RVP</a>.</div>
+        <div class="site-footer__inner">Zdroj dat: registrační a výsledkový systém ČSK DV a Slalom World. Připravil SK Vodní slalom České Budějovice · <a href="https://www.ww-cb.cz/">ww-cb.cz</a></div>
     </footer>
 
     <!-- SCRIPTS -->

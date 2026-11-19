@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#004899">
+    <meta name="theme-color" content="#002E5D">
     <title>Termínová listina 2026</title>
-    <link rel="icon" href="assets/csk-logo.svg" type="image/svg+xml">
-    <link rel="preload" href="assets/fonts/barlow-semi-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="assets/csk-tokens.css">
+    <link rel="icon" href="assets/logo-navy.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/skvscb-theme.css">
     <!-- HTML2PDF Library for PDF Export -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <style>
-        /* Termínová listina – vzhled podle CSK RVP Design System v2 („Klidná voda“), tón Tribuna */
+        /* Termínová listina – vzhled SK Vodní slalom České Budějovice (assets/skvscb-theme.css: tokeny z jakubbican/skvscb-design + vrstva --ui-*) */
 
         :root {
             /* Disciplíny divoké vody – jen pro štítky, vždy s textem */
-            --app-slalom-bg: var(--csk-blue-100);
-            --app-slalom-text: var(--csk-blue-dark);
-            --app-sjezd-bg: #fbeee7;
-            --app-sjezd-text: #8a3613;
-            --app-sprint-bg: var(--csk-amber-100);
-            --app-sprint-text: var(--csk-amber-dark);
-            --app-kros-bg: var(--csk-gray-100);
-            --app-kros-text: var(--csk-ink-2);
+            --app-slalom-bg: var(--water);
+            --app-slalom-text: var(--navy);
+            --app-sjezd-bg: #FBEBCB;
+            --app-sjezd-text: var(--accent-text);
+            --app-sprint-bg: #FBEBCB;
+            --app-sprint-text: var(--accent-text);
+            --app-sprint-border: var(--accent-strong);
+            --app-kros-bg: var(--line-soft);
+            --app-kros-text: var(--muted);
         }
 
         * { box-sizing: border-box; }
@@ -32,81 +34,92 @@
 
         body {
             margin: 0;
-            background: var(--csk-color-surface);
-            color: var(--csk-color-text);
-            font-family: var(--csk-font-sans);
-            font-size: var(--csk-text-base);
-            line-height: var(--csk-line-height-normal);
+            background: var(--ui-color-page);
+            color: var(--ui-color-text);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-base);
+            line-height: var(--ui-line-height-normal);
             -webkit-text-size-adjust: 100%;
         }
 
         :focus-visible {
-            outline: 2px solid var(--csk-color-focus);
+            outline: 2px solid var(--ui-color-focus);
             outline-offset: 2px;
         }
 
-        a { color: var(--csk-color-action); }
-        a:hover { color: var(--csk-color-action-hover); }
+        a { color: var(--ui-color-action); }
+        a:hover { color: var(--ui-color-action-hover); }
 
         /* ---------- Hlavička: satelitní lišta ---------- */
-        .site-band { height: 4px; background: var(--csk-color-brand); }
 
         .site-header {
-            background: var(--csk-color-surface-2);
-            border-bottom: 1px solid var(--csk-color-border);
+            background: var(--ui-color-surface-2);
+            border-bottom: 1px solid var(--ui-color-border);
         }
 
         .site-header__inner {
             display: flex;
             align-items: center;
-            gap: var(--csk-space-3);
-            max-width: var(--csk-layout-max-width);
-            min-height: 56px;
+            gap: var(--ui-space-3);
+            max-width: var(--ui-layout-max-width);
+            min-height: 76px;
             margin: 0 auto;
-            padding: var(--csk-space-2) var(--csk-layout-gutter);
+            padding: var(--ui-space-2) var(--ui-layout-gutter);
         }
 
         .site-header__brand {
             display: flex;
             align-items: center;
-            gap: var(--csk-space-3);
-            padding-right: var(--csk-space-3);
-            border-right: 1px solid var(--csk-color-border);
+            gap: var(--ui-space-3);
             color: inherit;
             text-decoration: none;
         }
 
-        .site-header__brand img { display: block; height: 36px; width: auto; }
+        .site-header__brand img { display: block; width: 36px; height: 48px; }
+
+        .site-header__name {
+            font-family: var(--ui-font-display);
+            font-size: 20px;
+            font-weight: var(--ui-font-weight-black);
+            line-height: .95;
+            text-transform: uppercase;
+            color: var(--ui-color-brand);
+        }
+
+        .site-header__name span { font-weight: var(--ui-font-weight-semibold); color: var(--ui-color-text-2); }
+
+        .site-header__sep { align-self: stretch; width: 1px; margin: var(--ui-space-2) var(--ui-space-1); background: var(--ui-color-border); }
 
         .site-header__app {
-            font-family: var(--csk-font-display);
-            font-size: var(--csk-text-lg);
-            font-weight: var(--csk-font-weight-bold);
-            line-height: var(--csk-line-height-tight);
-            color: var(--csk-color-brand);
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-lg);
+            font-weight: var(--ui-font-weight-bold);
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            color: var(--ui-color-text-2);
         }
 
         .site-header__home {
             margin-left: auto;
             display: inline-flex;
             align-items: center;
-            gap: var(--csk-space-1);
+            gap: var(--ui-space-1);
             min-height: 32px;
-            padding: var(--csk-space-1) var(--csk-space-2);
-            border-radius: var(--csk-radius-sm);
-            font-size: var(--csk-text-sm);
-            font-weight: var(--csk-font-weight-medium);
+            padding: var(--ui-space-1) var(--ui-space-2);
+            border-radius: var(--ui-radius-sm);
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-medium);
             text-decoration: none;
         }
 
-        .site-header__home:hover { background: var(--csk-color-highlight-bg); }
+        .site-header__home:hover { color: var(--ui-color-action-hover); }
 
         /* ---------- Obsah ---------- */
         .container {
-            max-width: var(--csk-layout-max-width);
+            max-width: var(--ui-layout-max-width);
             margin: 0 auto;
-            padding: var(--csk-space-8) var(--csk-layout-gutter) var(--csk-space-10);
-            background: var(--csk-color-surface);
+            padding: var(--ui-space-8) var(--ui-layout-gutter) var(--ui-space-10);
+            background: var(--ui-color-page);
         }
 
         .page-title {
@@ -114,53 +127,55 @@
             flex-wrap: wrap;
             align-items: flex-end;
             justify-content: space-between;
-            gap: var(--csk-space-4);
-            margin-bottom: var(--csk-space-6);
+            gap: var(--ui-space-4);
+            margin-bottom: var(--ui-space-6);
         }
 
-        .page-title__main { display: flex; flex-direction: column; gap: var(--csk-space-2); min-width: 0; }
+        .page-title__main { display: flex; flex-direction: column; gap: var(--ui-space-2); min-width: 0; }
 
         .pdf-logo { display: none; }
 
         .page-eyebrow {
             margin: 0;
-            font-size: var(--csk-text-xs);
-            font-weight: var(--csk-font-weight-semibold);
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-bold);
             text-transform: uppercase;
-            letter-spacing: var(--csk-letter-spacing-caps);
-            color: var(--csk-color-section-dv);
+            letter-spacing: var(--ui-letter-spacing-eyebrow);
+            color: var(--ui-color-eyebrow);
         }
 
         h1 {
             margin: 0;
-            font-family: var(--csk-font-display);
-            font-size: var(--csk-text-3xl);
-            font-weight: var(--csk-font-weight-bold);
-            line-height: var(--csk-line-height-tight);
-            letter-spacing: var(--csk-letter-spacing-tight);
-            color: var(--csk-color-text);
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-3xl);
+            font-weight: var(--ui-font-weight-black);
+            line-height: var(--ui-line-height-tight);
+            letter-spacing: var(--ui-letter-spacing-tight);
+            text-transform: uppercase;
+            color: var(--ui-color-brand);
         }
 
         .page-meta {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: var(--csk-space-2);
+            gap: var(--ui-space-2);
             margin: 0;
-            font-size: var(--csk-text-sm);
-            color: var(--csk-color-text-3);
+            font-size: var(--ui-text-sm);
+            color: var(--ui-color-text-3);
         }
 
         .meta-badge {
             display: inline-flex;
             align-items: center;
             height: 22px;
-            padding: 0 var(--csk-space-2);
-            border-radius: var(--csk-radius-sm);
-            background: var(--csk-color-surface-3);
-            color: var(--csk-color-text-2);
+            padding: 0 var(--ui-space-2);
+            border-radius: var(--ui-radius-sm);
+            background: var(--ui-color-surface-3);
+            color: var(--ui-color-text-2);
             font-size: 12px;
-            font-weight: var(--csk-font-weight-semibold);
+            font-weight: var(--ui-font-weight-semibold);
         }
 
         .count { font-variant-numeric: tabular-nums; }
@@ -169,34 +184,34 @@
         .filters {
             display: grid;
             grid-template-columns: minmax(220px, 2fr) minmax(160px, 1fr) minmax(160px, 1fr);
-            gap: var(--csk-space-4) var(--csk-space-5);
-            margin-bottom: var(--csk-space-6);
-            padding: var(--csk-space-4) var(--csk-space-5);
-            background: var(--csk-color-surface-2);
-            border: 1px solid var(--csk-color-border);
-            border-radius: var(--csk-radius-lg);
+            gap: var(--ui-space-4) var(--ui-space-5);
+            margin-bottom: var(--ui-space-6);
+            padding: var(--ui-space-4) var(--ui-space-5);
+            background: var(--ui-color-surface);
+            border-radius: var(--ui-radius-lg);
+            box-shadow: var(--ui-shadow-card);
         }
 
-        .filter-group { display: flex; flex-direction: column; gap: var(--csk-space-1); min-width: 0; }
+        .filter-group { display: flex; flex-direction: column; gap: var(--ui-space-1); min-width: 0; }
         .filter-group-chips { grid-column: 1 / 3; }
         .btn-group { grid-column: 3; justify-content: flex-end; align-items: flex-end; }
 
         label, .filter-label {
-            font-size: var(--csk-text-sm);
-            font-weight: var(--csk-font-weight-medium);
-            color: var(--csk-color-text-2);
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-medium);
+            color: var(--ui-color-text-2);
         }
 
-        .chip-hint { font-weight: var(--csk-font-weight-regular); color: var(--csk-color-text-3); }
+        .chip-hint { font-weight: var(--ui-font-weight-regular); color: var(--ui-color-text-3); }
 
         .input-wrapper { position: relative; display: flex; align-items: center; }
 
         .input-icon {
             position: absolute;
-            left: var(--csk-space-3);
+            left: var(--ui-space-3);
             width: 18px;
             height: 18px;
-            color: var(--csk-color-text-3);
+            color: var(--ui-color-text-3);
             pointer-events: none;
         }
 
@@ -209,27 +224,27 @@
             top: 50%;
             width: 7px;
             height: 7px;
-            border-right: 2px solid var(--csk-color-text-2);
-            border-bottom: 2px solid var(--csk-color-text-2);
+            border-right: 2px solid var(--ui-color-text-2);
+            border-bottom: 2px solid var(--ui-color-text-2);
             transform: translateY(-70%) rotate(45deg);
             pointer-events: none;
         }
 
         input, select {
             width: 100%;
-            min-height: var(--csk-tap);
-            padding: 0 var(--csk-space-3);
-            background: var(--csk-color-surface);
-            border: 1px solid var(--csk-color-border);
-            border-radius: var(--csk-radius-md);
-            font-family: var(--csk-font-sans);
-            font-size: var(--csk-text-md);
-            color: var(--csk-color-text);
-            transition: border-color var(--csk-transition-fast);
+            min-height: var(--ui-tap);
+            padding: 0 var(--ui-space-3);
+            background: var(--ui-color-surface);
+            border: 2px solid var(--ui-color-border);
+            border-radius: var(--ui-radius-md);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-base);
+            color: var(--ui-color-text);
+            transition: border-color var(--ui-transition-fast);
         }
 
         input { padding-left: 40px; }
-        input::placeholder { color: var(--csk-color-text-3); }
+        input::placeholder { color: var(--ui-color-text-3); }
 
         select {
             appearance: none;
@@ -238,43 +253,43 @@
             cursor: pointer;
         }
 
-        input:hover, select:hover { border-color: var(--csk-color-text-3); }
+        input:hover, select:hover { border-color: var(--ui-color-text-3); }
 
         input:focus, select:focus {
-            outline: 2px solid var(--csk-color-focus);
-            outline-offset: -1px;
-            border-color: var(--csk-color-focus);
+            outline: 2px solid var(--ui-color-focus);
+            outline-offset: 1px;
+            border-color: var(--ui-color-brand);
         }
 
         /* Úroveň – FilterPills */
-        .level-chips { display: flex; flex-wrap: wrap; gap: var(--csk-space-2); }
+        .level-chips { display: flex; flex-wrap: wrap; gap: var(--ui-space-2); }
 
         .chip {
             display: inline-flex;
             align-items: center;
             height: 34px;
-            padding: 0 var(--csk-space-3);
-            background: var(--csk-color-surface);
-            border: 1px solid var(--csk-color-border);
-            border-radius: var(--csk-radius-pill);
-            font-family: var(--csk-font-sans);
-            font-size: var(--csk-text-sm);
-            font-weight: var(--csk-font-weight-medium);
-            color: var(--csk-color-text-2);
+            padding: 0 var(--ui-space-3);
+            background: var(--ui-color-surface);
+            border: 2px solid var(--ui-color-border);
+            border-radius: var(--ui-radius-md);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-sm);
+            font-weight: var(--ui-font-weight-semibold);
+            color: var(--ui-color-text-2);
             white-space: nowrap;
             cursor: pointer;
-            transition: background-color var(--csk-transition-fast), border-color var(--csk-transition-fast), color var(--csk-transition-fast);
+            transition: background-color var(--ui-transition-fast), border-color var(--ui-transition-fast), color var(--ui-transition-fast);
         }
 
-        .chip:hover { background: var(--csk-color-surface-2); color: var(--csk-color-text); }
+        .chip:hover { background: var(--ui-color-surface-2); color: var(--ui-color-text); }
 
         .chip.active {
-            background: var(--csk-color-brand);
-            border-color: var(--csk-color-brand);
-            color: var(--csk-color-text-on-fill);
+            background: var(--ui-color-brand);
+            border-color: var(--ui-color-brand);
+            color: var(--ui-color-text-on-fill);
         }
 
-        .chip.active:hover { background: var(--csk-color-action-hover); border-color: var(--csk-color-action-hover); }
+        .chip.active:hover { background: var(--navy-deep); border-color: var(--navy-deep); }
 
         .chip:focus-visible { outline-offset: 2px; }
 
@@ -283,47 +298,46 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: var(--csk-space-2);
+            gap: var(--ui-space-2);
             min-height: 40px;
-            min-width: var(--csk-tap);
-            padding: 0 var(--csk-space-4);
+            min-width: var(--ui-tap);
+            padding: 0 var(--ui-space-4);
             border: 1px solid transparent;
-            border-radius: var(--csk-radius-md);
-            font-family: var(--csk-font-sans);
-            font-size: var(--csk-text-md);
-            font-weight: var(--csk-font-weight-semibold);
+            border-radius: var(--ui-radius-md);
+            font-family: var(--ui-font-sans);
+            font-size: var(--ui-text-base);
+            font-weight: var(--ui-font-weight-semibold);
             text-decoration: none;
             cursor: pointer;
-            transition: background-color var(--csk-transition-fast), border-color var(--csk-transition-fast), color var(--csk-transition-fast);
+            transition: background-color var(--ui-transition-fast), border-color var(--ui-transition-fast), color var(--ui-transition-fast);
         }
 
         .btn svg { width: 18px; height: 18px; }
 
+        /* Jediná akcentní akce na obrazovce: šafrán, text navy */
         .btn-pdf {
-            background: var(--csk-color-surface);
-            border-color: var(--csk-color-border);
-            color: var(--csk-color-text);
+            background: var(--ui-color-accent);
+            color: var(--ui-color-on-accent);
+            font-weight: var(--ui-font-weight-bold);
+            border-radius: var(--ui-radius-sm);
+            min-height: 44px;
         }
 
-        .btn-pdf:hover {
-            background: var(--csk-color-surface-2);
-            border-color: var(--csk-color-action);
-            color: var(--csk-color-action-hover);
-        }
+        .btn-pdf:hover { background: var(--accent-on-navy); }
 
         .btn-cal {
             min-height: 36px;
             min-width: 36px;
             padding: 0;
             background: transparent;
-            border-color: var(--csk-color-border);
-            color: var(--csk-color-text-2);
+            border: 2px solid var(--ui-color-border);
+            color: var(--ui-color-brand);
         }
 
         .btn-cal:hover {
-            border-color: var(--csk-color-action);
-            color: var(--csk-color-action);
-            background: var(--csk-color-highlight-bg);
+            border-color: var(--ui-color-action);
+            color: var(--ui-color-action);
+            background: var(--ui-color-highlight-bg);
         }
 
         .btn-cal svg { width: 18px; height: 18px; fill: currentColor; }
@@ -331,66 +345,66 @@
         /* ---------- Tabulka ---------- */
         .table-wrapper {
             overflow-x: auto;
-            border: 1px solid var(--csk-color-border);
-            border-radius: var(--csk-radius-lg);
-            background: var(--csk-color-surface);
+            border-radius: var(--ui-radius-lg);
+            background: var(--ui-color-surface);
+            box-shadow: var(--ui-shadow-card);
         }
 
         table {
             width: 100%;
             min-width: 880px;
             border-collapse: collapse;
-            font-size: var(--csk-text-md);
+            font-size: var(--ui-text-md);
         }
 
         th, td {
-            padding: var(--csk-space-3);
+            padding: var(--ui-space-3);
             text-align: left;
             vertical-align: top;
-            border-bottom: 1px solid var(--csk-color-border-2);
+            border-bottom: 1px solid var(--ui-color-border-2);
         }
 
         th {
             position: sticky;
             top: 0;
             z-index: 1;
-            padding-top: var(--csk-space-2);
-            padding-bottom: var(--csk-space-2);
-            background: var(--csk-color-surface);
-            border-bottom: 1px solid var(--csk-color-border);
-            font-size: var(--csk-text-xs);
-            font-weight: var(--csk-font-weight-semibold);
+            padding-top: var(--ui-space-2);
+            padding-bottom: var(--ui-space-2);
+            background: var(--ui-color-surface);
+            border-bottom: 1px solid var(--ui-color-border);
+            font-size: var(--ui-text-xs);
+            font-weight: var(--ui-font-weight-bold);
             text-transform: uppercase;
-            letter-spacing: var(--csk-letter-spacing-caps);
-            color: var(--csk-color-text-3);
+            letter-spacing: var(--ui-letter-spacing-caps);
+            color: var(--ui-color-text-3);
             white-space: nowrap;
         }
 
         tbody tr:last-child td { border-bottom: 0; }
-        tbody tr { transition: background-color var(--csk-transition-fast); }
-        tbody tr:hover { background: var(--csk-color-surface-2); }
+        tbody tr { transition: background-color var(--ui-transition-fast); }
+        tbody tr:hover { background: var(--ui-color-surface-2); }
 
-        td { line-height: var(--csk-line-height-snug); }
+        td { line-height: var(--ui-line-height-snug); }
 
         .date-col {
             white-space: nowrap;
-            font-family: var(--csk-font-mono);
-            font-size: var(--csk-text-md);
-            font-weight: var(--csk-font-weight-semibold);
+            font-family: var(--ui-font-display);
+            font-size: var(--ui-text-lg);
+            font-weight: var(--ui-font-weight-bold);
             font-variant-numeric: tabular-nums;
-            color: var(--csk-color-text);
+            color: var(--ui-color-brand);
         }
 
-        .place-col { font-weight: var(--csk-font-weight-semibold); }
-        .org-col { color: var(--csk-color-text-2); }
-        .action-col { color: var(--csk-color-text-2); }
+        .place-col { font-weight: var(--ui-font-weight-semibold); }
+        .org-col { color: var(--ui-color-text-2); }
+        .action-col { color: var(--ui-color-text-2); }
         .cal-col { width: 56px; text-align: center; vertical-align: middle; }
         .badges-col { white-space: nowrap; }
 
         .empty-row td {
-            padding: var(--csk-space-8);
+            padding: var(--ui-space-8);
             text-align: center;
-            color: var(--csk-color-text-3);
+            color: var(--ui-color-text-3);
         }
 
         /* Štítky – Badge */
@@ -399,11 +413,11 @@
             align-items: center;
             height: 22px;
             margin: 0 4px 4px 0;
-            padding: 0 var(--csk-space-2);
+            padding: 0 var(--ui-space-2);
             border: 1px solid transparent;
-            border-radius: var(--csk-radius-sm);
+            border-radius: var(--ui-radius-sm);
             font-size: 12px;
-            font-weight: var(--csk-font-weight-semibold);
+            font-weight: var(--ui-font-weight-semibold);
             line-height: 1;
             white-space: nowrap;
             vertical-align: middle;
@@ -411,29 +425,29 @@
 
         .disc-slalom { background: var(--app-slalom-bg); color: var(--app-slalom-text); }
         .disc-sjezd { background: var(--app-sjezd-bg); color: var(--app-sjezd-text); }
-        .disc-sprint { background: var(--app-sprint-bg); color: var(--app-sprint-text); }
+        .disc-sprint { background: transparent; border-color: var(--app-sprint-border); color: var(--app-sprint-text); }
         .disc-kros { background: var(--app-kros-bg); color: var(--app-kros-text); }
-        .disc-other { background: transparent; border-color: var(--csk-color-border); color: var(--csk-color-text-2); }
+        .disc-other { background: transparent; border-color: var(--ui-color-border); color: var(--ui-color-text-2); }
 
-        /* Úroveň: MČR = svazová modrá, ČP = level, mezinárodní = obrys, ostatní = neutrální */
-        .level-mcr { background: var(--csk-color-brand); color: var(--csk-color-text-on-fill); }
-        .level-cp { background: var(--csk-color-highlight-bg); color: var(--csk-color-highlight-text); }
-        .level-icf { background: transparent; border-color: var(--csk-color-brand); color: var(--csk-color-brand); }
-        .level-other { background: var(--csk-color-surface-3); color: var(--csk-color-text-2); }
+        /* Úroveň: MČR = navy, ČP = voda, mezinárodní = navy obrys, ostatní = neutrální */
+        .level-mcr { background: var(--ui-color-brand); color: var(--ui-color-text-on-fill); }
+        .level-cp { background: var(--ui-color-highlight-bg); color: var(--ui-color-highlight-text); }
+        .level-icf { background: transparent; border-color: var(--ui-color-brand); color: var(--ui-color-brand); }
+        .level-other { background: var(--ui-color-surface-3); color: var(--ui-color-text-2); }
 
         /* ---------- Patička ---------- */
         .footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: var(--csk-space-4);
-            margin-top: var(--csk-space-8);
-            padding-top: var(--csk-space-5);
-            border-top: 1px solid var(--csk-color-border);
+            gap: var(--ui-space-4);
+            margin-top: var(--ui-space-8);
+            padding-top: var(--ui-space-5);
+            border-top: 1px solid var(--ui-color-border);
         }
 
-        .footer p { margin: 0; font-size: var(--csk-text-sm); color: var(--csk-color-text-3); }
-        .footer img { height: 44px; width: auto; flex: none; }
+        .footer p { margin: 0; font-size: var(--ui-text-sm); color: var(--ui-color-text-3); }
+        .footer img { height: 48px; width: auto; flex: none; }
 
         /* ---------- Tablet ---------- */
         @media (max-width: 960px) {
@@ -445,14 +459,13 @@
 
         /* ---------- Mobil: karty ---------- */
         @media (max-width: 768px) {
-            .container { padding-top: var(--csk-space-5); }
-            h1 { font-size: var(--csk-text-2xl); }
-            .page-title { margin-bottom: var(--csk-space-4); }
+            .container { padding-top: var(--ui-space-5); }
+            h1 { font-size: var(--ui-text-2xl); }
+            .page-title { margin-bottom: var(--ui-space-4); }
 
-            .site-header__app { display: none; }
-            .site-header__brand { border-right: 0; }
+            .site-header__app, .site-header__sep { display: none; }
 
-            .filters { grid-template-columns: 1fr 1fr; gap: var(--csk-space-3); padding: var(--csk-space-4); margin-bottom: var(--csk-space-4); }
+            .filters { grid-template-columns: 1fr 1fr; gap: var(--ui-space-3); padding: var(--ui-space-4); margin-bottom: var(--ui-space-4); }
             .btn-group .btn { width: 100%; }
             .chip-hint { display: none; }
 
@@ -469,34 +482,34 @@
                     "place cal"
                     "badges badges"
                     "akce akce";
-                gap: 2px var(--csk-space-3);
-                margin-bottom: var(--csk-space-2);
-                padding: var(--csk-space-3) var(--csk-space-4);
-                background: var(--csk-color-surface);
-                border: 1px solid var(--csk-color-border);
-                border-radius: var(--csk-radius-lg);
+                gap: 2px var(--ui-space-3);
+                margin-bottom: var(--ui-space-2);
+                padding: var(--ui-space-3) var(--ui-space-4);
+                background: var(--ui-color-surface);
+                border: 1px solid var(--ui-color-border);
+                border-radius: var(--ui-radius-lg);
             }
 
-            tbody tr:hover { background: var(--csk-color-surface); }
+            tbody tr:hover { background: var(--ui-color-surface); }
             tbody tr.empty-row { display: block; }
 
             td { padding: 0; border: 0; }
 
             td.cal-col { grid-area: cal; width: auto; align-self: center; }
-            td.date-col { grid-area: date; color: var(--csk-color-brand); }
+            td.date-col { grid-area: date; }
             td.place-col { grid-area: place; }
             td.org-col { display: none; }
-            td.disc-col { grid-area: badges; padding-top: var(--csk-space-2); white-space: normal; }
-            td.level-col { grid-area: badges; padding-top: var(--csk-space-2); white-space: normal; justify-self: end; text-align: right; }
+            td.disc-col { grid-area: badges; padding-top: var(--ui-space-2); white-space: normal; }
+            td.level-col { grid-area: badges; padding-top: var(--ui-space-2); white-space: normal; justify-self: end; text-align: right; }
             td.action-col {
                 grid-area: akce;
-                margin-top: var(--csk-space-1);
-                padding-top: var(--csk-space-2);
-                border-top: 1px solid var(--csk-color-border-2);
-                font-size: var(--csk-text-sm);
+                margin-top: var(--ui-space-1);
+                padding-top: var(--ui-space-2);
+                border-top: 1px solid var(--ui-color-border-2);
+                font-size: var(--ui-text-sm);
             }
 
-            .btn-cal { min-height: var(--csk-tap); min-width: var(--csk-tap); }
+            .btn-cal { min-height: var(--ui-tap); min-width: var(--ui-tap); }
 
             .footer { flex-direction: column-reverse; align-items: flex-start; }
             .footer img { height: 36px; }
@@ -507,11 +520,12 @@
         }
 
         /* ---------- Export do PDF: tabulka ---------- */
-        .pdf-export .site-band,
         .pdf-export .site-header,
         .pdf-export .filters,
         .pdf-export .cal-col,
         .pdf-export .page-eyebrow { display: none !important; }
+
+        .pdf-export, .pdf-export .container { background: var(--white) !important; }
 
         .pdf-export .container {
             max-width: none !important;
@@ -521,9 +535,10 @@
         }
 
         .pdf-export .page-title { margin-bottom: 8px !important; align-items: center !important; justify-content: flex-start !important; }
-        .pdf-export .pdf-logo { display: block !important; height: 44px; width: auto; }
+        .pdf-export .pdf-logo { display: block !important; height: 48px; width: auto; }
         .pdf-export h1 { font-size: 20px !important; }
-        .pdf-export .table-wrapper { overflow: visible !important; border-radius: 0 !important; }
+        .pdf-export .table-wrapper { overflow: visible !important; border-radius: 0 !important; box-shadow: none !important; }
+        .pdf-export .date-col { font-size: 12px !important; }
 
         .pdf-export table {
             display: table !important;
@@ -556,13 +571,13 @@
         .pdf-export td {
             display: table-cell !important;
             padding: 5px 8px !important;
-            border-bottom: 1px solid var(--csk-color-border-2) !important;
+            border-bottom: 1px solid var(--ui-color-border-2) !important;
             border-top: 0 !important;
             margin: 0 !important;
             font-size: 10px !important;
             grid-area: unset !important;
             text-align: left !important;
-            color: var(--csk-color-text) !important;
+            color: var(--ui-color-text) !important;
         }
 
         .pdf-export td.org-col { display: table-cell !important; }
@@ -573,23 +588,24 @@
 </head>
 <body>
 
-<div class="site-band data-html2canvas-ignore" aria-hidden="true"></div>
 <header class="site-header data-html2canvas-ignore">
     <div class="site-header__inner">
-        <a class="site-header__brand" href="https://www.kanoe.cz/" aria-label="Český svaz kanoistů – kanoe.cz">
-            <img src="assets/csk-logo.svg" alt="ČSK – Český svaz kanoistů" width="45" height="36">
-            <span class="site-header__app">Termínová listina</span>
+        <a class="site-header__brand" href="https://www.ww-cb.cz/">
+            <img src="assets/logo-navy.svg" alt="" width="36" height="48">
+            <span class="site-header__name">SK Vodní slalom<br><span>České Budějovice</span></span>
         </a>
-        <a class="site-header__home" href="https://www.kanoe.cz/">
+        <span class="site-header__sep" aria-hidden="true"></span>
+        <span class="site-header__app">Termínová listina</span>
+        <a class="site-header__home" href="https://www.ww-cb.cz/">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
-            kanoe.cz
+            ww-cb.cz
         </a>
     </div>
 </header>
 
 <main class="container" id="contentToExport">
     <div class="page-title">
-        <img class="pdf-logo" src="logo.png" alt="">
+        <img class="pdf-logo" src="assets/logo-navy.png" alt="">
         <div class="page-title__main">
             <p class="page-eyebrow">Divoká voda · slalom, sjezd, sprint, kajak kros</p>
             <h1>Termínová listina vodáckých závodů 2026</h1>
@@ -675,7 +691,7 @@
 
     <div class="footer">
         <p>Z podkladů ZK ČSK vytvořil Jakub Bican / SK VS ČB <a href="http://www.ww-cb.cz" target="_blank" rel="noopener">www.ww-cb.cz</a></p>
-        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjAvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMtU1ZHLTIwMDEwOTA0L0RURC9zdmcxMC5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwcHgiIGhlaWdodD0iMjY3cHgiIHZpZXdCb3g9IjAgMCAyMDAgMjY3IiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBtZWV0Ij4KIDxnIGZpbGw9IiMwMDAwN2YiPgogIDxwYXRoIGQ9Ik04Ni4xIDI2NSBjLTM1LjEgLTcuNCAtNjQuMyAtMzcuNCAtNzcuOSAtODAgLTExIC0zNC40IC0xMSAtNjkuNyAwIC0xMDQgMTcuNiAtNTUuMSA2MS45IC04OC40IDEwNS42IC03OS40IDU0LjggMTEuMiA5My4xIDgxLjEgODMuNyAxNTIuNyAtNS4xIDM4LjYgLTIyIDcyIC00Ni41IDkyIC05LjIgNy40IC0yMyAxNC44IC0zMi41IDE3LjMgLTcuMiAxLjkgLTI2LjIgMi43IC0zMi40IDEuNHogbTIwLjcgLTEyLjMgYzAuOCAtMS42IDIgLTkuNyAyLjcgLTE4LjIgMS4yIC0xMy44IDEuNyAtMTYgNC44IC0yMi44IDQuOCAtMTAuMyAxMCAtMTcuNiAyMS40IC0zMC4yIDE3LjkgLTE5LjggMjYuNSAtMjkuOSAyOS40IC0zNSA0LjYgLTcuOSA3LjkgLTE5LjYgOC42IC0zMC40IDAuNyAtMTEuOCAwLjMgLTExLjYgLTkgNC45IC0yOS43IDUyLjkgLTM2LjYgNjIuOCAtNTYuNCA4MC4zIC0xMC40IDkuMiAtMTkuMSAxNCAtMzEuMSAxNi45IC0xMi41IDMgLTM3LjIgMi45IC0zNy4yIC0wLjIgMCAtMS4yIDMuNiAtNC41IDI4LjUgLTI2IDE3LjUgLTE1LjIgMjAgLTE3LjEgMjEgLTE1LjUgNCA2LjkgOS43IDEwLjIgMTUuMSA4LjkgOC41IC0yIDEyLjggLTkuNSAxNC4zIC0yNC45IDEgLTEwIDEgLTEwIDEwLjQgLTE5IDguNCAtOCAzMC4xIC0yNy45IDQxLjQgLTM3LjkgNC4yIC0zLjcgNC4yIC0zLjcgNS40IC0xLjQgMC44IDEuNCAxLjUgNy42IDEuNyAxNi41IDAuNyAyMi45IC00IDUyIC0xMC40IDY1IC0yLjEgNC40IC0zLjUgNS44IC04LjcgOC43IC0zLjQgMS45IC04LjcgNC40IC0xMS43IDUuNiAtMyAxLjEgLTguNiA0LjIgLTEyLjQgNi44IC05IDYuMSAtMTIgMTEuNSAtMTIuMSAyMS40IDAgOCAyLjMgMTIuMSA3LjIgMTIuNiA4LjQgMC44IDEwLjQgLTE2LjMgMi4yIC0xOSAtMS4xIC0wLjQgLTAuNyAtMS41IDEuNSAtNC43IDQgLTUuOCA5IC05LjkgMTUuNCAtMTIuOSA2LjUgLTMgMTIuNiAtMi41IDE4LjQgMS4zIDIuMSAxLjQgNC4yIDIuNSA0LjYgMi41IDEuMyAwIDguNyAtMTUuNCAxMS42IC0yNC4xIDYuOCAtMjAuMyA5LjMgLTQ4LjIgNi4yIC02OC4xIC0yIC0xMi43IC01LjMgLTI1LjEgLTkuOCAtMzcuMyAtMy4zIC05IC0zLjMgLTkgLTMuNiAxIC0wLjMgMTAgLTAuMyAxMCAtNy4zIDE0LjMgLTcuNiA0LjUgLTEyLjMgNS4zIC0xNi45IDIuNyAtMS40IC0wLjggLTMgLTEuNCAtMy42IC0xLjUgLTAuNiAwIC0yLjUgNi40IC00LjMgMTQuNiAtMy41IDE2IC00LjQgMTguNSAtOSAyMi44IC0yLjYgMi41IC00LjIgMyAtOS4yIDMuNCAtNS4xIDAuNCAtNi41IDAuMSAtOC45IC0xLjcgLTEuNiAtMS4xIC0zLjEgLTIuMSAtMy40IC0yLjEgLTAuMiAwIC0wLjYgOC4yIC0wLjggMTguMyAtMC4zIDE2LjIgLTAuNSAxOC42IC0yLjQgMjEuNyAtMi4zIDMuOSAtNS42IDYgLTguNCA1LjMgLTEuMSAtMC4zIC0zLjEgLTIuNyAtNC41IC01LjQgLTIuMiAtNC4yIC0yLjcgLTYuOSAtMy4zIC0xNy4xIC0wLjcgLTEyIC0wLjcgLTEyIC05LjggLTUgLTExLjMgOC43IC0xMi41IDEwLjMgLTE1LjkgMjAgLTYuNiAxOC42IC04LjEgMjAuNyAtMjIuMSAzMi4zIC05LjggOC4xIC0xMy4yIDEwLjQgLTE0LjEgOS42IC0wLjggLTAuOSAtMi4zIC0yOS4zIC0zIC01OCAtMC44IC0zNi44IDAuNiAtNDUuMiA5IC01Mi4zIDEuOSAtMS42IDkuMiAtNi45IDE2LjMgLTExLjkgMTcuOCAtMTIuNSAyMy45IC0xOC40IDI4LjEgLTI3IDIuNyAtNS44IDMuMyAtOC4xIDMuMyAtMTMuNyAwIC04LjQgLTIuMiAtMTQuMyAtNi4xIC0xNi4zIC00LjMgLTIuMyAtNi42IC0xLjggLTEwLjYgMS45IC0zLjYgMy4zIC0zLjggMy43IC00LjEgMTAuOCAtMC40IDkuOSAxLjYgMTQuMiA3LjEgMTQuNiA0LjQgMC40IDQuNyAxLjcgMS4zIDcgLTcuNyAxMiAtMjAuNiAxNy4xIC0zMS4yIDEyLjMgLTIuMiAtMSAtNi42IC00LjUgLTkuNyAtNy43IC00LjMgLTQuNSAtNS45IC01LjYgLTYuOCAtNC43IC0zLjMgMy4zIDMuNyAxMi4zIDEzIDE2LjkgMy4zIDEuNiA2IDMuNCA2IDQuMSAwLjIgMy45IC0xNi45IDkgLTI1LjkgNy44IC00LjYgLTAuNiAtNC42IC0wLjYgLTYuMyA2LjIgLTMuNiAxNS4xIC00LjIgMjEuMSAtNC4yIDQwLjMgMCAxNi44IDAuMyAyMSAyLjMgMjkuOSA3LjkgMzUuNCAyNS42IDYwLjcgNTIuNCA3NSAxMiA2LjUgMjggMTEuMSAzNy4zIDEwLjggNC40IC0wLjIgNS4xIC0wLjUgNi4zIC0zeiBtLTYxLjcgLTEwMy43IGMxMCAtNC41IDEzLjUgLTQuOCAxOS44IC0yIDIuNCAxLjEgNC45IDIgNS42IDIgMSAwIDEuNCAtNCAxLjcgLTE3LjcgMC40IC0yMi42IC0wLjEgLTIxLjcgMjAuOCAtMzkuOCAxNy40IC0xNSAxNyAtMTQuMyAxNyAtMjcuMSAwIC05LjEgMi4zIC0xNS41IDcgLTE5LjggNC45IC00LjQgOC4xIC00LjYgMTIuMSAtMC43IDIuNCAyLjQgMi45IDMuOCAyLjkgNy44IDAgOS45IC0zLjggMTUuOSAtMTQuNyAyMy42IC0xLjggMS4yIC0zLjUgMi44IC0zLjggMy40IC0xIDIuOCA2LjkgMjQuMyA5IDI0LjMgMS42IDAgOC4xIC00LjggMTcuNCAtMTIuNyA2LjkgLTUuOSA3LjcgLTYuOSAxMC42IC0xNC42IDMuOCAtMTAuMSA3LjQgLTE1LjkgMTMuMiAtMjEuNCA0LjUgLTQuMiA0LjUgLTQuMiAyLjIgLTggLTMuMiAtNS4zIC0xMC40IC0xMi44IC0xNy4xIC0xNy45IC0zLjEgLTIuNCAtNS45IC00LjQgLTYuMiAtNC40IC0wLjMgMCAtMC42IDExLjQgLTAuNiAyNS40IDAgMTQgLTAuNCAyNS43IC0wLjkgMjYgLTEuNCAwLjkgLTIuMSAtOC45IC0yLjEgLTMyIDAgLTIyLjEgMCAtMjIuMSAtNi4xIC0yNC45IC03IC0zLjEgLTEwIC00IC0xOC42IC01LjkgLTYuMiAtMS4zIC02LjIgLTEuMyAtNS42IDguMyAwLjggMTMuNSAtMS40IDI0LjQgLTguNCA0Mi43IC0zLjcgOS4zIC05LjkgMTYuOCAtMzMuMSAzOS41IC0xMi42IDEyLjMgLTI0LjUgMjQuOSAtMjYuNSAyNy45IC00LjkgNy41IC04LjYgMjIgLTUuNiAyMiAwLjYgMCA1LjEgLTEuOCAxMCAtNHogbTQ2LjMgLTExLjEgYzIuNiAtMiAyLjYgLTIgMi42IC0xOCAwIC0xNiAwIC0xNiAtMi42IC0xNCAtMTAgNy45IC0xNS40IDI2IC05LjcgMzIuMyAyLjIgMi40IDYuNCAyLjMgOS43IC0wLjN6IG00My4yIC0yMC41IGMyLjIgLTMuMyAyLjMgLTExIDAuMiAtMTMuMSAtMi4xIC0yLjEgLTUuOSAtMS4xIC05LjkgMi41IC0zLjYgMy4yIC0zLjQgNS4yIDAuOCAxMC4yIDMuMSAzLjggNi42IDMuOSA4LjkgMC40eiIvPgogPC9nPgo8L3N2Zz4=", alt="Logo SK VS ČB">
+        <img src="assets/logo-navy.png" alt="Logo SK VS ČB">
     </div>
 </main>
 

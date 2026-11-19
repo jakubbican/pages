@@ -1,466 +1,19 @@
-/* Statistika vodáckých oddílů – vzhled podle CSK RVP Design System v2 „Klidná voda“
-   Tokeny převzaté z CzechCanoe/rvp-design-system (src/tokens/*.css), fonty self-hosted v assets/fonts/. */
-
-/**
- * Self-hosted fonts (v2 T2) - Barlow Semi Condensed, IBM Plex Sans, IBM Plex Mono.
- * Files: public/fonts/ (woff2, subsets latin + latin-ext; latin-ext covers Czech
- * diacritics). Licences (SIL OFL 1.1): public/fonts/LICENSES/.
- * The relative ./assets/fonts/ URLs are intentionally left unresolved by Vite: the library build
- * copies public/fonts to dist/fonts (next to dist/rvp-design-system.css) instead of inlining
- * ~300 KB of base64 into the CSS, so unicode-range can fetch only the needed subsets.
- * Storybook maps public/fonts to the same relative locations (see .storybook/main.ts).
- */
-
-@font-face {
-  font-family: 'Barlow Semi Condensed';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./assets/fonts/barlow-semi-condensed-latin-ext-500-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./assets/fonts/barlow-semi-condensed-latin-500-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./assets/fonts/barlow-semi-condensed-latin-ext-600-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./assets/fonts/barlow-semi-condensed-latin-600-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('./assets/fonts/barlow-semi-condensed-latin-ext-700-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'Barlow Semi Condensed';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('./assets/fonts/barlow-semi-condensed-latin-700-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-sans-latin-ext-400-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-sans-latin-400-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-sans-latin-ext-500-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-sans-latin-500-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-sans-latin-ext-600-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'IBM Plex Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-sans-latin-600-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-@font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-mono-latin-ext-400-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-mono-latin-400-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-
-@font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-mono-latin-ext-600-normal.woff2') format('woff2');
-  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
-}
-
-@font-face {
-  font-family: 'IBM Plex Mono';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('./assets/fonts/ibm-plex-mono-latin-600-normal.woff2') format('woff2');
-  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
-}
-/**
- * Primitive colour tokens – CSK RVP Design System v2 („Klidná voda“)
- *
- * Raw palette derived from the ČSK logo and kanoe.cz (docs/v2/TOKENS.md, „Primitiva“).
- * Primitives are theme-independent values. Components never use them directly:
- * they use the semantic layer (semantic.css), which is the only layer a theme
- * (`[data-theme="dark"]`, 2.x) or a mode (`[data-mode="embed"]`) overrides.
- */
-
-:root {
-  /* Blues: union navy (logo) and action blue (kanoe.cz navigation, darkened to 4.5:1 on white) */
-  --csk-navy: #004899;
-  --csk-blue: #2a66b4;
-  --csk-blue-dark: #1d4f8f;
-  --csk-blue-100: #e8f0fa;
-  --csk-blue-200: #c9dbf1;
-
-  /* Red (logo): LIVE, errors, running time only */
-  --csk-red: #e42313;
-  --csk-red-100: #fdecea;
-  --csk-red-dark: #8a1a10;
-
-  /* Ink (text) */
-  --csk-ink: #1b1f26;
-  --csk-ink-2: #444b55;
-  --csk-ink-3: #626a75;  /* AA on every ground: 5.5:1 surface, 5.1:1 surface-2, 4.7:1 surface-3 (T19, #84.9) */
-
-  /* Lines */
-  --csk-line: #d9dee5;
-  --csk-line-2: #eceff3;
-
-  /* Grounds (surfaces) */
-  --csk-white: #ffffff;
-  --csk-ground: #ffffff;
-  --csk-ground-2: #f4f6f8;
-  --csk-ground-3: #eaeef2;
-
-  /* Value states */
-  --csk-green: #1f7a3a;
-  --csk-green-100: #e4f3e8;
-  --csk-green-dark: #14532d;
-  --csk-amber: #9a5b00;
-  --csk-amber-100: #fff3dc;
-  --csk-amber-dark: #5c3700;
-  --csk-violet: #5b3fa6;
-  --csk-violet-100: #efeafa;
-  --csk-gray: #8a919b;
-  --csk-gray-100: #f1f2f4;
-
-  /* Sections: divoká voda, rychlost, turistika */
-  --csk-dv: #1d4f8f;
-  --csk-ry: #1f7a3a;
-  --csk-vt: #b0471a;
-
-  /* Podium: row stripe colours and rank text colours */
-  --csk-gold: #d4a72c;
-  --csk-silver: #9aa5b1;
-  --csk-bronze: #c0712f;
-  --csk-gold-dark: #8a6a00;
-  --csk-silver-dark: #5f6b78;
-  --csk-bronze-dark: #8a4b1f;
-}
-/**
- * Semantic tokens – CSK RVP Design System v2 („Klidná voda“)
- *
- * The only colour layer components may use (docs/v2/TOKENS.md, „Sémantika“).
- *
- * Rules that keep a dark theme possible in 2.x without touching components:
- * - every semantic token points at a primitive (primitives.css) or a literal,
- *   never at another semantic token, so a theme block can override any subset
- *   and the rest stays consistent, also when the theme is set on a subtree;
- * - a theme overrides only this file's tokens, e.g. in 2.x:
- *     [data-theme="dark"] { color-scheme: dark; --csk-color-text: …; … }
- *   2.0 ships the light theme only (`data-theme="light"`, ThemeProvider maps
- *   'system' to light).
- */
-
-:root {
-  color-scheme: light;
-
-  /* ---------------------------------------------------------------------------
-     Text
-     ------------------------------------------------------------------------- */
-  --csk-color-text: var(--csk-ink);                 /* body text, values */
-  --csk-color-text-2: var(--csk-ink-2);             /* secondary text */
-  --csk-color-text-3: var(--csk-ink-3);             /* labels, meta (5.5:1 surface, 5.1:1 surface-2) */
-  --csk-color-text-on-fill: var(--csk-white);       /* text on brand/action/live/section fills */
-
-  /* ---------------------------------------------------------------------------
-     Surfaces and lines
-     ------------------------------------------------------------------------- */
-  --csk-color-surface: var(--csk-ground);           /* tribuna ground, cards, inputs */
-  --csk-color-surface-2: var(--csk-ground-2);       /* work ground (Úřad), detail, row hover */
-  --csk-color-surface-3: var(--csk-ground-3);       /* segments, neutral chips */
-  --csk-color-overlay: color-mix(in srgb, var(--csk-ink) 50%, transparent); /* modal backdrop */
-  --csk-color-on-dark-pad: color-mix(in srgb, var(--csk-white) 14%, transparent);  /* badge / tile pad on the navy band (data-tone="on-dark") */
-  --csk-color-on-dark-ring: color-mix(in srgb, var(--csk-white) 40%, transparent); /* avatar ring on the navy band */
-  --csk-color-border: var(--csk-line);             /* frames, inputs, table header rule */
-  --csk-color-border-2: var(--csk-line-2);          /* row separators */
-
-  /* ---------------------------------------------------------------------------
-     Brand and action
-     ------------------------------------------------------------------------- */
-  --csk-color-brand: var(--csk-navy);               /* top band, active tab, selected pill */
-  --csk-color-action: var(--csk-blue);              /* primary button, links */
-  --csk-color-action-hover: var(--csk-blue-dark);   /* hover / active */
-  --csk-color-focus: var(--csk-blue);               /* focus outline */
-  --csk-color-highlight-bg: var(--csk-blue-100);    /* tinted pad, active/selected item, level badge */
-  --csk-color-highlight-border: var(--csk-blue-200); /* frame of a highlighted card */
-  --csk-color-highlight-text: var(--csk-blue-dark); /* text on highlight-bg */
-
-  /* ---------------------------------------------------------------------------
-     Live (red is reserved for LIVE, running time and errors)
-     ------------------------------------------------------------------------- */
-  --csk-color-live: var(--csk-red);                 /* LIVE badge fill, running time */
-  --csk-color-live-bg: var(--csk-red-100);          /* running row in the programme */
-  --csk-color-live-text: var(--csk-red-dark);       /* text on live-bg (running time), AA */
-
-  /* ---------------------------------------------------------------------------
-     Value states: Oficiální · Předběžné · V revizi · Neznámo · Zastaveno (stale)
-     base = signal colour (border, dot, underline, icon)
-     -bg  = pad behind a state badge or cell
-     -text = text on -bg and on surface (WCAG AA)
-     ------------------------------------------------------------------------- */
-  --csk-color-state-official: var(--csk-green);
-  --csk-color-state-official-bg: var(--csk-green-100);
-  --csk-color-state-official-text: var(--csk-green);
-  --csk-color-state-provisional: var(--csk-amber);
-  --csk-color-state-provisional-bg: var(--csk-amber-100);
-  --csk-color-state-provisional-text: var(--csk-amber);
-  --csk-color-state-review: var(--csk-violet);
-  --csk-color-state-review-bg: var(--csk-violet-100);
-  --csk-color-state-review-text: var(--csk-violet);
-  --csk-color-state-unknown: var(--csk-gray);       /* non-text only (3.2:1 on surface) */
-  --csk-color-state-unknown-bg: var(--csk-gray-100);
-  --csk-color-state-unknown-text: var(--csk-ink-3); /* 4.9:1 on -bg (reference .b-unk) */
-  --csk-color-state-stale: var(--csk-gray);         /* dotted underline of a stale running value */
-
-  /* ---------------------------------------------------------------------------
-     Feedback: notes, alerts, form validation („Varování nikdy neblokuje“)
-     base = icon / border, -bg = pad, -text = body text on -bg
-     ------------------------------------------------------------------------- */
-  --csk-color-success: var(--csk-green);
-  --csk-color-success-bg: var(--csk-green-100);
-  --csk-color-success-text: var(--csk-green-dark);
-  --csk-color-warning: var(--csk-amber);
-  --csk-color-warning-bg: var(--csk-amber-100);
-  --csk-color-warning-text: var(--csk-amber-dark);
-  --csk-color-error: var(--csk-red);
-  --csk-color-error-bg: var(--csk-red-100);
-  --csk-color-error-text: var(--csk-red-dark);
-  --csk-color-info: var(--csk-blue);
-  --csk-color-info-bg: var(--csk-blue-100);
-  --csk-color-info-text: var(--csk-blue-dark);
-
-  /* ---------------------------------------------------------------------------
-     Sections and podium
-     ------------------------------------------------------------------------- */
-  --csk-color-section-dv: var(--csk-dv);
-  --csk-color-section-ry: var(--csk-ry);
-  --csk-color-section-vt: var(--csk-vt);
-
-  --csk-color-podium-1: var(--csk-gold);            /* row stripe */
-  --csk-color-podium-2: var(--csk-silver);
-  --csk-color-podium-3: var(--csk-bronze);
-  --csk-color-podium-1-text: var(--csk-gold-dark);  /* rank number */
-  --csk-color-podium-2-text: var(--csk-silver-dark);
-  --csk-color-podium-3-text: var(--csk-bronze-dark);
-
-  /* ---------------------------------------------------------------------------
-     Transitions (motion only where data changes; hover/focus feedback is fast)
-     Usage: transition: background-color var(--csk-transition-fast);
-     ------------------------------------------------------------------------- */
-  --csk-transition-fast: 150ms cubic-bezier(0, 0, 0.2, 1);  /* hover, focus, press */
-  --csk-transition-slow: 300ms cubic-bezier(0, 0, 0.2, 1);  /* data: new state, rank change */
-}
-
-@media (prefers-reduced-motion: reduce) {
-  :root {
-    --csk-transition-fast: 0s linear;
-    --csk-transition-slow: 0s linear;
-  }
-}
-/**
- * Radius tokens – CSK RVP Design System v2 („Klidná voda“)
- *
- * [data-mode="embed"] makes them smaller (embed.css).
- */
-
-:root {
-  --csk-radius-sm: 4px;    /* badges, penalty chips, bib */
-  --csk-radius-md: 6px;    /* buttons, inputs, notes */
-  --csk-radius-lg: 10px;   /* cards, panels */
-  --csk-radius-pill: 999px; /* pills, avatars */
-}
-/**
- * Shadow tokens – CSK RVP Design System v2 („Klidná voda“)
- *
- * One shadow only, for floating layers: Modal, Dropdown, Toast.
- * Everything else is separated by borders (--csk-color-border).
- * [data-mode="embed"] removes it (embed.css).
- */
-
-:root {
-  --csk-shadow-sm:
-    0 1px 2px color-mix(in srgb, var(--csk-ink) 8%, transparent),
-    0 4px 12px color-mix(in srgb, var(--csk-ink) 12%, transparent);
-}
-/**
- * Spacing tokens – CSK RVP Design System v2 („Klidná voda“)
- *
- * Four-pixel grid: --csk-space-N = N × 4px (docs/v2/TOKENS.md).
- * No mode variants: density differences between Tribuna and Úřad are made
- * by components (variants), not by switching the scale.
- */
-
-:root {
-  --csk-space-1: 4px;
-  --csk-space-2: 8px;
-  --csk-space-3: 12px;
-  --csk-space-4: 16px;
-  --csk-space-5: 20px;
-  --csk-space-6: 24px;
-  --csk-space-7: 28px;
-  --csk-space-8: 32px;
-  --csk-space-10: 40px;  /* section gaps on desktop */
-  --csk-space-12: 48px;  /* page padding on desktop */
-
-  /* Minimum touch target (WCAG 2.5.5) */
-  --csk-tap: 44px;
-
-  /* Content width of a page (reference .wrap) */
-  --csk-layout-max-width: 1200px;
-
-  /* Side gutter of the page content: 16 px phone, 24 px from 768 px. One source for
-     PageLayout (padded container, footer) and full-width bands (EventHeader), so their content lines up. */
-  --csk-layout-gutter: var(--csk-space-4);
-
-  /* Height of the condensed (one-row) EventHeader. Pages with a sticky condensed header use it
-     as scroll-padding-top, so focused or scrolled-to content (class carousel) is not covered. */
-  --csk-event-header-condensed-h: 36px;
-}
-
-@media (min-width: 768px) {
-  :root {
-    --csk-layout-gutter: var(--csk-space-6);
-  }
-}
-/**
- * Typography tokens – CSK RVP Design System v2 („Klidná voda“)
- *
- * Roles (docs/v2/TOKENS.md, „Typografie“):
- * - display: Barlow Semi Condensed 500/600/700 – headings, ranks, big numbers
- * - sans:    IBM Plex Sans 400/500/600 – text, tables, forms
- * - mono:    IBM Plex Mono 400/600 – times, gaps, start times
- *
- * Font files are self-hosted and declared in src/styles/fonts.css (public/fonts/).
- *
- * Sizes are in rem (16px root) so they follow the reader's font-size setting;
- * the px value from TOKENS.md is noted next to each.
- */
-
-:root {
-  /* Families */
-  --csk-font-sans: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-  --csk-font-display: 'Barlow Semi Condensed', 'IBM Plex Sans', system-ui, sans-serif;
-  --csk-font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-
-  /* Size scale */
-  --csk-text-xs: 0.6875rem;    /* 11px – table head in live, meta */
-  --csk-text-sm: 0.8125rem;    /* 13px – labels, secondary */
-  --csk-text-md: 0.875rem;     /* 14px – tables, forms, buttons */
-  --csk-text-base: 0.9375rem;  /* 15px – body */
-  --csk-text-lg: 1.0625rem;    /* 17px – rank in tables */
-  --csk-text-xl: 1.1875rem;    /* 19px – h3 */
-  --csk-text-2xl: 1.625rem;    /* 26px – h2 */
-  --csk-text-3xl: 2.5rem;      /* 40px – h1 */
-
-  /* Weights */
-  --csk-font-weight-regular: 400;
-  --csk-font-weight-medium: 500;
-  --csk-font-weight-semibold: 600;
-  --csk-font-weight-bold: 700;
-
-  /* Line heights */
-  --csk-line-height-tight: 1.1;    /* headings, display numbers */
-  --csk-line-height-snug: 1.25;    /* stacked cells (name + club) */
-  --csk-line-height-normal: 1.45;  /* body */
-
-  /* Letter spacing */
-  --csk-letter-spacing-tight: -0.005em; /* display headings */
-  --csk-letter-spacing-caps: 0.04em;    /* uppercase table heads and labels */
-}
+/* Statistika vodáckých oddílů – vzhled SK Vodní slalom České Budějovice
+   Tokeny: assets/skvscb-theme.css (z jakubbican/skvscb-design v2.2.2 + aplikační vrstva --ui-*). */
 
 /* =============================================================================
-   Stránka – sémantika aplikace (jen přes --csk-* tokeny)
+   Stránka – sémantika aplikace (jen přes --ui-* tokeny)
    ============================================================================= */
 
 :root {
   /* Disciplíny v rámci divoké vody: rozlišení jen pro grafy a štítky.
      Barva nikdy nenese význam sama – vždy je vedle text (sl / sj / kr). */
-  --app-color-slalom: var(--csk-blue);
-  --app-color-slalom-bg: var(--csk-blue-100);
-  --app-color-sjezd: var(--csk-vt);
-  --app-color-sjezd-bg: #fbeee7;
-  --app-color-kros: var(--csk-silver-dark);
-  --app-color-kros-bg: var(--csk-gray-100);
+  --app-color-slalom: var(--navy);
+  --app-color-slalom-bg: var(--water);
+  --app-color-sjezd: var(--accent-strong);
+  --app-color-sjezd-bg: #FBEBCB;
+  --app-color-kros: var(--muted);
+  --app-color-kros-bg: var(--line-soft);
 }
 
 * {
@@ -474,21 +27,21 @@ html {
 }
 
 body {
-  background-color: var(--csk-color-surface);
-  color: var(--csk-color-text);
-  font-family: var(--csk-font-sans);
-  font-size: var(--csk-text-base);
-  line-height: var(--csk-line-height-normal);
+  background-color: var(--ui-color-page);
+  color: var(--ui-color-text);
+  font-family: var(--ui-font-sans);
+  font-size: var(--ui-text-base);
+  line-height: var(--ui-line-height-normal);
   overflow-x: hidden;
 }
 
 :focus-visible {
-  outline: 2px solid var(--csk-color-focus);
+  outline: 2px solid var(--ui-color-focus);
   outline-offset: 2px;
 }
 
 .font-heading {
-  font-family: var(--csk-font-display);
+  font-family: var(--ui-font-display);
 }
 
 .num {
@@ -497,70 +50,84 @@ body {
 }
 
 /* =============================================================================
-   HLAVIČKA – satelitní lišta (samostatná aplikace s odkazem zpět na kanoe.cz)
+   HLAVIČKA – satelitní lišta (sestava loga klubu, odkaz zpět na ww-cb.cz)
    ============================================================================= */
 
-.site-band {
-  height: 4px;
-  background: var(--csk-color-brand);
-}
-
 .site-header {
-  background: var(--csk-color-surface-2);
-  border-bottom: 1px solid var(--csk-color-border);
+  background: var(--ui-color-surface-2);
+  border-bottom: 1px solid var(--ui-color-border);
 }
 
 .site-header__inner {
   display: flex;
   align-items: center;
-  gap: var(--csk-space-3);
-  max-width: var(--csk-layout-max-width);
-  min-height: 56px;
+  gap: var(--ui-space-3);
+  max-width: var(--ui-layout-max-width);
+  min-height: 76px;
   margin: 0 auto;
-  padding: var(--csk-space-2) var(--csk-layout-gutter);
+  padding: var(--ui-space-2) var(--ui-layout-gutter);
 }
 
 .site-header__brand {
   display: flex;
   align-items: center;
-  gap: var(--csk-space-3);
-  padding-right: var(--csk-space-3);
-  border-right: 1px solid var(--csk-color-border);
+  gap: var(--ui-space-3);
   color: inherit;
   text-decoration: none;
 }
 
+.site-header__sep {
+  align-self: stretch;
+  width: 1px;
+  margin: var(--ui-space-2) var(--ui-space-1);
+  background: var(--ui-color-border);
+}
+
 .site-header__brand img {
   display: block;
-  height: 36px;
-  width: auto;
+  width: 36px;
+  height: 48px;
+}
+
+.site-header__name {
+  font-family: var(--ui-font-display);
+  font-size: 20px;
+  font-weight: var(--ui-font-weight-black);
+  line-height: .95;
+  text-transform: uppercase;
+  color: var(--ui-color-brand);
+}
+
+.site-header__name span {
+  font-weight: var(--ui-font-weight-semibold);
+  color: var(--ui-color-text-2);
 }
 
 .site-header__app {
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-lg);
-  font-weight: var(--csk-font-weight-bold);
-  line-height: var(--csk-line-height-tight);
-  color: var(--csk-color-brand);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-lg);
+  font-weight: var(--ui-font-weight-bold);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--ui-color-text-2);
 }
 
 .site-header__home {
   margin-left: auto;
   display: inline-flex;
   align-items: center;
-  gap: var(--csk-space-1);
+  gap: var(--ui-space-1);
   min-height: 32px;
-  padding: var(--csk-space-1) var(--csk-space-2);
-  border-radius: var(--csk-radius-sm);
-  font-size: var(--csk-text-sm);
-  font-weight: var(--csk-font-weight-medium);
-  color: var(--csk-color-action);
+  padding: var(--ui-space-1) var(--ui-space-2);
+  border-radius: var(--ui-radius-sm);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-action);
   text-decoration: none;
 }
 
 .site-header__home:hover {
-  background: var(--csk-color-highlight-bg);
-  color: var(--csk-color-action-hover);
+  color: var(--ui-color-action-hover);
 }
 
 /* =============================================================================
@@ -568,12 +135,12 @@ body {
    ============================================================================= */
 
 .dashboard-container {
-  max-width: var(--csk-layout-max-width);
+  max-width: var(--ui-layout-max-width);
   margin: 0 auto;
-  padding: var(--csk-space-8) var(--csk-layout-gutter) var(--csk-space-12);
+  padding: var(--ui-space-8) var(--ui-layout-gutter) var(--ui-space-12);
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-6);
+  gap: var(--ui-space-6);
 }
 
 .dashboard-header {
@@ -581,54 +148,56 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: var(--csk-space-4);
+  gap: var(--ui-space-4);
 }
 
 .header-title-wrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-2);
+  gap: var(--ui-space-2);
   min-width: 0;
 }
 
 .header-eyebrow {
-  font-size: var(--csk-text-xs);
-  font-weight: var(--csk-font-weight-semibold);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: var(--csk-letter-spacing-caps);
-  color: var(--csk-color-section-dv);
+  letter-spacing: var(--ui-letter-spacing-eyebrow);
+  color: var(--ui-color-eyebrow);
 }
 
 .header-title {
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-3xl);
-  font-weight: var(--csk-font-weight-bold);
-  line-height: var(--csk-line-height-tight);
-  letter-spacing: var(--csk-letter-spacing-tight);
-  color: var(--csk-color-text);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-3xl);
+  font-weight: var(--ui-font-weight-black);
+  line-height: var(--ui-line-height-tight);
+  letter-spacing: var(--ui-letter-spacing-tight);
+  text-transform: uppercase;
+  color: var(--ui-color-brand);
 }
 
 .header-subtitle {
-  font-size: var(--csk-text-base);
-  color: var(--csk-color-text-2);
+  font-size: var(--ui-text-base);
+  color: var(--ui-color-text-2);
 }
 
 .data-source-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--csk-space-2);
-  padding: var(--csk-space-1) var(--csk-space-3);
-  border-radius: var(--csk-radius-pill);
-  background: var(--csk-color-surface-3);
-  font-size: var(--csk-text-sm);
-  font-weight: var(--csk-font-weight-medium);
-  color: var(--csk-color-text-2);
+  gap: var(--ui-space-2);
+  padding: var(--ui-space-1) var(--ui-space-3);
+  border-radius: var(--ui-radius-pill);
+  background: var(--ui-color-surface-3);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-text-2);
 }
 
 .data-source-badge svg {
   width: 14px;
   height: 14px;
-  color: var(--csk-color-text-3);
+  color: var(--ui-color-text-3);
 }
 
 /* =============================================================================
@@ -639,17 +208,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  gap: var(--csk-space-5);
-  padding: var(--csk-space-4) var(--csk-space-5);
-  background: var(--csk-color-surface-2);
-  border: 1px solid var(--csk-color-border);
-  border-radius: var(--csk-radius-lg);
+  gap: var(--ui-space-5);
+  padding: var(--ui-space-4) var(--ui-space-5);
+  background: var(--ui-color-surface);
+  border-radius: var(--ui-radius-lg);
+  box-shadow: var(--ui-shadow-card);
 }
 
 .filter-group {
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-1);
+  gap: var(--ui-space-1);
 }
 
 .search-group { flex: 1 1 260px; }
@@ -657,9 +226,9 @@ body {
 .discipline-group { flex: 0 0 auto; }
 
 .filter-label {
-  font-size: var(--csk-text-sm);
-  font-weight: var(--csk-font-weight-medium);
-  color: var(--csk-color-text-2);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-text-2);
 }
 
 .input-wrapper {
@@ -670,25 +239,25 @@ body {
 
 .search-icon {
   position: absolute;
-  left: var(--csk-space-3);
+  left: var(--ui-space-3);
   width: 18px;
   height: 18px;
-  color: var(--csk-color-text-3);
+  color: var(--ui-color-text-3);
   pointer-events: none;
 }
 
 .form-input,
 .form-select {
   width: 100%;
-  min-height: var(--csk-tap);
-  padding: 0 var(--csk-space-3);
-  background: var(--csk-color-surface);
-  border: 1px solid var(--csk-color-border);
-  border-radius: var(--csk-radius-md);
-  font-family: var(--csk-font-sans);
-  font-size: var(--csk-text-md);
-  color: var(--csk-color-text);
-  transition: border-color var(--csk-transition-fast);
+  min-height: var(--ui-tap);
+  padding: 0 var(--ui-space-3);
+  background: var(--ui-color-surface);
+  border: 2px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+  font-family: var(--ui-font-sans);
+  font-size: var(--ui-text-base);
+  color: var(--ui-color-text);
+  transition: border-color var(--ui-transition-fast);
 }
 
 .form-input {
@@ -696,25 +265,31 @@ body {
 }
 
 .form-input::placeholder {
-  color: var(--csk-color-text-3);
+  color: var(--ui-color-text-3);
 }
 
 .form-input:hover,
 .form-select:hover {
-  border-color: var(--csk-color-text-3);
+  border-color: var(--ui-color-text-3);
+}
+
+.form-input:focus,
+.form-select:focus,
+.detail-search:focus {
+  border-color: var(--ui-color-brand) !important;
 }
 
 .form-input:focus,
 .form-select:focus {
-  outline: 2px solid var(--csk-color-focus);
+  outline: 2px solid var(--ui-color-focus);
   outline-offset: -1px;
-  border-color: var(--csk-color-focus);
+  border-color: var(--ui-color-focus);
 }
 
 .year-selects {
   display: flex;
   align-items: center;
-  gap: var(--csk-space-2);
+  gap: var(--ui-space-2);
 }
 
 .select-wrapper {
@@ -737,50 +312,50 @@ body {
   top: 50%;
   width: 7px;
   height: 7px;
-  border-right: 2px solid var(--csk-color-text-2);
-  border-bottom: 2px solid var(--csk-color-text-2);
+  border-right: 2px solid var(--ui-color-text-2);
+  border-bottom: 2px solid var(--ui-color-text-2);
   transform: translateY(-70%) rotate(45deg);
   pointer-events: none;
 }
 
 .year-separator {
-  font-size: var(--csk-text-sm);
-  color: var(--csk-color-text-3);
+  font-size: var(--ui-text-sm);
+  color: var(--ui-color-text-3);
 }
 
 /* Přepínač disciplín – SegmentedControl */
 .btn-toggle-group {
   display: inline-flex;
   padding: 2px;
-  background: var(--csk-color-surface-3);
-  border-radius: var(--csk-radius-lg);
+  background: var(--ui-color-surface);
+  border: 2px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
 }
 
 .btn-toggle {
-  min-width: var(--csk-tap);
+  min-width: var(--ui-tap);
   min-height: 40px;
-  padding: 0 var(--csk-space-4);
+  padding: 0 var(--ui-space-4);
   background: transparent;
-  border: 1px solid transparent;
-  border-radius: var(--csk-radius-md);
-  font-family: var(--csk-font-sans);
-  font-size: var(--csk-text-md);
-  font-weight: var(--csk-font-weight-medium);
-  color: var(--csk-color-text-2);
+  border: 0;
+  border-radius: 8px;
+  font-family: var(--ui-font-sans);
+  font-size: var(--ui-text-md);
+  font-weight: var(--ui-font-weight-semibold);
+  color: var(--ui-color-text-2);
   cursor: pointer;
   white-space: nowrap;
-  transition: color var(--csk-transition-fast), background-color var(--csk-transition-fast);
+  transition: color var(--ui-transition-fast), background-color var(--ui-transition-fast);
 }
 
 .btn-toggle:hover:not(.active) {
-  color: var(--csk-color-text);
+  color: var(--ui-color-text);
 }
 
 .btn-toggle.active {
-  background: var(--csk-color-surface);
-  border-color: var(--csk-color-border);
-  color: var(--csk-color-brand);
-  font-weight: var(--csk-font-weight-bold);
+  background: var(--ui-color-brand);
+  color: var(--ui-color-text-on-fill);
+  font-weight: var(--ui-font-weight-bold);
 }
 
 /* Checkbox */
@@ -792,13 +367,13 @@ body {
 .checkbox-container {
   display: inline-flex;
   align-items: center;
-  gap: var(--csk-space-2);
-  min-height: var(--csk-tap);
+  gap: var(--ui-space-2);
+  min-height: var(--ui-tap);
   position: relative;
   cursor: pointer;
-  font-size: var(--csk-text-md);
-  font-weight: var(--csk-font-weight-medium);
-  color: var(--csk-color-text);
+  font-size: var(--ui-text-md);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-text);
   user-select: none;
 }
 
@@ -814,24 +389,24 @@ body {
   flex: none;
   width: 20px;
   height: 20px;
-  background: var(--csk-color-surface);
-  border: 1.5px solid var(--csk-color-text-3);
-  border-radius: var(--csk-radius-sm);
-  transition: background-color var(--csk-transition-fast), border-color var(--csk-transition-fast);
+  background: var(--ui-color-surface);
+  border: 2px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-sm);
+  transition: background-color var(--ui-transition-fast), border-color var(--ui-transition-fast);
 }
 
 .checkbox-container:hover .checkmark {
-  border-color: var(--csk-color-action);
+  border-color: var(--ui-color-action);
 }
 
 .checkbox-container input:focus-visible ~ .checkmark {
-  outline: 2px solid var(--csk-color-focus);
+  outline: 2px solid var(--ui-color-focus);
   outline-offset: 2px;
 }
 
 .checkbox-container input:checked ~ .checkmark {
-  background: var(--csk-color-brand);
-  border-color: var(--csk-color-brand);
+  background: var(--ui-color-brand);
+  border-color: var(--ui-color-brand);
 }
 
 .checkmark::after {
@@ -842,7 +417,7 @@ body {
   top: 2px;
   width: 5px;
   height: 10px;
-  border: solid var(--csk-color-text-on-fill);
+  border: solid var(--ui-color-text-on-fill);
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
@@ -858,17 +433,17 @@ body {
 .kpi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: var(--csk-space-4);
+  gap: var(--ui-space-4);
 }
 
 .kpi-card {
   display: flex;
   align-items: flex-start;
-  gap: var(--csk-space-3);
-  padding: var(--csk-space-4);
-  background: var(--csk-color-surface);
-  border: 1px solid var(--csk-color-border);
-  border-radius: var(--csk-radius-lg);
+  gap: var(--ui-space-3);
+  padding: var(--ui-space-5);
+  background: var(--ui-color-surface);
+  border-radius: var(--ui-radius-lg);
+  box-shadow: var(--ui-shadow-card);
   min-width: 0;
 }
 
@@ -879,9 +454,9 @@ body {
   flex: none;
   width: 40px;
   height: 40px;
-  border-radius: var(--csk-radius-md);
-  background: var(--csk-color-highlight-bg);
-  color: var(--csk-color-highlight-text);
+  border-radius: var(--ui-radius-md);
+  background: var(--ui-color-highlight-bg);
+  color: var(--ui-color-highlight-text);
 }
 
 .kpi-icon-wrapper svg {
@@ -893,35 +468,40 @@ body {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-1);
+  gap: var(--ui-space-1);
   min-width: 0;
 }
 
 .kpi-title {
-  font-size: var(--csk-text-sm);
-  color: var(--csk-color-text-3);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-bold);
+  letter-spacing: var(--ui-letter-spacing-caps);
+  text-transform: uppercase;
+  color: var(--ui-color-eyebrow);
 }
 
 .kpi-value {
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-2xl);
-  font-weight: var(--csk-font-weight-bold);
-  line-height: var(--csk-line-height-tight);
-  color: var(--csk-color-text);
+  font-family: var(--ui-font-display);
+  font-size: 40px;
+  font-weight: var(--ui-font-weight-black);
+  line-height: var(--ui-line-height-tight);
+  color: var(--ui-color-brand);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 .kpi-text-sm {
-  font-size: var(--csk-text-xl);
-  line-height: var(--csk-line-height-snug);
+  font-size: var(--ui-text-2xl);
+  text-transform: uppercase;
+  line-height: var(--ui-line-height-snug);
   white-space: normal;
   overflow-wrap: anywhere;
 }
 
 .kpi-desc {
-  font-size: var(--csk-text-sm);
-  color: var(--csk-color-text-3);
+  font-size: var(--ui-text-sm);
+  color: var(--ui-color-text-3);
 }
 
 /* =============================================================================
@@ -931,49 +511,50 @@ body {
 .charts-section {
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-4);
+  gap: var(--ui-space-4);
 }
 
 .chart-card,
 .table-section {
-  background: var(--csk-color-surface);
-  border: 1px solid var(--csk-color-border);
-  border-radius: var(--csk-radius-lg);
+  background: var(--ui-color-surface);
+  border-radius: var(--ui-radius-lg);
+  box-shadow: var(--ui-shadow-card);
 }
 
 .chart-card {
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-4);
-  padding: var(--csk-space-5);
+  gap: var(--ui-space-4);
+  padding: var(--ui-space-5);
   min-width: 0;
 }
 
 .charts-grid-two {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--csk-space-4);
+  gap: var(--ui-space-4);
 }
 
 .chart-header {
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-1);
+  gap: var(--ui-space-1);
 }
 
 .chart-title,
 .table-card-title {
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-xl);
-  font-weight: var(--csk-font-weight-semibold);
-  line-height: var(--csk-line-height-tight);
-  color: var(--csk-color-text);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-xl);
+  font-weight: var(--ui-font-weight-black);
+  line-height: var(--ui-line-height-tight);
+  text-transform: uppercase;
+  color: var(--ui-color-brand);
 }
 
 .chart-subtitle,
 .table-card-subtitle {
-  font-size: var(--csk-text-sm);
-  color: var(--csk-color-text-3);
+  font-size: var(--ui-text-sm);
+  color: var(--ui-color-text-3);
 }
 
 .chart-container {
@@ -999,24 +580,24 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: var(--csk-space-3);
-  padding: var(--csk-space-5) var(--csk-space-5) var(--csk-space-4);
-  border-bottom: 1px solid var(--csk-color-border);
+  gap: var(--ui-space-3);
+  padding: var(--ui-space-5) var(--ui-space-5) var(--ui-space-4);
+  border-bottom: 1px solid var(--ui-color-border);
 }
 
 .table-title-wrapper {
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-1);
+  gap: var(--ui-space-1);
 }
 
 .table-records-count {
-  padding: var(--csk-space-1) var(--csk-space-3);
-  border-radius: var(--csk-radius-pill);
-  background: var(--csk-color-surface-3);
-  font-size: var(--csk-text-sm);
-  font-weight: var(--csk-font-weight-medium);
-  color: var(--csk-color-text-2);
+  padding: var(--ui-space-1) var(--ui-space-3);
+  border-radius: var(--ui-radius-pill);
+  background: var(--ui-color-surface-3);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-text-2);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
@@ -1030,33 +611,35 @@ body {
 .data-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: var(--csk-text-md);
-  color: var(--csk-color-text);
+  font-size: var(--ui-text-md);
+  color: var(--ui-color-text);
 }
 
 .data-table > thead > tr > th,
 .data-table > tbody > tr > td {
-  padding: var(--csk-space-3);
+  padding: var(--ui-space-3);
   text-align: left;
   vertical-align: middle;
 }
 
 .data-table > thead > tr > th {
-  padding-top: var(--csk-space-2);
-  padding-bottom: var(--csk-space-2);
-  background: var(--csk-color-surface);
-  border-bottom: 1px solid var(--csk-color-border);
-  font-size: var(--csk-text-xs);
-  font-weight: var(--csk-font-weight-semibold);
+  padding-top: var(--ui-space-2);
+  padding-bottom: var(--ui-space-2);
+  background: var(--ui-color-surface);
+  border-bottom: 1px solid var(--ui-color-border);
+  font-size: var(--ui-text-xs);
+  font-weight: var(--ui-font-weight-semibold);
   text-transform: uppercase;
-  letter-spacing: var(--csk-letter-spacing-caps);
-  color: var(--csk-color-text-3);
-  white-space: nowrap;
+  letter-spacing: .06em;
+  color: var(--ui-color-text-3);
+  white-space: normal;
+  line-height: var(--ui-line-height-snug);
+  vertical-align: bottom;
 }
 
 .data-table > thead > tr > th:first-child,
 .data-table > tbody > tr > td:first-child {
-  padding-left: var(--csk-space-5);
+  padding-left: var(--ui-space-5);
 }
 
 .th-sort {
@@ -1065,12 +648,12 @@ body {
 }
 
 .th-sort:hover {
-  color: var(--csk-color-text);
+  color: var(--ui-color-text);
 }
 
 .th-sort.sort-asc,
 .th-sort.sort-desc {
-  color: var(--csk-color-brand);
+  color: var(--ui-color-brand);
 }
 
 .sort-arrow {
@@ -1083,25 +666,25 @@ body {
 .th-sort.sort-desc .sort-arrow::before { content: '▼'; font-size: 8px; }
 
 .data-table tbody tr.club-row {
-  border-bottom: 1px solid var(--csk-color-border-2);
+  border-bottom: 1px solid var(--ui-color-border-2);
   cursor: pointer;
-  transition: background-color var(--csk-transition-fast);
+  transition: background-color var(--ui-transition-fast);
 }
 
 .data-table tbody tr.club-row:hover {
-  background: var(--csk-color-surface-2);
+  background: var(--ui-color-surface-2);
 }
 
 .data-table tbody tr.club-row.active {
-  background: var(--csk-color-highlight-bg);
-  box-shadow: inset 3px 0 0 var(--csk-color-brand);
+  background: var(--ui-color-highlight-bg);
+  box-shadow: inset 4px 0 0 var(--ui-color-brand);
 }
 
 .club-name-cell {
   display: flex;
   align-items: center;
-  gap: var(--csk-space-3);
-  font-weight: var(--csk-font-weight-medium);
+  gap: var(--ui-space-3);
+  font-weight: var(--ui-font-weight-medium);
   min-width: 220px;
 }
 
@@ -1112,17 +695,17 @@ body {
   flex: none;
   width: 32px;
   height: 32px;
-  border-radius: var(--csk-radius-pill);
-  background: var(--csk-color-highlight-bg);
-  color: var(--csk-color-highlight-text);
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-sm);
-  font-weight: var(--csk-font-weight-bold);
+  border-radius: var(--ui-radius-pill);
+  background: var(--ui-color-highlight-bg);
+  color: var(--ui-color-highlight-text);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-bold);
 }
 
 .club-row.active .club-avatar {
-  background: var(--csk-color-brand);
-  color: var(--csk-color-text-on-fill);
+  background: var(--ui-color-brand);
+  color: var(--ui-color-text-on-fill);
 }
 
 .text-center {
@@ -1130,36 +713,36 @@ body {
 }
 
 .cell-strong {
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-lg);
-  font-weight: var(--csk-font-weight-bold);
+  font-family: var(--ui-font-display);
+  font-size: 20px;
+  font-weight: var(--ui-font-weight-black);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
-  color: var(--csk-color-text);
+  color: var(--ui-color-text);
 }
 
 .cell-brand {
-  color: var(--csk-color-brand);
+  color: var(--ui-color-brand);
 }
 
 .cell-muted {
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-base);
-  font-weight: var(--csk-font-weight-semibold);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-base);
+  font-weight: var(--ui-font-weight-semibold);
   font-variant-numeric: tabular-nums;
-  color: var(--csk-color-text-2);
+  color: var(--ui-color-text-2);
 }
 
 .badge-sub {
-  font-size: var(--csk-text-sm);
-  font-weight: var(--csk-font-weight-semibold);
+  font-size: var(--ui-text-sm);
+  font-weight: var(--ui-font-weight-semibold);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
 
 .badge-sep {
   padding: 0 4px;
-  color: var(--csk-color-border);
+  color: var(--ui-color-border);
 }
 
 .badge-slalom { color: var(--app-color-slalom); }
@@ -1173,28 +756,28 @@ body {
   width: 36px;
   height: 36px;
   background: transparent;
-  border: 1px solid var(--csk-color-border);
-  border-radius: var(--csk-radius-md);
-  color: var(--csk-color-text-2);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+  color: var(--ui-color-text-2);
   cursor: pointer;
-  transition: background-color var(--csk-transition-fast), color var(--csk-transition-fast);
+  transition: background-color var(--ui-transition-fast), color var(--ui-transition-fast);
 }
 
 .detail-btn:hover {
-  background: var(--csk-color-surface);
-  border-color: var(--csk-color-action);
-  color: var(--csk-color-action);
+  background: var(--ui-color-surface);
+  border-color: var(--ui-color-action);
+  color: var(--ui-color-action);
 }
 
 .detail-btn svg {
   width: 16px;
   height: 16px;
-  transition: transform var(--csk-transition-fast);
+  transition: transform var(--ui-transition-fast);
 }
 
 .club-row.active .detail-btn {
-  border-color: var(--csk-color-brand);
-  color: var(--csk-color-brand);
+  border-color: var(--ui-color-brand);
+  color: var(--ui-color-brand);
 }
 
 .club-row.active .detail-btn svg {
@@ -1203,8 +786,8 @@ body {
 
 /* Rozbalený detail oddílu */
 .detail-row {
-  background: var(--csk-color-surface-2);
-  border-bottom: 1px solid var(--csk-color-border);
+  background: var(--ui-color-surface-2);
+  border-bottom: 1px solid var(--ui-color-border);
 }
 
 .data-table > tbody > tr.detail-row > td {
@@ -1214,7 +797,7 @@ body {
 .detail-wrapper {
   max-height: 0;
   overflow: hidden;
-  transition: max-height var(--csk-transition-slow);
+  transition: max-height var(--ui-transition-slow);
 }
 
 .club-row.active + .detail-row .detail-wrapper {
@@ -1224,8 +807,8 @@ body {
 .detail-content {
   display: flex;
   flex-direction: column;
-  gap: var(--csk-space-3);
-  padding: var(--csk-space-4) var(--csk-space-5) var(--csk-space-5);
+  gap: var(--ui-space-3);
+  padding: var(--ui-space-4) var(--ui-space-5) var(--ui-space-5);
 }
 
 .detail-header-actions {
@@ -1233,41 +816,41 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: var(--csk-space-3);
+  gap: var(--ui-space-3);
 }
 
 .detail-title {
-  font-family: var(--csk-font-display);
-  font-size: var(--csk-text-lg);
-  font-weight: var(--csk-font-weight-semibold);
-  color: var(--csk-color-text);
+  font-family: var(--ui-font-display);
+  font-size: var(--ui-text-lg);
+  font-weight: var(--ui-font-weight-semibold);
+  color: var(--ui-color-text);
 }
 
 .detail-search {
   width: 260px;
   max-width: 100%;
   min-height: 36px;
-  padding: 0 var(--csk-space-3);
-  background: var(--csk-color-surface);
-  border: 1px solid var(--csk-color-border);
-  border-radius: var(--csk-radius-md);
-  font-family: var(--csk-font-sans);
-  font-size: var(--csk-text-sm);
-  color: var(--csk-color-text);
+  padding: 0 var(--ui-space-3);
+  background: var(--ui-color-surface);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
+  font-family: var(--ui-font-sans);
+  font-size: var(--ui-text-sm);
+  color: var(--ui-color-text);
 }
 
 .detail-search:focus {
-  outline: 2px solid var(--csk-color-focus);
+  outline: 2px solid var(--ui-color-focus);
   outline-offset: -1px;
-  border-color: var(--csk-color-focus);
+  border-color: var(--ui-color-focus);
 }
 
 .races-list-container {
   max-height: 320px;
   overflow-y: auto;
-  background: var(--csk-color-surface);
-  border: 1px solid var(--csk-color-border);
-  border-radius: var(--csk-radius-md);
+  background: var(--ui-color-surface);
+  border: 1px solid var(--ui-color-border);
+  border-radius: var(--ui-radius-md);
 }
 
 .races-grid-table {
@@ -1277,8 +860,8 @@ body {
 
 .races-grid-table th,
 .races-grid-table td {
-  padding: var(--csk-space-2) var(--csk-space-3);
-  font-size: var(--csk-text-sm);
+  padding: var(--ui-space-2) var(--ui-space-3);
+  font-size: var(--ui-text-sm);
   text-align: left;
 }
 
@@ -1286,17 +869,17 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
-  background: var(--csk-color-surface);
-  border-bottom: 1px solid var(--csk-color-border);
-  font-size: var(--csk-text-xs);
-  font-weight: var(--csk-font-weight-semibold);
+  background: var(--ui-color-surface);
+  border-bottom: 1px solid var(--ui-color-border);
+  font-size: var(--ui-text-xs);
+  font-weight: var(--ui-font-weight-semibold);
   text-transform: uppercase;
-  letter-spacing: var(--csk-letter-spacing-caps);
-  color: var(--csk-color-text-3);
+  letter-spacing: var(--ui-letter-spacing-caps);
+  color: var(--ui-color-text-3);
 }
 
 .races-grid-table tbody tr {
-  border-bottom: 1px solid var(--csk-color-border-2);
+  border-bottom: 1px solid var(--ui-color-border-2);
 }
 
 .races-grid-table tbody tr:last-child {
@@ -1304,55 +887,55 @@ body {
 }
 
 .races-grid-table tbody tr:hover {
-  background: var(--csk-color-surface-2);
+  background: var(--ui-color-surface-2);
 }
 
 .race-year {
-  font-size: var(--csk-text-xs);
-  color: var(--csk-color-text-3);
+  font-size: var(--ui-text-xs);
+  color: var(--ui-color-text-3);
 }
 
 .race-date {
-  font-family: var(--csk-font-mono);
-  font-size: var(--csk-text-sm);
-  color: var(--csk-color-text-2);
+  font-family: var(--ui-font-mono);
+  font-size: var(--ui-text-sm);
+  color: var(--ui-color-text-2);
   white-space: nowrap;
 }
 
 .race-name {
-  font-weight: var(--csk-font-weight-medium);
-  color: var(--csk-color-text);
+  font-weight: var(--ui-font-weight-medium);
+  color: var(--ui-color-text);
 }
 
 .race-count {
   text-align: center !important;
-  font-family: var(--csk-font-mono);
-  font-weight: var(--csk-font-weight-semibold);
+  font-family: var(--ui-font-mono);
+  font-weight: var(--ui-font-weight-semibold);
   font-variant-numeric: tabular-nums;
-  color: var(--csk-color-text);
+  color: var(--ui-color-text);
 }
 
 /* Štítek disciplíny – Badge */
 .badge-pill {
   display: inline-block;
-  padding: 1px var(--csk-space-2);
-  border-radius: var(--csk-radius-sm);
-  font-size: var(--csk-text-xs);
-  font-weight: var(--csk-font-weight-semibold);
-  letter-spacing: var(--csk-letter-spacing-caps);
+  padding: 1px var(--ui-space-2);
+  border-radius: var(--ui-radius-sm);
+  font-size: var(--ui-text-xs);
+  font-weight: var(--ui-font-weight-semibold);
+  letter-spacing: var(--ui-letter-spacing-caps);
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-.pill-slalom { background: var(--app-color-slalom-bg); color: var(--csk-blue-dark); }
-.pill-sjezd { background: var(--app-color-sjezd-bg); color: #8a3613; }
-.pill-kros { background: var(--app-color-kros-bg); color: var(--csk-ink-2); }
+.pill-slalom { background: var(--app-color-slalom-bg); color: var(--navy); }
+.pill-sjezd { background: var(--app-color-sjezd-bg); color: var(--accent-text); }
+.pill-kros { background: var(--app-color-kros-bg); color: var(--muted); }
 
 .no-races-row,
 .empty-row {
-  padding: var(--csk-space-8) !important;
+  padding: var(--ui-space-8) !important;
   text-align: center !important;
-  color: var(--csk-color-text-3);
+  color: var(--ui-color-text-3);
 }
 
 /* =============================================================================
@@ -1360,20 +943,19 @@ body {
    ============================================================================= */
 
 .site-footer {
-  border-top: 1px solid var(--csk-color-border);
-  background: var(--csk-color-surface-2);
+  background: var(--navy-deep);
 }
 
 .site-footer__inner {
-  max-width: var(--csk-layout-max-width);
+  max-width: var(--ui-layout-max-width);
   margin: 0 auto;
-  padding: var(--csk-space-5) var(--csk-layout-gutter);
-  font-size: var(--csk-text-sm);
-  color: var(--csk-color-text-3);
+  padding: var(--ui-space-5) var(--ui-layout-gutter);
+  font-size: var(--ui-text-sm);
+  color: var(--water);
 }
 
 .site-footer a {
-  color: var(--csk-color-action);
+  color: var(--accent-on-navy);
 }
 
 /* =============================================================================
@@ -1388,7 +970,7 @@ body {
   .filters-panel {
     flex-direction: column;
     align-items: stretch;
-    gap: var(--csk-space-4);
+    gap: var(--ui-space-4);
   }
 
   .filter-group,
@@ -1413,30 +995,27 @@ body {
 
 @media (max-width: 600px) {
   .dashboard-container {
-    padding-top: var(--csk-space-5);
-    gap: var(--csk-space-4);
+    padding-top: var(--ui-space-5);
+    gap: var(--ui-space-4);
   }
 
   .header-title {
-    font-size: var(--csk-text-2xl);
+    font-size: var(--ui-text-2xl);
   }
 
-  .site-header__app {
+  .site-header__app,
+  .site-header__sep {
     display: none;
-  }
-
-  .site-header__brand {
-    border-right: 0;
   }
 
   .kpi-grid {
     grid-template-columns: 1fr 1fr;
-    gap: var(--csk-space-3);
+    gap: var(--ui-space-3);
   }
 
   .kpi-card {
     flex-direction: column;
-    padding: var(--csk-space-3);
+    padding: var(--ui-space-3);
   }
 
   .kpi-icon-wrapper {
@@ -1444,7 +1023,7 @@ body {
   }
 
   .chart-card {
-    padding: var(--csk-space-4);
+    padding: var(--ui-space-4);
   }
 
   .chart-container,
@@ -1454,13 +1033,13 @@ body {
 
   .table-card-header,
   .detail-content {
-    padding-left: var(--csk-space-4);
-    padding-right: var(--csk-space-4);
+    padding-left: var(--ui-space-4);
+    padding-right: var(--ui-space-4);
   }
 
   .data-table > thead > tr > th:first-child,
   .data-table > tbody > tr > td:first-child {
-    padding-left: var(--csk-space-4);
+    padding-left: var(--ui-space-4);
   }
 }
 
